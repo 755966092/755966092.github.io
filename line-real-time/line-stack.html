@@ -1,0 +1,131 @@
+<!--
+    THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=line-stack
+-->
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script src="./data/html-data.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/echarts.min.js"></script>
+    <!-- Uncomment this line if you want to dataTool extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/extension/dataTool.min.js"></script>
+        -->
+    <!-- Uncomment this line if you want to use gl extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+        -->
+    <!-- Uncomment this line if you want to echarts-stat extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+        -->
+    <!-- Uncomment this line if you want to use map
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/map/js/china.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/map/js/world.js"></script>
+        -->
+    <!-- Uncomment these two lines if you want to use bmap extension
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+        -->
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+
+        var option;
+        var legendData = [];
+        var seriesData = [];
+        var selected = {}
+        var x = []
+
+        lineData.forEach((item, index) => {
+            let n = item.hi
+            legendData.push(item.name)
+            if (index > 10) {
+                selected[item.name] = false
+            }
+            x = item.hisDate
+            seriesData.push({
+                name: item.name,
+                type: 'line',
+                // stack: 'Total',
+                data: item.hisData
+            })
+        });
+
+
+        option = {
+            title: {
+                text: '历史价格曲线'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                data: legendData,
+                selected
+            },
+            grid: {
+                left: '3%',
+                right: '20%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: x
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: seriesData,
+            // series: [{
+            //     name: 'Email',
+            //     type: 'line',
+            //     stack: 'Total',
+            //     data: [120, 132, 101, 134, 90, 230, 210]
+            // }, {
+            //     name: 'Union Ads',
+            //     type: 'line',
+            //     stack: 'Total',
+            //     data: [220, 182, 191, 234, 290, 330, 310]
+            // }, {
+            //     name: 'Video Ads',
+            //     type: 'line',
+            //     stack: 'Total',
+            //     data: [150, 232, 201, 154, 190, 330, 410]
+            // }, {
+            //     name: 'Direct',
+            //     type: 'line',
+            //     stack: 'Total',
+            //     data: [320, 332, 301, 334, 390, 330, 320]
+            // }, {
+            //     name: 'Search Engine',
+            //     type: 'line',
+            //     stack: 'Total',
+            //     data: [820, 932, 901, 934, 1290, 1330, 1320]
+            // }]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+    </script>
+</body>
+
+</html>
