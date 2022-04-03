@@ -644,7 +644,7 @@ module.exports = {
     },
     {
       id: 100000276,
-      name: "《时空旅行者-3》",
+      name: "《时空旅行者-1》",
       total: 100,
       albumName: "时空旅行者系列",
       author: "林苒",
