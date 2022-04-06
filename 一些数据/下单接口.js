@@ -88,3 +88,27 @@ thumbPic2: "/file/oss/test/image/nft-goods/df663291b2f545f2b0d697a8aab0d860.jpg"
 tokenAddress: ""
 tokenId: "701160"
 vFlag: 1
+
+
+
+:method:	GET
+:scheme:	https
+:path:	/nft-mall-web/v1.2/nft/product/getResellList?origin=0&page=1&pageSize=20&sort=0&type=0
+:authority:	api-app.ibox.art
+ib-device-id:	120c1969-0a19-4516-a645-e0e9daf02ad7
+accept:	*/*
+hb-nft-token:	SXsM8b9OQZRLgF01H2fyxWpOyh0a4Q7DywIwTq6aIbw=
+ib-app-version:	1.1.0
+ib-platform-type:	ios
+ib-trans-id:	2097731b-2248-4509-a645-b45d5d07cd2c_iOS
+ib-user-token:	SXsM8b9OQZRLgF01H2fyxWpOyh0a4Q7DywIwTq6aIbw=
+accept-language:	zh-Hans-CN;q=1, en-CN;q=0.9, zh-Hant-CN;q=0.8, zh-Hant-HK;q=0.7
+accept-encoding:	gzip, deflate, br
+user-agent:	iBox/1.1.1 (iPhone; iOS 13.5.1; Scale/3.00),iBoxApp
+wtoken:	e447_40SrP2Y1m+4YSfydK4URd/RfmRBeRBllY2F1NYHjCvr7p5o1AUfmNBKgXgPelpXLBz7rKrOlLu4dfSYOX+kQ1w/kg0LjTRAxLQy6I5ZyP3jxGaN4SHryS9+1rv4nUf4I2kn13e87mA7SnDu+XdxIrH/yVX3BCjKQCyuCclTg+XdwBbXulKeyKos0Tli9NdWIwD1SYajgXzIaJ5ovtnGqc8sdGWm7jlKHYObtNIIgZsJILdTbW7w5RGln6iW9nWuHDBD/F9C3LRTrD84XRK0jT6TuGZta6SBuMNrFDdQzXDuMlvhJvVNMnKyAXLxMWHpKabJcocvvMBMHidQe2PwD7khP1l/T6IWJYe7c+Ng+er6TDZZLkDn2QhRvQG7Ecxldn16jwemFn1vOAUZcAdX5vRGXx5pVD2UQMdAgotSRvViaZmoGnGavnEy40U6F4c6JAtGHI+7RBrATXB0ZHqvVWvvdwJQP5GcKdT9ZQ6a3BQHuYZ+ZGh9U7DJbtNgs2q4K&b7ee_7FFDADCDA55A92830BA4E5F72F05B64D8386C8C503E40CBB65
+wtoken:	e447_40SrP2Y1m+4YSfydK4URd/RfmRBeRBllY2F1NYHjCvr7p5o1AUfmNBKgXgPelpXLBz7rKrOlLu4dfSYOX+kQ1w/kg0LjTRAxLQy6I5ZyP3jxGaN4SHryS9+1rv4nUf4I2kn13e87mA7SnDu+XdxIrH/yVX3BCjKQCyuCclTg+XdwBbXulKeyKos0Tli9NdWIwD1SYajgXzIaJ5ovtnGqc8sdGWm7jlKHYObtNIIgZsJILdTbW7w5RGln6iW9nWuHDBD/F9C3LRTrD84XRK0jT6TuGZta6SBuMNrFDdQzXDuMlvhJvVNMnKyAXLxMWHpKabJcocvvMBMHidQe2PwD7khP1l/T6IWJYe7c+Ng+er6TDZZLkDn2QhRvQG7Ecxldn16jwemFn1vOAUZcAdX5vRGXx5pVD2UQMdAgotSRvViaZmoGnGavnEy40U6F4c6JAtGHI+7RBrATXB0ZHqvVWvvdwJQP5GcKdT9ZQ6a3BQHuYZ+ZGh9U7DJbtNgs2q4K&b7ee_7FFDB975CC223F59696E9CEFF955F0FE12655C0F2F9B26A748
+
+
+_7FFDB975CC223F59696E9CEFF955F0FE12655C0F2F9B26A748
+
+
