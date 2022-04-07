@@ -7,7 +7,7 @@ module.exports = {
       name: "魏征斩龙王",
       total: 2000,
       albumName: "长安往事",
-      author: "肉丸",
+      author: "张肉丸",
       link: "https://www.ibox.art/zh-cn/item/?id=100513785",
       authentication: "该作品拥有MagicBox官方认证",
       number: 123,

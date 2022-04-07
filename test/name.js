@@ -3,26 +3,6 @@
 module.exports = {
   data: [
     {
-      id: 100513785,
-      name: "魏征斩龙王",
-      total: 2000,
-      albumName: "长安往事",
-      author: "肉丸",
-      link: "https://www.ibox.art/zh-cn/item/?id=100513785",
-      authentication: "该作品拥有MagicBox官方认证",
-      number: 123,
-    },
-    {
-      id: 100513784,
-      name: "iBox-CyberMouse",
-      total: 18000,
-      albumName: "iBox赛博生肖系列",
-      author: "iBox",
-      link: "https://www.ibox.art/zh-cn/item/?id=100513784",
-      authentication: "该作品拥有iBox官方认证",
-      number: 122,
-    },
-    {
       id: 100513775,
       name: "寿瑞狮",
       total: 200,
