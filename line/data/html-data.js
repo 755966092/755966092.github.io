@@ -1,1 +1,970 @@
-var lineData = [{"id":100513775,"name":"寿瑞狮","total":200,"priceCny":8499,"albumName":"五瑞狮","hisData":[7430,6990,6699,7338,7499,8499],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"龙在天皮影","authentication":"该作品拥有北京岚韵文化传媒有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513757"},{"id":100513757,"name":"禄瑞狮","total":200,"priceCny":8699,"albumName":"五瑞狮","hisData":[8066,6999,6999,7888,7500,8699],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"龙在天皮影","authentication":"该作品拥有北京岚韵文化传媒有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513757"},{"id":100513747,"name":"异星夜袭","total":2000,"priceCny":1260,"albumName":"异星夜袭","hisData":[706,588.88,513,680,1169,1260],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"疯姜大粒","authentication":"该作品拥有元宙光年官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513747"},{"id":100513755,"name":"福瑞狮","total":200,"priceCny":9333,"albumName":"五瑞狮","hisData":[7988,6999,7080,7665,7666,9333],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"龙在天皮影","authentication":"该作品拥有北京岚韵文化传媒有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513755"},{"id":100513751,"name":"炉灶女神-赫斯提亚","total":888,"priceCny":1565,"albumName":"希腊神话系列","hisData":[1488,1339,1180,1444,1580,1565],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513751"},{"id":100513749,"name":"爱神-阿佛洛狄忒","total":888,"priceCny":1565,"albumName":"希腊神话系列","hisData":[1530,1399,1220,1477,1566,1565],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513749"},{"id":100513746,"name":"想你的液","total":500,"priceCny":6500,"albumName":"想你的液","hisData":[5777,4933,4150,5466,6450,6500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Otatob","authentication":"该作品拥有iBox官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513746"},{"id":100513743,"name":"橙C的愿望","total":3000,"priceCny":839,"albumName":"橙C的愿望","hisData":[625,560,444,657,788,839],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"橙C","authentication":"该作品拥有元宙光年官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513743"},{"id":100513740,"name":"戏剧老虎","total":1000,"priceCny":1620,"albumName":"戏剧老虎","hisData":[1280,1095,888,1299,1555,1620],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"池月秋","authentication":"该作品拥有恩爱福提官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513740"},{"id":100513739,"name":"虎年生金","total":500,"priceCny":3249,"albumName":"虎年生金","hisData":[2498,2199,1950,2660,3286,3249],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"池月秋","authentication":"该作品拥有恩爱福提官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513739"},{"id":100513728,"name":"《你到底在想什么》-音乐","total":5355,"priceCny":473.8,"albumName":"畅享音乐（无版权）","hisData":[410,386,370.99,405,440,473.8],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"小河River","authentication":"该作品拥有UOVA宇宙官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513728"},{"id":100513729,"name":"《你到底在想什么》-附改编发行授权","total":100,"priceCny":6700,"albumName":"你到底在想什么（附改编发行权）","hisData":[6811,6388,6100,5899,6288,6700],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"小河River","authentication":"该作品拥有UOVA宇宙官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513729"},{"id":100513699,"name":"众生","total":300,"priceCny":7300,"albumName":"齐兴华2022数字藏品\t","hisData":[4500,4333,4090,4555,7450,7300],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"齐兴华","authentication":"该作品拥有MagicBox官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513699"},{"id":100513691,"name":"龙啸","total":300,"priceCny":7496,"albumName":"齐兴华2022数字藏品","hisData":[4880,4450,4239,4555,7488,7496],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"齐兴华","authentication":"该作品拥有MagicBox官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513691"},{"id":100513692,"name":"狐狸小姐和她的小公主","total":100,"priceCny":6888,"albumName":"狐狸小姐和她的小公主","hisData":[5999,5200,5100,5588,5879,6888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"苏童（Amy Su）","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513692"},{"id":100513693,"name":"Winter Beneath","total":100,"priceCny":5448,"albumName":"Winter Beneath","hisData":[5888,5080,5087,5000,5400,5448],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"苏童（Amy Su）","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513693"},{"id":100513392,"name":"暴富有道(蓝)","total":333,"priceCny":15888,"albumName":"茅山财富新福系列","hisData":[16888,16288,15188,14666,13999,15888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"中轴线数字天工","authentication":"该作品拥有中轴线数字天工官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513392"},{"id":100513393,"name":"暴富有道(红)","total":333,"priceCny":13666,"albumName":"茅山财富新福系列","hisData":[16666,15398,13999,14497,13555,13666],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"中轴线数字天工","authentication":"该作品拥有中轴线数字天工官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513393"},{"id":100513394,"name":"暴富有道(黄)","total":333,"priceCny":15999,"albumName":"茅山财富新福系列","hisData":[18620,18220,17777,17400,17500,15999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"中轴线数字天工","authentication":"该作品拥有中轴线数字天工官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100513394"},{"id":100098433,"name":"一星三闪","total":3000,"priceCny":750,"albumName":"“十二天宫”系列","hisData":[650,590,525,710,709.99,750],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098433"},{"id":100098435,"name":"天庭对接","total":3000,"priceCny":750,"albumName":"“十二天宫”系列","hisData":[650,580,500,685,699,750],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098435"},{"id":100098436,"name":"东方红系列","total":3000,"priceCny":826,"albumName":"“十二天宫”系列","hisData":[745,720,580,800,829,826],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098436"},{"id":100098437,"name":"奔月系列","total":3000,"priceCny":748,"albumName":"“十二天宫”系列","hisData":[719,630,598,690,692,748],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098437"},{"id":100098438,"name":"悟空号","total":3000,"priceCny":735,"albumName":"“十二天宫”系列","hisData":[642,569.99,56,490,650,675,735],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098438"},{"id":100098439,"name":"首次载人航天","total":3000,"priceCny":769,"albumName":"“十二天宫”系列","hisData":[658,660,566,699,710,769],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098439"},{"id":100098440,"name":"问天一号","total":3000,"priceCny":850,"albumName":"“十二天宫”系列","hisData":[788,740,655,810,825,850],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098440"},{"id":100098441,"name":"空间站","total":3000,"priceCny":1288,"albumName":"“十二天宫”系列","hisData":[1166,998,1025,1099.8,1099.8,1288],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098441"},{"id":100098442,"name":"风暴系列","total":3000,"priceCny":999,"albumName":"“十二天宫”系列","hisData":[988,988,966,999,998,999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098442"},{"id":100098443,"name":"能源系列","total":3000,"priceCny":1399,"albumName":"“十二天宫”系列","hisData":[1280,1455,1388,1313,1538,1399],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098443"},{"id":100098444,"name":"天通一号","total":3000,"priceCny":899,"albumName":"“十二天宫”系列","hisData":[890,880,886,888,888,899],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098444"},{"id":100098448,"name":"探索系列","total":3000,"priceCny":739.99,"albumName":"“十二天宫”系列","hisData":[645,618.99,61,569,700,730,739.99],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"王泽工作室","authentication":"该作品拥有十二天宫官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100098448"},{"id":100097452,"name":"Magic Girl","total":100,"priceCny":5238,"albumName":"COSMOS","hisData":[4800,4300,3800,4400,4966,5238],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Pancya","authentication":"该作品拥有NFTCOSMOS官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100097452"},{"id":100097453,"name":"Bit Doge","total":100,"priceCny":4288,"albumName":"COSMOS","hisData":[3929,3800,3766,4395,4200,4288],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Pancya","authentication":"该作品拥有NFTCOSMOS官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100097453"},{"id":100090982,"name":"SCREW-未来人2046","total":100,"priceCny":5100,"albumName":"SCREW","hisData":[5400,4700,4088,4999,5000,5100],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"李延","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100090982"},{"id":100090988,"name":"宝宝—大火、小火","total":50,"priceCny":7499,"albumName":"宝宝系列","hisData":[8188,7888,6555.55,7888,8799,7499],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Tei","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100090988"},{"id":100000387,"name":"《平行幻象》","total":33,"priceCny":9999,"albumName":"一汽大众-奥迪33周年纪念数字藏品","hisData":[9999,9999,9999,9999,9999,9999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"奥迪","authentication":"该作品拥有YIKART官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000387"},{"id":100000385,"name":"宝宝—创世","total":50,"priceCny":7488,"albumName":"宝宝系列","hisData":[8333,7500,7200,7000,7699,7488],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Tei","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000385"},{"id":100000386,"name":"《宝可梦H2O》","total":100,"priceCny":4500,"albumName":"宝可梦系列","hisData":[4000,3666,3899,4298,4188,4500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"杨嘎","authentication":"该作品拥有YG加密艺术工作室官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000386"},{"id":100000379,"name":"《精灵圣域-驭灵师》","total":100,"priceCny":5950,"albumName":"精灵圣域-驭灵师","hisData":[5900,5500,3988.88,5950,5866,5950],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"9th Art","authentication":"该作品拥有9th Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000379"},{"id":100000381,"name":"《平行世界行舟1号》","total":100,"priceCny":5118,"albumName":"平行世界","hisData":[5978,5111,4600,5577,5081.81,5118],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"于世涛","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000381"},{"id":100000349,"name":"梦境系列01","total":199,"priceCny":2666,"albumName":"梦境系列","hisData":[2650,2299,1788,2520,2599,2666],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"小白","authentication":"该作品拥有Camus Club官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000349"},{"id":100000374,"name":"多维宇宙谎言03","total":199,"priceCny":2500,"albumName":"多维宇宙谎言","hisData":[2355,2155,2199,2444,2400,2500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"HOUHAORAN（侯浩然）","authentication":"该作品拥有元気星空（METACHI）官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000374"},{"id":100000350,"name":"Rich","total":199,"priceCny":2488,"albumName":"SIJIA","hisData":[2500,2100,1988,2280,2666,2488],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"SIJIA","authentication":"该作品拥有Camus Club官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000350"},{"id":100000352,"name":"仙境","total":199,"priceCny":2588,"albumName":"仙境","hisData":[2800,2280,1900,2540,2588,2588],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Bobliang 梁卫华","authentication":"该作品拥有元気星空（METACHI）官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000352"},{"id":100000358,"name":"无声剧场系列2号","total":199,"priceCny":2550,"albumName":"无声剧场","hisData":[2450,2200,2149,2350,2545,2550],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"徐清","authentication":"该作品拥有元気星空（METACHI）官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000358"},{"id":100000369,"name":"何B仔坐姿","total":199,"priceCny":2500,"albumName":"何B仔系列","hisData":[2180,2266,1750,2359,2609,2500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"骆宗杰","authentication":"该作品拥有TKSX官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000369"},{"id":100000364,"name":"SCREW-创世纪","total":199,"priceCny":2450,"albumName":"SCREW","hisData":[2450,2350,1950,2350,2399,2450],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"李延","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000364"},{"id":100000372,"name":"SCREW-舜跖","total":199,"priceCny":2649,"albumName":"SCREW","hisData":[2499,2050,2050,2399,2488,2649],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"李延","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000372"},{"id":100000366,"name":"Particle Fever No.1","total":199,"priceCny":2445,"albumName":"Particle Fever","hisData":[2356,2199,2108,2222,2388,2445],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Michelle six","authentication":"该作品拥有元気星空（METACHI）官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000366"},{"id":100000367,"name":"1001页-0038","total":199,"priceCny":2876,"albumName":"1001页(1001 Pages)","hisData":[2600,2300,2399,2550,2800,2876],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"余润德","authentication":"该作品拥有元気星空（METACHI）官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000367"},{"id":100000365,"name":"十二支宝宝之龙","total":199,"priceCny":2868,"albumName":"十二支宝宝","hisData":[2750,2100,2000,2599,2850,2868],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Tei","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000365"},{"id":100000373,"name":"十二支宝宝之虎","total":199,"priceCny":2888,"albumName":"十二支宝宝","hisData":[2780,2100,2000,2550,2780,2888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Tei","authentication":"该作品拥有雷鹿文创官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000373"},{"id":100000346,"name":"天宫之手","total":200,"priceCny":4088,"albumName":"一枚以太的奇妙旅程","hisData":[3578,3188,2888.88,3300,3688,4088],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"洛兵","authentication":"该作品拥有熵湾艺术官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000346"},{"id":100000347,"name":"赛博敦煌02","total":200,"priceCny":4100,"albumName":"赛博敦煌","hisData":[3666,3088,2888,3688,3686,4100],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"小白","authentication":"该作品拥有Camus Club官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000347"},{"id":100000344,"name":"iBox-Black Hole","total":100,"priceCny":4800,"albumName":"SIJIA","hisData":[4498,4250,4188.88,4600,4499,4800],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"SIJIA","authentication":"该作品拥有Camus Club官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000344"},{"id":100000345,"name":"《云上涂鸦》","total":100,"priceCny":5388,"albumName":"云上涂鸦","hisData":[5960,6088,4555,5188,5150,5388],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"9th Art","authentication":"该作品拥有9th Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000345"},{"id":100000338,"name":"吴作人《任重道远图》","total":10,"priceCny":38888,"albumName":"荣宝斋当代十大画家","hisData":[38888,36666,38888,38888,38888,38888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"荣宝斋","authentication":"该作品拥有搜云科技官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000338"},{"id":100000337,"name":"叶浅予《延边长鼓舞图》","total":10,"priceCny":29999,"albumName":"荣宝斋当代十大画家","hisData":[35888,35888,29999,29999,29999,29999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"荣宝斋","authentication":"该作品拥有搜云科技官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000337"},{"id":100000336,"name":"张大千《南岳祝融峰图》","total":10,"priceCny":40888,"albumName":"荣宝斋当代十大画家","hisData":[40888,40888,40888,40888,40888,40888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"荣宝斋","authentication":"该作品拥有搜云科技官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000336"},{"id":100000332,"name":"张国荣公益数字藏品-四期","total":2000,"priceCny":3200,"albumName":"张国荣公益数字藏品-四期","hisData":[3333.33,2700,2180,3000,2888,3200],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"厦门任星投资有限公司","authentication":"该作品拥有厦门任星投资有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000332"},{"id":100000331,"name":"张国荣公益数字藏品-三期","total":2000,"priceCny":2917,"albumName":"张国荣公益数字藏品-三期","hisData":[3333,2558,1999,2858,2888,2917],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"厦门任星投资有限公司","authentication":"该作品拥有厦门任星投资有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000331"},{"id":100000330,"name":"张国荣公益数字藏品-二期","total":2000,"priceCny":2900,"albumName":"张国荣公益数字藏品-二期","hisData":[3399,2644,1999,2829,2857,2900],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"厦门任星投资有限公司","authentication":"该作品拥有厦门任星投资有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000330"},{"id":100000322,"name":"张国荣公益数字藏品","total":2000,"priceCny":2888,"albumName":"张国荣公益数字藏品","hisData":[3299,2699,1988,2799,2944,2888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"厦门任星投资有限公司","authentication":"该作品拥有厦门任星投资有限公司官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000322"},{"id":100000275,"name":"《时空旅行者-3》","total":100,"priceCny":5398,"albumName":"时空旅行者系列","hisData":[5300,5299,5179,5050,5450,5398],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"林苒","authentication":"该作品拥有YG加密艺术工作室官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000275"},{"id":100000276,"name":"《时空旅行者-1》","total":100,"priceCny":5299,"albumName":"时空旅行者系列","hisData":[5777,5000,4800,5582,5387,5299],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"林苒","authentication":"该作品拥有YG加密艺术工作室官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000276"},{"id":100000273,"name":"记忆的花园-洋甘菊-清晨","total":100,"priceCny":4888,"albumName":"记忆的花园-洋甘菊-清晨","hisData":[5050,4700,4200,4666,4888,4888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"殷世炎","authentication":"该作品拥有殷世炎官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000273"},{"id":100000274,"name":"记忆的花园-洋甘菊-正午","total":100,"priceCny":5299,"albumName":"记忆的花园-洋甘菊-正午","hisData":[5398,5000,5000,5000,4888,5299],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"殷世炎","authentication":"该作品拥有殷世炎官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000274"},{"id":100000266,"name":"《谎言·冠军》","total":100,"priceCny":5500,"albumName":"之之2021系列","hisData":[6123,5800,4999,4788,5500,5500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"之之","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000266"},{"id":100000267,"name":"《云端·天使》","total":100,"priceCny":5180,"albumName":"之之2021系列","hisData":[5888,5340,3987,5199,4777,5180],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"之之","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000267"},{"id":100000268,"name":"《创世·奔袭》","total":100,"priceCny":4999,"albumName":"之之2021系列","hisData":[5888,5000,4300,4888,4700,4999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"之之","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000268"},{"id":100000264,"name":"Arrive IN Mars","total":100,"priceCny":6000,"albumName":"Arrive IN Mars","hisData":[5999,5099,5000,6499,6100,6000],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"CrazyJN","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000264"},{"id":100000265,"name":"DOGE CAR","total":100,"priceCny":5555,"albumName":"DOGE CAR","hisData":[5888,4999,4700,5208,5288,5555],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"CrazyJN","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000265"},{"id":100000255,"name":"云豹","total":35,"priceCny":10999.99,"albumName":"云豹","hisData":[9999,10666.6,1066,8888.88,11066,11000,10999.99],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"LULU.Z","authentication":"该作品拥有NFT Avatar Lab官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000255"},{"id":100000256,"name":"火吻","total":100,"priceCny":4800,"albumName":"火吻","hisData":[5100,4567,3788,4700,4800,4800],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"周杨","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000256"},{"id":100000257,"name":"悟空","total":100,"priceCny":7333,"albumName":"悟空","hisData":[7800,6555,6300,6500,6666,7333],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Shan Qiao","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000257"},{"id":100000258,"name":"Knight Guard","total":100,"priceCny":5100,"albumName":"Knight Guard","hisData":[5299,4900,4498,4666,5258,5100],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"周杨","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000258"},{"id":100000259,"name":"大闹天宫-孙悟空大战二郎神","total":888,"priceCny":3147,"albumName":"大闹天宫系列","hisData":[2998,2799,2498,2800,2810,3147],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"熵湾 X 上美影","authentication":"该作品拥有熵湾 X 上美影官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000259"},{"id":100000207,"name":"《The Girls-机车少女》","total":80,"priceCny":5588,"albumName":"GGAC","hisData":[5200,4888,4888,4777,4888,5588],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"GGAC","authentication":"该作品拥有GGAC.COM CG艺术创作分享平台官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000207"},{"id":100000208,"name":"《The Girls—福音少女》","total":80,"priceCny":6000,"albumName":"GGAC","hisData":[5400,5000,4500,4600,4900,6000],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"GGAC","authentication":"该作品拥有GGAC.COM CG艺术创作分享平台官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000208"},{"id":100000203,"name":"《启示录-天使战争》","total":30,"priceCny":14999,"albumName":"《圣经-启示录》","hisData":[15555,14444,15555,14999,12999,14999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Charles","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000203"},{"id":100000204,"name":"草莓女孩","total":100,"priceCny":5555,"albumName":"草莓女孩","hisData":[5888,5777,5660,5377,5388,5555],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"青爵","authentication":"该作品拥有青爵-矢量艺术插画官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000204"},{"id":100000205,"name":"粉红色的凝视","total":100,"priceCny":5166,"albumName":"粉红色的凝视","hisData":[5500,4999,4888,5250,5299,5166],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"青爵","authentication":"该作品拥有青爵-矢量艺术插画官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000205"},{"id":100000200,"name":"傅抱石《待细把江山图画》","total":10,"priceCny":33333,"albumName":"荣宝斋当代十大画家","hisData":[36665,31111,34888,33333,33333,33333],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"荣宝斋","authentication":"该作品拥有搜云科技官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000200"},{"id":100000201,"name":"丰收女神-德墨忒尔","total":888,"priceCny":1479,"albumName":"希腊神话系列","hisData":[1545,1350,1166,1366,1400,1479],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000201"},{"id":100000202,"name":"战神-阿瑞斯","total":888,"priceCny":1399,"albumName":"希腊神话系列","hisData":[1488,1348.88,134,1020,1385,1436,1399],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000202"},{"id":100000198,"name":"大闹天宫-孙悟空语录版","total":888,"priceCny":2949,"albumName":"大闹天宫系列","hisData":[2699,2498,2188.88,2488,2988.88,2949],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"熵湾 X 上美影","authentication":"该作品拥有熵湾 X 上美影官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000198"},{"id":100000199,"name":"何B仔卡住了","total":38,"priceCny":8999,"albumName":"何B仔卡住了","hisData":[8666,8000,8500,8500,8199,8999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"骆宗杰","authentication":"该作品拥有TKSX官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000199"},{"id":100000196,"name":"祈祷之手","total":100,"priceCny":7288,"albumName":"祈祷之手","hisData":[6200,5900,5000,5560,5200,7288],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"丁文尧","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000196"},{"id":100000197,"name":"罗威纳犬","total":100,"priceCny":4500,"albumName":"罗威纳犬","hisData":[4000,3666,3333,3900,3950,4500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"丁文尧","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000197"},{"id":100000193,"name":"心动大王（老虎）","total":100,"priceCny":5333,"albumName":"心动系列","hisData":[5500,4800,5200,5111,5200,5333],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"任萌","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000193"},{"id":100000194,"name":"心动牛牛（牛牛）","total":100,"priceCny":5299,"albumName":"心动系列","hisData":[5500,5088,4800,4700,5555,5299],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"任萌","authentication":"该作品拥有So Art官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000194"},{"id":100000187,"name":"巴别塔","total":10000,"priceCny":102,"albumName":"iBox先锋音乐","hisData":[100,94.9,9,90,93.99,94,102],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"灰子","authentication":"该作品拥有大乐musicchain官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000187"},{"id":100000189,"name":"No other name","total":10000,"priceCny":97.6,"albumName":"iBox先锋音乐","hisData":[90,85,75,82,89,97.6],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"张骞","authentication":"该作品拥有大乐musicchain官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000189"},{"id":100000170,"name":"齐白石《贝叶工虫图》","total":10,"priceCny":33388.88,"albumName":"荣宝斋当代十大画家","hisData":[39999,39999,39999,39999,33388.88,33388.88],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"荣宝斋","authentication":"该作品拥有搜云科技官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000170"},{"id":100000122,"name":"“旷世之恋”情侣卡","total":1888,"priceCny":1655,"albumName":"《真 · 三国无双》电影版","hisData":[1649,1495,1429,1680,1732,1655],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Lead Supreme United","authentication":"该作品拥有《真 · 三国无双》电影版官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000122"},{"id":100000129,"name":"Huntress 女猎人","total":100,"priceCny":4600,"albumName":"Huntress 女猎人","hisData":[4199,4000,3799,4600,4480,4600],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"陈敦煌","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000129"},{"id":100000130,"name":"Cyber Girl 赛博女孩","total":100,"priceCny":4896,"albumName":"Cyber Girl 赛博女孩","hisData":[4699,4500,3988,4222,4888,4896],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"陈敦煌","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000130"},{"id":100000131,"name":"Freedom Fighter 自由战士","total":100,"priceCny":4886,"albumName":"Freedom Fighter 自由战士","hisData":[4100,3887,3600,4166,4150,4886],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"陈敦煌","authentication":"Cyber Girl 赛博女孩","link":"https://www.ibox.art/zh-cn/item/?id=100000131"},{"id":100000132,"name":"坠","total":30,"priceCny":12345,"albumName":"坠","hisData":[11999,12000,10000,11000,12888,12345],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"GGAC","authentication":"该作品拥有GGAC.COM CG艺术创作分享平台官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000132"},{"id":100000133,"name":"龙夜·邪马祭祀会","total":30,"priceCny":12888,"albumName":"龙夜·邪马祭祀会","hisData":[15998,13888,12888,14800,11888,12888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"GGAC","authentication":"该作品拥有GGAC.COM CG艺术创作分享平台官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000133"},{"id":100000134,"name":"痴娃娃-东方艺术花园主题-山茶花系列","total":100,"priceCny":4999,"albumName":"痴娃娃-东方艺术花园主题-山茶花系列","hisData":[4999,4499,4049.99,4998,4999,4999],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"刘欣珏","authentication":"该作品拥有刘欣珏官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000134"},{"id":100000135,"name":"时装雕塑-东方艺术花园主题-波普嘴唇系列","total":100,"priceCny":5000,"albumName":"时装雕塑-东方艺术花园主题-波普嘴唇系列","hisData":[5000,4888,3555,4333,5000,5000],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"刘欣珏","authentication":"该作品拥有刘欣珏官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000135"},{"id":100000137,"name":"大闹天宫-土地公公","total":888,"priceCny":1769,"albumName":"大闹天宫系列","hisData":[1650,1399,1222,1689,1822.66,1769],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"熵湾 X 上美影","authentication":"该作品拥有熵湾 X 上美影官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000137"},{"id":100000125,"name":"回眸倾城","total":10000,"priceCny":166,"albumName":"iBox先锋音乐","hisData":[158,158,136,148,149.99,166],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"郑梦瑶","authentication":"该作品拥有大乐musicchain官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000125"},{"id":100000126,"name":"Fool around","total":10000,"priceCny":97,"albumName":"iBox先锋音乐","hisData":[90,86,73.55,82.96,84.99,97],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"MAFIA-叶林涛","authentication":"该作品拥有大乐musicchain官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000126"},{"id":100000127,"name":"芒种","total":10000,"priceCny":100,"albumName":"iBox先锋音乐","hisData":[94.49,86,76,84,86,100],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"李夏","authentication":"该作品拥有大乐musicchain官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000127"},{"id":100000121,"name":"003号古力娜扎","total":1000,"priceCny":1998,"albumName":"iBox十大明星卡 ","hisData":[2050,1699,1800,1950,1992,1998],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Lead Supreme United","authentication":"该作品拥有《真 · 三国无双》电影版官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000121"},{"id":100000119,"name":"天后-赫拉","total":888,"priceCny":1688,"albumName":"希腊神话系列","hisData":[1800,1500,1390,1600,1600,1688],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000119"},{"id":100000120,"name":"GGAC 探索地球起源传说","total":30,"priceCny":18888,"albumName":"GGAC 探索地球起源传说","hisData":[17500,17000,17000,15699,14868,18888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"GGAC","authentication":"该作品拥有GGAC.COM CG艺术创作分享平台官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000120"},{"id":100000112,"name":"爱染明王","total":50,"priceCny":8555,"albumName":"HOTOKEMONO","hisData":[8500,8500,8500,8299,8555,8555],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Tei","authentication":"该作品拥有Tei官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000112"},{"id":100000113,"name":"BUNNY BAR","total":77,"priceCny":6665,"albumName":"BUNNY BAR","hisData":[7188,5998,5300,5312,5998,6665],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"陈镒晗","authentication":"该作品拥有陈镒晗官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000113"},{"id":100000114,"name":"困兽之斗","total":77,"priceCny":7288,"albumName":"困兽之斗","hisData":[7486.6,6885,7777,6543.21,6999,7288],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"陈镒晗","authentication":"该作品拥有陈镒晗官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000114"},{"id":100000117,"name":"Bastet 特别版《时间》","total":99,"priceCny":5500,"albumName":"Bastet 特别版《时间》","hisData":[5600,5000,4800,5555,5500,5500],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"刘皓南","authentication":"该作品拥有刘皓南官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000117"},{"id":100000111,"name":"002号陶喆","total":1000,"priceCny":1785,"albumName":"iBox十大明星卡","hisData":[1620,1499,1450,1788,1797,1785],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"iFans NFT","authentication":"该作品拥有iFans NFT官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000111"},{"id":100000096,"name":"大闹天宫-Q版孙悟空VI","total":888,"priceCny":1799,"albumName":"大闹天宫系列","hisData":[1728,1480,1236,1650,1759,1799],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"熵湾 X 上美影","authentication":"该作品拥有熵湾 X 上美影官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000096"},{"id":100000097,"name":"大闹天宫-Q版孙悟空VII","total":888,"priceCny":1797,"albumName":"大闹天宫系列","hisData":[1700,1488,1220,1668,1840,1797],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"熵湾 X 上美影","authentication":"该作品拥有熵湾 X 上美影官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000097"},{"id":100000098,"name":"001号古天乐","total":1000,"priceCny":1915,"albumName":"iBox十大明星卡","hisData":[1750,1450,1460,1730,1920,1915],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Lead Supreme United","authentication":"该作品拥有iFans NFT官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000098"},{"id":100000099,"name":"海皇-波塞冬","total":888,"priceCny":1430,"albumName":"希腊神话系列","hisData":[1488,1368.88,136,1003,1388,1418,1430],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Ignacio.Z","authentication":"该作品拥有AuctPool NFT Studio官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000099"},{"id":100000102,"name":"囍","total":30,"priceCny":28888,"albumName":"囍","hisData":[23999,23999,23999,28888,28000,28888],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"鱼鱼","authentication":"该作品拥有鱼鱼官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000102"},{"id":100000105,"name":"World-The Challenge","total":100,"priceCny":8000,"albumName":"World- The Challenge","hisData":[8666,8666,8000,8666,8500,8000],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Shan Qiao","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000105"},{"id":100000106,"name":"World-The King","total":100,"priceCny":9999.99,"albumName":"World-The King","hisData":[9888,9500,9500,11666,9999,9999.99],"hisDate":["04-01","04-02","04-03","04-04","04-05","04-06"],"date":"04-01","author":"Shan Qiao","authentication":"该作品拥有M Space官方认证","link":"https://www.ibox.art/zh-cn/item/?id=100000106"}]
+var lineData = [
+  {
+    id: 100513775,
+    hisData: [7430, 6990, 6699, 7338, 7499, 8499],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513757,
+    hisData: [8066, 6999, 6999, 7888, 7500, 8699],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513747,
+    hisData: [706, 588.88, 513, 680, 1169, 1260],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513755,
+    hisData: [7988, 6999, 7080, 7665, 7666, 9333],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513751,
+    hisData: [1488, 1339, 1180, 1444, 1580, 1565],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513749,
+    hisData: [1530, 1399, 1220, 1477, 1566, 1565],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513746,
+    hisData: [5777, 4933, 4150, 5466, 6450, 6500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513743,
+    hisData: [625, 560, 444, 657, 788, 839],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513740,
+    hisData: [1280, 1095, 888, 1299, 1555, 1620],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513739,
+    hisData: [2498, 2199, 1950, 2660, 3286, 3249],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513728,
+    hisData: [410, 386, 370.99, 405, 440, 473.8],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513729,
+    hisData: [6811, 6388, 6100, 5899, 6288, 6700],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513699,
+    hisData: [4500, 4333, 4090, 4555, 7450, 7300],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513691,
+    hisData: [4880, 4450, 4239, 4555, 7488, 7496],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513692,
+    hisData: [5999, 5200, 5100, 5588, 5879, 6888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513693,
+    hisData: [5888, 5080, 5087, 5000, 5400, 5448],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513392,
+    hisData: [16888, 16288, 15188, 14666, 13999, 15888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513393,
+    hisData: [16666, 15398, 13999, 14497, 13555, 13666],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100513394,
+    hisData: [18620, 18220, 17777, 17400, 17500, 15999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098433,
+    hisData: [650, 590, 525, 710, 709.99, 750],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098435,
+    hisData: [650, 580, 500, 685, 699, 750],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098436,
+    hisData: [745, 720, 580, 800, 829, 826],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098437,
+    hisData: [719, 630, 598, 690, 692, 748],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098438,
+    hisData: [642, 569.99, 56, 490, 650, 675, 735],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098439,
+    hisData: [658, 660, 566, 699, 710, 769],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098440,
+    hisData: [788, 740, 655, 810, 825, 850],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098441,
+    hisData: [1166, 998, 1025, 1099.8, 1099.8, 1288],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098442,
+    hisData: [988, 988, 966, 999, 998, 999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098443,
+    hisData: [1280, 1455, 1388, 1313, 1538, 1399],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098444,
+    hisData: [890, 880, 886, 888, 888, 899],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100098448,
+    hisData: [645, 618.99, 61, 569, 700, 730, 739.99],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100097452,
+    hisData: [4800, 4300, 3800, 4400, 4966, 5238],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100097453,
+    hisData: [3929, 3800, 3766, 4395, 4200, 4288],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100090982,
+    hisData: [5400, 4700, 4088, 4999, 5000, 5100],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100090988,
+    hisData: [8188, 7888, 6555.55, 7888, 8799, 7499],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000387,
+    hisData: [9999, 9999, 9999, 9999, 9999, 9999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000385,
+    hisData: [8333, 7500, 7200, 7000, 7699, 7488],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000386,
+    hisData: [4000, 3666, 3899, 4298, 4188, 4500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000379,
+    hisData: [5900, 5500, 3988.88, 5950, 5866, 5950],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000381,
+    hisData: [5978, 5111, 4600, 5577, 5081.81, 5118],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000349,
+    hisData: [2650, 2299, 1788, 2520, 2599, 2666],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000374,
+    hisData: [2355, 2155, 2199, 2444, 2400, 2500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000350,
+    hisData: [2500, 2100, 1988, 2280, 2666, 2488],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000352,
+    hisData: [2800, 2280, 1900, 2540, 2588, 2588],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000358,
+    hisData: [2450, 2200, 2149, 2350, 2545, 2550],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000369,
+    hisData: [2180, 2266, 1750, 2359, 2609, 2500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000364,
+    hisData: [2450, 2350, 1950, 2350, 2399, 2450],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000372,
+    hisData: [2499, 2050, 2050, 2399, 2488, 2649],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000366,
+    hisData: [2356, 2199, 2108, 2222, 2388, 2445],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000367,
+    hisData: [2600, 2300, 2399, 2550, 2800, 2876],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000365,
+    hisData: [2750, 2100, 2000, 2599, 2850, 2868],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000373,
+    hisData: [2780, 2100, 2000, 2550, 2780, 2888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000346,
+    hisData: [3578, 3188, 2888.88, 3300, 3688, 4088],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000347,
+    hisData: [3666, 3088, 2888, 3688, 3686, 4100],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000344,
+    hisData: [4498, 4250, 4188.88, 4600, 4499, 4800],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000345,
+    hisData: [5960, 6088, 4555, 5188, 5150, 5388],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000338,
+    hisData: [38888, 36666, 38888, 38888, 38888, 38888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000337,
+    hisData: [35888, 35888, 29999, 29999, 29999, 29999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000336,
+    hisData: [40888, 40888, 40888, 40888, 40888, 40888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000332,
+    hisData: [3333.33, 2700, 2180, 3000, 2888, 3200],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000331,
+    hisData: [3333, 2558, 1999, 2858, 2888, 2917],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000330,
+    hisData: [3399, 2644, 1999, 2829, 2857, 2900],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000322,
+    hisData: [3299, 2699, 1988, 2799, 2944, 2888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000275,
+    hisData: [5300, 5299, 5179, 5050, 5450, 5398],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000276,
+    hisData: [5777, 5000, 4800, 5582, 5387, 5299],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000273,
+    hisData: [5050, 4700, 4200, 4666, 4888, 4888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000274,
+    hisData: [5398, 5000, 5000, 5000, 4888, 5299],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000266,
+    hisData: [6123, 5800, 4999, 4788, 5500, 5500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000267,
+    hisData: [5888, 5340, 3987, 5199, 4777, 5180],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000268,
+    hisData: [5888, 5000, 4300, 4888, 4700, 4999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000264,
+    hisData: [5999, 5099, 5000, 6499, 6100, 6000],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000265,
+    hisData: [5888, 4999, 4700, 5208, 5288, 5555],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000255,
+    hisData: [9999, 10666.6, 1066, 8888.88, 11066, 11000, 10999.99],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000256,
+    hisData: [5100, 4567, 3788, 4700, 4800, 4800],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000257,
+    hisData: [7800, 6555, 6300, 6500, 6666, 7333],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000258,
+    hisData: [5299, 4900, 4498, 4666, 5258, 5100],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000259,
+    hisData: [2998, 2799, 2498, 2800, 2810, 3147],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000207,
+    hisData: [5200, 4888, 4888, 4777, 4888, 5588],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000208,
+    hisData: [5400, 5000, 4500, 4600, 4900, 6000],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000203,
+    hisData: [15555, 14444, 15555, 14999, 12999, 14999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000204,
+    hisData: [5888, 5777, 5660, 5377, 5388, 5555],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000205,
+    hisData: [5500, 4999, 4888, 5250, 5299, 5166],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000200,
+    hisData: [36665, 31111, 34888, 33333, 33333, 33333],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000201,
+    hisData: [1545, 1350, 1166, 1366, 1400, 1479],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000202,
+    hisData: [1488, 1348.88, 134, 1020, 1385, 1436, 1399],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000198,
+    hisData: [2699, 2498, 2188.88, 2488, 2988.88, 2949],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000199,
+    hisData: [8666, 8000, 8500, 8500, 8199, 8999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000196,
+    hisData: [6200, 5900, 5000, 5560, 5200, 7288],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000197,
+    hisData: [4000, 3666, 3333, 3900, 3950, 4500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000193,
+    hisData: [5500, 4800, 5200, 5111, 5200, 5333],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000194,
+    hisData: [5500, 5088, 4800, 4700, 5555, 5299],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000187,
+    hisData: [100, 94.9, 9, 90, 93.99, 94, 102],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000189,
+    hisData: [90, 85, 75, 82, 89, 97.6],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000170,
+    hisData: [39999, 39999, 39999, 39999, 33388.88, 33388.88],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000122,
+    hisData: [1649, 1495, 1429, 1680, 1732, 1655],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000129,
+    hisData: [4199, 4000, 3799, 4600, 4480, 4600],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000130,
+    hisData: [4699, 4500, 3988, 4222, 4888, 4896],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000131,
+    hisData: [4100, 3887, 3600, 4166, 4150, 4886],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000132,
+    hisData: [11999, 12000, 10000, 11000, 12888, 12345],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000133,
+    hisData: [15998, 13888, 12888, 14800, 11888, 12888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000134,
+    hisData: [4999, 4499, 4049.99, 4998, 4999, 4999],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000135,
+    hisData: [5000, 4888, 3555, 4333, 5000, 5000],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000137,
+    hisData: [1650, 1399, 1222, 1689, 1822.66, 1769],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000125,
+    hisData: [158, 158, 136, 148, 149.99, 166],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000126,
+    hisData: [90, 86, 73.55, 82.96, 84.99, 97],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000127,
+    hisData: [94.49, 86, 76, 84, 86, 100],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000121,
+    hisData: [2050, 1699, 1800, 1950, 1992, 1998],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000119,
+    hisData: [1800, 1500, 1390, 1600, 1600, 1688],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000120,
+    hisData: [17500, 17000, 17000, 15699, 14868, 18888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000112,
+    hisData: [8500, 8500, 8500, 8299, 8555, 8555],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000113,
+    hisData: [7188, 5998, 5300, 5312, 5998, 6665],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000114,
+    hisData: [7486.6, 6885, 7777, 6543.21, 6999, 7288],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000117,
+    hisData: [5600, 5000, 4800, 5555, 5500, 5500],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000111,
+    hisData: [1620, 1499, 1450, 1788, 1797, 1785],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000096,
+    hisData: [1728, 1480, 1236, 1650, 1759, 1799],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000097,
+    hisData: [1700, 1488, 1220, 1668, 1840, 1797],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000098,
+    hisData: [1750, 1450, 1460, 1730, 1920, 1915],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000099,
+    hisData: [1488, 1368.88, 136, 1003, 1388, 1418, 1430],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000102,
+    hisData: [23999, 23999, 23999, 28888, 28000, 28888],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000105,
+    hisData: [8666, 8666, 8000, 8666, 8500, 8000],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+  {
+    id: 100000106,
+    hisData: [9888, 9500, 9500, 11666, 9999, 9999.99],
+    hisDate: [
+      1648742400000, 1648828800000, 1648915200000, 1649001600000, 1649088000000,
+      1649174400000,
+    ],
+  },
+];

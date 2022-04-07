@@ -12,6 +12,8 @@
     <div id="container" style="height: 100%"></div>
 
     <script src="./data/html-data.js"></script>
+    <script src="../public/name-html.js"></script>
+    <script src="../public/moment.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/echarts.min.js"></script>
     <!-- Uncomment this line if you want to dataTool extension
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/extension/dataTool.min.js"></script>
@@ -42,20 +44,46 @@
         var selected = {}
         var x = []
 
+        // lineData.forEach((item, index) => {
+        //     let n = item.hi
+        //     legendData.push(item.name)
+        //     if (index > 10) {
+        //         selected[item.name] = false
+        //     }
+        //     x = item.hisDate
+        //     seriesData.push({
+        //         name: item.name,
+        //         type: 'line',
+        //         // stack: 'Total',
+        //         data: item.hisData
+        //     })
+        // });
+
         lineData.forEach((item, index) => {
-            let n = item.hi
-            legendData.push(item.name)
-            if (index > 10) {
-                selected[item.name] = false
+            for (let i = 0; i < nameData.length; i++) {
+                const nameItem = nameData[i];
+                if (item.id === nameItem.id) {
+                    legendData.push(nameItem.name)
+                    if (index > 10) {
+                        selected[nameItem.name] = false
+                    }
+                    x = item.hisDate.map(t => {
+                        return moment(t).format("MM-DD")
+                    })
+
+                    seriesData.push({
+                        name: nameItem.name,
+                        type: 'line',
+                        data: item.hisData
+                    })
+                    break;
+                }
             }
-            x = item.hisDate
-            seriesData.push({
-                name: item.name,
-                type: 'line',
-                // stack: 'Total',
-                data: item.hisData
-            })
+
+
+
         });
+
 
 
         option = {
