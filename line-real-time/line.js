@@ -2199,7 +2199,7 @@ shangyici = shangyici.map((item) => {
 var buffer = xlsx.build(formatData(resultData));
 
 fs.writeFile(
-    `./xlsx/ibox实时价格${moment().format("(MM_DD_hh_mm)")}.xlsx`,
+    `./xlsx/ibox实时价格${moment().format("(MM_DD_HH_mm)")}.xlsx`,
     buffer,
     (err) => {
         if (err) {
@@ -2210,11 +2210,11 @@ fs.writeFile(
 
 fs.writeFile(
     "./line-real-time/data/html-data.js",
-    "var lineData = " + JSON.stringify(shangyici)
+    "var lineData = " + JSON.stringify(shangyici), () => {}
 );
 fs.writeFile(
     "./line-real-time/data/js-data.js",
-    "module.exports = { lineData:" + JSON.stringify(shangyici) + "}"
+    "module.exports = { lineData:" + JSON.stringify(shangyici) + "}", () => {}
 );
 
 function formatData(params) {
