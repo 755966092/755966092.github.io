@@ -6,9 +6,22 @@
 
 <head>
     <meta charset="utf-8">
+    <style>
+        .sel {
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body style="height: 100%; margin: 0">
+    <div class="sel">
+        <select name="name" id="id" onchange="selDay(value)">
+            <option value="7">最近7条数据</option>
+            <option value="14">最近14条数据</option>
+            <option value="30">最近30条数据</option>
+            <option value="0">所有数据</option>
+        </select>
+    </div>
     <div id="container" style="height: 100%"></div>
 
     <script src="./data/html-data.js"></script>
@@ -37,6 +50,7 @@
         var dom = document.getElementById("container");
         var myChart = echarts.init(dom);
         var app = {};
+        var limit = 7
 
         var option;
         var legendData = [];
@@ -44,98 +58,100 @@
         var selected = {}
         var x = []
 
-        lineData.forEach((item, index) => {
-            for (let i = 0; i < nameData.length; i++) {
-                const nameItem = nameData[i];
-                if (item.id === nameItem.id) {
-                    legendData.push(nameItem.name)
-                    if (index > 10) {
-                        selected[nameItem.name] = false
-                    }
-                    x = item.hisDate.map(t => {
-                        return moment(t).format("MM-DD HH:mm")
-                    })
-
-                    seriesData.push({
-                        name: nameItem.name,
-                        type: 'line',
-                        data: item.hisData
-                    })
-                    break;
-                }
+        function selDay(d) {
+            legendData = []
+            seriesData = []
+            if (d > lineData[0].hisData.length) {
+                d = lineData[0].hisData.length
+            } else if (d == 0) {
+                d = lineData[0].hisData.length
             }
+            limit = d;
+            initChart()
+        }
+        initChart()
 
+        function initChart() {
+            lineData.forEach((item, index) => {
+                let len = item.hisDate.length - limit;
+                let len2 = item.hisDate.length
 
+                for (let i = 0; i < nameData.length; i++) {
+                    const nameItem = nameData[i];
+                    if (item.id === nameItem.id) {
+                        legendData.push(nameItem.name)
+                        if (index > 10) {
+                            // 默认显示前十个数据
+                            selected[nameItem.name] = false
+                        }
+                        // 数组倒数第limit个数据
+                        x = item.hisDate.map((t, i) => {
+                            return moment(t).format("MM-DD HH:mm")
+                        })
+                        x = x.slice(len, len2)
 
-        });
-
-
-        option = {
-            title: {
-                text: '历史价格曲线'
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            legend: {
-                type: 'scroll',
-                orient: 'vertical',
-                right: 10,
-                top: 20,
-                bottom: 20,
-                data: legendData,
-                selected
-            },
-            grid: {
-                left: '3%',
-                right: '20%',
-                bottom: '3%',
-                containLabel: true
-            },
-            toolbox: {
-                feature: {
-                    saveAsImage: {}
+                        seriesData.push({
+                            name: nameItem.name,
+                            type: 'line',
+                            smooth: true,
+                            // symbol: 'none',
+                            showSymbol: false,
+                            // step: 'start',
+                            data: item.hisData.slice(len, len2)
+                        })
+                        break;
+                    }
                 }
-            },
-            xAxis: {
-                type: 'category',
-                boundaryGap: false,
-                data: x
-            },
-            yAxis: {
-                type: 'value'
-            },
-            series: seriesData,
-            // series: [{
-            //     name: 'Email',
-            //     type: 'line',
-            //     stack: 'Total',
-            //     data: [120, 132, 101, 134, 90, 230, 210]
-            // }, {
-            //     name: 'Union Ads',
-            //     type: 'line',
-            //     stack: 'Total',
-            //     data: [220, 182, 191, 234, 290, 330, 310]
-            // }, {
-            //     name: 'Video Ads',
-            //     type: 'line',
-            //     stack: 'Total',
-            //     data: [150, 232, 201, 154, 190, 330, 410]
-            // }, {
-            //     name: 'Direct',
-            //     type: 'line',
-            //     stack: 'Total',
-            //     data: [320, 332, 301, 334, 390, 330, 320]
-            // }, {
-            //     name: 'Search Engine',
-            //     type: 'line',
-            //     stack: 'Total',
-            //     data: [820, 932, 901, 934, 1290, 1330, 1320]
-            // }]
-        };
+            });
 
-        if (option && typeof option === 'object') {
-            myChart.setOption(option);
+
+            option = {
+                title: {
+                    text: '历史价格曲线'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    type: 'scroll',
+                    orient: 'vertical',
+                    right: 10,
+                    top: 20,
+                    bottom: 20,
+                    data: legendData,
+                    selected
+                },
+                grid: {
+                    left: '3%',
+                    right: '20%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: x
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: seriesData,
+                // series: [{
+                //     name: 'Email',
+                //     type: 'line',
+                //     stack: 'Total',
+                //     data: [120, 132, 101, 134, 90, 230, 210]
+
+            };
+
+            if (option && typeof option === 'object') {
+                myChart.setOption(option);
+            }
         }
     </script>
 </body>
