@@ -2,6 +2,16 @@
 
 var nameData = [
   {
+    id: 100513786,
+    name: "古龙今韵",
+    total: 1000,
+    albumName: "齐兴华2022数字藏品",
+    author: "齐兴华",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513786  ",
+    authentication: "该作品拥有Magicbox官方认证",
+    number: 124,
+  },
+  {
     id: 100513785,
     name: "魏征斩龙王",
     total: 2000,

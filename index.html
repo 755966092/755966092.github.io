@@ -2,29 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container a {
+            margin: 20px;
+        }
+        
+        .container button {
+            width: 100px;
+            height: 61px
+        }
+    </style>
 </head>
 
 <body>
-    神秘隐藏款
-    <div>伊爱娃</div>
-    <div>佛里奥索</div>
-    <div>贝贝</div>
-    <div>普普拉</div>
-    <div>拉万达</div>
-    <div>布兰卡</div>
-    <div>紫月</div>
-    <div>橙日</div>
-    <div>蓝日</div>
-    <div>昂蒂娜</div>
-    <div>维洛</div>
-    <div>艾斯波列塔</div>
-
-    <a href="./line/line-stack.html">每日曲线</a>
-    <a href="./line-real-time/line-stack.html">实时曲线</a>
+    <div class="container">
+        <a href="./line/line-stack.html"><button>每日曲线</button></a>
+        <a href="./line-real-time/line-stack.html"><button>实时曲线</button></a>
+    </div>
 </body>
 
 </html>
