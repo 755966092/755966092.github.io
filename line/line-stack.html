@@ -8,7 +8,15 @@
     <meta charset="utf-8">
     <style>
         .sel {
-            padding: 15px;
+            padding-left: 10px;
+            /* background: #ff0; */
+            height: 5%;
+            display: flex;
+            align-items: center;
+        }
+        
+        #container {
+            height: 95%;
         }
     </style>
 </head>
@@ -22,7 +30,7 @@
             <option value="0">所有数据</option>
         </select>
     </div>
-    <div id="container" style="height: 100%"></div>
+    <div id="container"></div>
 
     <script src="./data/html-data.js"></script>
     <script src="../public/name-html.js"></script>
@@ -96,6 +104,10 @@
                         if (index > 10) {
                             selected[nameItem.name] = false
                         }
+                        // 不显示赛博老鼠
+                        if (item.id == 100513784) {
+                            selected[nameItem.name] = false
+                        }
                         x = item.hisDate.map(t => {
                             return moment(t).format("MM-DD")
                         })
@@ -129,15 +141,15 @@
                     type: 'scroll',
                     orient: 'vertical',
                     right: 10,
-                    top: 20,
+                    // top: 20,
                     bottom: 20,
                     data: legendData,
                     selected
                 },
                 grid: {
-                    left: '3%',
-                    right: '20%',
-                    bottom: '3%',
+                    left: "2%",
+                    right: 300,
+                    bottom: '2%',
                     containLabel: true
                 },
                 toolbox: {
