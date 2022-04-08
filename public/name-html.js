@@ -2,6 +2,16 @@
 
 var nameData = [
   {
+    id: 100513788,
+    name: "窦府巷选婿",
+    total: 888,
+    albumName: "长安往事",
+    author: "张肉丸",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513788",
+    authentication: "该作品拥有MagicBox官方认证",
+    number: 125,
+  },
+  {
     id: 100513786,
     name: "古龙今韵",
     total: 1000,
