@@ -10,6 +10,7 @@ module.exports = {
     this.c = new Crawler({
       // 超时时间
       timeout: config.crawler.timeout,
+      // jQuery: false,
       // 失败重试次数
       retries: config.crawler.retries,
       // 失败重试等待时间
