@@ -26,7 +26,7 @@ var headers = {
   "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
   "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
   "ib-platform-type": "web",
-  "ib-trans-id": "55361d7c8c614c8daa9bf14b036569fc",
+  "ib-trans-id": "32dfe5bec2b44e0d9598ffa0fba34bf7",
   "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
   "sec-ch-ua":
     '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
@@ -36,7 +36,7 @@ var headers = {
   "sec-fetch-mode": "cors",
   "sec-fetch-site": "same-site",
   cookie:
-    "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_tc=7ca5d59c16494702431206938e010b3cbef0159eba7a47d18b8997233a; acw_sc__v3=6250ef324f51f80cf1ffabc83a79fc08c9b06709; ssxmod_itna=eqAx9DgDy0KGq4BPOe5K4+AKDOWdqaeWFDl=DWTeGzDAxn40iDtPxTBDDTWvzH31tW73YGOjli531xrEnmq4K=ch3XtrDneG0DQKGmDBKDSDWKD9IeOlOnDixGWDbxDYGxY5GnDQykDWEp1DDP8DW5scx0rB2PD0g+zzpAxtcF8yoIHDBbeK6nvrGpqrm43K=DeeAwr7nwq63px3BDEs80PKOpNFY8XSQBDSWhYZQGDD; ssxmod_itna2=eqAx9DgDy0KGq4BPOe5K4+AKDOWdqaeWD6azxDqi=DlEiBDjby30QRLqLEe6qRDn4i5Vebja3O3a7CAQeoH3LARvPxfjSn68=SaERa/SQcI=seB98cWq6QQ=8CX3F55ozfXFy9kOXlqfF0ho4pxAA3WIIDerk/3vYsdLxLeLcUW3XnQjZleTqZQ3iwjLZfmnE8fWGifWpi3aED+agQScc+Pa1Ma9zxuHzqI7OR7Twacas3ZEGx+5PbEpR3LoC3LAfyqMZWqv+8dkBmxC9AOXBQHZnrXY9sy1R5H6R+f68EKZxIK5Gzusq3G8qrMOkrEb=2aY88aRPzRqrShDMTTEKbgoYAeD7jtQDkioH2Nci4A6wsAP5753iqYQIsiea8QHED3oKkQqibP47qHY+CGuRPv8+bO7GeWU=0YPDb78Wm+KMBhtWWPCq8mhmU4jWLL9hjSDY2X1fmt7Dp7qLRaRbwu+YbDGcDG7qYo7i80jqao6cn5qixa2D+aeNem+PXE0q3Wpo2xW8Pj85cZ4jfqYAhzGOLDhoYoAEEz0x4D=",
+    "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_tc=7ca5d59516494794022865390e3c535b75649854b3dabd2e9bd7b62951; acw_sc__v2=62510eeac19f29c4d7ba8540c81a8bdc65b9a172; acw_sc__v3=62511220496efdaa418488dda015242ef8a4fff7; ssxmod_itna2=eqjxyDcDgDn0wrxlSodjKD5DQDOSiekbseD6ObnED0y0DRD03DuY3ujOj2UoMNYTXsRS0u50xqxnRjGUmcWKeAdE=pDTvKfzpfXp10Fa2BOduQpMc0zu3UoqcjGq8t7qwHIXEHUdpkoeUwAQR3jAl4xIeqKI3MoxwfGg8+GeTLDFmQU3NTt=pbRYqQN5re03OuX=vxAVtuEq113hi8f=RS9FUpKKn8jkEb3Gj1REFWnKgb7INFThyApxZOxFUeAj4+Y=50L8OoI+KuYUsqk06ggybdkHeL7F3qAPZIkUAKll1e/gAZLM=ey1PsBdSiewY0EiqPbqK4KvjxpY3OE0hZN12=eli+0DwajtA0QlLzE4P+GSZQvaiKbjEQGizLPxmGPie6pF=PZYvK1A/Pfd2fkFElQAh1oixd27fqaIm93gCEw+q+FqZYIzUELjjCSteZ368T4fKTDG2SD=zhdlr4KeqC7rbLbz2d2DtFxtYiZbRKRe=bu5jhdCRDSM4Tq4nKijhT/LQY0D8x1ZKmNlWSDqD08DijwAHZS48jxxD===; ssxmod_itna=Yqfx0QKCuD2nDXDnekDkmGCmDCiGOFYWGfDBLhD4iNDnD8x7YDvGzMQGb3QBWQNlEmPNAQCDawwIBYgwExNuox4GIDeKG2DmeDyDi5GRD09eYzPNKD3Dm4i3DDOdDgDmKGgWqGff2xDc7DWy10x0ru1PD0cb1OrAPYhKORcaFDB4eh7bYimuDCDxxAlrqCjhxsGhtCm8TFAD5GK+PHlrWoWbvg9GDD==",
   Referer: "https://www.ibox.art/",
   "Referrer-Policy": "strict-origin-when-cross-origin",
 };
@@ -52,8 +52,16 @@ crawler.initCrawler({ headers }, async (res, b) => {
   page += 1;
 
   if (resultData.length > 0) {
-    await sleep(Math.floor(Math.random() * (15000 - 10000 + 1) + 10000));
-    console.log("当前页:" + page + ",当前藏品:" + data[0].gName);
+    let ranNum = Math.floor(Math.random() * (15000 - 7000 + 1) + 7000);
+    await sleep(ranNum);
+    console.log(
+      "间隔时间: " +
+        ranNum +
+        ",当前页:" +
+        page +
+        ",当前藏品:" +
+        resultData[0].gName
+    );
     crawler.c.queue(
       `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`
     );
@@ -61,7 +69,7 @@ crawler.initCrawler({ headers }, async (res, b) => {
     // 处理数据,请求下一个
     for (let i = 0; i < data.length; i++) {
       const ele = data[i];
-      if (ele.gStatus == 2) {
+      if (ele.gStatus == 2 && arr[arrNum] == ele.albumId) {
         resultObj[ele.gName] = ele.gNum - 1;
         break;
       }
@@ -72,15 +80,19 @@ crawler.initCrawler({ headers }, async (res, b) => {
       "var lineData = " + JSON.stringify(data) + JSON.stringify(resultObj),
       () => {}
     );
+    fs.writeFile(
+      `./src/data/d2ata-${arr[arrNum]}.js`,
+      "var lineData = " + JSON.stringify(resultObj),
+      () => {}
+    );
 
     if (arrNum == 12) {
       console.log("结束...");
-      console.log(resultObj);
       process.exit(1);
     }
     arrNum += 1;
     page = 1;
-    await sleep(Math.floor(Math.random() * (13000 - 8000 + 1) + 5000));
+    await sleep(Math.floor(Math.random() * (13000 - 8000 + 1) + 8000));
 
     crawler.c.queue(
       `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`
