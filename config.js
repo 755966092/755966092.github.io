@@ -6,6 +6,7 @@ module.exports = {
     crawler: {
         // 超时时间
         timeout: 10000000,
+        jQuery: false,
         // 失败重试次数
         retries: 10,
         // 失败重试等待时间

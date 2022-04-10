@@ -72,9 +72,10 @@
             if (d > lineData[0].hisData.length) {
                 d = lineData[0].hisData.length
             } else if (d == 0) {
-                d = lineData[0].hisData.length
+                d = lineData[0].hisDate.length
             }
             limit = d;
+            console.log('limit: ', limit);
             initChart()
         }
         initChart()
