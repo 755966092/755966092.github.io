@@ -83,6 +83,8 @@
         function initChart() {
             lineData.forEach((item, index) => {
                 let len = item.hisDate.length - limit;
+                console.log('limit: ', limit);
+                console.log('item.hisDate.length: ', item.hisDate.length);
                 let len2 = item.hisDate.length
 
                 for (let i = 0; i < nameData.length; i++) {
