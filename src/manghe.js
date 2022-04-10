@@ -10,6 +10,8 @@ var resultData = {};
 let page = 1;
 let arrNum = 0;
 let resultObj = {};
+let resultPic = {};
+let timeNum = 0;
 var arr = [
   100513759, 100513761, 100513762, 100513763, 100513764, 100513765, 100513766,
   100513767, 100513768, 100513769, 100513770, 100513771,
@@ -53,6 +55,7 @@ crawler.initCrawler({ headers }, async (res, b) => {
 
   if (resultData.length > 0) {
     let ranNum = Math.floor(Math.random() * (15000 - 7000 + 1) + 7000);
+    timeNum += ranNum / 1000;
     await sleep(ranNum);
     console.log(
       "间隔时间: " +
@@ -69,6 +72,16 @@ crawler.initCrawler({ headers }, async (res, b) => {
     // 处理数据,请求下一个
     for (let i = 0; i < data.length; i++) {
       const ele = data[i];
+      // gStatus; 2 未開  1 未寄售  6  正在寄售
+      if (ele.gStatus == 6 && arr[arrNum] == ele.albumId) {
+        if (resultPic[ele.gName]) {
+          if (ele.priceCny < resultPic[ele.gName]) {
+            resultPic[ele.gName] = ele.priceCny;
+          }
+        } else {
+          resultPic[ele.gName] = ele.priceCny;
+        }
+      }
       if (ele.gStatus == 2 && arr[arrNum] == ele.albumId) {
         resultObj[ele.gName] = ele.gNum - 1;
         break;
@@ -81,18 +94,32 @@ crawler.initCrawler({ headers }, async (res, b) => {
       () => {}
     );
     fs.writeFile(
-      `./src/data/d2ata-${arr[arrNum]}.js`,
+      `./src/data/num-${arr[arrNum]}.js`,
       "var lineData = " + JSON.stringify(resultObj),
+      () => {}
+    );
+    fs.writeFile(
+      `./src/data/price-${arr[arrNum]}.js`,
+      "var lineData = " + JSON.stringify(resultPic),
       () => {}
     );
 
     if (arrNum == 12) {
+      // 计算
+      fs.writeFile(
+        `./src/data/time-${arr[arrNum]}.js`,
+        "总耗时: " + timeNum/1000,
+        () => {}
+      );
+
       console.log("结束...");
       process.exit(1);
     }
     arrNum += 1;
     page = 1;
-    await sleep(Math.floor(Math.random() * (13000 - 8000 + 1) + 8000));
+    let timeLin2 = Math.floor(Math.random() * (13000 - 8000 + 1) + 8000);
+    timeNum += timeLin2 / 1000;
+    await sleep(timeLin2);
 
     crawler.c.queue(
       `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`
