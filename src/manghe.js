@@ -111,6 +111,7 @@ crawler.initCrawler({ headers }, async (res, b) => {
         "总耗时: " + timeNum/1000,
         () => {}
       );
+      sleep(3000)
 
       console.log("结束...");
       process.exit(1);
