@@ -2219,7 +2219,7 @@ fs.writeFile(
   "./line-real-time/data/js-data.js",
   `var time = ${JSON.stringify(
     jsData.time
-  )}; module.exports = { lineData: ${JSON.stringify(shangyici)}}`,
+  )}; module.exports = { time:time,lineData: ${JSON.stringify(shangyici)}}`,
   () => {}
 );
 
