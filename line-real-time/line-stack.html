@@ -72,21 +72,22 @@
             if (d > lineData[0].hisData.length) {
                 d = lineData[0].hisData.length
             } else if (d == 0) {
-                d = lineData[0].hisDate.length
+                d = time.length
             }
             limit = d;
-            console.log('limit: ', limit);
             initChart()
         }
         initChart()
 
         function initChart() {
-            lineData.forEach((item, index) => {
-                let len = item.hisDate.length - limit;
-                console.log('limit: ', limit);
-                console.log('item.hisDate.length: ', item.hisDate.length);
-                let len2 = item.hisDate.length
+            let len = time.length - limit;
+            let len2 = time.length
 
+            x = time.map((t, i) => {
+                return moment(t).format("MM-DD HH:mm")
+            })
+            x = x.slice(len, len2)
+            lineData.forEach((item, index) => {
                 for (let i = 0; i < nameData.length; i++) {
                     const nameItem = nameData[i];
                     if (item.id === nameItem.id) {
@@ -100,10 +101,7 @@
                             selected[nameItem.name] = false
                         }
                         // 数组倒数第limit个数据
-                        x = item.hisDate.map((t, i) => {
-                            return moment(t).format("MM-DD HH:mm")
-                        })
-                        x = x.slice(len, len2)
+
 
                         seriesData.push({
                             name: nameItem.name,
