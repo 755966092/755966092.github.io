@@ -31,7 +31,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6809",
+        priceCny: "6887",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -50,7 +50,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6818",
+        priceCny: "6870",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -69,7 +69,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6778",
+        priceCny: "6850",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -107,7 +107,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3210",
+        priceCny: "3166",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -126,7 +126,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3099",
+        priceCny: "3050",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -145,7 +145,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1600",
+        priceCny: "1638",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -183,7 +183,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "12980",
+        priceCny: "12886",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -202,7 +202,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "13666",
+        priceCny: "13650",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -221,7 +221,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "864",
+        priceCny: "899",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -240,7 +240,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "14999",
+        priceCny: "14987",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -259,7 +259,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1875",
+        priceCny: "1839",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -278,7 +278,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1877",
+        priceCny: "1850",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -297,7 +297,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "7288",
+        priceCny: "7188",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -316,7 +316,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "700",
+        priceCny: "780",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -335,7 +335,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1999",
+        priceCny: "2087",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -354,7 +354,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4050",
+        priceCny: "4088",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -392,7 +392,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "7499",
+        priceCny: "7498",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -411,7 +411,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6187",
+        priceCny: "5888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -430,7 +430,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5999",
+        priceCny: "6088",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -449,7 +449,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "9999",
+        priceCny: "8888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -468,7 +468,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "10101",
+        priceCny: "8444",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -487,7 +487,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "19688",
+        priceCny: "19888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -544,7 +544,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "985",
+        priceCny: "970",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -563,7 +563,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "942",
+        priceCny: "899",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -582,7 +582,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1610",
+        priceCny: "1488",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -601,7 +601,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "935",
+        priceCny: "899.99",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -620,7 +620,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "889",
+        priceCny: "887",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -639,7 +639,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "920",
+        priceCny: "945",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -658,7 +658,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1097",
+        priceCny: "1088",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -677,7 +677,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1286",
+        priceCny: "1199",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -715,7 +715,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1478",
+        priceCny: "1497",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -734,7 +734,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1328",
+        priceCny: "1300",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -753,7 +753,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "995",
+        priceCny: "989",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -772,7 +772,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6333",
+        priceCny: "6200",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -791,7 +791,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5100",
+        priceCny: "5173",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -810,7 +810,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "9979.99",
+        priceCny: "7300",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -829,7 +829,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "8666",
+        priceCny: "8660",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -848,7 +848,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "15999",
+        priceCny: "16888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -886,7 +886,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "8580",
+        priceCny: "9380",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -905,7 +905,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5000",
+        priceCny: "4890",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -924,7 +924,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "9870",
+        priceCny: "7799",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -943,7 +943,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6599",
+        priceCny: "7188",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -962,7 +962,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3499",
+        priceCny: "3880",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -981,7 +981,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3315",
+        priceCny: "3799",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1000,7 +1000,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3288",
+        priceCny: "4180",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1019,7 +1019,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3688",
+        priceCny: "3888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1038,7 +1038,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3620",
+        priceCny: "3665",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1057,7 +1057,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4444",
+        priceCny: "4899",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1076,7 +1076,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "9909",
+        priceCny: "6999",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1095,7 +1095,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4760",
+        priceCny: "4666.66",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1114,7 +1114,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3388",
+        priceCny: "4500",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1133,7 +1133,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3788",
+        priceCny: "4200",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1152,7 +1152,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3666.66",
+        priceCny: "4099",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1171,7 +1171,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3550",
+        priceCny: "4298",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1209,7 +1209,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4988",
+        priceCny: "4860",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1228,7 +1228,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5388",
+        priceCny: "5499",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1247,7 +1247,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6288",
+        priceCny: "6999",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1285,7 +1285,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3000",
+        priceCny: "3000.88",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1304,7 +1304,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3066",
+        priceCny: "2930",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1323,7 +1323,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3100",
+        priceCny: "3094",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1342,7 +1342,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5800",
+        priceCny: "5787",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1361,7 +1361,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5899",
+        priceCny: "5774",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1380,7 +1380,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5300",
+        priceCny: "5666",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1399,7 +1399,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5280",
+        priceCny: "5688",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1437,7 +1437,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5800",
+        priceCny: "6300",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1456,7 +1456,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5900",
+        priceCny: "6518",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1475,7 +1475,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6990",
+        priceCny: "6599",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1494,7 +1494,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6998.99",
+        priceCny: "6888",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1513,7 +1513,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "11998",
+        priceCny: "11999",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1532,7 +1532,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5555",
+        priceCny: "6486",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1551,7 +1551,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "7777",
+        priceCny: "8555",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1570,7 +1570,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5750",
+        priceCny: "5740",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1589,7 +1589,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3799",
+        priceCny: "3728",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1608,7 +1608,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5888",
+        priceCny: "5887",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1627,7 +1627,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5300",
+        priceCny: "5600",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1646,7 +1646,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "15555",
+        priceCny: "15000",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1665,7 +1665,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5800",
+        priceCny: "5998",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1684,7 +1684,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6363",
+        priceCny: "6555",
         priceUnit: "",
         sellLimit: 0,
         thumbPic:
@@ -1703,7 +1703,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1700",
+        priceCny: "1780",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1722,7 +1722,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1749",
+        priceCny: "1797.38",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1741,7 +1741,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "3900",
+        priceCny: "3750",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1779,7 +1779,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6999",
+        priceCny: "7390",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1798,7 +1798,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5757",
+        priceCny: "5600",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1817,7 +1817,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5518",
+        priceCny: "5510",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1836,7 +1836,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5677",
+        priceCny: "5670",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1855,7 +1855,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "563",
+        priceCny: "645",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1874,7 +1874,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "220",
+        priceCny: "276",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1893,7 +1893,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1850",
+        priceCny: "1840",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1912,7 +1912,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4877",
+        priceCny: "4868.68",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -1931,7 +1931,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "4599",
+        priceCny: "4800",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2026,7 +2026,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "5530",
+        priceCny: "5529",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2045,7 +2045,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "2100",
+        priceCny: "2228",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2064,7 +2064,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "460",
+        priceCny: "559",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2083,7 +2083,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "234",
+        priceCny: "280",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2102,7 +2102,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "220",
+        priceCny: "288",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2140,7 +2140,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "2150",
+        priceCny: "2288",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2159,7 +2159,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "28666",
+        priceCny: "28888",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2178,7 +2178,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "8999",
+        priceCny: "9999",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2197,7 +2197,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6666",
+        priceCny: "6999.9",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2216,7 +2216,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "6888",
+        priceCny: "7699",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2235,7 +2235,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "8300",
+        priceCny: "6666",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2254,7 +2254,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1800",
+        priceCny: "1890",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2273,7 +2273,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "2200",
+        priceCny: "2204.11",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2292,7 +2292,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "2398.99",
+        priceCny: "2299",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2311,7 +2311,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "1920",
+        priceCny: "1970",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2368,7 +2368,7 @@ var data = {
         isBuy: null,
         onSale: 1,
         price: "0",
-        priceCny: "10654.32",
+        priceCny: "10653",
         priceUnit: "USDT",
         sellLimit: 0,
         thumbPic:
@@ -2400,7 +2400,7 @@ var data = {
     totalPage: 0,
   },
   message: "success",
-  msgId: "a43aab51e3b8416485efc11ad7a9d361",
+  msgId: "abcc9b4441794c9da8517c724ecc6ef3",
   success: true,
 };
 
@@ -2434,8 +2434,8 @@ shangyici = shangyici.map((item) => {
     const ele = resultData[i];
     if (ele.id === item.id) {
       item.hisData.push(ele.priceCny);
-      item.priceCny = ele.priceCny;
-      item.pridateceCny = ele.priceCny;
+    //   item.priceCny = ele.priceCny;
+    //   item.pridateceCny = ele.priceCny;
       break;
     }
   }
