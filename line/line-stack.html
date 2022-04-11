@@ -86,7 +86,7 @@
             if (d > lineData[0].hisData.length) {
                 d = lineData[0].hisData.length
             } else if (d == 0) {
-                d = lineData[0].hisData.length
+                d = time.length
             }
             limit = d;
             initChart()
@@ -94,9 +94,15 @@
         initChart()
 
         function initChart() {
+            let len = time.length - limit;
+            let len2 = time.length
+
+            x = time.map((t, i) => {
+                return moment(t).format("MM-DD")
+            })
+            x = x.slice(len, len2)
             lineData.forEach((item, index) => {
-                let len = item.hisDate.length - limit;
-                let len2 = item.hisDate.length
+
                 for (let i = 0; i < nameData.length; i++) {
                     const nameItem = nameData[i];
                     if (item.id === nameItem.id) {
@@ -108,10 +114,7 @@
                         if (item.id == 100513784) {
                             selected[nameItem.name] = false
                         }
-                        x = item.hisDate.map(t => {
-                            return moment(t).format("MM-DD")
-                        })
-                        x = x.slice(len, len2)
+
 
                         seriesData.push({
                             name: nameItem.name,
