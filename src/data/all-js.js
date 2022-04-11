@@ -1,7 +1,7 @@
 // export const data = ;
 
 module.exports = {
-    data: [{
+    lineData: [{
             id: 100099581,
             name: "《山海经》-蚩尤",
             total: 10,
