@@ -8,7 +8,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099581",
     authentication: "该作品拥有iBox官方认证",
     number: 1,
-    priceCny: "299",
   },
   {
     id: 100099582,
@@ -19,7 +18,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099582",
     authentication: "该作品拥有iBox官方认证",
     number: 2,
-    priceCny: "39888",
   },
   {
     id: 100099599,
@@ -30,7 +28,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099599",
     authentication: "该作品拥有iBox官方认证",
     number: 3,
-    priceCny: "23686",
   },
   {
     id: 100000395,
@@ -41,7 +38,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000395",
     authentication: "该作品拥有iBox官方认证",
     number: 4,
-    priceCny: "1998",
   },
   {
     id: 100000378,
@@ -52,7 +48,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000378",
     authentication: "该作品拥有iBox官方认证",
     number: 5,
-    priceCny: "350",
   },
   {
     id: 100513734,
@@ -63,7 +58,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513734",
     authentication: "该作品拥有iBox官方认证",
     number: 6,
-    priceCny: "14000",
   },
   {
     id: 100513733,
@@ -74,7 +68,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513733",
     authentication: "该作品拥有iBox官方认证",
     number: 7,
-    priceCny: "49999",
   },
   {
     id: 100513748,
@@ -85,7 +78,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513748",
     authentication: "该作品拥有iBox官方认证",
     number: 8,
-    priceCny: "0",
   },
   {
     id: 100513745,
@@ -96,7 +88,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513745",
     authentication: "该作品拥有iBox官方认证",
     number: 9,
-    priceCny: "4799",
   },
   {
     id: 100513777,
@@ -107,7 +98,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513777",
     authentication: "该作品拥有iBox官方认证",
     number: 10,
-    priceCny: "0",
   },
   {
     id: 100513778,
@@ -118,7 +108,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513778",
     authentication: "该作品拥有iBox官方认证",
     number: 11,
-    priceCny: "17400",
   },
   {
     id: 100513779,
@@ -129,7 +118,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513779",
     authentication: "该作品拥有iBox官方认证",
     number: 12,
-    priceCny: "24999",
   },
   {
     id: 100513780,
@@ -140,7 +128,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513780",
     authentication: "该作品拥有iBox官方认证",
     number: 13,
-    priceCny: "39999",
   },
   {
     id: 100513781,
@@ -151,7 +138,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513781",
     authentication: "该作品拥有iBox官方认证",
     number: 14,
-    priceCny: "35000",
   },
   {
     id: 100100115,
@@ -162,7 +148,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100100115",
     authentication: "该作品拥有iBox官方认证",
     number: 15,
-    priceCny: "6298",
   },
   {
     id: 100513396,
@@ -173,7 +158,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513396",
     authentication: "该作品拥有iBox官方认证",
     number: 16,
-    priceCny: "1175",
   },
   {
     id: 100513397,
@@ -184,7 +168,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513397",
     authentication: "该作品拥有iBox官方认证",
     number: 17,
-    priceCny: "1150",
   },
   {
     id: 100513731,
@@ -195,7 +178,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513731",
     authentication: "该作品拥有十二天宫官方认证",
     number: 18,
-    priceCny: "8199",
   },
   {
     id: 100513736,
@@ -206,7 +188,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513736",
     authentication: "该作品拥有iBox官方认证",
     number: 19,
-    priceCny: "6800",
   },
   {
     id: 100513737,
@@ -217,7 +198,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513737",
     authentication: "该作品拥有中轴线数字天工官方认证",
     number: 20,
-    priceCny: "0",
   },
   {
     id: 100513741,
@@ -228,7 +208,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513741",
     authentication: "该作品拥有iBox官方认证",
     number: 21,
-    priceCny: "3466",
   },
   {
     id: 100513744,
@@ -239,7 +218,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513744",
     authentication: "该作品拥有iBox官方认证",
     number: 22,
-    priceCny: "4870",
   },
   {
     id: 100513727,
@@ -250,7 +228,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513727",
     authentication: "该作品拥有iBox官方认证",
     number: 23,
-    priceCny: "48888",
   },
   {
     id: 100000169,
@@ -261,7 +238,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000169",
     authentication: "该作品拥有GfanX Inc.官方认证",
     number: 24,
-    priceCny: "397",
   },
   {
     id: 100000128,
@@ -272,7 +248,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000128",
     authentication: "该作品拥有iFans NFT官方认证",
     number: 25,
-    priceCny: "9888",
   },
   {
     id: 100000118,
@@ -283,7 +258,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000118",
     authentication: "该作品拥有iFans NFT官方认证",
     number: 26,
-    priceCny: "979",
   },
   {
     id: 100513752,
@@ -294,7 +268,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513752",
     authentication: "该作品拥有iBox官方认证",
     number: 27,
-    priceCny: "12866",
   },
   {
     id: 100513756,
@@ -305,7 +278,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513756",
     authentication: "该作品拥有iBox官方认证",
     number: 28,
-    priceCny: "0",
   },
   {
     id: 100513758,
@@ -316,7 +288,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513758",
     authentication: "该作品拥有iBox官方认证",
     number: 29,
-    priceCny: "48880",
   },
   {
     id: 100513790,
@@ -327,7 +298,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513790",
     authentication: "该作品拥有中轴线数字天工官方认证",
     number: 30,
-    priceCny: "0",
   },
   {
     id: 100513798,
@@ -338,7 +308,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513798",
     authentication: "该作品拥有深圳市小马腾云互动科技有限公司官方认证",
     number: 31,
-    priceCny: "299",
   },
   {
     id: 100513799,
@@ -349,7 +318,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513799",
     authentication: "该作品拥有深圳市小马腾云互动科技有限公司官方认证",
     number: 32,
-    priceCny: "299",
   },
   {
     id: 100513795,
@@ -360,7 +328,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513795",
     authentication: "该作品拥有元宙光年官方认证",
     number: 33,
-    priceCny: "199",
   },
   {
     id: 100513796,
@@ -371,7 +338,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513796",
     authentication: "该作品拥有元宙光年官方认证",
     number: 34,
-    priceCny: "199",
   },
   {
     id: 100000120,
@@ -382,7 +348,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000120",
     authentication: "该作品拥有GGAC.COM CG艺术创作分享平台官方认证",
     number: 35,
-    priceCny: "28666",
   },
   {
     id: 100513726,
@@ -393,7 +358,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513726",
     authentication: "该作品拥有iBox官方认证",
     number: 36,
-    priceCny: "40",
   },
   {
     id: 100513782,
@@ -404,7 +368,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100513782",
     authentication: "该作品拥有iBox官方认证",
     number: 37,
-    priceCny: "299",
   },
   {
     id: 100099867,
@@ -415,7 +378,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099867",
     authentication: "该作品拥有iBox官方认证",
     number: 38,
-    priceCny: "299",
   },
   {
     id: 100000396,
@@ -426,7 +388,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000396",
     authentication: "该作品拥有iBox官方认证",
     number: 39,
-    priceCny: "745",
   },
   {
     id: 100000335,
@@ -437,7 +398,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000335",
     authentication: "该作品拥有iBox官方认证",
     number: 40,
-    priceCny: "186.88",
   },
   {
     id: 100000254,
@@ -448,7 +408,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000254",
     authentication: "该作品拥有iBox官方认证",
     number: 41,
-    priceCny: "85",
   },
   {
     id: 100000253,
@@ -459,7 +418,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000253",
     authentication: "该作品拥有iBox官方认证",
     number: 42,
-    priceCny: "159",
   },
   {
     id: 100000190,
@@ -470,7 +428,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000190",
     authentication: "该作品拥有iBox官方认证",
     number: 43,
-    priceCny: "1645",
   },
   {
     id: 100000139,
@@ -481,7 +438,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000139",
     authentication: "该作品拥有iBox官方认证",
     number: 44,
-    priceCny: "795",
   },
   {
     id: 100000388,
@@ -492,7 +448,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000388",
     authentication: "该作品拥有iBox官方认证",
     number: 45,
-    priceCny: "509",
   },
   {
     id: 100000394,
@@ -503,7 +458,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000394",
     authentication: "该作品拥有iBox官方认证",
     number: 46,
-    priceCny: "299",
   },
   {
     id: 100000384,
@@ -514,7 +468,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100000384",
     authentication: "该作品拥有iBox官方认证",
     number: 47,
-    priceCny: "686",
   },
   {
     id: 100099573,
@@ -525,7 +478,6 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099573",
     authentication: "该作品拥有iBox官方认证",
     number: 48,
-    priceCny: "4500",
   },
   {
     id: 100099573,
@@ -536,6 +488,5 @@ var lineData = [
     link: "https://www.ibox.art/zh-cn/item/?id=100099573",
     authentication: "该作品拥有iBox官方认证",
     number: 49,
-    priceCny: "4500",
   },
 ];

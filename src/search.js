@@ -17,15 +17,16 @@ var arr = [
   100513716, 100513715, 100513714, 100513713, 100513712,
 ];
 
-var asd = [
-  100099581, 100099582, 100099599, 100000395, 100000378, 100513734, 100513733,
-  100513748, 100513745, 100513777, 100513778, 100513779, 100513780, 100513781,
-  100100115, 100513396, 100513397, 100513731, 100513736, 100513737, 100513741,
-  100513744, 100513727, 100000169, 100000128, 100000118, 100513752, 100513756,
-  100513758, 100513790, 100513798, 100513799, 100513795, 100513796, 100000120,
-  100513726, 100513782, 100099867, 100000396, 100000335, 100000254, 100000253,
-  100000190, 100000139, 100000388, 100000394, 100000384, 100099573,
-];
+var asd = [100513794, 100000395];
+// var asd = [
+//   100099581, 100099582, 100099599, 100000395, 100000378, 100513734, 100513733,
+//   100513748, 100513745, 100513777, 100513778, 100513779, 100513780, 100513781,
+//   100100115, 100513396, 100513397, 100513731, 100513736, 100513737, 100513741,
+//   100513744, 100513727, 100000169, 100000128, 100000118, 100513752, 100513756,
+//   100513758, 100513790, 100513798, 100513799, 100513795, 100513796, 100000120,
+//   100513726, 100513782, 100099867, 100000396, 100000335, 100000254, 100000253,
+//   100000190, 100000139, 100000388, 100000394, 100000384, 100099573,
+// ];
 var all = {
   100099581: "《山海经》-蚩尤",
   100099582: "《山海经》-呲铁",
@@ -127,6 +128,8 @@ var all = {
  * 100513726 iBox−赛博边牧
  * 100513782 iBox-赛博龙
  * 100099867 泰迪熊-空投版
+ * 100513724 iBox-CyberTiger
+ * 100000393 I‘m Sorry
 
  * 100000396 iBox宣传小标兵
  * 100000335 iBox-潮牛逐浪
@@ -142,9 +145,14 @@ var all = {
  *
  */
 
+//  gStatus: 16, 锁定中
 function getUrl(id) {
-  return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductDetail?albumId=${id}`;
+  return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=1&pageSize=50&albumId=${id}&onSale=1&order=1`;
 }
+
+// function getUrl(id) {
+//   return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductDetail?albumId=${id}`;
+// }
 var data = [];
 console.log("开始");
 crawler.initCrawler(async (res, err) => {
@@ -155,16 +163,14 @@ crawler.initCrawler(async (res, err) => {
   if (JSON.parse(res.body).data) {
     resultData = JSON.parse(res.body).data;
   }
+  console.log('resultData: ', resultData);
   data.push({
     id: resultData.albumId,
     name: resultData.gName,
     total: resultData.sellLimit,
     albumName: resultData.albumName,
     author: resultData.authorName,
-    link: "https://www.ibox.art/zh-cn/item/?id=" + resultData.albumId,
-    authentication: `该作品拥有${resultData.brandName}官方认证`,
-    number: arrNum + 1,
-    priceCny: resultData.priceCny
+    priceCny: resultData.priceCny,
   });
   if (arrNum < asd.length) {
     arrNum += 1;
@@ -178,11 +184,11 @@ crawler.initCrawler(async (res, err) => {
       },
     ]);
   } else {
-    fs.writeFile(
-      `./src/data/all.js`,
-      "var lineData = " + JSON.stringify(data),
-      () => {}
-    );
+    // fs.writeFile(
+    //   `./src/data/all.js`,
+    //   "var lineData = " + JSON.stringify(data),
+    //   () => {}
+    // );
   }
 });
 
