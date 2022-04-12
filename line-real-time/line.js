@@ -107,8 +107,8 @@ async function paramData(data) {
         }, ]);
     } else {
         concatData()
-        await sleep(100000);
-        process.exit(1);
+            // await sleep(100000);
+            // process.exit(1);
     }
 
 }
@@ -135,7 +135,7 @@ function concatData() {
     var buffer = xlsx.build(formatData(resultData));
 
     fs.writeFile(
-        `./xlsx/ibox实时价格${moment().format("(MM_DD_1111_HH_mm)")}.xlsx`,
+        `./xlsx/ibox实时价格${moment().format("(MM_DD_HH_mm)")}.xlsx`,
         buffer,
         (err) => {
             if (err) {
