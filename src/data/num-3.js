@@ -1,1 +1,14 @@
-var lineData = {"伊爱娃（IARA）":597,"佛里奥索（FURIOSA）":671,"贝贝（BEBE）":645,"普普拉（PURPURA）":1767,"拉万达（LAVANDA）":1783,"布兰卡（BRANCA）":1783,"紫月（MINGUANTE）":1792,"橙日（CRESCENTE）":1797,"蓝日（NOVA）":1820,"昂蒂娜（ONDINHA）":1783,"维洛（VELOZ）":1801,"艾斯波列塔（ESPOLETA）":1785}
+var lineData = {
+  "伊爱娃（IARA）": 597,
+  "佛里奥索（FURIOSA）": 671,
+  "贝贝（BEBE）": 645,
+  "普普拉（PURPURA）": 1767,
+  "拉万达（LAVANDA）": 1783,
+  "布兰卡（BRANCA）": 1783,
+  "紫月（MINGUANTE）": 1792,
+  "橙日（CRESCENTE）": 1797,
+  "蓝日（NOVA）": 1820,
+  "昂蒂娜（ONDINHA）": 1783,
+  "维洛（VELOZ）": 1801,
+  "艾斯波列塔（ESPOLETA）": 1785,
+};
