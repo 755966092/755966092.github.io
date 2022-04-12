@@ -1,57 +1,54 @@
 const Crawler = require("crawler"),
-  path = require("path"),
-  root_path = process.cwd(),
-  config = require(path.join(root_path, "/config"));
+    path = require("path"),
+    root_path = process.cwd(),
+    config = require(path.join(root_path, "/config"));
 module.exports = {
-  c: "",
-  num: "",
-  initCrawler(cb) {
-  // initCrawler(params, cb) {
-    //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
-    this.c = new Crawler({
-      // 超时时间
-      timeout: config.crawler.timeout,
-      // jQuery: false,
-      // 失败重试次数
-      retries: config.crawler.retries,
-      // 失败重试等待时间
-      retryTimeout: config.crawler.retryTimeout,
-      // 最大并发数默认为10
-      // maxConnections: config.crawler.maxConnections,
-      // rateLimit: config.crawler.rateLimit,
-      // 在每个请求处理完毕后将调用此回调函数
-      headers: {
-        accept: "application/json, text/plain, */*",
-        "accept-language": "zh-CN",
-        "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
-        "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
-        "ib-platform-type": "web",
-        "ib-trans-id": "32dfe5bec2b44e0d9598ffa0fba34bf7",
-        "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
-        "sec-ch-ua":
-          '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-site",
-        cookie:
-          "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_tc=7ca5d59516494794022865390e3c535b75649854b3dabd2e9bd7b62951; acw_sc__v2=62510eeac19f29c4d7ba8540c81a8bdc65b9a172; acw_sc__v3=62511220496efdaa418488dda015242ef8a4fff7; ssxmod_itna2=eqjxyDcDgDn0wrxlSodjKD5DQDOSiekbseD6ObnED0y0DRD03DuY3ujOj2UoMNYTXsRS0u50xqxnRjGUmcWKeAdE=pDTvKfzpfXp10Fa2BOduQpMc0zu3UoqcjGq8t7qwHIXEHUdpkoeUwAQR3jAl4xIeqKI3MoxwfGg8+GeTLDFmQU3NTt=pbRYqQN5re03OuX=vxAVtuEq113hi8f=RS9FUpKKn8jkEb3Gj1REFWnKgb7INFThyApxZOxFUeAj4+Y=50L8OoI+KuYUsqk06ggybdkHeL7F3qAPZIkUAKll1e/gAZLM=ey1PsBdSiewY0EiqPbqK4KvjxpY3OE0hZN12=eli+0DwajtA0QlLzE4P+GSZQvaiKbjEQGizLPxmGPie6pF=PZYvK1A/Pfd2fkFElQAh1oixd27fqaIm93gCEw+q+FqZYIzUELjjCSteZ368T4fKTDG2SD=zhdlr4KeqC7rbLbz2d2DtFxtYiZbRKRe=bu5jhdCRDSM4Tq4nKijhT/LQY0D8x1ZKmNlWSDqD08DijwAHZS48jxxD===; ssxmod_itna=Yqfx0QKCuD2nDXDnekDkmGCmDCiGOFYWGfDBLhD4iNDnD8x7YDvGzMQGb3QBWQNlEmPNAQCDawwIBYgwExNuox4GIDeKG2DmeDyDi5GRD09eYzPNKD3Dm4i3DDOdDgDmKGgWqGff2xDc7DWy10x0ru1PD0cb1OrAPYhKORcaFDB4eh7bYimuDCDxxAlrqCjhxsGhtCm8TFAD5GK+PHlrWoWbvg9GDD==",
-        Referer: "https://www.ibox.art/",
-        "Referrer-Policy": "strict-origin-when-cross-origin",
-      },
-      // method: "POST",
-      
-      callback: function (error, res, done) {
-        if (error) {
-          console.log(error);
-        } else {
-          cb(res);
-        }
-        done();
-      },
-    });
-  },
+    c: "",
+    num: "",
+    initCrawler(cb) {
+        // initCrawler(params, cb) {
+        //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
+        this.c = new Crawler({
+            // 超时时间
+            timeout: config.crawler.timeout,
+            // jQuery: false,
+            // 失败重试次数
+            retries: config.crawler.retries,
+            // 失败重试等待时间
+            retryTimeout: config.crawler.retryTimeout,
+            // 最大并发数默认为10
+            // maxConnections: config.crawler.maxConnections,
+            // rateLimit: config.crawler.rateLimit,
+            // 在每个请求处理完毕后将调用此回调函数
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "accept-language": "zh-CN",
+                "ib-device-id": "f00bdb0f9ec14ba496ccb24c20c0e548",
+                "ib-platform-type": "web",
+                "ib-trans-id": "dac024ee9da240e985a7678bf4bfa317",
+                "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"100\", \"Google Chrome\";v=\"100\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Windows\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-site",
+                "cookie": "_uab_collina=164865229955951961884756; JSESSIONID=164865229955951961884756; acw_sc__v2=625582b8a30f2d733b57294b56ee0aac435849f5; acw_tc=3cd9f6d316497733953546439e41bd743b00341ec05413edc68573bc41; acw_sc__v3=62558b5677fa66ac3b8354ce659f1bb62be365cd; ssxmod_itna=iq+xuDgD970=3AKDtDX3W+8G8=qCihxDK3Y4QD/YGADnqD=GFDK40o3gxEbDOKMxOmmKEe8DwxrEzYopmsEWeQcAfIADB3DEx0=qZjixii9DCeDIDWeDiDG4GmS4GtDpxG=Dj0FUZMUxi3Dbh=Di4D+7uQDmqG0DDt794G2D7t9K7e=OM06FjUovuGqoGD9D0U3xBdYW1e9zCcF5OXq56WxT2QDzkHDtMUSBLLox0pySqNxEAvxbEO3lE4YF2D4mDhQa8DQG74Yi7kINxYeY7vK0Y8coDDAe814eD===; ssxmod_itna2=iq+xuDgD970=3AKDtDX3W+8G8=qCihxDK3Y4G9iaDmhDGNw2xGaYFAkhoAx8hv0GHwl2q20+nmYlIRCK7ZRP6KnKepacfKmlbh=fXGiwaBXpoQRd740tvMacRiFHUh7RnAVpHyyE2kUcSMp83LdqEgYojRIUKuDkefQMzxYPp4jM/SL4Re=PjQXMUlAdM+bQghYTxLLTsg58Y8DhmPYq+6QFw1akWLv1afyO6+7+UTF+7ox1T3Y+XcFzm6d+49K7UI066ofUkkDWD7QcD7=DekexD===",
+                "Referer": "https://www.ibox.art/",
+                "Referrer-Policy": "strict-origin-when-cross-origin"
+
+            },
+            // method: "POST",
+
+            callback: function(error, res, done) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    cb(res);
+                }
+                done();
+            },
+        });
+    },
 };
 // curl
 //  'Host: 100000552840.yuyue.n.weimob.com'
