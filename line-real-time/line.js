@@ -75,6 +75,8 @@ crawler.initCrawler(async(res, err) => {
 crawler.c.queue([{
     uri: url,
     jQuery: false,
+    // proxy: "60.185.141.54:22978"
+    // proxy:"http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2",
 }, ]);
 
 async function paramData(data) {
