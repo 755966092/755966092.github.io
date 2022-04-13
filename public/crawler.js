@@ -28,7 +28,7 @@ module.exports = {
         "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
         "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
         "ib-platform-type": "web",
-        "ib-trans-id": "1f60f64133af472084e4078cc864d558",
+        "ib-trans-id": "90bad0495c9b47e288e1a7d7cf947fa3",
         "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
         "sec-ch-ua":
           '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
@@ -38,7 +38,7 @@ module.exports = {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
         cookie:
-          "_uab_collina=164871563825662603194418; JSESSIONID=3cdd179d16498257691562556e1df76efb8a248edcc4f2d7bae6c2da3b; acw_tc=3cd9f6da16498256633737555ee346b282fcceead68357e1558fc2fbd3; acw_sc__v2=6256577f94edf1d42c5b7050cc4930243efa32a5; acw_sc__v3=625657f3ca40af912a3fc28439e139e71d36e4c1; ssxmod_itna=YqRx9DuDcDB00=eDQDXDnD+h+=F4kiggoxCqh7qGNQP3DZDiqAPGhDC+89+E8i3meYfWYx2K4V7oW4Lm=hGicDqjAQG4GIDeKG2DmeDyDi5GRD09P3+=sKD3Dm4i3DDgdDgDmKGgCqGfjfqDAtqGS9wtDtSU6DDU7RLde=AYa7q=M4LdDCg3dIR43lhx3WGPe0Gx4j0AtU+xeQGxdQBx5ADxoQGqeKAy3nD7rPeqonYWeeD=; ssxmod_itna2=YqRx9DuDcDB00=eDQDXDnD+h+=F4kiggoxCqhDA6WtQQD/C2iDF242Gz0Yg=mF4=QQzPQYv7c0Ynij5DEoSa6w0WDPoahNzOxkup5oeqLp+sZhpkB6TrLPEd8D8OoKUgtRpGS7KkMcr=PW16Zy1v1m4XQH=u=ikPFBivOvxqmAi7RIdO+hO5RaAOtGez+DEqxTh5=DrNbybXKYTQfpLQtWj4hSCgWB7uZejYavwzrgCl=vHpIMXuYn+/byTsIdhlpl12RGnQzPcYbBbYY27VregnGbU7=6wi+A0n1cD7tvyu1a0qB7nyuFiSrcYqQ442b4ibx0wiFDbyDCn2kh0FnrzL8oT8=i2CASY4xWZrbFRTXbwpmar+T=hmc4Fkn1TfpqLKKBmqnkFGd=S+nAptboZ+xzEtb0kwAHFB39rxL4bxghmrrd+TISi7bzS7rV2QjxQ4rYI+T0Gjz4K5467xa9rjzb4p6wb7861xvxFA0Lix17oU63PD7jx7xdQ9GBGLi7/QB45qMWfewwAGG=PebeeeB=K+D9UmdutXhh1DGcDG7HaxKihtI04D",
+          "_uab_collina=164871563825662603194418; JSESSIONID=62564e5def0b73010920584f0207ac9652687ee2; acw_tc=7d25cea416498306399521801eb296baaa359562fd7fdbdc894ee82fa4; acw_sc__v2=62566aefdd8bce168f4d58d2e34c005d2eafd12b; ssxmod_itna=QqjxyDniDtiQGQD7DgDl4cf=48UKrCN=qOqY8DlcDWTPGzDAxn40iDta=wjeaoZGamPKboCGIobF=QR3itotYcq4Lf7xiTD4q07Db4GkDAqiOD7MbP2INqDPDbxYPDGlPGCDbq0CUxiaFcxDWvxi1Mr5D51yFDDHQgcP+eYW3jhI1hcPDUlq4Wh+NNjiPjlWqdQx4rWD3wF043704m44xkQ0qgSTKlfhGqGeX4D=; ssxmod_itna2=QqjxyDniDtiQGQD7DgDl4cf=48UKrCN=qOqYD6h9xWqDsdTYDLQjQySK=XNPEuLK01X9cAIxHD8gBwONbQWYuO5=lkyUPDN4OOy8Nm/DhnxCv2f7iAbkj97wXarSUjbvnY6UE7wcE8GvYD6yDREKIA069r05tk5e28Kqfh0Y22pUnLwg9oEjz3PDKM5DFqD2+iD=",
         Referer: "https://www.ibox.art/",
         "Referrer-Policy": "strict-origin-when-cross-origin",
       },
