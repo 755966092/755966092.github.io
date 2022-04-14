@@ -48,3 +48,22 @@ request({
     }
 });
 
+fetch("https://movie.douban.com/j/search_subjects?type=movie&tag=%E7%83%AD%E9%97%A8&page_limit=50&page_start=0", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"100\", \"Google Chrome\";v=\"100\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "cookie": "ll=\"108288\"; gr_user_id=4488acc5-5b1c-4138-8ce0-85621c8e3a31; douban-fav-remind=1; __utmv=30149280.16208; douban-profile-remind=1; _vwo_uuid_v2=D323AFD70F5D3D4BC95373BB6F6DB0240|2c0791156e5d84d8b70ba6faf22210e1; bid=KW1qtdnF4Ys; Hm_lvt_16a14f3002af32bf3a75dfe352478639=1641457577; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1649915017%2C%22https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DeXJn9u0W_oNG1zZRikRaY67qjeAdDjJO8_HgrTKuWgpWkyL7V86SpjziKMED7g3cUopulqaZU1Op-kcKoLAYyq%26wd%3D%26eqid%3Deaf882650005665a000000026257b484%22%5D; _pk_ses.100001.4cf6=*; ap_v=0,6.0; __utma=30149280.1615528916.1601264371.1649136660.1649915018.18; __utmb=30149280.0.10.1649915018; __utmc=30149280; __utmz=30149280.1649915018.18.11.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utma=223695111.297657636.1601264371.1639222926.1649915018.11; __utmb=223695111.0.10.1649915018; __utmc=223695111; __utmz=223695111.1649915018.11.2.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; _pk_id.100001.4cf6=acb3fa6f3a0cd763.1601021563.19.1649915025.1641458131.",
+    "Referer": "https://movie.douban.com/?_t_t_t=0.8765449977945536",
+    "Referrer-Policy": "unsafe-url"
+  },
+  "body": null,
+  "method": "GET"
+});
+
