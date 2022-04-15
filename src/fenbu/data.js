@@ -24,11 +24,11 @@ crawler.initCrawler(async (res, err) => {
     console.log("请求失败", err);
   }
   // 获取数据
-  console.log('获取数据...');
+  console.log("获取数据...");
   if (JSON.parse(res.body).data) {
-    console.log('有数据...');
+    console.log("有数据...");
     if (JSON.parse(res.body).data.list.length > 0) {
-      console.log('列表有数据...');
+      console.log("列表有数据...", page);
       resultData = resultData.concat(JSON.parse(res.body).data.list);
       // 所有列表
       await sleep(Math.floor(Math.random() * (12000 - 5000 + 1) + 5000));
@@ -59,20 +59,25 @@ const sleep = (ms) =>
   });
 
 function getUrl(page, id) {
-  return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${id}&onSale=1&order=1`;
+  // return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${id}&onSale=1&order=1`;
+  return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${id}&onSale=0&order=0`;
 }
 
 async function formatData(data) {
-  console.log('处理数据...');
-  let result = { priceCny: [], time: moment().valueOf() };
-  console.log('result: ', result);
+  console.log("处理数据...");
+  let result = { priceCny: [], priceCny2: [], time: moment().valueOf() };
+  console.log("result: ", result);
   data.forEach((item) => {
-    result.priceCny.push(item.priceCny);
+    if (item.priceCny > 99) {
+      if (item.gStatus == 6) {
+        result.priceCny.push(item.priceCny);
+      } else {
+        result.priceCny2.push(item.priceCny);
+      }
+    }
   });
-  console.log('result: ', result);
-  console.log('jsData.data["id_" + id]: ', jsData.data["id_" + id]);
   jsData.data["id_" + id].push(result);
-  console.log('jsData: ', jsData);
+
   fs.writeFile(
     "./src/fenbu/data/js-data.js",
     `module.exports =  ${JSON.stringify(jsData)}`,
@@ -83,6 +88,6 @@ async function formatData(data) {
     `let lineData = ${JSON.stringify(jsData)}`,
     () => {}
   );
-  console.log('写入文件中...');
+  console.log("写入文件中...");
   sleep(10000);
 }
