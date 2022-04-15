@@ -13,8 +13,8 @@ let resultObj = {};
 let resultPic = {};
 let timeNum = 0;
 var arr = [
-  100000171, 100000172, 100000173, 100000174, 100000175, 100000176, 100000177,
-  100000178, 100000179, 100000180,
+  100000180, 100000179, 100000178, 100000171, 100000172, 100000173, 100000174,
+  100000175, 100000176, 100000177,
 ];
 
 var url = `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`;
@@ -73,19 +73,19 @@ crawler.initCrawler(async (res, err) => {
     // 结束条件
     if (arrNum == arr.length - 1) {
       // 计算
-      fs.writeFile(`./src/data/time-2.js`, "总耗时: " + timeNum, () => {});
+      fs.writeFile(`./src/data-0415/time-2.js`, "总耗时: " + timeNum, () => {});
       fs.writeFile(
-        `./src/data/data-2.js`,
+        `./src/data-0415/data-2.js`,
         "var lineData = " + JSON.stringify(data),
         () => {}
       );
       fs.writeFile(
-        `./src/data/num-2.js`,
+        `./src/data-0415/num-2.js`,
         "var lineData = " + JSON.stringify(resultObj),
         () => {}
       );
       fs.writeFile(
-        `./src/data/price-2.js`,
+        `./src/data-0415/price-2.js`,
         "var lineData = " + JSON.stringify(resultPic),
         () => {}
       );

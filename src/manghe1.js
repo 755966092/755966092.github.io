@@ -72,19 +72,19 @@ crawler.initCrawler(async (res, err) => {
     // 结束条件
     if (arrNum == arr.length - 1) {
       // 计算
-      fs.writeFile(`./src/data/time-1.js`, "总耗时: " + timeNum, () => {});
+      fs.writeFile(`./src/data-0415/time-1.js`, "总耗时: " + timeNum, () => {});
       fs.writeFile(
-        `./src/data/data-1.js`,
+        `./src/data-0415/data-1.js`,
         "var lineData = " + JSON.stringify(data),
         () => {}
       );
       fs.writeFile(
-        `./src/data/num-1.js`,
+        `./src/data-0415/num-1.js`,
         "var lineData = " + JSON.stringify(resultObj),
         () => {}
       );
       fs.writeFile(
-        `./src/data/price-1.js`,
+        `./src/data-0415/price-1.js`,
         "var lineData = " + JSON.stringify(resultPic),
         () => {}
       );
