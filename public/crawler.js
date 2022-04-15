@@ -1,58 +1,60 @@
 const Crawler = require("crawler"),
-    path = require("path"),
-    root_path = process.cwd(),
-    config = require(path.join(root_path, "/config"));
+  path = require("path"),
+  root_path = process.cwd(),
+  config = require(path.join(root_path, "/config"));
 
 const uuid = require("node-uuid");
 module.exports = {
-    c: "",
-    num: "",
-    initCrawler(cb) {
-        // initCrawler(params, cb) {
-        //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
-        this.c = new Crawler({
-            // 超时时间
-            timeout: config.crawler.timeout,
-            // jQuery: false,
-            // 失败重试次数
-            retries: config.crawler.retries,
-            // 失败重试等待时间
-            retryTimeout: config.crawler.retryTimeout,
-            // 最大并发数默认为10
-            // maxConnections: config.crawler.maxConnections,
-            // rateLimit: config.crawler.rateLimit,
-            // 在每个请求处理完毕后将调用此回调函数
-            headers: {
-                accept: "application/json, text/plain, */*",
-                "accept-language": "zh-CN",
-                "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
-                "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
-                "ib-platform-type": "web",
-                "ib-trans-id": "03e5a8a9bece40928a352cdebe91e3db",
-                "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
-                "sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
-                "sec-ch-ua-mobile": "?0",
-                "sec-ch-ua-platform": '"macOS"',
-                "sec-fetch-dest": "empty",
-                "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-site",
-                cookie: "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_tc=74759e2016499143366008903e23c95fd67a879bd0e95ed0838de07e56; acw_sc__v2=6257b1e023be68624dcca66499a8a51d8346ba83; acw_sc__v3=6257b2f0add7802711f728a3ddf2925d81aa3838; ssxmod_itna2=mqAx9DRDcG0=iQ3GHmvlOYw2MDGrOAhi4hDD5G9bNxIhDGXvpTGai86s0YlGx8Er=4cIxCy08qtSEFL+Nt8wA2s73FnvaqcjFexQUNUgxCuI3tFLExG3FVZBGUwyxerus+w/LckLW254Cx7CVGG=FZI1VA0753ewanP4cxIzYnadN27de/0CYCEKWUAGNOPk5Zvi6OPfI4erzooCQtFTahdWyOMpM/GFDVL6lxj2PLFUIpjHgKcOlK6rTuQ6/mHI9pvp0m6nW4/hGXjyhX1RNF5n99+Q9+=C+4TIzp9U=iN1lzjgNVt6Du0l5VmHk+F/IKMRa4pybRWTi0DeAxoAx+5q1v4awHtYCbunC50+56F7C971R+/35vBPaBp7Bc++w=nFW+eXCi=e4tmrI4eZRmt+bpWbrR5xFWAbws3+=bu434a8qxzRG9oZFerzApRgCzGtegiaEo3bj+i=nrQziLbk3D07BAqRAov0DuoEerULcby1Y3iY30Dro7MWxeE53Ex=BeR7Q=B0qgOeDDLxD209+2wwOLDD; ssxmod_itna=mqAx9DRDcG0=iQ3GHmvlOYw2MDGrOAhi4rM4GXYoDZDiqAPGhDCb4IDD5XbXPXC=iE0qGOUQDh5aDH/YgRGPrgDPNebDneG0DQKGmDBKDSDWKD9AYrjguDixGWDbxDYsxY5GnDQvkDWpa1DDcODWyznx0ry6PD0gbz1hAxeh4kAOH71xGdpiDamCatbAG3PZitP7WKpmTrKmux=muAPghx7We4SRwPZ3h54/G5Fibr4D",
-                Referer: "https://www.ibox.art/",
-                "Referrer-Policy": "strict-origin-when-cross-origin",
-            },
-            // method: "POST",
-            // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
+  c: "",
+  num: "",
+  initCrawler(cb) {
+    // initCrawler(params, cb) {
+    //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
+    this.c = new Crawler({
+      // 超时时间
+      timeout: config.crawler.timeout,
+      // jQuery: false,
+      // 失败重试次数
+      retries: config.crawler.retries,
+      // 失败重试等待时间
+      retryTimeout: config.crawler.retryTimeout,
+      // 最大并发数默认为10
+      // maxConnections: config.crawler.maxConnections,
+      // rateLimit: config.crawler.rateLimit,
+      // 在每个请求处理完毕后将调用此回调函数
+      headers: {
+        accept: "application/json, text/plain, */*",
+        "accept-language": "zh-CN",
+        "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
+        "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
+        "ib-platform-type": "web",
+        "ib-trans-id": "645e3db000484fe185a342b01452f6af",
+        "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
+        "sec-ch-ua":
+          '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"macOS"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        cookie:
+          "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_sc__v2=6258bce9ab302590968640827cb0a997e8c77df3; acw_sc__v2=6258bf1df619e4a829e7e454598f9615f9c86551; acw_tc=7d25cea516499853217221164e20f0a1b4e16e262f547c13c9866ce62f; acw_sc__v3=6258c743a79626351195d688c51fd00d38992e63; ssxmod_itna=eqGxcDy7GQD=K0L9DtD9nDgmxB7Dunn02r=jjWx0yieGzDAxn40iDtxoNbD6ij7GD5ef4/EbKsjebGaRIqVA8xrzYGDAoDhx7QDox0=DnxAQDjoxbBRIxG4DEDm4Dil4itDEx7U9DA4d1DDpODWvzux0r9EPD0xqzC1APxER8va57CxGdZn0W=DxNd0xeK0R5q0rK=i057nq5URrqFGDoilxxFC25dndNWDCAxFDPG/hDD==; ssxmod_itna2=eqGxcDy7GQD=K0L9DtD9nDgmxB7Dunn02r=jjDnFSidxDsPeqDLjGniNmlZ4nRUPS9OMu+HenEwTQ8gKGBpiqSjlSwup2btDMpHFnoeSa8WovqrcHWuAdfiX066toHI9cODo6mF+IyHDruGdDTGr=YH=0y1=2cxpxOQvOqTsAIwKb7=sOxaq/iwFzP53=DwqBKHF6GEqbKfZ6IqubIxCEqx560fSZbtCPPF4dO19Ka=oOBwS0Aij9Q3=yRATvvqB=M5em7Het95Fgu57gqa=QzdINGEAUvNgeN=+HFCYmrODcOZ/eIVnYqQ+3fx35+TtwN/7Qo4WRSe5oNFiG=uDO7DVG1xez4Ohonwzj1VBsUkCIMowqWvhouwCL25XbtOeO=2w+BGd8IoExzqhTqmg7eVi=D2=di1eSoZGCoxYeDdC7CXbFjmAsk5uCzCM56wis0A4RaeR4zhpf3EPCCd0CK01IZk+GKYBdUomK7NY8W7aOn037deSPXubAx8ElPq2DdW2iMEwc0X94wx4wlZeWqwwrQEDDwh4hFD8i4nx4km67no5eWbuhQ7PiwXGtPAmXFYHxSm0xGcDG75RDAf56dq4D===",
+        Referer: "https://www.ibox.art/",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+      },
+      // method: "POST",
+      // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
 
-            callback: function(error, res, done) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    cb(res);
-                }
-                done();
-            },
-        });
-    },
+      callback: function (error, res, done) {
+        if (error) {
+          console.log(error);
+        } else {
+          cb(res);
+        }
+        done();
+      },
+    });
+  },
 };
 // curl
 //  'Host: 100000552840.yuyue.n.weimob.com'

@@ -7,29 +7,21 @@
 <head>
     <meta charset="utf-8">
     <style>
-        .sel {
-            padding-left: 10px;
-            /* background: #ff0; */
-            height: 5%;
-            display: flex;
-            align-items: center;
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 20px 10px;
+            box-sizing: border-box;
         }
         
         #container {
-            height: 95%;
+            height: 100%;
         }
     </style>
 </head>
 
-<body style="height: 100%; margin: 0">
-    <div class="sel">
-        <select name="name" id="id" onchange="selDay(value)">
-            <option value="7">最近7条数据</option>
-            <option value="14">最近14条数据</option>
-            <option value="30">最近30条数据</option>
-            <option value="0">所有数据</option>
-        </select>
-    </div>
+<body>
+
     <div id="container"></div>
 
     <script src="./data/html-data.js"></script>
@@ -66,17 +58,7 @@
         var selected = {}
         var x = []
 
-        function selDay(d) {
-            legendData = []
-            seriesData = []
-            if (d > lineData[0].hisData.length) {
-                d = lineData[0].hisData.length
-            } else if (d == 0) {
-                d = time.length
-            }
-            limit = d;
-            initChart()
-        }
+
         initChart()
 
         function initChart() {
@@ -86,7 +68,6 @@
             x = time.map((t, i) => {
                 return moment(t).format("MM-DD HH:mm")
             })
-            x = x.slice(len, len2)
             lineData.forEach((item, index) => {
                 for (let i = 0; i < nameData.length; i++) {
                     const nameItem = nameData[i];
@@ -110,7 +91,7 @@
                             // symbol: 'none',
                             showSymbol: false,
                             // step: 'start',
-                            data: item.hisData.slice(len, len2)
+                            data: item.hisData
                         })
                         break;
                     }
@@ -154,6 +135,14 @@
                     type: 'value'
                 },
                 series: seriesData,
+                dataZoom: [{
+                    type: 'inside',
+                    start: 0,
+                    end: 20
+                }, {
+                    start: 0,
+                    end: 20
+                }],
                 // series: [{
                 //     name: 'Email',
                 //     type: 'line',
