@@ -27,7 +27,7 @@ module.exports = {
         "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
         "ib-device-id": "e141d54cf837418784b6c8fd68ae1e37",
         "ib-platform-type": "web",
-        "ib-trans-id": "52ca7d2a1b564ff0b70a310578a62687",
+        "ib-trans-id": "78427a36c5ac407d94635be960611ea1",
         "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
         "sec-ch-ua":
           '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
@@ -37,7 +37,7 @@ module.exports = {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
         cookie:
-          "_uab_collina=164871563825662603194418; JSESSIONID=164871563825662603194418; acw_tc=3cd9f6d416499916617961881e5a53df991d9848b7ed3c748e474acda7; acw_sc__v3=6258dffdcf799ac01cf705df70ca21a7ffd03dbe; ssxmod_itna=Cqmx2DniYmwxzhGKG==Iw40xxGrqQuqcwxDsKDclDA5D8D6DQeGTN0Y81Ne1eEsK74AYqQShST5WGAjWuGpeDO854bD84i7DKqibDCqD1D3qDkrzeUjODADi3DEDDeXDmqi8DIL=Df0b5DiOKDcEyCDCm18xDCUG5H5bxiIj9OcxKHDB4NY7R4Njqx8li3QOGKQBrTY0TYkCcD8i3Y1irPGQaNpe3XKeB3M7GDD=; ssxmod_itna2=Cqmx2DniYmwxzhGKG==Iw40xxGrqQuqPikm38DlOD8DWq03GqG0AE10gYED6WyuDQ4ffpw0DqEiGiKjxFYx7jtEDjKD2SYD=",
+          "JSESSIONID=625832cbeca45b36753decb29f8909f2283705a6; acw_sc__v2=62591fb40cbf11d5a8421b5c260e8eba2eecba64; acw_tc=65e21c1a16500101019907895e4d949a280b1073adcc6893b5465bbbb5; acw_sc__v3=6259280b183730147957629f19dc189ffb7272bb; ssxmod_itna2=CqIx2DnDRAKBPSOD9DfxDucAXDCKqHtkTD6ab=x0Hb403aK1UEfHUyK3Dg7wMfYw3D67B54eHY8QHvpVAlQyfh3CamKaInC+=HPsgKleLj0nDMpFX+yYiwbApyiDvA+xU92pBkLrL+K8KLQntqN+IB3L0GA7UbrPY7owzuD4oA48jm3zAEUd1CXd5lUS/wieRkYiTTILjjdq9diu7P3HhREkISQ4IW6sXM3wj1c+EfURmauhjnaPL6L3W/gMRTj/REnhIEy+j4chMpybyF5p93xajn0VFTPiuSjiaspR5ihuf7ysY0EynL=YAiEAIA+GiiDUvVnwVg+SCGBg5HiDZOD=OmGGicODetq2=0jEq124jOAoetHQDvCRzB=8ANqR5b+QFWtKGiABrLnd=p6DFfSm6ztXRPpRO2uQhxB2DamOx21ewZgqjY2GaDsWj1B2wSa4SWcEXkWKN/IkODN9jOAFF7pfmwd8mf7ozbHemrz+9lKubDG2QDxKDcUEdSi5UrPIDAKChakQ6DQblmyxDFqD+Ee=QG1nhaA93QDxD===; ssxmod_itna=eqjxnDBiuDRlDXQq7xWqDKl7qIEqCwpaaPDsqmDSxGKidDqxBemk4KWqFTK4AOItaDmwtW7iGxa543ZEjr5TBe4AoDhx7QDox0=DnxAQDjox+H2wxG4DEDm4Di94itDEx7tcDAf8CDi=KDc15CDCnCHxDCjWHFebiKIGKORcaFDBbtK7bqKDxt=GDeFjnDYQmx70mvhRe4KiDYYY857jDx1eptpGqPqYD===",
         Referer: "https://www.ibox.art/",
         "Referrer-Policy": "strict-origin-when-cross-origin",
       },
