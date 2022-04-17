@@ -23,6 +23,7 @@
 <body>
 
     <div id="container"></div>
+    <canvas></canvas>
 
     <script src="./data/html-data.js"></script>
     <script src="../public/name-html.js"></script>
@@ -99,9 +100,15 @@
             });
 
 
+
             option = {
                 title: {
                     text: '历史价格曲线'
+                },
+                backgroundColor: { //在背景属性中添加
+                    type: 'pattern',
+                    image: initCanvas(),
+                    repeat: 'repeat'
                 },
                 tooltip: {
                     trigger: 'axis'
@@ -148,6 +155,25 @@
             if (option && typeof option === 'object') {
                 myChart.setOption(option);
             }
+        }
+
+
+        function initCanvas() {
+            const waterMarkText = 'ibox-data.cn';
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = 600
+            canvas.height = 400;
+            // ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.globalAlpha = 0.08;
+            ctx.font = '50px Microsoft Yahei';
+            ctx.translate(50, 50);
+            // ctx.rotate(-Math.PI / 4);
+            ctx.fillText(waterMarkText, 0, 0);
+            return canvas
+
         }
     </script>
 </body>
