@@ -87,14 +87,14 @@
 </head>
 
 <body style="height: 100%; margin: 0">
-    <div class="sel">
+    <!-- <div class="sel">
         <select name="name" id="id" onchange="selDay(value)">
             <option value="7">最近7条数据</option>
             <option value="14">最近14条数据</option>
             <option value="30">最近30条数据</option>
             <option value="0">所有数据</option>
         </select>
-    </div>
+    </div> -->
     <div class="psd" id="psd-box">
         <div>
             输入密码<input id="psd" type="text" /><button class="btn" onclick="showEcharts()">
@@ -164,12 +164,32 @@
             initChart()
         }
 
+        var uuid = '';
+        var localStorageTime = window.localStorage.getItem('time') || null
+        if (localStorageTime != moment().format("YYYY-MM-DD")) {
+            window.localStorage.clear()
+        } else {
+            uuid = window.localStorage.getItem('uuid')
+            for (let i = 0; i < abc.length; i++) {
+                const element = abc[i];
+                if (uuid == element.toString().substring(2, 8)) {
+                    document.getElementById("psd-box").setAttribute("class", "none");
+                    initChart();
+                }
+
+            }
+        }
+        // window.localStorage.setItem("uuid", psd)
+        //             window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
+
         function showEcharts() {
             var psd = document.getElementById("psd").value;
             for (let i = 0; i < abc.length; i++) {
                 const element = abc[i];
                 if (psd == element.toString().substring(2, 8)) {
                     document.getElementById("psd-box").setAttribute("class", "none");
+                    window.localStorage.setItem("uuid", psd)
+                    window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
                     initChart();
                 }
 
@@ -261,6 +281,14 @@
                     type: 'value'
                 },
                 series: seriesData,
+                dataZoom: [{
+                    type: 'inside',
+                    start: 50,
+                    end: 100
+                }, {
+                    start: 50,
+                    end: 100
+                }],
                 // series: [{
                 //     name: 'Email',
                 //     type: 'line',

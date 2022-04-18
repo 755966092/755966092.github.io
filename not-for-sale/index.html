@@ -152,6 +152,24 @@
         //         data: item.hisData
         //     })
         // });
+        var uuid = '';
+        var localStorageTime = window.localStorage.getItem('time') || null
+        if (localStorageTime != moment().format("YYYY-MM-DD")) {
+            window.localStorage.clear()
+        } else {
+            uuid = window.localStorage.getItem('uuid')
+            for (let i = 0; i < abc.length; i++) {
+                const element = abc[i];
+                if (uuid == element.toString().substring(2, 8)) {
+                    document.getElementById("psd-box").setAttribute("class", "none");
+                    initChart();
+                }
+
+            }
+        }
+        // window.localStorage.setItem("uuid", psd)
+        //             window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
+
 
         function showEcharts() {
             var psd = document.getElementById("psd").value;
@@ -159,6 +177,9 @@
                 const element = abc[i];
                 if (psd == element.toString().substring(2, 8)) {
                     document.getElementById("psd-box").setAttribute("class", "none");
+                    window.localStorage.setItem("uuid", psd)
+                    window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
+
                     initChart();
                 }
 

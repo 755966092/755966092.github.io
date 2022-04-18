@@ -132,28 +132,41 @@
         var selected = {}
         var x = []
 
-        function showEcharts() {
-            var psd = document.getElementById("psd").value;
+
+        var uuid = '';
+        var localStorageTime = window.localStorage.getItem('time') || null
+        if (localStorageTime != moment().format("YYYY-MM-DD")) {
+            window.localStorage.clear()
+        } else {
+            uuid = window.localStorage.getItem('uuid')
             for (let i = 0; i < abc.length; i++) {
                 const element = abc[i];
-                if (psd == element.toString().substring(2, 8)) {
+                if (uuid == element.toString().substring(2, 8)) {
                     document.getElementById("psd-box").setAttribute("class", "none");
                     initChart();
                 }
 
             }
-            // if (psd == "741852") {
-            //     document.getElementById("psd-box").setAttribute("class", "none");
-            //     initChart();
-            // }
+        }
+
+
+        function showEcharts() {
+            var psd = document.getElementById("psd").value;
+            for (let i = 0; i < abc.length; i++) {
+                const element = abc[i];
+                if (psd == element.toString().substring(2, 8)) {
+                    window.localStorage.setItem("uuid", psd)
+                    window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
+                    document.getElementById("psd-box").setAttribute("class", "none");
+                    initChart();
+                }
+
+            }
         }
 
         // initChart()
 
         function initChart() {
-            let len = time.length - limit;
-            let len2 = time.length
-
             x = time.map((t, i) => {
                 return moment(t).format("MM-DD HH:mm")
             })
