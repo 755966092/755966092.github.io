@@ -25,7 +25,7 @@ module.exports = {
       // method: "POST",
       // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
 
-      proxy: "http://111.72.157.88:31431",
+      // proxy: "http://111.72.157.88:31431",
       // proxy: proxy,
       callback: function (error, res, done) {
         if (error) {

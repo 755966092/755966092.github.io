@@ -11,8 +11,9 @@ const path = require("path"),
   crawler = require(path.join(root_path, "/public/crawler")),
   fs = require("fs");
 
-var url = "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getAlbumSearch?page=1&pageSize=200&order=0";
+// var url = "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getAlbumSearch?page=1&pageSize=200&order=0";
 // var url = "https://www.ibox.art/zh-cn/";
+var url = "https://movie.douban.com/j/search_tags?type=movie&source=index";
 
 console.log("开始...");
 crawler.initCrawler(async (res, err) => {
