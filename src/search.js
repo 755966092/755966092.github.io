@@ -215,7 +215,7 @@ crawler.initCrawler(async (res, err) => {
 
   if (arrNum < asd.length - 1) {
     arrNum += 1;
-    let ranNum = Math.floor(Math.random() * (12000 - 5000 + 1) + 5000);
+    let ranNum = Math.floor(Math.random() * (16000 - 7000 + 1) + 7000);
     console.log(`当前产品${arrNum}: ${currentData.name}`);
     await sleep(ranNum);
     crawler.c.queue([

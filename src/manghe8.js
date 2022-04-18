@@ -25,7 +25,7 @@ var arr = [
  * 100513818, 蔷薇处处开 6673
  */
 
-var url = `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`;
+var url = `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=1&pageSize=200&albumId=100513813&onSale=0&order=0`;
 
 function getUrl(page, arr, arrNum) {
   return `https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=${page}&pageSize=200&albumId=${arr[arrNum]}&onSale=0&order=0`;
