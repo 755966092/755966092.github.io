@@ -10,28 +10,65 @@ const path = require("path"),
   root_path = process.cwd(),
   crawler = require(path.join(root_path, "/public/crawler")),
   fs = require("fs");
+const request = require("request");
+var proxy = "";
+var count = 0;
 
 // var url = "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getAlbumSearch?page=1&pageSize=200&order=0";
 // var url = "https://www.ibox.art/zh-cn/";
-var url = "https://movie.douban.com/j/search_tags?type=movie&source=index";
+// var url = "https://movie.douban.com/j/search_tags?type=movie&source=index";
+var url =
+  "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=1&pageSize=50&albumId=100513810&onSale=0&order=0";
 
 console.log("开始...");
 crawler.initCrawler(async (res, err) => {
   if (err) {
     console.log("请求失败", err);
   }
+
   console.log("res: ", res.body);
+  if (res.body[0] == "<") {
+    // 报错
+    console.log("出错...", count++);
+    await sleep(1000);
+    getIp();
+  } else {
+    // 开始处理
+    console.log(res.body);
+  }
   // 获取数据
 });
+//
 
-crawler.c.queue([
-  {
-    uri: url,
-    jQuery: false,
-  },
-]);
+getIp();
 
 const sleep = (ms) =>
   new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
+
+async function getIp() {
+  let ip = "";
+  await request.get(
+    {
+      url: "http://api.shenlongip.com/ip?key=d7xxbfz5&pattern=txt&count=1&protocol=1,",
+      timeout: 10000,
+    },
+    function (error, response, body) {
+      if (response.body) {
+        ip = response.body;
+        console.log("ip: ", ip);
+        crawler.c.queue([
+          {
+            uri: url,
+            jQuery: false,
+            proxy: "http://" + ip,
+          },
+        ]);
+      } else {
+        getIp();
+      }
+    }
+  );
+  return ip;
+}
