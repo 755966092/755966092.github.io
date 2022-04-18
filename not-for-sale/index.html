@@ -174,9 +174,9 @@
             let len2 = time.length
 
             x = time.map((t, i) => {
-                return moment(t).format("MM-DD")
-            })
-            x = x.slice(len, len2)
+                    return moment(t).format("MM-DD")
+                })
+                // x = x.slice(len, len2)
             lineData.forEach((item, index) => {
 
                 for (let i = 0; i < nameData.length; i++) {
@@ -197,7 +197,7 @@
                             type: 'line',
                             smooth: true,
                             showSymbol: false,
-                            data: item.hisData.slice(len, len2)
+                            data: item.hisData
                         })
                         break;
                     }
