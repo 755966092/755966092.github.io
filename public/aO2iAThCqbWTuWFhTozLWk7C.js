@@ -2,6 +2,16 @@
 
 var nameData = [
   {
+    id: 100513829,
+    name: "张国荣签名纪念版",
+    total: 300,
+    albumName: "张国荣签名纪念版",
+    author: "厦门任星投资有限公司",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513829",
+    authentication: "该作品拥有厦门任星投资有限公司官方认证",
+    number: 136,
+  },
+  {
     id: 100513825,
     name: "丹凤门酒宴",
     total: 3000,
