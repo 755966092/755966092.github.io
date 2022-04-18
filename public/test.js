@@ -41,6 +41,13 @@ crawler.initCrawler(async (res, err) => {
 //
 
 getIp();
+// crawler.c.queue([
+//   {
+//     uri: url,
+//     jQuery: false,
+//     // proxy: "http://" + ip,
+//   },
+// ]);
 
 const sleep = (ms) =>
   new Promise((resolve) => {
