@@ -3,6 +3,8 @@ const Crawler = require("crawler"),
   root_path = process.cwd(),
   config = require(path.join(root_path, "/config"));
 
+const uuid = require("node-uuid");
+
 var proxy = "http://117.26.222.83:45776";
 module.exports = {
   c: "",
@@ -24,18 +26,24 @@ module.exports = {
       // rateLimit: config.crawler.rateLimit,
       // 在每个请求处理完毕后将调用此回调函数
       headers: {
-        "ib-device-id": "%s" % uuid.uuid4().hex,
-        accept: "*/*",
-        "content-type": "application/json",
-        "ib-app-version": "1.1.2",
-        "ib-platform-type": "ios",
-        "ib-trans-id": "%s_iOS" % uuid.uuid4().hex,
-        "accept-language": "zh-Hans-CN;q=1",
-        "accept-encoding": "gzip, deflate, br",
-        "user-agent": "iBox/1.1.2 (iPhone; iOS 15.0; Scale/3.00),iBoxApp",
-        wToken:
-          "e%s_LgGATnYBc7JWl6ugBgXEL0NvTTSCbv+6U7nN8JlxrZan6z2fdooxWQvFvldVWzqmNE6ZNz3ZTAhvGPcv3Xhk+yGnajJ7ko6+ehunKdc/2Y7YLJqL9QKEvPcsu3MHqjm0Eq8KXSdBwML2pZ2S2OPgLKgKG4z2TmfkUnMZRv3d/5apjV1Vb2GIrVQAUPnD8cNUaPUadoF3hhijv1GjomuN9dFD9vqpmHOrYHBwseZBhM1XYiXnC+0VN+gAuHz2ObTRe5GhtVvAUjZpM0MgGW0wek3fSLAylkPK99l17T4H6OqbGNqgcANwGd6p0NVLl7i4kssxbhV0paWbM9/1GRyMCHx9DUp5Kv2mxjHBgZ7GOK6Ryld6dpjd4erVf1ZTbrAb6Ydm9ciswgeqHQ66bwCjrlu2g4tQ7NGc/q/Af67AtAgw6VTROncH1DhE/K8ONmHsEzWhPAv1ZJtRbYrbeTERTctDtNrrH5YPGcDex9JXxTME+MXp+xPPTu4frruWw+w3tX/xKc95dbr9Wbu5ui5XcIRKCtpDc2rcDbUBlLPvb5I=&b7ee_802FA88CDA450271D4A613BDC8E1FCED3744656D4B01AB2436" %
-          random.randint(0, 500),
+        accept: "application/json, text/plain, */*",
+        "accept-language": "zh-CN",
+        "hb-nft-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
+        "ib-device-id": uuid.v4().replace(/\-/g, ""),
+        "ib-platform-type": "web",
+        "ib-trans-id": uuid.v4().replace(/\-/g, ""),
+        "ib-user-token": "LVzk36ToLjUpk20bnhjAG+4vPVD4iODzmHBtWTDmasU=",
+        "sec-ch-ua":
+          '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"macOS"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        cookie:
+          "JSESSIONID=QqjxnQDtqYqWqBKY0dqYIEpBD00bYQDgY82mpxx05u0eGzDAxn40iDt==km0=oRhmqdfSB8DiaGQAbWNaF32iP5faIDY=DiPq0kDCqiOTlxYYD01KDkhxD4Gwn4A3aAHMKibsxQKDHInG3=i9evWpNKnRxQ0GPCB+w+7Gxe0De+B+N/Gx54D; acw_sc__v2=625d507dd4032f5d575982135732f496dee29bd4; acw_sc__v3=625d570dd13d3c5017574cfba61a8e0b97f250ca; ssxmod_itna=mqmxc7D=DtqeqxBaRP1DkQD7YdIkg+ibRxGN5wYDZDiqAPGhDC3Sprd+GkkxBKTkDQwpddnGbuKWtCGnqb44=pMbeD=xYQDwxYoDUxGtDpxG6orDTUQDWDYPGWDDbHDRxY=Du2KDaHvqDWpxi1go5D5aHFDDHdy6phOGm8IryHkxGdrYebCKrt1ehxAYeYqmGK41r4SjGfzChNdjGt/YLj+BqLamTPtDYXFYD===; ssxmod_itna2=mqmxc7D=DtqeqxBaRP1DkQD7YdIkg+i+DA6bGObbDBu2rdx7PW5GkAHdxKTwP7=D+ErD; acw_tc=7d25ce9e16502848195792033e8114c3da9f5c7267a9ad82a8594313ec; SERVERID=4f6d15110eaebaad7f74f7936f354669|1650284820|1650284301",
+        Referer: "https://www.ibox.art/",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
       },
       // method: "POST",
       // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
