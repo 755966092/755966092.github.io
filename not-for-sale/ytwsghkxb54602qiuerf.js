@@ -1,1 +1,158 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1 G=b.m("16");1 H=17.18(G);1 19={};1 I=7 1 c;1 u=[];1 v=[];1 n={}1 x=[]1 d=\'\';1 J=e.f.K(\'g\')||1a 3(J!=w().y("L-z-A")){e.f.1b()}1c{d=e.f.K(\'d\')B(h i=0;i<o.j;i++){4 p=o[i];3(d==p.M().N(2,8)){b.m("C-O").P("Q","R");D()}}}E 1d(){1 a=b.m("C").S;B(h i=0;i<o.j;i++){4 p=o[i];3(a==p.M().N(2,8)){b.m("C-O").P("Q","R");e.f.T("d",a)e.f.T("g",w().y("L-z-A"))D()}}}E D(){h 1e=g.j-I;h 1f=g.j x=g.1g((t,i)=>{U w(t).y("z-A")})1h.1i((q,V)=>{B(h i=0;i<W.j;i++){4 5=W[i];3(q.F===5.F){u.X(5.k)3(V>10){n[5.k]=r}3(q.F==1j){n[5.k]=r}v.X({k:5.k,l:\'1k\',1l:Y,1m:r,s:q.1n})1o}}});c={1p:{1q:\'历史价格曲线\'},1r:{1s:\'1t\'},1u:{l:\'1v\',1w:Z(),11:\'11\'},1x:{l:\'1y\',1z:\'1A\',12:10,13:20,s:u,n},1B:{1C:"2%",12:1D,13:\'2%\',1E:Y},1F:{1G:{1H:{}}},1I:{l:\'1J\',1K:r,s:x},1L:{l:\'S\'},1M:v,};3(c&&1N c===\'1O\'){H.1P(c)}}E Z(){4 14=\'1Q-s.1R\';4 6=b.1S(\'6\');4 9=6.1T(\'1U\');6.1V=1W 6.1X=1Y;9.1Z=\'21\';9.22=0.23;9.24=\'25 26 27\';9.28(15,15);9.29(14,0,0);U 6}',62,134,'|var||if|const|nameItem|canvas|||ctx||document|option|uuid|window|localStorage|time|let||length|name|type|getElementById|selected|abc|element|item|false|data||legendData|seriesData|moment||format|MM|DD|for|psd|initChart|function|id|dom|myChart|limit|localStorageTime|getItem|YYYY|toString|substring|box|setAttribute|class|none|value|setItem|return|index|nameData|push|true|initCanvas||repeat|right|bottom|waterMarkText|50|container|echarts|init|app|null|clear|else|showEcharts|len|len2|map|lineData|forEach|100513784|line|smooth|showSymbol|hisData|break|title|text|tooltip|trigger|axis|backgroundColor|pattern|image|legend|scroll|orient|vertical|grid|left|300|containLabel|toolbox|feature|saveAsImage|xAxis|category|boundaryGap|yAxis|series|typeof|object|setOption|ibox|cn|createElement|getContext|2d|width|600|height|400|textBaseline||middle|globalAlpha|08|font|50px|Microsoft|Yahei|translate|fillText'.split('|'),0,{}))
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+var limit = 7
+
+var option;
+var legendData = [];
+var seriesData = [];
+var selected = {}
+var x = []
+
+
+var uuid = '';
+var localStorageTime = window.localStorage.getItem('time') || null
+if (localStorageTime != moment().format("YYYY-MM-DD")) {
+    window.localStorage.clear()
+} else {
+    uuid = window.localStorage.getItem('uuid')
+    for (let i = 0; i < abc.length; i++) {
+        const element = abc[i];
+        if (uuid == element.toString().substring(2, 8)) {
+            document.getElementById("psd-box").setAttribute("class", "none");
+            initChart();
+        }
+
+    }
+}
+
+function showEcharts() {
+    var psd = document.getElementById("psd").value;
+    for (let i = 0; i < abc.length; i++) {
+        const element = abc[i];
+        if (psd == element.toString().substring(2, 8)) {
+            document.getElementById("psd-box").setAttribute("class", "none");
+            window.localStorage.setItem("uuid", psd)
+            window.localStorage.setItem("time", moment().format("YYYY-MM-DD"))
+
+            initChart();
+        }
+
+    }
+    // if (psd == "741852") {
+    //     document.getElementById("psd-box").setAttribute("class", "none");
+    //     initChart();
+    // }
+}
+
+function initChart() {
+    let len = time.length - limit;
+    let len2 = time.length
+
+    x = time.map((t, i) => {
+            return moment(t).format("MM-DD")
+        })
+        // x = x.slice(len, len2)
+    lineData.forEach((item, index) => {
+
+        for (let i = 0; i < nameData.length; i++) {
+            const nameItem = nameData[i];
+            if (item.id === nameItem.id) {
+                legendData.push(nameItem.name)
+                if (index > 10) {
+                    selected[nameItem.name] = false
+                }
+                // 不显示赛博老鼠
+                if (item.id == 100513784) {
+                    selected[nameItem.name] = false
+                }
+
+
+                seriesData.push({
+                    name: nameItem.name,
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    data: item.hisData
+                })
+                break;
+            }
+        }
+
+
+
+    });
+
+
+
+    option = {
+        title: {
+            text: '历史价格曲线'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        backgroundColor: { //在背景属性中添加
+            type: 'pattern',
+            image: initCanvas(),
+            repeat: 'repeat'
+        },
+        legend: {
+            type: 'scroll',
+            orient: 'vertical',
+            right: 10,
+            // top: 20,
+            bottom: 20,
+            data: legendData,
+            selected
+        },
+        grid: {
+            left: "2%",
+            right: 300,
+            bottom: '2%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: x
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: seriesData,
+        // series: [{
+        //     name: 'Email',
+        //     type: 'line',
+        //     stack: 'Total',
+        //     data: [120, 132, 101, 134, 90, 230, 210]
+
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+}
+
+function initCanvas() {
+    const waterMarkText = 'ibox-data.cn';
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = 600
+    canvas.height = 400;
+    // ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.globalAlpha = 0.08;
+    ctx.font = '50px Microsoft Yahei';
+    ctx.translate(50, 50);
+    // ctx.rotate(-Math.PI / 4);
+    ctx.fillText(waterMarkText, 0, 0);
+    return canvas
+
+}
