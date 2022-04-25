@@ -20,40 +20,35 @@ var url = "https://movie.douban.com/j/search_tags?type=movie&source=index";
 // var url ="https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getProductListByAlbumId?page=1&pageSize=50&albumId=100513810&onSale=0&order=0";
 
 console.log("开始...");
-crawler.initCrawler(async (res, err) => {
-  if (err) {
-    console.log("请求失败", err);
-  }
 
-  console.log("res: ", res.body);
-  if (res.body[0] == "<") {
-    // 报错
-    console.log("出错...", count++);
-    await sleep(1000);
-    // getIp();
-  } else {
-    // 开始处理
-    console.log(res.body);
-  }
-  // 获取数据
-});
 //
 
 // getIp();
-crawler.c.queue([
+
+request(
   {
-    uri: url,
-    jQuery: false,
-    proxy: "http://117.95.166.97:57114",
+    url: url, //请求路径
+    method: "GET", //请求方式，默认为get
+    headers: {
+      //设置请求头
+      "content-type": "application/json",
+    },
   },
-]);
+  function (error, response, body) {
+    console.log('body: ', body);
+    // console.log('response: ', response);
+    console.log('error: ', error);
+    if (!error && response.statusCode == 200) {
+      console.log('body: ', body);
+    }
+  }
+);
 
 const sleep = (ms) =>
   new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
-  // 
-
+//
 
 async function getIp() {
   let ip = "";
