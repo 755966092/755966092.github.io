@@ -273,6 +273,16 @@ var nameData = [
     number: 122,
   },
   {
+    id: 100513782,
+    name: "iBox-CyberDragon",
+    total: 33844,
+    albumName: "iBox赛博生肖系列",
+    author: "iBox",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513782",
+    authentication: "该作品拥有iBox官方认证",
+    number: 123,
+  },
+  {
     id: 100513775,
     name: "寿瑞狮",
     total: 200,

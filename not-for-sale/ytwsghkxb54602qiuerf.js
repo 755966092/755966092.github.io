@@ -43,8 +43,6 @@ function initChart() {
   x = time.map((t, i) => {
     return moment(t).format("MM-DD");
   });
-  console.log('lineData: ', lineData);
-  console.log('nameData: ', nameData);
   lineData.forEach((item, index) => {
     for (let i = 0; i < nameData.length; i++) {
       const nameItem = nameData[i];
@@ -70,7 +68,6 @@ function initChart() {
     }
   });
   
-  console.log('seriesData: ', seriesData);
   option = {
     title: {
       text: "历史价格曲线",
