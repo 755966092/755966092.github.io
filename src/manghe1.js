@@ -101,6 +101,7 @@ crawler.initCrawler(async (res, err) => {
     page = 1;
     let timeLin2 = Math.floor(Math.random() * (13000 - 8000 + 1) + 8000);
     timeNum += timeLin2 / 1000;
+    
     await sleep(timeLin2);
 
     crawler.c.queue([
