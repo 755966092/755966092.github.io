@@ -23951,3 +23951,11 @@ var lineData = [{
         tokenId: "",
     },
 ]
+
+const ObjectsToCsv = require("objects-to-csv");
+
+const csv = new ObjectsToCsv(lineData);
+
+(async () => {
+  await csv.toDisk("./list-manghe.csv", { append: true });
+})();

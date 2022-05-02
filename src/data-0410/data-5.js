@@ -2,8 +2,4 @@ var lineData = [{ "albumId": 100092628, "gId": 100765247, "gName": "机器人熊
 
 
 
-var a = {}
-lineData.map(item => {
-    a[item.albumId] = item
-})
-console.log(a)
+

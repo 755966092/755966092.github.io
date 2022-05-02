@@ -1,61 +1,60 @@
 const Crawler = require("crawler"),
-    path = require("path"),
-    root_path = process.cwd(),
-    config = require(path.join(root_path, "/config"));
+  path = require("path"),
+  root_path = process.cwd(),
+  config = require(path.join(root_path, "/config"));
 
 const uuid = require("node-uuid");
 
 var proxy = "http://117.26.222.83:45776";
 module.exports = {
-    c: "",
-    num: "",
-    initCrawler(cb) {
-        console.log("init crawler");
-        // initCrawler(params, cb) {
-        //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
-        this.c = new Crawler({
-            // 超时时间
-            timeout: config.crawler.timeout,
-            // jQuery: false,
-            // 失败重试次数
-            retries: config.crawler.retries,
-            // 失败重试等待时间
-            retryTimeout: config.crawler.retryTimeout,
-            // 最大并发数默认为10
-            // maxConnections: config.crawler.maxConnections,
-            // rateLimit: config.crawler.rateLimit,
-            // 在每个请求处理完毕后将调用此回调函数
-            headers: {
-                accept: "application/json, text/plain, */*",
-                "accept-language": "zh-CN",
-                // "ib-device-id": "f00bdb0f9ec14ba496ccb24c20c0e548",
-                "ib-platform-type": "web",
-                "ib-trans-id": "0a365f7642564c839cbc55bb51bb0c97",
-                "sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
-                // "sec-ch-ua-mobile": "?0",
-                // "sec-ch-ua-platform": '"Windows"',
-                "sec-fetch-dest": "empty",
-                "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-site",
-                // cookie: "_uab_collina=164865229955951961884756; JSESSIONID=6261291eb2cdbb5824ea85fb44bf1c9245ed4e2a; acw_tc=7ca5d59716505901867681719e018aa32ff944adccf228eade056c4e75; acw_sc__v2=626201eaef02ba7bfc479d5d003f197f19aa3059; acw_sc__v3=62620304d0aacfd227a2894e040aa58c48456151; SERVERID=a4bcc7c3b0f107c82701c502eddc64da|1650590469|1650590187; ssxmod_itna=Yq0EYv4UgY0dD=G7CbG=G8D0GN8Ac0hPpmmbPDsb7tDSxGKidDqxBmwQehIuG9G=eWm8qGOf7n+pW3ji7ai=PN7QcWo8zQ0xGLDmKDyQRP+qDxOq0rD74irDDxD3Db3QDSDWKD9D04CMnkNgDi3DbxtDi4D+GT=DmqG0DDt7/4G2D7tBGiqNhk2XzQXdXuAP=xtDjdTD/4wFcDUo1PF=/k2T=20WWqGylPGu9dNDqMbDCOUDguisGYpxQLv4CDwaQb44tATpQwPQYAqXZOGxWD4Y0YZbCAvyxDfjA0QweD==; ssxmod_itna2=Yq0EYv4UgY0dD=G7CbG=G8D0GN8Ac0hPpmm4ikAbee7DlhxrDj+Y0Q9G8X8nbnUxu50dXKilv4P56iwYQo8CSqqhw3AxAPGyBE70uGbzoWlDdXmQwITokz1ByXLXPq5w7oy3LN=isUhNsYfGHBbjqYqr+tB00Y3=6RxrrtWteNgR63+EoglvnRfdd7+i8W0+nlxrYWD4cD6pz93QxNeikF4Hip7GqhDWmtQ5AtQd64T45T9XquwYNd9KopLAsc3X+U+LDVxKU4TgfvTYCLEYo5iOkBok2UaLGw/2uGpr8IGFGKGXIqn1g3z4nsg8DGTG0+aDhDQdH84s3YGuOKl+zBkOFj=d3HF7+Kqsq7riRKGwmzrwXx7SxhDxrAWdWro5uz5bIfWzS2T7fYydQORTgoTfMQmgm7AGSgKCwmOlsh8T/BGB8hV0s5CdgD=N4Tg0Youp147VQ7spDh6YIdkxM1q0Tg4EydjgMwxEU1YpCMKtrxzP4iBHvbsYfOyGoucqHx8ViqQhmkPotTeZSD7DPD7QnAoEiqOWqrm5=sB+AxMBp0e452gOnPDyIkAYcDeF5eHd4DjKDew5TOX0ReyiDD==",
-                Referer: "https://www.ibox.art/",
-                "Referrer-Policy": "strict-origin-when-cross-origin",
-            },
-            // method: "POST",
-            // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
+  c: "",
+  num: "",
+  initCrawler(cb) {
+    console.log("init crawler");
+    // initCrawler(params, cb) {
+    //   initCrawler(headers = {}, body = {}, type = "GET", cb) {
+    this.c = new Crawler({
+      // 超时时间
+      timeout: config.crawler.timeout,
+      // jQuery: false,
+      // 失败重试次数
+      retries: config.crawler.retries,
+      // 失败重试等待时间
+      retryTimeout: config.crawler.retryTimeout,
+      // 最大并发数默认为10
+      // maxConnections: config.crawler.maxConnections,
+      // rateLimit: config.crawler.rateLimit,
+      // 在每个请求处理完毕后将调用此回调函数
+      headers: {
+        accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "cache-control": "max-age=0",
+        "sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"macOS"',
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1",
+        cookie:
+          "_uab_collina=165121459464777614314658; JSESSIONID=165121459464777614314658; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2218074a69a63a6a-0b7a8d1d150e08-535b0614-2073600-18074a69a64d14%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22%24device_id%22%3A%2218074a69a63a6a-0b7a8d1d150e08-535b0614-2073600-18074a69a64d14%22%7D; ssxmod_itna2=7qUxRDBDgD2A3xBPGKFm=Dc0IAx+GYkQR0nDA=nEoPD/7BDIx7pxQP8qphh1OHD82i682eRAIx8QDDqRQnI0mG0CKLtC8ttFpfMOiKYj2C+iRd2YCDTfYaRexbKUOmxOMpKt5mC1vAT5I0TjpWf0A8+IH4+D8FmhjI3RjREbhzQRxiqRyeuucD=RKLdblFmWhF3Rubatm46iTVCEh/jtiPcFDLSc2F=WtVpTiccHN=Aoq+6t++=bK4UahWeF2Dm0fq1t2YFY3ctA0x/9=h/6svMyOq=oH/ZEBrHbBg9/Pk2/GUOGCSr8n4xtDsniKDr=Q4Kh4YTr=BhaQhTCr5CfKS+OrC=g4ibMaK0wzSGURtQkrGbKRTmqdWIQWdq1NTQ3Y=mSGLuT=bqKnKYEog7o1LDniHhxx9335OCrOCQhOxOqeZNNpNe=Eh2D6xftPo9RYhooe13QBENSF3pEDSE86wdeWIA3nSPV3mSb8xg+fp=+poycjoZUmhsC6Ek=ikcrQrKADDwoqqY+IDm7Bnj9Hv705DwPhGQj54nqInmQAN3ygN5SPjO8mhIjA1mh+BeligFV8PeMdXSQGD53w51vxlMBF5zMM5xbthgjbK4nmVQxrlQTNh9iGoeEIQGvGgzNPsig7WhqK0SB1kDRS0qDjKDeTzCGIzG9N9m871rs73Aoe7125zTDrnx0GmQHwrFazbKl7DkDVxetYQizeA9xGw2CaD0DsG3CD5BxeBwxN7DEEC2iKYDD; ssxmod_itna=7qGxniitqYqCqqBpxeTmtDci=DCb1q15eHHDlrpPxA5D8D6DQeGTr0zpQeQOe1ttgq0QHerYPxsvKBY7AGQKzfn0trDneG0DQKGmDBKDSDWKD9IeoCOuDixGWDbxDYzxY5GnDQHkDWhptDGRQDfTXgDBYMn4DBCxNUtWqmFMjSDwdDCo+hifuYngfQbOY3/DhhK0GY7AwWM0GISBfFNGqqK+xojAedAiD===; acw_tc=3cdd17a116514903000102478e83a438e4df601f2d61d2512a9dd4fcca; SERVERID=a90c3e2c66038217a856f599553a3c6b|1651490302|1651489845"
+      },
+      // method: "POST",
+      // http://api.shenlongip.com/ip?key=7cmfnoag&pattern=json&count=11&need=1000&protocol=2
 
-            // proxy: proxy,
-            // proxy: proxy,
-            callback: function(error, res, done) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    cb(res);
-                }
-                done();
-            },
-        });
-    },
+      // proxy: proxy,
+      // proxy: proxy,
+      callback: function (error, res, done) {
+        if (error) {
+          console.log(error);
+        } else {
+          cb(res);
+        }
+        done();
+      }
+    });
+  }
 };
 // curl
 //  'Host: 100000552840.yuyue.n.weimob.com'
