@@ -2,12 +2,23 @@
 
 module.exports = {
   data: [
-    
+    {
+      id: 100513869,
+      name: "干杯",
+      albumName: "干杯",
+      total: 2001,
+    },
     {
       id: 100513867,
       name: "姜子牙",
       albumName: "姜子牙",
       total: 700,
+    },
+    {
+      id: 100513864,
+      name: "iBox-赛博GOLDEN",
+      albumName: "赛博猫狗",
+      total: 100000,
     },
     {
       id: 100513863,

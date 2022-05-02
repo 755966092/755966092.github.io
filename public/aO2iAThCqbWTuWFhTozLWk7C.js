@@ -2,6 +2,12 @@
 
 var nameData = [
   {
+    id: 100513869,
+    name: "干杯",
+    albumName: "干杯",
+    total: 2001,
+  },
+  {
     id: 100513867,
     name: "姜子牙",
     albumName: "姜子牙",
