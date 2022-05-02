@@ -4,6 +4,12 @@ module.exports = {
   data: [
     
     {
+      id: 100513867,
+      name: "姜子牙",
+      albumName: "姜子牙",
+      total: 700,
+    },
+    {
       id: 100513863,
       name: "iBox-赛博Terrier",
       albumName: "赛博猫狗",

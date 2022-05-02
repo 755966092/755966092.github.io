@@ -2,40 +2,60 @@
 
 var nameData = [
   {
+    id: 100513867,
+    name: "姜子牙",
+    albumName: "姜子牙",
+    total: 700,
+  },
+  {
+    id: 100513863,
+    name: "iBox-赛博Terrier",
+    albumName: "赛博猫狗",
+    total: 100000,
+  },
+  {
     id: 100513862,
     name: "孙悟空大战巨灵神",
-    name: "大闹天宫系列"
+    albumName: "大闹天宫系列",
+    total: 3000,
   },
   {
     id: 100513862,
     name: "青啸虎",
-    name: "青啸虎"
+    albumName: "青啸虎",
+    total: 1100,
+
   },
   {
     id: 100513856,
     name: "刘备",
-    name: "五虎上将"
+    albumName: "五虎上将",
+    total: 200,
   },
 
   {
     id: 100513860,
     name: "孙悟空大战托塔天王",
-    name: "大闹天宫系列"
+    albumName: "大闹天宫系列",
+    total: 2000,
   },
   {
     id: 100513859,
     name: "功夫猫-2号",
-    name: "功夫猫-2号"
+    albumName: "功夫猫-2号",
+    total: 70000,
   },
   {
     id: 100513858,
     name: "功夫猫-1号",
-    name: "功夫猫-1号"
+    albumName: "功夫猫-1号",
+    total: 70000,
   },
   {
     id: 100513857,
     name: "精灵宝贝",
-    name: "精灵宝贝"
+    albumName: "精灵宝贝",
+    total: 15000,
   },
   {
     id: 100513853,
