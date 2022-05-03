@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="../public/jquery.js"></script>
+    <script>
+        // $.ajax({
+        //     url: "http://123.57.64.135/ibox/getInfos",
+        //     type: "post",
+        //     data: {
+        //         "tokenid": "660508"
+        //     },
+        //     dataType: 'json',
+        //     success: function(msg) {
+        //         alert("Data Saved: " + msg);
+        //     }
+
+        $.ajax({
+            type: "POST",
+            url: "http://123.57.64.135/ibox/getInfos",
+            data: {
+                token: "uwjJoJKOv5bk7KAEN8ln"
+            },
+            success: function(msg) {
+
+                alert("Data Saved: " + msg);
+            }
+        });
+
+        // });
+        $.ajax({
+            type: "POST",
+            url: "http://60.205.252.237:8080/Api/Token/verifyToken",
+            data: {
+                token: "uwjJoJKOv5bk7KAEN8ln"
+            },
+            success: function(msg) {
+
+                alert("Data Saved: " + msg);
+            }
+        });
+    </script>
+</body>
+
+</html>
