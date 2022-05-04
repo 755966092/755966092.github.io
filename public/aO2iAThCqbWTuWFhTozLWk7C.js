@@ -2,41 +2,56 @@
 
 var nameData = [
   {
+    id: 100513871,
+    name: "iBox-CyberBull",
+    total: 70000,
+    albumName: "赛博生肖系列",
+    author: "iBox",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513871",
+    authentication: "该作品拥有iBox官方认证",
+    number: 156,
+  },
+  {
     id: 100513869,
     name: "干杯",
     albumName: "干杯",
     total: 2001,
+    number: 155,
   },
   {
     id: 100513867,
     name: "姜子牙",
     albumName: "姜子牙",
     total: 700,
+    number: 154,
   },
   {
     id: 100513863,
     name: "iBox-赛博Terrier",
     albumName: "赛博猫狗",
     total: 100000,
+    number: 153,
   },
   {
     id: 100513862,
     name: "孙悟空大战巨灵神",
     albumName: "大闹天宫系列",
     total: 3000,
+    number: 152,
   },
   {
     id: 100513862,
     name: "青啸虎",
     albumName: "青啸虎",
     total: 1100,
-
+    number: 151,
   },
   {
     id: 100513856,
     name: "刘备",
     albumName: "五虎上将",
     total: 200,
+    number: 150,
   },
 
   {
@@ -44,24 +59,28 @@ var nameData = [
     name: "孙悟空大战托塔天王",
     albumName: "大闹天宫系列",
     total: 2000,
+    number: 149,
   },
   {
     id: 100513859,
     name: "功夫猫-2号",
     albumName: "功夫猫-2号",
     total: 70000,
+    number: 148,
   },
   {
     id: 100513858,
     name: "功夫猫-1号",
     albumName: "功夫猫-1号",
     total: 70000,
+    number: 147,
   },
   {
     id: 100513857,
     name: "精灵宝贝",
     albumName: "精灵宝贝",
     total: 15000,
+    number: 146,
   },
   {
     id: 100513853,
@@ -71,7 +90,7 @@ var nameData = [
     author: "iBox",
     link: "https://www.ibox.art/zh-cn/item/?id=100513853",
     authentication: "该作品拥有iBox官方认证",
-    number: 143,
+    number: 145,
   },
   {
     id: 100513851,
@@ -81,7 +100,7 @@ var nameData = [
     author: "iBox",
     link: "https://www.ibox.art/zh-cn/item/?id=100513851",
     authentication: "该作品拥有iBox官方认证",
-    number: 142,
+    number: 144,
   },
   // {
   //   id: 100513844,
@@ -121,7 +140,7 @@ var nameData = [
     author: "极坞世界",
     link: "https://www.ibox.art/zh-cn/item/?id=100513841",
     authentication: "该作品拥有极坞 X Kanachan官方认证",
-    number: 138,
+    number: 143,
   },
   {
     id: 100513839,
