@@ -5,49 +5,447 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>购买历史查询</title>
+    <link rel="stylesheet" href="../public/bootstrap.css">
+    <style>
+        html,
+        body,
+        .loading-wrap {
+            height: 100%;
+        }
+        
+        .loading-wrap {
+            background-color: rgba(0, 0, 0, .5);
+            align-items: center;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+        }
+        
+        .wrap {
+            height: 100%;
+            padding: 0 30px;
+        }
+        
+        .item-wrap {
+            margin-right: 10px;
+        }
+        
+        .item-wrap p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .label {
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .number {
+            width: 140px;
+        }
+        
+        .token {
+            width: 140px;
+        }
+        
+        .text-black-50 {
+            font-size: 14px;
+        }
+        
+        .badge-secondary {
+            margin-left: 10px;
+        }
+        
+        div.hide {
+            display: none !important;
+        }
+        
+        div.show {
+            display: flex !important;
+        }
+        
+        .form-group {
+            width: 300px;
+            padding: 20px 0 0 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="d-flex justify-content-center loading-wrap" id="loading">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
+            <option value="">选择</option>
+            <option value="0x6006aabb73454c9cfae62febbc6c3f3728f546c8">鱼化寨一号</option>
+            <option value="0x9ba78a93387cdee2769ae6e24d3f13e2ec2b12ef">小明星</option>
+            <option value="0x3342572427e79309071b43368cc7976e5c627a12">我想吃西瓜</option>
+            <option value="0xeb6124360c548c9593f39b8d889facde76e52fb3">马迪托1号(干杯)</option>
+            <option value="0xca7155fb215750619e6d68fc5d2363be77252886">爱学习的小白(干杯)</option>
+            <option value="0xcb6e6e58d97bd5bbc5eae37a77171ca88364f458">Lj72cgRf(干杯)</option>
+            <option value="0x4018fee7752c503b6c2ad8b5807bfecef5eb9ec7">Dashazi(干杯)</option>
+            <option value="0xc2618849b719bce2016c0e27b3925b35a33fa8ff">超超小飞侠NFT(干杯)</option>
+        </select>
+    </div>
+    <div class="wrap">
+
+        <div>
+
+        </div>
+        <ul class="list-group list-group-flush" id="ul_wrap">
+            <!-- <li class="list-group-item d-flex">
+                <div class="item-wrap">
+                    <p>想你的液 <span class="bg-danger badge badge-secondary">卖出</span></p>
+                    <div class="text-black-50">
+                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
+                        <span class="label token">tokenId: 12345</span>
+                        <span class="label number">编号: 12345</span>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item d-flex">
+                <div class="item-wrap">
+                    <p>想你的液想你的液 <span class="bg-success badge badge-secondary">买入</span></p>
+                    <div class="text-black-50">
+                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
+                        <span class="label token">tokenId: 12345</span>
+                        <span class="label number">编号: 12345</span>
+                    </div>
+                </div>
+            </li> -->
+
+        </ul>
+    </div>
 
     <script src="../public/jquery.js"></script>
+    <script src="../public/moment.js"></script>
+    <script src="../public/bootstrap.js"></script>
     <script>
-        // $.ajax({
-        //     url: "http://123.57.64.135/ibox/getInfos",
-        //     type: "post",
-        //     data: {
-        //         "tokenid": "660508"
-        //     },
-        //     dataType: 'json',
-        //     success: function(msg) {
-        //         alert("Data Saved: " + msg);
-        //     }
+        let id = '0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e'
+        const loading = document.getElementById('loading')
+            // getData()
+        $("#loading").addClass("hide");
+        $("#loading").removeClass("show");
 
-        $.ajax({
-            type: "POST",
-            url: "http://123.57.64.135/ibox/getInfos",
-            data: {
-                token: "uwjJoJKOv5bk7KAEN8ln"
-            },
-            success: function(msg) {
-
-                alert("Data Saved: " + msg);
+        function selId(e) {
+            console.log('e: ', e.target.value);
+            if (e.target.value) {
+                getData(e.target.value)
             }
-        });
+        }
 
-        // });
-        $.ajax({
-            type: "POST",
-            url: "http://60.205.252.237:8080/Api/Token/verifyToken",
-            data: {
-                token: "uwjJoJKOv5bk7KAEN8ln"
-            },
-            success: function(msg) {
-
-                alert("Data Saved: " + msg);
+        function getData(address) {
+            let iid;
+            if (address) {
+                id = address
+                iid = address
+            } else {
+                iid = id
             }
-        });
+            $("#loading").addClass("show");
+            $("#loading").removeClass("hide");
+            $.ajax({
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&startblock=0&endblock=999999999&sort=desc`,
+                type: "get",
+                dataType: 'json',
+                success: function(msg) {
+                    render(msg, iid)
+                }
+            });
+        }
+
+        function render(data, iid) {
+            $("#loading").addClass("hide");
+            $("#loading").removeClass("show");
+            var a2 = {
+                code: 1,
+                data: {
+                    currPage: 1,
+                    hashNext: 0,
+                    list: [{
+                        id: 167,
+                        noticeName: "关于藏品「干杯」暂时中止寄售交易公告",
+                        noticeTime: 1651564500000
+                    }, {
+                        id: 166,
+                        noticeName: "iBox《干杯》藏品开启合成公告",
+                        noticeTime: 1651555800000
+                    }, {
+                        id: 165,
+                        noticeName: "「iBox平台关于近期部分用户造谣澄清公告」",
+                        noticeTime: 1651518900000
+                    }, {
+                        id: 163,
+                        noticeName: "iBox全网首创“缤纷好运来”合成活动即将开启",
+                        noticeTime: 1651487040000
+                    }, {
+                        id: 118,
+                        noticeName: "iBox关于提升藏品寄售限额的公告",
+                        noticeTime: 1650966000000
+                    }, {
+                        id: 174,
+                        noticeName: "iBox藏品《iBox-CyberBull》现已开放寄售公告",
+                        noticeTime: 1651658280000
+                    }, {
+                        id: 173,
+                        noticeName: "关于iBox发放“五一空投活动”藏品公告",
+                        noticeTime: 1651657560000
+                    }, {
+                        id: 172,
+                        noticeName: "「寻人启事」寻找4位IBox账户持有人",
+                        noticeTime: 1651645440000
+                    }, {
+                        id: 171,
+                        noticeName: "iBox将对集齐「五瑞狮」系列藏品的用户发放《牛气冲天》空投藏品公告",
+                        noticeTime: 1651644780000
+                    }, {
+                        id: 169,
+                        noticeName: "iBox藏品「汉昭烈帝-刘备」赋能公告",
+                        noticeTime: 1651643460000
+                    }, {
+                        id: 168,
+                        noticeName: "iBox「五虎上将」系列藏品赋能公告",
+                        noticeTime: 1651643220000
+                    }, {
+                        id: 161,
+                        noticeName: "iBox八期盲盒《民国六大金曲》即将开启合成公告",
+                        noticeTime: 1651458720000
+                    }, {
+                        id: 160,
+                        noticeName: "iBox劳动节空投活动5月2日提前结束公告",
+                        noticeTime: 1651415820000
+                    }, {
+                        id: 159,
+                        noticeName: "iBox对合成藏品《鱼化寨由来》发放限量专属空投公告",
+                        noticeTime: 1651412040000
+                    }, {
+                        id: 158,
+                        noticeName: "iBox合成藏品《COSMOS-太空龙》赋能公告",
+                        noticeTime: 1651410900000
+                    }, {
+                        id: 157,
+                        noticeName: "iBox合作艺术家刘向东《红红火火》系列作品展示",
+                        noticeTime: 1651407180000
+                    }, {
+                        id: 155,
+                        noticeName: "iBox合成藏品《拥抱》赋能公告",
+                        noticeTime: 1651404060000
+                    }, {
+                        id: 153,
+                        noticeName: "iBox 5月2号春日限定第二次合成活动即将开启",
+                        noticeTime: 1651393800000
+                    }, {
+                        id: 152,
+                        noticeName: "七期盲盒合成藏品《MALDITO马迪托·序章》发放限量专属空投公告",
+                        noticeTime: 1651383000000
+                    }, {
+                        id: 151,
+                        noticeName: "iBox 5月1号春日限定合成活动延后1小时开启公告",
+                        noticeTime: 1651381260000
+                    }, {
+                        id: 149,
+                        noticeName: "惊喜不断好运连连五一空投活动发放公告「壹」",
+                        noticeTime: 1651375380000
+                    }, {
+                        id: 148,
+                        noticeName: "「iBox关于部分用户针对钱包余额造谣的澄清公告」",
+                        noticeTime: 1651333200000
+                    }, {
+                        id: 147,
+                        noticeName: "iBox缤纷合成活动藏品《鱼化寨由来》赋能公告",
+                        noticeTime: 1651323120000
+                    }, {
+                        id: 145,
+                        noticeName: "iBox 5月1号春日限定合成活动即将开启",
+                        noticeTime: 1651312800000
+                    }, {
+                        id: 144,
+                        noticeName: "「4月30日」《iBox-CyberTige》转入黑洞地址数量公告",
+                        noticeTime: 1651309200000
+                    }, {
+                        id: 142,
+                        noticeName: "iBox劳动节空投送不停福利活动惊喜来袭（已暂停）",
+                        noticeTime: 1651289100000
+                    }, {
+                        id: 141,
+                        noticeName: "iBox「大闹天宫-孙悟空大战巨灵神」增加优先抢白名单公告",
+                        noticeTime: 1651204920000
+                    }, {
+                        id: 139,
+                        noticeName: "iBox对「五瑞狮」系列藏品进行神秘空投公告 ",
+                        noticeTime: 1651199580000
+                    }, {
+                        id: 138,
+                        noticeName: "4月29日上新藏品「大闹天宫-孙悟空大战巨灵神」白名单公示",
+                        noticeTime: 1651143600000
+                    }, {
+                        id: 137,
+                        noticeName: "「4月28日」《iBox−赛博布偶》转入黑洞地址数量公告",
+                        noticeTime: 1651137780000
+                    }, {
+                        id: 135,
+                        noticeName: "iBox 4月29日火热上线「大闹天宫-孙悟空大战巨灵神」",
+                        noticeTime: 1651133400000
+                    }, {
+                        id: 133,
+                        noticeName: "iBox APP下载及官网访问方式指引",
+                        noticeTime: 1651119900000
+                    }, {
+                        id: 132,
+                        noticeName: "iBox 4月28日「大闹天宫-孙悟空大战托塔天王」优先抢白名单",
+                        noticeTime: 1651118640000
+                    }, {
+                        id: 129,
+                        noticeName: "4月28日「大闹天宫-孙悟空大战托塔天王」优先购白名单",
+                        noticeTime: 1651113480000
+                    }, {
+                        id: 128,
+                        noticeName: "「4月28日」iBox 服务器维护公告",
+                        noticeTime: 1651062000000
+                    }, {
+                        id: 127,
+                        noticeName: "「呼朋唤友福同享」活动有效用户发放空投藏品公告",
+                        noticeTime: 1651057800000
+                    }, {
+                        id: 125,
+                        noticeName: "iBox 4月28日重磅上线「大闹天宫-孙悟空大战托塔天王」",
+                        noticeTime: 1651052580000
+                    }, {
+                        id: 123,
+                        noticeName: "iBox过关斩将藏品开放转让寄售市场公告",
+                        noticeTime: 1651026600000
+                    }, {
+                        id: 122,
+                        noticeName: "iBox《Love-001》合成活动将在4月27日二次限时开启",
+                        noticeTime: 1651026360000
+                    }, {
+                        id: 120,
+                        noticeName: "iBox《拥抱》合成活动将在4月27日温暖开启",
+                        noticeTime: 1650969000000
+                    }, {
+                        id: 117,
+                        noticeName: "iBox藏品《四五花洞》赋能公告",
+                        noticeTime: 1650962700000
+                    }, {
+                        id: 116,
+                        noticeName: "iBox发放空投藏品《刘备》公告",
+                        noticeTime: 1650961800000
+                    }, {
+                        id: 115,
+                        noticeName: "iBox发放空投藏品《情愫》公告",
+                        noticeTime: 1650960000000
+                    }, {
+                        id: 114,
+                        noticeName: "「辟谣公告」关于iBox近期冒充官方警示公告",
+                        noticeTime: 1650893400000
+                    }, {
+                        id: 112,
+                        noticeName: " iBox《蝴蝶精灵》藏品合成活动将在4月26日惊喜开启！",
+                        noticeTime: 1650892320000
+                    }, {
+                        id: 110,
+                        noticeName: "iBox将在4月26日升级钱包支付公告",
+                        noticeTime: 1650884400000
+                    }, {
+                        id: 109,
+                        noticeName: "「4月25日」iBox 发放空投藏品《呼唤》公告",
+                        noticeTime: 1650882900000
+                    }, {
+                        id: 108,
+                        noticeName: "「4月25日」iBox五虎上将-张飞空投公告",
+                        noticeTime: 1650881400000
+                    }, {
+                        id: 107,
+                        noticeName: "iBox第三方钱包暂缓开通公告",
+                        noticeTime: 1650879000000
+                    }, {
+                        id: 105,
+                        noticeName: "iBox即将在4月25日升级钱包支付公告",
+                        noticeTime: 1650806100000
+                    }],
+                    pageSize: 50,
+                    totalCount: 80,
+                    totalPage: 2
+                },
+                message: "success",
+                msgId: "4b782b2d8ae94cf790c084f72dff2183",
+                success: true
+            }
+
+
+            let html = ''
+            for (let i = 0; i < data.result.length; i++) {
+                const item = data.result[i];
+                item.noticeTime = item.timeStamp * 1000
+            }
+
+            console.log('resultData: ', resultData);
+            var resultData = data.result.concat(a2.data.list)
+            resultData = resultData.sort(compare('noticeTime'))
+
+            function compare(property) {
+                return function(a, b) {
+                    var value1 = a[property];
+                    var value2 = b[property];
+                    return value2 - value1;
+                }
+            }
+            for (let i = 0; i < resultData.length; i++) {
+                const item = resultData[i];
+                if (item.noticeName) {
+                    html += `<li class="list-group-item d-flex">
+                        <div class="item-wrap">
+                            <p class="font-weight-bolder">${item.noticeName}</p>
+                            <div class="text-black-50">
+                                <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
+                            </div>
+                        </div>
+                </li>`
+                } else if (item.to === iid) {
+                    // 买
+                    html += `
+                <li class="list-group-item d-flex">
+                    <div class="item-wrap">
+                        <p>想你的液想你的液 <span class="bg-success badge badge-secondary">买入</span></p>
+                        <div class="text-black-50">
+                            <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
+                            <span class="label token">tokenId: ${item.tokenID}</span>
+                            <span class="label number">编号: 12345</span>
+                        </div>
+                    </div>
+                </li>
+                `
+                } else {
+                    // 卖出
+                    html +=
+                        `<li class="list-group-item d-flex">
+                    <div class="item-wrap">
+                        <p>想你的液 <span class="bg-danger badge badge-secondary">卖出</span></p>
+                        <div class="text-black-50">
+                            <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
+                            <span class="label token">tokenId: ${item.tokenID}</span>
+                            <span class="label number">编号: 12345</span>
+                        </div>
+                    </div>
+                </li>
+                `
+                }
+            }
+
+            let dom = document.getElementById('ul_wrap')
+            dom.innerHTML = html
+        }
     </script>
 </body>
+
+</html>
+
+</html>
+
+</html>
 
 </html>
