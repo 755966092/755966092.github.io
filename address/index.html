@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>购买历史查询</title>
     <link rel="stylesheet" href="../public/bootstrap.css">
     <style>
@@ -69,6 +70,18 @@
             width: 300px;
             padding: 20px 0 0 20px;
         }
+        
+        .header {
+            display: flex;
+            /* flex-direction: column; */
+            padding-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .header-item {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 
@@ -78,33 +91,37 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <div class="form-group">
-        <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
-            <option value="">选择</option>
-            <option value="0x6006aabb73454c9cfae62febbc6c3f3728f546c8">鱼化寨一号</option>
-            <option value="0x9ba78a93387cdee2769ae6e24d3f13e2ec2b12ef">小明星</option>
-            <option value="0x3342572427e79309071b43368cc7976e5c627a12">我想吃西瓜</option>
-            <option value="0xeb6124360c548c9593f39b8d889facde76e52fb3">马迪托1号(干杯)</option>
-            <option value="0xca7155fb215750619e6d68fc5d2363be77252886">爱学习的小白(干杯)</option>
-            <option value="0xcb6e6e58d97bd5bbc5eae37a77171ca88364f458">Lj72cgRf(干杯)</option>
-            <option value="0x4018fee7752c503b6c2ad8b5807bfecef5eb9ec7">Dashazi(干杯)</option>
-            <option value="0xc2618849b719bce2016c0e27b3925b35a33fa8ff">超超小飞侠NFT(干杯)</option>
-            <option value="0xf66dcdbb3110a1d833b32a28da3083d644d639be">麻辣小龙虾</option>
-            <option value="0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e">财神爷</option>
-            <option value="0xcd05bf87177b6ed34bd3f67ff04fda79ae5c8076">鱼化寨2号</option>
-            <option value="0x2c93bdd79b7930b14f520ca2238e22a2e52a657e">暴富三符(N卡2号)</option>
-            <option value="0x5067236b58238325225fbdb276db52f8bbb82f76">重点2</option>
-            <option value="0x7cf335280c65554e4ce3f6268b030a5918088e5f">南拳妈妈 干杯</option>
-            <option value="0xc447a826ad68265a395953aadf04cbefdbb72015">大闹群主小号</option>
-            <option value="0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba">test</option>
-            <option value="0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f">公告前买小老虎的</option>
-        </select>
+    <div class="header">
+        <div class="header-item">
+            <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
+                <option value="">选择</option>
+                <option value="0x6006aabb73454c9cfae62febbc6c3f3728f546c8">鱼化寨一号</option>
+                <option value="0x9ba78a93387cdee2769ae6e24d3f13e2ec2b12ef">小明星</option>
+                <option value="0x3342572427e79309071b43368cc7976e5c627a12">我想吃西瓜</option>
+                <option value="0xeb6124360c548c9593f39b8d889facde76e52fb3">马迪托1号(干杯)</option>
+                <option value="0xca7155fb215750619e6d68fc5d2363be77252886">爱学习的小白(干杯)</option>
+                <option value="0xcb6e6e58d97bd5bbc5eae37a77171ca88364f458">Lj72cgRf(干杯)</option>
+                <option value="0x4018fee7752c503b6c2ad8b5807bfecef5eb9ec7">Dashazi(干杯)</option>
+                <option value="0xc2618849b719bce2016c0e27b3925b35a33fa8ff">超超小飞侠NFT(干杯)</option>
+                <option value="0xf66dcdbb3110a1d833b32a28da3083d644d639be">麻辣小龙虾</option>
+                <option value="0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e">财神爷</option>
+                <option value="0xcd05bf87177b6ed34bd3f67ff04fda79ae5c8076">鱼化寨2号</option>
+                <option value="0x2c93bdd79b7930b14f520ca2238e22a2e52a657e">暴富三符(N卡2号)</option>
+                <option value="0x5067236b58238325225fbdb276db52f8bbb82f76">重点2</option>
+                <option value="0x7cf335280c65554e4ce3f6268b030a5918088e5f">南拳妈妈 干杯</option>
+                <option value="0xc447a826ad68265a395953aadf04cbefdbb72015">大闹群主小号</option>
+                <option value="0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba">test</option>
+                <option value="0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f">公告前买小老虎的</option>
+            </select>
+        </div>
+        <div class="header-item">
+            <input class="form-control" oninput="iptChange(event)">
+        </div>
+        <div class="header-item">
+            <button type="button" class="btn btn-primary" onclick="queryResult()">查询</button>
+        </div>
     </div>
     <div class="wrap">
-
-        <div>
-
-        </div>
         <ul class="list-group list-group-flush" id="ul_wrap">
             <!-- <li class="list-group-item d-flex">
                 <div class="item-wrap">
@@ -126,7 +143,6 @@
                     </div>
                 </div>
             </li> -->
-
         </ul>
     </div>
 
@@ -135,6 +151,7 @@
     <script src="../public/bootstrap.js"></script>
     <script>
         let id = '0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e'
+        let iptAddress = ''
         const loading = document.getElementById('loading')
             // getData()
         $("#loading").addClass("hide");
@@ -145,6 +162,18 @@
             if (e.target.value) {
                 getData(e.target.value)
             }
+        }
+        // http://60.205.252.237:8080/Api/Token/verifyIbox
+        // url: "http://60.205.252.237:8080/Api/Token/verifyToken",
+
+
+
+        function queryResult() {
+            getData(iptAddress)
+        }
+
+        function iptChange(e) {
+            iptAddress = e.target.value
         }
 
         function getData(address) {
@@ -162,12 +191,27 @@
                 type: "get",
                 dataType: 'json',
                 success: function(msg) {
-                    render(msg, iid)
+                    console.log('msg: ', msg);
+                    let tokenids = []
+                    for (let i = 0; i < msg.result.length; i++) {
+                        const item = msg.result[i];
+                        tokenids.push(item.tokenID)
+                    }
+                    tokenids = '56320, 913021,56209'
+                    getProductList(tokenids.toString(), (data_ibox) => {
+                        render(msg, iid, data_ibox)
+                    })
+                },
+                error: function() {
+                    $("#loading").addClass("hide");
+                    $("#loading").removeClass("show");
                 }
             });
         }
 
-        function render(data, iid) {
+        function render(data, iid, data_ibox) {
+            console.log('data_ibox: ', data_ibox.data);
+            const ibox = data_ibox.data
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
@@ -176,25 +220,37 @@
                     currPage: 1,
                     hashNext: 0,
                     list: [{
-                        id: 167,
-                        noticeName: "关于藏品「干杯」暂时中止寄售交易公告",
-                        noticeTime: 1651564500000
-                    }, {
-                        id: 166,
-                        noticeName: "iBox《干杯》藏品开启合成公告",
-                        noticeTime: 1651555800000
-                    }, {
-                        id: 165,
-                        noticeName: "「iBox平台关于近期部分用户造谣澄清公告」",
-                        noticeTime: 1651518900000
+                        id: 176,
+                        noticeName: "iBox5月5日重磅上线《大闹天宫-孙悟空大战哪吒》",
+                        noticeTime: 1651741380000
                     }, {
                         id: 163,
                         noticeName: "iBox全网首创“缤纷好运来”合成活动即将开启",
                         noticeTime: 1651487040000
                     }, {
+                        id: 161,
+                        noticeName: "iBox八期盲盒《民国六大金曲》即将开启合成公告",
+                        noticeTime: 1651458720000
+                    }, {
                         id: 118,
                         noticeName: "iBox关于提升藏品寄售限额的公告",
                         noticeTime: 1650966000000
+                    }, {
+                        id: 181,
+                        noticeName: "iBox5月6日将对《COSMOS-太空龙》发放限量空投藏品公告",
+                        noticeTime: 1651757400000
+                    }, {
+                        id: 179,
+                        noticeName: "iBox《大闹天宫-孙悟空大战哪吒》白名单用户延后至20:00抢购公告",
+                        noticeTime: 1651748400000
+                    }, {
+                        id: 178,
+                        noticeName: "iBox上新藏品《大闹天宫-孙悟空大战哪吒》优先购/抢白名单公示",
+                        noticeTime: 1651743660000
+                    }, {
+                        id: 175,
+                        noticeName: "iBox官网维护升级公告 「5月5日」",
+                        noticeTime: 1651723800000
                     }, {
                         id: 174,
                         noticeName: "iBox藏品《iBox-CyberBull》现已开放寄售公告",
@@ -220,9 +276,17 @@
                         noticeName: "iBox「五虎上将」系列藏品赋能公告",
                         noticeTime: 1651643220000
                     }, {
-                        id: 161,
-                        noticeName: "iBox八期盲盒《民国六大金曲》即将开启合成公告",
-                        noticeTime: 1651458720000
+                        id: 167,
+                        noticeName: "关于藏品「干杯」暂时中止寄售交易公告",
+                        noticeTime: 1651564500000
+                    }, {
+                        id: 166,
+                        noticeName: "iBox《干杯》藏品开启合成公告",
+                        noticeTime: 1651555800000
+                    }, {
+                        id: 165,
+                        noticeName: "「iBox平台关于近期部分用户造谣澄清公告」",
+                        noticeTime: 1651518900000
                     }, {
                         id: 160,
                         noticeName: "iBox劳动节空投活动5月2日提前结束公告",
@@ -375,16 +439,115 @@
                         id: 105,
                         noticeName: "iBox即将在4月25日升级钱包支付公告",
                         noticeTime: 1650806100000
+                    }, {
+                        id: 104,
+                        noticeName: "iBox钱包开通教程",
+                        noticeTime: 1650796200000
+                    }, {
+                        id: 101,
+                        noticeName: "【4月24日】 iBox平台首次！缤纷合成正式开启！",
+                        noticeTime: 1650793800000
+                    }, {
+                        id: 99,
+                        noticeName: "iBox往期藏品赋能清单（陆续更新中）",
+                        noticeTime: 1650789000000
+                    }, {
+                        id: 98,
+                        noticeName: "联系客服",
+                        noticeTime: 1650715200000
+                    }, {
+                        id: 95,
+                        noticeName: "4月23日上新藏品「威尼斯双年展」白名单公示",
+                        noticeTime: 1650704400000
+                    }, {
+                        id: 94,
+                        noticeName: "iBox 4月23日惊喜上线「2022威尼斯双年展全球首届加密艺术展纪念海报」数字藏品",
+                        noticeTime: 1650693600000
+                    }, {
+                        id: 92,
+                        noticeName: "关于部分用户使用低俗言论对IP合作方造谣、传播等警示公告",
+                        noticeTime: 1650624300000
+                    }, {
+                        id: 90,
+                        noticeName: "「4月22日」“MALDITO马迪托·序章”二次合成限时开启！",
+                        noticeTime: 1650616800000
+                    }, {
+                        id: 89,
+                        noticeName: "iBox「魔法药水」主题活动公告",
+                        noticeTime: 1650538800000
+                    }, {
+                        id: 86,
+                        noticeName: "iBox「过关斩将」活动补偿空投发放公告",
+                        noticeTime: 1650510900000
+                    }, {
+                        id: 84,
+                        noticeName: "合成藏品大鱼、爱丽丝梦游仙境赋能方案公告",
+                        noticeTime: 1650456900000
+                    }, {
+                        id: 82,
+                        noticeName: "宙斯传奇之希腊神话系列四神赋能方案公告",
+                        noticeTime: 1650456900000
+                    }, {
+                        id: 80,
+                        noticeName: "关于iBox「花泽香菜」系列藏品解释公告",
+                        noticeTime: 1650439800000
+                    }, {
+                        id: 78,
+                        noticeName: "「4月20日」花泽香菜系列数字藏品白名单公示",
+                        noticeTime: 1650432600000
+                    }, {
+                        id: 75,
+                        noticeName: "「4月20日」七期盲盒马迪托MALDITO限时开启合成公告",
+                        noticeTime: 1650424500000
+                    }, {
+                        id: 73,
+                        noticeName: "如何参与购买花泽香菜系列数字藏品",
+                        noticeTime: 1650423600000
+                    }, {
+                        id: 71,
+                        noticeName: "iBox关于「呼朋唤友福同享」活动的公告通知",
+                        noticeTime: 1650421800000
+                    }, {
+                        id: 69,
+                        noticeName: "关于对「呼朋唤友福同享」活动的补充说明",
+                        noticeTime: 1650297840000
+                    }, {
+                        id: 68,
+                        noticeName: "「2月23日」iBox数字藏品《iBox 002号空投版》《找自己》销毁公告",
+                        noticeTime: 1645585200000
+                    }, {
+                        id: 67,
+                        noticeName: "「3月21日」《茅山财富新福系列》“三福合一”二次限时开启",
+                        noticeTime: 1647831600000
+                    }, {
+                        id: 66,
+                        noticeName: "「3月24日」关于iBox 盲盒N卡大融合活动公告",
+                        noticeTime: 1648090800000
+                    }, {
+                        id: 65,
+                        noticeName: "「3月29日」第六期盲盒金陵十二钗开启合成活动",
+                        noticeTime: 1648522800000
+                    }, {
+                        id: 64,
+                        noticeName: "「3月31日」梅兰芳传世经典《霸王别姬》原声大作火热来袭",
+                        noticeTime: 1648695600000
+                    }, {
+                        id: 63,
+                        noticeName: "「4月9日」走进忘我的奇幻世界！《爱丽丝梦游仙境》即将开启合成",
+                        noticeTime: 1649473200000
+                    }, {
+                        id: 62,
+                        noticeName: "  「4月1日」iBox“宙斯传奇”合成活动正式开启",
+                        noticeTime: 1648782000000
                     }],
-                    pageSize: 50,
-                    totalCount: 80,
+                    pageSize: 80,
+                    totalCount: 85,
                     totalPage: 2
                 },
                 message: "success",
-                msgId: "4b782b2d8ae94cf790c084f72dff2183",
+                msgId: "6389d1d90a8f4004b9af59d8b5d09a45",
                 success: true
             }
-
 
             let html = ''
             for (let i = 0; i < data.result.length; i++) {
@@ -405,6 +568,15 @@
             }
             for (let i = 0; i < resultData.length; i++) {
                 const item = resultData[i];
+                for (let j = 0; j < ibox.length; j++) {
+                    const ele = ibox[j];
+                    if (ele.tokenId === item.tokenID) {
+                        item.gName = ele.gName
+                        item.gNum = ele.gNum
+                        item.gId = ele.gId
+                        break;
+                    }
+                }
                 if (item.noticeName) {
                     html += `<li class="list-group-item d-flex">
                         <div class="item-wrap">
@@ -419,11 +591,12 @@
                     html += `
                 <li class="list-group-item d-flex">
                     <div class="item-wrap">
-                        <p>想你的液想你的液 <span class="bg-success badge badge-secondary">买入</span></p>
+                        <p>${item.gName || '暂无数据'} <span class="bg-success badge badge-secondary">买入</span></p>
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: 12345</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
+                            <span class="label number">gid: ${item.gid || '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -433,11 +606,12 @@
                     html +=
                         `<li class="list-group-item d-flex">
                     <div class="item-wrap">
-                        <p>想你的液 <span class="bg-danger badge badge-secondary">卖出</span></p>
+                        <p>${item.gName || '暂无数据'} <span class="bg-danger badge badge-secondary">卖出</span></p>
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: 12345</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
+                            <span class="label number">gid: ${item.gid || '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -447,6 +621,20 @@
 
             let dom = document.getElementById('ul_wrap')
             dom.innerHTML = html
+        }
+
+        function getProductList(ids, cb) {
+            $.ajax({
+                type: "POST",
+                url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
+                data: {
+                    // token: "uwjJoJKOv5bk7KAEN8ln",
+                    tokenIds: ids
+                },
+                success: function(msg) {
+                    cb(msg)
+                }
+            });
         }
     </script>
 </body>
