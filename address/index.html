@@ -197,7 +197,6 @@
                         const item = msg.result[i];
                         tokenids.push(item.tokenID)
                     }
-                    tokenids = '56320, 913021,56209'
                     getProductList(tokenids.toString(), (data_ibox) => {
                         render(msg, iid, data_ibox)
                     })
