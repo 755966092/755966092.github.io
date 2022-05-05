@@ -197,9 +197,11 @@
                         const item = msg.result[i];
                         tokenids.push(item.tokenID)
                     }
-                    getProductList(tokenids.toString(), (data_ibox) => {
-                        render(msg, iid, data_ibox)
-                    })
+
+                    render(msg, iid)
+                        // getProductList(tokenids.toString(), (data_ibox) => {
+                        //     render(msg, iid, data_ibox)
+                        // })
                 },
                 error: function() {
                     $("#loading").addClass("hide");
@@ -209,8 +211,8 @@
         }
 
         function render(data, iid, data_ibox) {
-            console.log('data_ibox: ', data_ibox.data);
-            const ibox = data_ibox.data
+            const ibox = [{}]
+                // const ibox = data_ibox.data
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
@@ -569,7 +571,7 @@
                 const item = resultData[i];
                 for (let j = 0; j < ibox.length; j++) {
                     const ele = ibox[j];
-                    if (ele.tokenId === item.tokenID) {
+                    if (ele.tokenId == item.tokenID) {
                         item.gName = ele.gName
                         item.gNum = ele.gNum
                         item.gId = ele.gId
@@ -595,7 +597,7 @@
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
                             <span class="label number">编号: ${item.gNum || '--'}</span>
-                            <span class="label number">gid: ${item.gid || '--'}</span>
+                            <span class="label number">gid: ${item.gId || '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -610,7 +612,7 @@
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
                             <span class="label number">编号: ${item.gNum || '--'}</span>
-                            <span class="label number">gid: ${item.gid || '--'}</span>
+                            <span class="label number">gid: ${item.gId || '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -625,7 +627,7 @@
         function getProductList(ids, cb) {
             $.ajax({
                 type: "POST",
-                dataType: "jsonp",
+                // dataType: "jsonp",
                 url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
                 data: {
                     // token: "uwjJoJKOv5bk7KAEN8ln",
