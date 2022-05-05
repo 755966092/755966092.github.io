@@ -626,6 +626,7 @@
         function getProductList(ids, cb) {
             $.ajax({
                 type: "POST",
+                dataType: "jsonp",
                 url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
                 data: {
                     // token: "uwjJoJKOv5bk7KAEN8ln",
@@ -633,6 +634,10 @@
                 },
                 success: function(msg) {
                     cb(msg)
+                },
+                error: () => {
+                    $("#loading").addClass("hide");
+                    $("#loading").removeClass("show");
                 }
             });
         }
