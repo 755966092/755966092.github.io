@@ -186,8 +186,10 @@
             }
             $("#loading").addClass("show");
             $("#loading").removeClass("hide");
+            // 0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb
             $.ajax({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&startblock=0&endblock=999999999&sort=desc`,
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&contractaddress=0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb&address=${iid}&page=0&offset=100&sort=asc`,
+                // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&startblock=0&endblock=999999999&sort=desc`,
                 type: "get",
                 dataType: 'json',
                 success: function(msg) {
@@ -627,7 +629,6 @@
         function getProductList(ids, cb) {
             $.ajax({
                 type: "POST",
-                dataType: "jsonp",
                 url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
                 data: {
                     token: "kxmi29",
@@ -641,6 +642,13 @@
                     $("#loading").removeClass("show");
                 }
             });
+        }
+
+        function showData(data) {
+            console.info("Get Into showData");
+            // json对象转成字符串
+            var result = JSON.stringify(data);
+            console.log('result: ', result);
         }
     </script>
 </body>
