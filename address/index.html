@@ -113,6 +113,7 @@
                 <option value="0xc447a826ad68265a395953aadf04cbefdbb72015">大闹群主小号</option>
                 <option value="0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba">test</option>
                 <option value="0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f">公告前买小老虎的</option>
+                <option value="0x65652Ce109F1f538252C3ba6bc3E145744A6F955">公告前买小老虎的</option>
             </select>
         </div>
         <div class="header-item">
@@ -189,7 +190,7 @@
             $("#loading").removeClass("hide");
             // 0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb
             $.ajax({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&contractaddress=0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb&address=${iid}&page=0&offset=100&sort=asc`,
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&contractaddress=0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb&address=${iid}&page=0&offset=100&sort=desc`,
                 // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&startblock=0&endblock=999999999&sort=desc`,
                 type: "get",
                 dataType: 'json',
@@ -201,10 +202,10 @@
                         tokenids.push(item.tokenID)
                     }
 
-                    // render(msg, iid)
-                    getProductList(tokenids.toString(), (data_ibox) => {
-                        render(msg, iid, data_ibox)
-                    })
+                    render(msg, iid)
+                        // getProductList(tokenids.toString(), (data_ibox) => {
+                        //     render(msg, iid, data_ibox)
+                        // })
                 },
                 error: function() {
                     $("#loading").addClass("hide");
@@ -214,8 +215,8 @@
         }
 
         function render(data, iid, data_ibox) {
-            // const ibox = [{}]
-            const ibox = data_ibox.data || [{}]
+            const ibox = [{}]
+                // const ibox = data_ibox.data || [{}]
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
