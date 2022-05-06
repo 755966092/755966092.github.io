@@ -190,7 +190,8 @@
             $("#loading").removeClass("hide");
             // 0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb
             $.ajax({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&contractaddress=0xd3d20d0bd31751f084cb4e4ff98e568c8c2132fb&address=${iid}&page=0&offset=100&sort=desc`,
+                // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=0&offset=10&sort=desc`,
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=1&offset=100&sort=desc`,
                 // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&startblock=0&endblock=999999999&sort=desc`,
                 type: "get",
                 dataType: 'json',
@@ -202,10 +203,10 @@
                         tokenids.push(item.tokenID)
                     }
 
-                    render(msg, iid)
-                        // getProductList(tokenids.toString(), (data_ibox) => {
-                        //     render(msg, iid, data_ibox)
-                        // })
+                    // render(msg, iid)
+                    getProductList(tokenids.toString(), (data_ibox) => {
+                        render(msg, iid, data_ibox)
+                    })
                 },
                 error: function() {
                     $("#loading").addClass("hide");
@@ -215,8 +216,8 @@
         }
 
         function render(data, iid, data_ibox) {
-            const ibox = [{}]
-                // const ibox = data_ibox.data || [{}]
+            // const ibox = [{}]
+            const ibox = data_ibox.data || [{}]
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
@@ -225,9 +226,13 @@
                     currPage: 1,
                     hashNext: 0,
                     list: [{
-                        id: 176,
-                        noticeName: "iBox5月5日重磅上线《大闹天宫-孙悟空大战哪吒》",
-                        noticeTime: 1651741380000
+                        id: 185,
+                        noticeName: "“芳情雀艳若翠仙”iBox 5月7日上新藏品《孔雀呈祥》",
+                        noticeTime: 1651811760000
+                    }, {
+                        id: 189,
+                        noticeName: "iBox 5月8日上新藏品《太平有象》",
+                        noticeTime: 1651820640000
                     }, {
                         id: 163,
                         noticeName: "iBox全网首创“缤纷好运来”合成活动即将开启",
@@ -241,6 +246,14 @@
                         noticeName: "iBox关于提升藏品寄售限额的公告",
                         noticeTime: 1650966000000
                     }, {
+                        id: 188,
+                        noticeName: "iBox合作艺术家蒙秦作品赏析",
+                        noticeTime: 1651818300000
+                    }, {
+                        id: 182,
+                        noticeName: "关于iBox购买藏品需实名认证公告",
+                        noticeTime: 1651803180000
+                    }, {
                         id: 181,
                         noticeName: "iBox5月6日将对《COSMOS-太空龙》发放限量空投藏品公告",
                         noticeTime: 1651757400000
@@ -252,6 +265,10 @@
                         id: 178,
                         noticeName: "iBox上新藏品《大闹天宫-孙悟空大战哪吒》优先购/抢白名单公示",
                         noticeTime: 1651743660000
+                    }, {
+                        id: 176,
+                        noticeName: "iBox5月5日重磅上线《大闹天宫-孙悟空大战哪吒》",
+                        noticeTime: 1651741380000
                     }, {
                         id: 175,
                         noticeName: "iBox官网维护升级公告 「5月5日」",
@@ -544,15 +561,36 @@
                         id: 62,
                         noticeName: "  「4月1日」iBox“宙斯传奇”合成活动正式开启",
                         noticeTime: 1648782000000
+                    }, {
+                        id: 61,
+                        noticeName: "「4月10日」关于「宙斯」相关权益解读",
+                        noticeTime: 1649559600000
+                    }, {
+                        id: 59,
+                        noticeName: "传承国家非物质文化遗产，皮影系列藏品《财瑞狮》4月19日上线",
+                        noticeTime: 1650358800000
+                    }, {
+                        id: 57,
+                        noticeName: "iBox违规用户账户处理公告",
+                        noticeTime: 1650355500000
+                    }, {
+                        id: 53,
+                        noticeName: "“呼朋唤友福同享”iBox全新邀请活动重磅来袭！",
+                        noticeTime: 1650352200000
+                    }, {
+                        id: 51,
+                        noticeName: "《三国演义》系列「五虎上将」！参见！",
+                        noticeTime: 1650297600000
                     }],
-                    pageSize: 80,
-                    totalCount: 85,
-                    totalPage: 2
+                    pageSize: 200,
+                    totalCount: 89,
+                    totalPage: 1
                 },
                 message: "success",
-                msgId: "6389d1d90a8f4004b9af59d8b5d09a45",
+                msgId: "364d80915d474f67a0a773891c4bc7a3",
                 success: true
             }
+
 
             let html = ''
             for (let i = 0; i < data.result.length; i++) {
