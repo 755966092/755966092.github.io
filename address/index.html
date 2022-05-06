@@ -214,7 +214,7 @@
 
         function render(data, iid, data_ibox) {
             // const ibox = [{}]
-            const ibox = data_ibox.data
+            const ibox = data_ibox.data || [{}]
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
