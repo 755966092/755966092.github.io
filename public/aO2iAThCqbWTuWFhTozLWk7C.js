@@ -1,6 +1,15 @@
-// export const data = ;
 
 var nameData = [
+  {
+    id: 100513879,
+    name: "孙悟空大战哪吒",
+    total: 2000,
+    albumName: "熵湾 X 上美影",
+    author: "熵湾 X 上美影",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513879",
+    authentication: "该作品拥有iBox官方认证",
+    number: 157,
+  },
   {
     id: 100513871,
     name: "iBox-CyberBull",
@@ -26,12 +35,20 @@ var nameData = [
     number: 154,
   },
   {
+    id: 100513864,
+    name: "iBox-赛博GOLDEN",
+    albumName: "赛博猫狗",
+    total: 100000,
+    number: 158,
+  },
+  {
     id: 100513863,
     name: "iBox-赛博Terrier",
     albumName: "赛博猫狗",
     total: 100000,
     number: 153,
   },
+  
   {
     id: 100513862,
     name: "孙悟空大战巨灵神",
