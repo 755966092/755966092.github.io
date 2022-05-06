@@ -1,6 +1,16 @@
 
 var nameData = [
   {
+    id: 100513881,
+    name: "异形人",
+    total: 3000,
+    albumName: "异形人",
+    author: "潘跃",
+    link: "https://www.ibox.art/zh-cn/item/?id=100513881",
+    authentication: "该作品拥有iBox官方认证",
+    number: 159,
+  },
+  {
     id: 100513879,
     name: "孙悟空大战哪吒",
     total: 2000,
