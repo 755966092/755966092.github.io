@@ -198,10 +198,10 @@
                         tokenids.push(item.tokenID)
                     }
 
-                    render(msg, iid)
-                        // getProductList(tokenids.toString(), (data_ibox) => {
-                        //     render(msg, iid, data_ibox)
-                        // })
+                    // render(msg, iid)
+                    getProductList(tokenids.toString(), (data_ibox) => {
+                        render(msg, iid, data_ibox)
+                    })
                 },
                 error: function() {
                     $("#loading").addClass("hide");
@@ -211,8 +211,8 @@
         }
 
         function render(data, iid, data_ibox) {
-            const ibox = [{}]
-                // const ibox = data_ibox.data
+            // const ibox = [{}]
+            const ibox = data_ibox.data
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
             var a2 = {
