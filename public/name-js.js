@@ -3,6 +3,16 @@
 module.exports = {
   data: [
     {
+      id: 100513883,
+      name: "Sunny",
+      total: 700,
+      albumName: "异形人",
+      author: "王喆",
+      link: "https://www.ibox.art/zh-cn/item/?id=100513883",
+      authentication: "该作品拥有iBox官方认证",
+      number: 160,
+    },
+    {
       id: 100513881,
       name: "异形人",
       total: 3000,
