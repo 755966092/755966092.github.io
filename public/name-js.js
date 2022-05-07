@@ -71,7 +71,7 @@ module.exports = {
       number: 153,
     },
     {
-      id: 100513862,
+      id: 100513861,
       name: "孙悟空大战巨灵神",
       albumName: "大闹天宫系列",
       total: 3000,
