@@ -3,6 +3,39 @@
 module.exports = {
   data: [
     {
+      albumId: 100513868,
+      albumName: "Cece-cotton",
+      authorId: 11056151,
+      authorName: "Ceceplants",
+      brandId: 100000059,
+      brandName: "武汉派呦科技",
+      gId: 101834096,
+      gName: "Cece-cotton",
+      gNum: "3664",
+      ownerId: 10069896,
+      ownerName: "orange",
+      total: 4000
+    },
+    {
+      albumId: 100513868,
+      albumName: "Cece-cotton",
+      authorId: 11056151,
+      authorName: "Ceceplants",
+      authorSocialInfo: "",
+      authorWalletInfo: "0xa42def785ee959d531b486887d798e879cc4a6b6",
+      blindAlbumId: null,
+      brandId: 100000059,
+      brandName: "武汉派呦科技",
+      contractAddress: "",
+      contractType: null,
+      gId: 101830935,
+      gName: "Cece-cotton",
+      gNum: "503",
+      ownerId: 10160384,
+      total: 4000,
+      soldNum: 4000
+    },
+    {
       id: 100099581,
       name: "《山海经》-蚩尤",
       total: 10,
