@@ -55,9 +55,8 @@
         -->
 
     <script type="text/javascript">
-        // var allData = lineData.data.id_100513850.priceCny
-        var allData = lineData.data.id_100513845.priceCny
-        var allData2 = lineData.data.id_100513845.priceCny2
+        var allData = lineData.data.id_100513852.priceCny
+        var allData2 = lineData.data.id_100513852.priceCny2
 
         var dom = document.getElementById("container");
         var myChart = echarts.init(dom);
@@ -70,17 +69,7 @@
         var selected = {}
         var x = []
 
-        function selDay(d) {
-            legendData = []
-            seriesData = []
-            if (d > lineData[0].hisData.length) {
-                d = lineData[0].hisData.length
-            } else if (d == 0) {
-                d = time.length
-            }
-            limit = d;
-            initChart()
-        }
+
         initChart()
 
         function initChart() {
