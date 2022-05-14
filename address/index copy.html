@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>购买历史查询</title>
     <link rel="stylesheet" href="../public/bootstrap.css">
     <style>
@@ -132,26 +131,6 @@
     </div>
     <div class="wrap">
         <ul class="list-group list-group-flush" id="ul_wrap">
-            <!-- <li class="list-group-item d-flex">
-                <div class="item-wrap">
-                    <p>想你的液 <span class="bg-danger badge badge-secondary">卖出</span></p>
-                    <div class="text-black-50">
-                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
-                        <span class="label token">tokenId: 12345</span>
-                        <span class="label number">编号: 12345</span>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item d-flex">
-                <div class="item-wrap">
-                    <p>想你的液想你的液 <span class="bg-success badge badge-secondary">买入</span></p>
-                    <div class="text-black-50">
-                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
-                        <span class="label token">tokenId: 12345</span>
-                        <span class="label number">编号: 12345</span>
-                    </div>
-                </div>
-            </li> -->
         </ul>
     </div>
 
@@ -782,7 +761,6 @@
                 item.noticeTime = item.timeStamp * 1000
             }
 
-
             var resultData = data.result.concat(a2.data.list)
             resultData = resultData.sort(compare('noticeTime'))
 
@@ -867,33 +845,7 @@
                 }
             });
         }
-
-        function getList(cb) {
-            $.ajax({
-                type: "GET",
-                url: "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getCommonNoticeList?page=1&pageSize=200",
-                success: function(msg) {
-                    cb(msg)
-                },
-                error: () => {
-
-                }
-            });
-        }
-
-        function showData(data) {
-            console.info("Get Into showData");
-            // json对象转成字符串
-            var result = JSON.stringify(data);
-            console.log('result: ', result);
-        }
     </script>
 </body>
-
-</html>
-
-</html>
-
-</html>
 
 </html>
