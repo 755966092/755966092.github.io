@@ -1,5 +1,17 @@
 var nameData = [
   {
+    id: 100513927,
+    name: "照妖镜",
+    total: 3000,
+    authorName: "西安电影制片厂"
+  },
+  {
+    id: 100513926,
+    name: "月光宝盒",
+    total: 3000,
+    authorName: "西安电影制片厂"
+  },
+  {
     id: 100513922,
     name: "花米其",
     total: 10000,
