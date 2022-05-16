@@ -1,5 +1,10 @@
 var nameData = [
   {
+    id: 100513929,
+    name: "Cece-Plants",
+    total: 2000,
+  },
+  {
     id: 100513927,
     name: "照妖镜",
     total: 3000,
@@ -58,7 +63,6 @@ var nameData = [
     name: "企鹅",
     total: 10000,
     authorName: "龙在天皮影"
-    
   },
   {
     id: 100513890,
@@ -84,7 +88,7 @@ var nameData = [
     total: 2170,
     authorName: "龙在天皮影"
   },
-  
+
   {
     id: 100513883,
     name: "Sunny",
