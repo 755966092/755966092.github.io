@@ -54,7 +54,7 @@ var num = 1;
 (async () => {
   while (true) {
     try {
-      getDate(addressList[i].toLowerCase());
+      getDate(addressList[i]);
       await sleep(3000);
     } catch (error) {}
   }
@@ -71,7 +71,7 @@ var num = 1;
 function getDate(params) {
   request(
     {
-      url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address}&page=1&offset=10&sort=desc`,
+      url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
       headers: {
         "content-type": "application/json"
       }
@@ -82,7 +82,7 @@ function getDate(params) {
       }
       try {
         let bodyData = JSON.parse(body);
-        console.log("请求:", params.address, "-", i);
+        console.log("请求:", params.name, "-", i);
         if (i < addressList.length - 1) {
           i++;
         } else {
