@@ -54,7 +54,7 @@ var num = 1;
 (async () => {
   while (true) {
     try {
-      getDate(addressList[i]);
+      getDate(addressList[i].toLowerCase());
       await sleep(3000);
     } catch (error) {}
   }
