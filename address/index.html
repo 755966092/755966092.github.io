@@ -201,7 +201,7 @@
                         const item = msg.result[i];
                         tokenids.push(item.tokenID)
                     }
-                    getProductList(tokenids.toString(), (data_ibox) => {
+                    getProductList(tokenids, (data_ibox) => {
                         render(msg, iid, data_ibox)
                     })
                 },
@@ -990,22 +990,42 @@
             dom.innerHTML = html
         }
 
-        function getProductList(ids, cb) {
-            $.ajax({
-                type: "POST",
-                url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
-                data: {
-                    token: "kxmi29",
-                    tokenIds: ids
-                },
-                success: function(msg) {
-                    cb(msg)
-                },
-                error: () => {
-                    $("#loading").addClass("hide");
-                    $("#loading").removeClass("show");
-                }
-            });
+        async function getProductList(ids, cb) {
+            // ids
+            let i = 0
+            while (true) {
+                $.ajax({
+                    type: "GET",
+                    url: "http://123.57.64.135:8080/ibox/getInfos?tokenid=" + ids[i],
+                    success: function(msg) {
+                        cb(msg)
+                        i++;
+                        if (i - 1 == isd.length) {
+
+                        }
+                    },
+                    error: () => {
+                        $("#loading").addClass("hide");
+                        $("#loading").removeClass("show");
+                    }
+                });
+            }
+
+            // $.ajax({
+            //     type: "POST",
+            //     url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
+            //     data: {
+            //         token: "kxmi29",
+            //         tokenIds: ids
+            //     },
+            //     success: function(msg) {
+            //         cb(msg)
+            //     },
+            //     error: () => {
+            //         $("#loading").addClass("hide");
+            //         $("#loading").removeClass("show");
+            //     }
+            // });
         }
 
         function getList(cb) {
