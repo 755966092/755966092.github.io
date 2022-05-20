@@ -1,6 +1,4 @@
-// export const data = ;
-
-var nameData = [
+var time = [
   {
     id: 100513868,
     albumName: "Cece-roses",
@@ -3195,3 +3193,4 @@ var nameData = [
     cid: "c9uds1q2dtehdn0rm790"
   }
 ];
+

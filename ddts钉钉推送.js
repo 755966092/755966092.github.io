@@ -40,7 +40,7 @@ const addressList = [
   { address: "0xc447a826ad68265a395953aadf04cbefdbb72015", name: "大闹群主小号" },
   { address: "0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba", name: "test" },
   { address: "0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f", name: "公告前买小老虎的" },
-  { address: "0x65652Ce109F1f538252C3ba6bc3E145744A6F955", name: "24k" },
+  { address: "0x65652ce109f1f538252c3ba6bc3e145744a6f955", name: "24k" },
   { address: "0x0ae867f59df1ed5442d55d8a39d3b8403892dc3a", name: "阿达" },
   { address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6", name: "张国荣查出来的" }
 ];
@@ -51,11 +51,12 @@ const sleep = (ms) =>
     setTimeout(resolve, ms);
   });
 var num = 1;
+console.log('开始...');
 (async () => {
   while (true) {
     try {
       getDate(addressList[i]);
-      await sleep(3000);
+      await sleep(10000);
     } catch (error) {}
   }
 })();
@@ -115,11 +116,12 @@ function sendDDNews(diff, params) {
 
   diff.forEach((item) => {
     getProductList(item.tokenID, (data) => {
+      console.log('data: ', data);
       var aaaaaaaa = {
         title: "提醒：",
         text: ''
       };
-      let d = JSON.parse(data).data;
+      let d = JSON.parse(data);
       let news = "成功-提醒：";
       const time = moment(item.timeStamp * 1000).format("MM-DD HH:mm:ss");
       aaaaaaaa.title += params.name
@@ -137,7 +139,7 @@ function sendDDNews(diff, params) {
         sendNews(aaaaaaaa);
       } else {
         // news += `商品：暂无信息，编号：- - ，GID：- -，tokenId：${item.tokenID}`;
-        aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${ele.tokenId}`
+        aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`
         sendNews(aaaaaaaa);
       }
     });
@@ -157,7 +159,7 @@ function sendNews(news) {
         msgtype: "markdown",
         markdown: news
       }),
-      body: JSON.stringify({ msgtype: "text", text: { content: news } })
+      // body: JSON.stringify({ msgtype: "text", text: { content: news } })
     },
     function (error, response, body) {
       if (!error && response.statusCode == 200) {
@@ -166,21 +168,38 @@ function sendNews(news) {
   );
 }
 
+
 function getProductList(ids, cb) {
+  console.log('ids: ', ids);
   request(
     {
       method: "POST",
       headers: {
         "content-type": "application/json"
       },
-      url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
-      body: JSON.stringify({
-        token: "kxmi29",
-        tokenIds: ids
-      })
+      url: "http://123.57.64.135:8080/ibox/getInfos?tokenid=" + ids
     },
     function (error, response, body) {
       cb(body);
     }
   );
 }
+
+// function getProductList(ids, cb) {
+//   request(
+//     {
+//       method: "POST",
+//       headers: {
+//         "content-type": "application/json"
+//       },
+//       url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
+//       body: JSON.stringify({
+//         token: "kxmi29",
+//         tokenIds: ids
+//       })
+//     },
+//     function (error, response, body) {
+//       cb(body);
+//     }
+//   );
+// }

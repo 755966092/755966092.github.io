@@ -2,27 +2,22 @@ var request = require("request");
 const lodash = require("lodash");
 const moment = require("moment");
 
-sendNews();
+getProductList([56191,496716,731272], (re) => {
+  console.log('re: ', re);
+});
 
-function sendNews(news) {
+
+function getProductList(ids, cb) {
   request(
     {
-      url: "钉钉群地址", //请求路径
-      method: "POST",
+      method: "GET",
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify({
-        msgtype: "markdown",
-        markdown: {
-          title: "提醒：",
-          text: "内容"
-        }
-      })
+      url: "https://api-app.ibox.art/nft-mall-web/v1.2/nft/product/getAlbumSearch?order=0&page=1&pageSize=20"
     },
     function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-      }
+      cb(body);
     }
   );
 }

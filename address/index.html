@@ -201,9 +201,10 @@
                         const item = msg.result[i];
                         tokenids.push(item.tokenID)
                     }
-                    getProductList(tokenids, (data_ibox) => {
-                        render(msg, iid, data_ibox)
-                    })
+                    // getProductList(tokenids, (data_ibox) => {
+                    //     render(msg, iid, data_ibox)
+                    // })
+                    render(msg, iid, data_ibox)
                 },
                 error: function() {
                     $("#loading").addClass("hide");
