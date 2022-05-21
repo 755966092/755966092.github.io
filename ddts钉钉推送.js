@@ -56,7 +56,7 @@ console.log('开始...');
   while (true) {
     try {
       getDate(addressList[i]);
-      await sleep(1000);
+      await sleep(10000);
     } catch (error) {}
   }
 })();
@@ -135,7 +135,7 @@ function sendDDNews(diff, params) {
       if (d.length > 0) {
         const ele = d[0];
         // news += `商品：${ele.gName}，编号：${ele.gNum}，GID：${ele.gId}，tokenId：${ele.tokenId}`;
-        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gName} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gId}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId})  \n- tokenId： ${ele.tokenId}`
+        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`
         sendNews(aaaaaaaa);
       } else {
         // news += `商品：暂无信息，编号：- - ，GID：- -，tokenId：${item.tokenID}`;

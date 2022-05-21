@@ -92,6 +92,7 @@
         </div>
     </div>
     <div class="header">
+
         <div class="header-item">
             <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
                 <option value="">选择</option>
@@ -166,7 +167,6 @@
         $("#loading").removeClass("show");
 
         function selId(e) {
-            console.log('e: ', e.target.value);
             if (e.target.value) {
                 getData(e.target.value.toLowerCase())
             }
@@ -195,7 +195,6 @@
                 type: "get",
                 dataType: 'json',
                 success: function(msg) {
-                    console.log('msg: ', msg);
                     let tokenids = []
                     for (let i = 0; i < msg.result.length; i++) {
                         const item = msg.result[i];
@@ -214,7 +213,7 @@
         }
 
         function render(data, iid, data_ibox) {
-            const ibox = data_ibox.data || [{}]
+            const ibox = data_ibox || [{}]
             $("#loading").addClass("hide");
             $("#loading").removeClass("show");
 
@@ -939,9 +938,9 @@
                 for (let j = 0; j < ibox.length; j++) {
                     const ele = ibox[j];
                     if (ele.tokenId == item.tokenID) {
-                        item.gName = ele.gName
-                        item.gNum = ele.gNum
-                        item.gId = ele.gId
+                        item.gName = ele.gname
+                        item.nNum = ele.gnum
+                        item.gId = ele.gid
                         break;
                     }
                 }
@@ -963,8 +962,8 @@
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: ${item.gNum || '--'}</span>
-                            <span class="label number">gid: ${item.gId || '--'}</span>
+                            <span class="label number">编号: ${item.nNum || '--'}</span>
+                            <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -978,8 +977,8 @@
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: ${item.gNum || '--'}</span>
-                            <span class="label number">gid: ${item.gId || '--'}</span>
+                            <span class="label number">编号: ${item.nNum || '--'}</span>
+                            <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
                         </div>
                     </div>
                 </li>
@@ -996,7 +995,7 @@
             $.ajax({
                 type: "POST",
                 url: "http://123.57.64.135:8080/ibox/getInfos?tokenid=" + ids.toString(),
-                success: function(msg) {
+                success: function (msg, e, body) {
                     cb(msg)
                 },
                 error: () => {
@@ -1025,7 +1024,7 @@
             $.ajax({
                 type: "GET",
                 url: "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getCommonNoticeList?page=1&pageSize=200",
-                success: function(msg) {
+                success: function (msg) {
                     cb(msg)
                 },
                 error: () => {
@@ -1035,10 +1034,8 @@
         }
 
         function showData(data) {
-            console.info("Get Into showData");
             // json对象转成字符串
             var result = JSON.stringify(data);
-            console.log('result: ', result);
         }
     </script>
 </body>
