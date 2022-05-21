@@ -56,7 +56,7 @@ console.log('开始...');
   while (true) {
     try {
       getDate(addressList[i]);
-      await sleep(10000);
+      await sleep(1000);
     } catch (error) {}
   }
 })();

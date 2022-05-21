@@ -993,10 +993,8 @@
 
         function getProductList(ids, cb) {
             // ids
-
             $.ajax({
                 type: "POST",
-
                 url: "http://123.57.64.135:8080/ibox/getInfos?tokenid=" + ids.toString(),
                 success: function(msg) {
                     cb(msg)
