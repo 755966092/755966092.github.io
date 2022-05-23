@@ -76,7 +76,8 @@ function initChart() {
   x = time.map((t, i) => {
     return moment(t).format("MM-DD");
   });
-  x = x.slice(len, len2);
+  console.log('x: ', x);
+  // x = x.slice(len, len2);
   lineData.forEach((item, index) => {
     for (let i = 0; i < nameData.length; i++) {
       const nameItem = nameData[i];
@@ -95,13 +96,14 @@ function initChart() {
           type: "line",
           smooth: true,
           showSymbol: false,
-          data: item.hisData.slice(len, len2),
+          data: item.hisData,
+          // data: item.hisData.slice(len, len2),
         });
         break;
       }
     }
   });
-
+  console.log(x);
   option = {
     title: {
       text: "历史价格曲线",
