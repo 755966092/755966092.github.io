@@ -2,22 +2,27 @@ var request = require("request");
 const lodash = require("lodash");
 const moment = require("moment");
 
-getProductList([56191,496716,731272], (re) => {
-  console.log('re: ', re);
-});
+sendNews();
 
-
-function getProductList(ids, cb) {
+function sendNews(news) {
   request(
     {
-      method: "GET",
+      url: "https://oapi.dingtalk.com/robot/send?access_token=d728f7912c9fe66fe78679ed4ccd046a37c6273c30839fbb7b9b01f15dba832e", //请求路径
+      method: "POST",
       headers: {
         "content-type": "application/json"
       },
-      url: "https://api-app.ibox.art/nft-mall-web/v1.2/nft/product/getAlbumSearch?order=0&page=1&pageSize=20"
+      body: JSON.stringify({
+        msgtype: "markdown",
+        markdown: {
+          title: "新交易提醒：",
+          text: "内容"
+        }
+      })
     },
     function (error, response, body) {
-      cb(body);
+      if (!error && response.statusCode == 200) {
+      }
     }
   );
 }
