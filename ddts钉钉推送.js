@@ -42,7 +42,9 @@ const addressList = [
   { address: "0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f", name: "NEI-公告前买小老虎的" },
   { address: "0x65652ce109f1f538252c3ba6bc3e145744a6f955", name: "NEI-24k" },
   { address: "0x0ae867f59df1ed5442d55d8a39d3b8403892dc3a", name: "NEI-阿达" },
-  { address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6", name: "NEI-张国荣查出来的" }
+  { address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6", name: "NEI-张国荣查出来的" },
+  { address: "0x7351928ee87ac364858b55673e649eac049370c5", name: "林斌" },
+  { address: "0xc9e4f4a4512290612cf8ecb5086d290d0a3e396b", name: "辛德勒" }
 ];
 var addressData = {};
 var i = 0;
@@ -56,7 +58,7 @@ console.log('开始...');
   while (true) {
     try {
       getDate(addressList[i]);
-      await sleep(10000);
+      await sleep(5000);
     } catch (error) {}
   }
 })();

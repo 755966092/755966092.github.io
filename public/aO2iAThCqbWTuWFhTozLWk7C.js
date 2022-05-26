@@ -1710,6 +1710,9 @@ var nameData222 = [
 ];
 
 var nameData = [
+  { id: 100513973, name: "筋斗云", total: 2000, cid: "ca79tp22dteiua32t0ug" },
+  { id: 100513983, name: "泼彩红荷", total: 2000, cid: "ca6vohpuk5rr5i8o6p90" },
+  { id: 100513971, name: "至尊宝", total: 2000, cid: "ca6sjnpuk5rr5i8o5nmg" },
   { id: 100513968, name: "Old Is New", total: 2000, cid: "ca6542puk5rr5i8nssrg" },
   { id: 100513964, name: "Lady Puppy", total: 2000, cid: "ca3lp01uk5rpni3e3rtg" },
   { id: 100513960, name: "登场了！敦煌 运动系列", total: 2000, cid: "ca3c351uk5rtae50diug" },
