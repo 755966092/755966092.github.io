@@ -44,7 +44,10 @@ const addressList = [
   { address: "0x0ae867f59df1ed5442d55d8a39d3b8403892dc3a", name: "NEI-阿达" },
   { address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6", name: "NEI-张国荣查出来的" },
   { address: "0x7351928ee87ac364858b55673e649eac049370c5", name: "林斌" },
-  { address: "0xc9e4f4a4512290612cf8ecb5086d290d0a3e396b", name: "辛德勒" }
+  { address: "0xc9e4f4a4512290612cf8ecb5086d290d0a3e396b", name: "辛德勒" },
+  { address: "0x09c3fd879365c00410e3fcf37f58687b76ac75e3", name: "NEI-花花" },
+  // { address: "0x5e71ee36793db6bb532d0fedc0f1ad74b58ac541", name: "NEI-马超黄忠" }
+  { address: "0x07d46d9cf737a121ecc359d6e29b0f62f33bb05e", name: "NEI-花+马超" }
 ];
 var addressData = {};
 var i = 0;
