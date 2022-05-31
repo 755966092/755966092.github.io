@@ -97,6 +97,7 @@ function getDate(params) {
       }
       try {
         let bodyData = JSON.parse(body);
+
         console.log("请求:", params.name, "-", i);
         if (i < addressList.length - 1) {
           i++;
@@ -104,7 +105,7 @@ function getDate(params) {
           i = 0;
         }
         // tokenID
-        console.log("请求次数:", num++);
+        console.log("请求次数:", num++, " -- ", moment().format('MM-DD HH:mm:ss'));
         console.log(i, "-最新id: ", bodyData.result[0].tokenID);
         getDate(addressList[i]);
         if (addressData[params.address]) {
