@@ -56,15 +56,22 @@ const sleep = (ms) =>
     setTimeout(resolve, ms);
   });
 var num = 1;
-console.log('开始...');
+console.log("开始...");
+// (async () => {
+//   while (true) {
+//     try {
+//       getDate(addressList[i]);
+//       // await sleep(2000);
+//     } catch (error) {}
+//   }
+// })();
+
 (async () => {
-  while (true) {
-    try {
-      getDate(addressList[i]);
-      await sleep(5000);
-    } catch (error) {}
-  }
+  try {
+    getDate(addressList[i]);
+  } catch (error) {}
 })();
+
 // let diff = lodash.differenceBy(a.result, a1.result, "timeStamp");
 // if (diff.length > 0) {
 //     // 有新交易
@@ -82,8 +89,10 @@ function getDate(params) {
         "content-type": "application/json"
       }
     },
+
     function (error, response, body) {
       if (error) {
+        getDate(addressList[i]);
         console.log("错误一次:", JSON.stringify(error));
       }
       try {
@@ -97,6 +106,7 @@ function getDate(params) {
         // tokenID
         console.log("请求次数:", num++);
         console.log(i, "-最新id: ", bodyData.result[0].tokenID);
+        getDate(addressList[i]);
         if (addressData[params.address]) {
           let diff = lodash.differenceBy(bodyData.result, addressData[params.address], "timeStamp");
           console.log("不同: ", diff);
@@ -121,37 +131,42 @@ function sendDDNews(diff, params) {
 
   diff.forEach((item) => {
     getProductList(item.tokenID, (data) => {
-      console.log('data: ', data);
       var aaaaaaaa = {
         title: "新交易提醒：",
-        text: ''
+        text: ""
       };
       let d = JSON.parse(data);
       const time = moment(item.timeStamp * 1000).format("MM-DD HH:mm:ss");
-      aaaaaaaa.title += params.name
-      let type = ''
+      aaaaaaaa.title += params.name;
+      let type = "";
       if (item.to == params.address) {
-        type = '买入'
-        
+        type = "买入";
       } else {
-        type = '卖出'
+        type = "卖出";
       }
       if (d.length > 0) {
         const ele = d[0];
         // news += `商品：${ele.gName}，编号：${ele.gNum}，GID：${ele.gId}，tokenId：${ele.tokenId}`;
-        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`
-        sendNews(aaaaaaaa);
+        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`;
+        sendNews(aaaaaaaa, params);
       } else {
         // news += `商品：暂无信息，编号：- - ，GID：- -，tokenId：${item.tokenID}`;
-        aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`
-        sendNews(aaaaaaaa);
+        aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`;
+        sendNews(aaaaaaaa, params);
       }
     });
   });
 }
 
-function sendNews(news) {
-  sendNews2(news)
+function sendNews(news, params) {
+  if (
+    params.address == "0x3342572427e79309071b43368cc7976e5c627a12" ||
+    params.address == "0xf66dcdbb3110a1d833b32a28da3083d644d639be" ||
+    params.address == "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e"
+  ) {
+  } else {
+    sendNews2(news);
+  }
   request(
     {
       url: "https://oapi.dingtalk.com/robot/send?access_token=febedf3f0da93b332c18b7b34926a82fd1bbb3474b5372417b2a1e83cf6ad180", //请求路径
@@ -163,7 +178,7 @@ function sendNews(news) {
       body: JSON.stringify({
         msgtype: "markdown",
         markdown: news
-      }),
+      })
       // body: JSON.stringify({ msgtype: "text", text: { content: news } })
     },
     function (error, response, body) {
@@ -185,7 +200,7 @@ function sendNews2(news) {
       body: JSON.stringify({
         msgtype: "markdown",
         markdown: news
-      }),
+      })
       // body: JSON.stringify({ msgtype: "text", text: { content: news } })
     },
     function (error, response, body) {
@@ -195,9 +210,8 @@ function sendNews2(news) {
   );
 }
 
-
 function getProductList(ids, cb) {
-  console.log('ids: ', ids);
+  console.log("ids: ", ids);
   request(
     {
       method: "POST",
@@ -230,3 +244,4 @@ function getProductList(ids, cb) {
 //     }
 //   );
 // }
+
