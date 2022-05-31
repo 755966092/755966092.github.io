@@ -120,7 +120,9 @@ function getDate(params) {
         } else {
           addressData[params.address] = bodyData.result;
         }
-      } catch (error) {}
+      } catch (error) {
+        getDate(addressList[i]);
+      }
     }
   );
 }
