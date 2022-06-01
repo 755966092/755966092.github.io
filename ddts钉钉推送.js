@@ -105,21 +105,27 @@ function getDate(params) {
           i = 0;
         }
         // tokenID
-        console.log("请求次数:", num++, " -- ", moment().format('MM-DD HH:mm:ss'));
-        console.log(i, "-最新id: ", bodyData.result[0].tokenID);
-        getDate(addressList[i]);
+        console.log("请求次数:", num++, " -- ", moment().format("MM-DD HH:mm:ss"));
+        // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
+
         if (addressData[params.address]) {
-          let diff = lodash.differenceBy(bodyData.result, addressData[params.address], "timeStamp");
-          console.log("不同: ", diff);
+          let diff = [];
+          if (bodyData.result.length == 10 && addressData[params.address].length == 10) {
+            diff = lodash.differenceBy(bodyData.result, addressData[params.address], "timeStamp");
+          }
           if (diff.length > 0) {
+            console.log("不同: ", diff);
             // 有新交易
             addressData[params.address] = bodyData.result;
             sendDDNews(diff, params);
+            getDate(addressList[i]);
           } else {
             addressData[params.address] = bodyData.result;
+            getDate(addressList[i]);
           }
         } else {
           addressData[params.address] = bodyData.result;
+          getDate(addressList[i]);
         }
       } catch (error) {
         getDate(addressList[i]);
@@ -247,5 +253,3 @@ function getProductList(ids, cb) {
 //     }
 //   );
 // }
-
-
