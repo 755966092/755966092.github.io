@@ -90,7 +90,7 @@ function getDate(params) {
       }
     },
 
-    function (error, response, body) {
+    async function (error, response, body) {
       if (error) {
         getDate(addressList[i]);
         console.log("错误一次:", JSON.stringify(error));
@@ -107,7 +107,7 @@ function getDate(params) {
         // tokenID
         console.log("请求次数:", num++, " -- ", moment().format("MM-DD HH:mm:ss"));
         // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
-
+        await sleep(500);
         if (addressData[params.address]) {
           let diff = [];
           if (bodyData.result.length == 10 && addressData[params.address].length == 10) {
