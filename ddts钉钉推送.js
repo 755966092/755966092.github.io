@@ -108,6 +108,8 @@ function getDate(params) {
         console.log("请求次数:", num++, " -- ", moment().format("MM-DD HH:mm:ss"));
         // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
         await sleep(500);
+        getDate(addressList[i]);
+
         if (addressData[params.address]) {
           let diff = [];
           if (bodyData.result.length == 10 && addressData[params.address].length == 10) {
@@ -118,14 +120,11 @@ function getDate(params) {
             // 有新交易
             addressData[params.address] = bodyData.result;
             sendDDNews(diff, params);
-            getDate(addressList[i]);
           } else {
             addressData[params.address] = bodyData.result;
-            getDate(addressList[i]);
           }
         } else {
           addressData[params.address] = bodyData.result;
-          getDate(addressList[i]);
         }
       } catch (error) {
         getDate(addressList[i]);
