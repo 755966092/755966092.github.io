@@ -50,6 +50,8 @@ const addressList = [
   { address: "0x07d46d9cf737a121ecc359d6e29b0f62f33bb05e", name: "NEI-花+马超" }
 ];
 var addressData = {};
+let getFlag = true;
+
 var i = 0;
 const sleep = (ms) =>
   new Promise((resolve) => {
@@ -80,57 +82,60 @@ console.log("开始...");
 //         address: "0x8a8e090adf437bb30eaf601a5a4d109a08d72d89"
 //     });
 // }
-
 function getDate(params) {
-  request(
-    {
-      url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
-      headers: {
-        "content-type": "application/json"
-      }
-    },
-
-    async function (error, response, body) {
-      if (error) {
-        getDate(addressList[i]);
-        console.log("错误一次:", JSON.stringify(error));
-      }
-      try {
-        let bodyData = JSON.parse(body);
-
-        console.log("请求:", params.name, "-", i);
-        if (i < addressList.length - 1) {
-          i++;
-        } else {
-          i = 0;
+  if (getFlag) {
+    getFlag = false;
+    request(
+      {
+        url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
+        headers: {
+          "content-type": "application/json"
         }
-        // tokenID
-        console.log("请求次数:", num++, " -- ", moment().format("MM-DD HH:mm:ss"));
-        // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
-        await sleep(500);
-        getDate(addressList[i]);
+      },
 
-        if (addressData[params.address]) {
-          let diff = [];
-          if (bodyData.result.length == 10 && addressData[params.address].length == 10) {
-            diff = lodash.differenceBy(bodyData.result, addressData[params.address], "timeStamp");
+      async function (error, response, body) {
+        getFlag = true;
+        try {
+          if (error) {
+            getDate(addressList[i]);
+            console.log("错误一次:", JSON.stringify(error));
           }
-          if (diff.length > 0) {
-            console.log("不同: ", diff);
-            // 有新交易
-            addressData[params.address] = bodyData.result;
-            sendDDNews(diff, params);
+          let bodyData = JSON.parse(body);
+
+          console.log("请求:", params.name, "-", i);
+          if (i < addressList.length - 1) {
+            i++;
+          } else {
+            i = 0;
+          }
+          // tokenID
+          console.log("请求次数:", num++, " -- ", moment().format("MM-DD HH:mm:ss"));
+          // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
+          await sleep(500);
+          getDate(addressList[i]);
+
+          if (addressData[params.address]) {
+            let diff = [];
+            if (bodyData.result.length == 10 && addressData[params.address].length == 10) {
+              diff = lodash.differenceBy(bodyData.result, addressData[params.address], "timeStamp");
+            }
+            if (diff.length > 0) {
+              console.log("不同: ", diff);
+              // 有新交易
+              addressData[params.address] = bodyData.result;
+              sendDDNews(diff, params);
+            } else {
+              addressData[params.address] = bodyData.result;
+            }
           } else {
             addressData[params.address] = bodyData.result;
           }
-        } else {
-          addressData[params.address] = bodyData.result;
+        } catch (error) {
+          getDate(addressList[i]);
         }
-      } catch (error) {
-        getDate(addressList[i]);
       }
-    }
-  );
+    );
+  }
 }
 
 function sendDDNews(diff, params) {
