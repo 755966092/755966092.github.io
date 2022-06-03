@@ -59,6 +59,10 @@ const sleep = (ms) =>
   });
 var num = 1;
 console.log("开始...");
+setTimeout(() => {
+  console.log('重启服务...');
+  throw("测试错误")
+}, 1800000);
 // (async () => {
 //   while (true) {
 //     try {
