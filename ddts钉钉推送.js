@@ -47,7 +47,10 @@ const addressList = [
   { address: "0xc9e4f4a4512290612cf8ecb5086d290d0a3e396b", name: "辛德勒" },
   { address: "0x09c3fd879365c00410e3fcf37f58687b76ac75e3", name: "NEI-花花" },
   // { address: "0x5e71ee36793db6bb532d0fedc0f1ad74b58ac541", name: "NEI-马超黄忠" }
-  { address: "0x07d46d9cf737a121ecc359d6e29b0f62f33bb05e", name: "NEI-花+马超" }
+  { address: "0x07d46d9cf737a121ecc359d6e29b0f62f33bb05e", name: "NEI-花+马超" },
+  { address: "0xdd7ef936fa6fbc14fc583f25b7b70e73460fa42a", name: "NEI-20古龙" },
+  { address: "0xf2d3249d7725d5ff117c9a9688cdb0edd4bddb87", name: "NEI-14古龙" },
+  { address: "0x26028941e28ad3eae79543c6768595d4d4daaab4", name: "NEI-17古龙" }
 ];
 var addressData = {};
 let getFlag = true;
@@ -60,8 +63,8 @@ const sleep = (ms) =>
 var num = 1;
 console.log("开始...");
 setTimeout(() => {
-  console.log('重启服务...');
-  throw("测试错误")
+  console.log("重启服务...");
+  throw "测试错误";
 }, 1800000);
 // (async () => {
 //   while (true) {
@@ -176,12 +179,15 @@ function sendDDNews(diff, params) {
 }
 
 function sendNews(news, params) {
-  if (
-    params.address == "0x3342572427e79309071b43368cc7976e5c627a12" ||
-    params.address == "0xf66dcdbb3110a1d833b32a28da3083d644d639be" ||
-    params.address == "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e"
-  ) {
-  } else {
+  let noall = [
+    "0x3342572427e79309071b43368cc7976e5c627a12",
+    "0xf66dcdbb3110a1d833b32a28da3083d644d639be",
+    "0xdd7ef936fa6fbc14fc583f25b7b70e73460fa42a",
+    "0xf2d3249d7725d5ff117c9a9688cdb0edd4bddb87",
+    "0x26028941e28ad3eae79543c6768595d4d4daaab4",
+    "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e"
+  ];
+  if (noall.indexOf(params.address) == -1) {
     sendNews2(news);
   }
   request(
