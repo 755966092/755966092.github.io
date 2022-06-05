@@ -35,28 +35,22 @@ getData()
 function getData() {
   var list = [];
   for (let i = 0; i < data.length; i++) {
-    console.log("序号: ", i + 1);
     const item = data[i];
     const d = ht(item.data, item.encryptKey);
     const d1 = d.data;
+    console.log('序号:', i);
+    // console.log('d1: ', d1.);
     list.push({
-      albumId: d1.albumId,
-      gId: d1.gId,
-      gName: d1.gName,
-      gNum: d1.gNum,
-      gStatus: d1.soldNumx,
-      isBuy: d1.isBuy,
-      ownerId: d1.ownerId,
-      ownerName: d1.authorName,
-      priceCny: d1.priceCny,
-      tokenId: d1.tokenId
+      name: d1.userName,
+      address: d1.walletAddress,
+      uid: d1.uid
     });
   }
+  console.log(JSON.stringify(list));
 
-  const csv = new ObjectsToCsv(list);
 
-  (async () => {
-    await csv.toDisk("./宙斯.csv");
-    //   await csv.toDisk("./list.csv", { append: true });
-  })();
+  // (async () => {
+  //   await csv.toDisk("./宙斯.js");
+  //   //   await csv.toDisk("./list.csv", { append: true });
+  // })();
 }
