@@ -1737,6 +1737,24 @@ var nameData222 = [
 // caahba22dtejln1eq9jg  夏天的板栗 100513970
 // caahbki2dtejln1eq9k0  东海龙王 100513991
 var nameData = [
+  { id: 100513995, name: "周瑜", total: 2000, cid: "cag5e61uk5rtcpdogqqg" },
+  { id: 100513996, name: "黄盖", total: 2000, cid: "cag5h0puk5rtcpdograg" },
+  { id: 100514026, name: "两仪", total: 2000, cid: "cag3f21uk5rtcpdogee0" },
+  { id: 100513999, name: "哪吒", total: 2000, cid: "cafpkri2dteir921jr9g" },
+  { id: 100514002, name: "太空飞鸟", total: 2000, cid: "cafpkk22dteir921jr90" },
+  { id: 100513998, name: "呼朋引伴", total: 2000, cid: "caf3tqq2dtei4e7r5cl0" },
+  { id: 100514007, name: "灵鹿送祥", total: 2000, cid: "caf3tkq2dtei4e7r5ckg" },
+  { id: 100513993, name: "太史慈", total: 2000, cid: "cadfbp9uk5rov1fi2hog" },
+  { id: 100513994, name: "吕蒙", total: 2000, cid: "cadf9s1uk5rov1fi2h5g" },
+  { id: 100514025, name: "马迪托MALDITO", total: 2000, cid: "caficn9uk5rtkhugjjpg" },
+  { id: 100514009, name: "变幻", total: 2000, cid: "cad1pe9uk5rov1fi0510" },
+  { id: 100513982, name: "BLUE", total: 2000, cid: "cade0i9uk5rov1fi29ng" },
+  { id: 100513981, name: "RED", total: 2000, cid: "cacstapuk5rov1fhupng" },
+  { id: 100513992, name: "玉皇大帝", total: 2000, cid: "cacfeu22dteh0m3s4130" },
+  { id: 100513977, name: "幻狮", total: 2000, cid: "cablbl9uk5rs05fb1k1g" },
+  { id: 100513976, name: "灵犬", total: 2000, cid: "cabira1uk5rs05favpv0" },
+  { id: 100514000, name: "兵小贝", total: 2000, cid: "cabfug1uk5rs05fasl7g" },
+
   { id: 100513950, name: "机械师", total: 2000, cid: "ca79voq2dteiua32t0v0" },
   { id: 100513948, name: "前线指挥官", total: 2000, cid: "ca7a08q2dteiua32t0vg" },
   { id: 100513949, name: "士兵", total: 2000, cid: "ca7a0ci2dteiua32t100" },
