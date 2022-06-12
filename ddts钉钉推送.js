@@ -115,6 +115,10 @@ const addressList = [
   {
     address: "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
     name: "NEI-毛哥发现的小号",
+  },
+  {
+    address: "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37",
+    name: "NEI-这个人4个宙斯",
   }
 ];
 var addressData = {};
@@ -247,7 +251,8 @@ function sendNews(news, params) {
     "0xf2d3249d7725d5ff117c9a9688cdb0edd4bddb87",
     "0x26028941e28ad3eae79543c6768595d4d4daaab4",
     "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e",
-    "0x06fefec3d5d978aea8ca1367421c9d78b0adef83"
+    "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
+    "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37"
   ];
   if (noall.indexOf(params.address) == -1) {
     sendNews2(news);
