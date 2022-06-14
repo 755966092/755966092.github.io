@@ -1737,6 +1737,7 @@ var nameData222 = [
 // caahba22dtejln1eq9jg  夏天的板栗 100513970
 // caahbki2dtejln1eq9k0  东海龙王 100513991
 var nameData = [
+  { id: 100513995, name: "太白金星", total: 2000, cid: "cage6qa2dtehun6tr5lg" },
   { id: 100513995, name: "周瑜", total: 2000, cid: "cag5e61uk5rtcpdogqqg" },
   { id: 100513996, name: "黄盖", total: 2000, cid: "cag5h0puk5rtcpdograg" },
   { id: 100514026, name: "两仪", total: 2000, cid: "cag3f21uk5rtcpdogee0" },
