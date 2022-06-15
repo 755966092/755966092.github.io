@@ -24,6 +24,18 @@
      * sp
      * inviteCustomerId
      * agreementId
+     * symbolCode
+     * financialLicense
+     * name
+     * code
+     * appStyle
+     * appId
+     * locale
+     * mobile
+     * receiver
+     * templateId
+     * userid
+     * employeeId
 
 
      * customerId$
