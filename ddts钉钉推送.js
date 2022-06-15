@@ -119,6 +119,10 @@ const addressList = [
   {
     address: "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37",
     name: "NEI-这个人4个宙斯",
+  },
+  {
+    address: "0x513f61fec7ee705dbd5da9a8e0354e407802c3dd",
+    name: "NEI-活动前买金福",
   }
 ];
 var addressData = {};
