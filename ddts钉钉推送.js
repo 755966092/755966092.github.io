@@ -235,7 +235,7 @@ function sendDDNews(diff, params) {
       }
       if (d.length > 0) {
         const ele = d[0];
-        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gName} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gId}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId})  \n- tokenId： ${ele.tokenId}`;
+        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gName} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId}  \n- tokenId： ${ele.tokenId}`;
         // aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`;
         sendNews(aaaaaaaa, params);
       } else {
