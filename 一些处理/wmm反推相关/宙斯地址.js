@@ -1488,3 +1488,462 @@ var a = [
     num: 1
   }
 ];
+
+var a = {
+  success: true,
+  value: [
+    {
+      description: "LidaOffbankVNM",
+      type: "Other",
+      paymentChannel: "LidaOffbankVNM",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 22000.0,
+      checkCardHour: 48,
+      integerOnly: true,
+      inMinimum: 50.0,
+      name: "Bank Transfer",
+      requireBrand: true,
+      indexId: 232,
+      provType: 4,
+      currency: "VND",
+      channelVersion: "v2",
+      id: 232,
+      inMaximum: 1000.0,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        paymentChannel: "LidaOffbankVNM",
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "BIDV",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 47,
+            bankName: "(BIDV) - Ngân hàng Đầu Tư Và Phát Triển Việt Nam",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "STB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 44,
+            bankName: "(Sacombank) - Ngân hàng TMCP Sài Gòn Thương Tín",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "ACB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 38,
+            bankName: "(ACB) - Ngân hàng TMCP Á Châu ACB",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "EXB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 37,
+            bankName: "(Eximbank) - Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "ICB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 36,
+            bankName: "(VietinBank) - Ngân hàng TMCP Công Thương Việt Nam",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "MB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 34,
+            bankName: "(MB) - Ngân hàng Quân đội",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "TCB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 33,
+            bankName: "(Techcombank) - Ngân hàng TMCP Kỹ thương Việt Nam",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "VCB",
+            channel: "LidaOffbankVNM",
+            needProv: false,
+            weight: 31,
+            bankName:
+              "(Vietcombank) - Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam",
+            channelVersion: "v2"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "LidapayBankVNM",
+      type: "EBank",
+      paymentChannel: "LidapayBankVNM",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 40000.0,
+      checkCardHour: 168,
+      integerOnly: true,
+      inMinimum: 150.0,
+      name: "Internet Banking",
+      requireBrand: true,
+      indexId: 227,
+      provType: 2,
+      currency: "VND",
+      channelVersion: "v2",
+      id: 215,
+      inMaximum: 10000.0,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "SCB",
+            channel: "LidapayBankVNM",
+            needProv: false,
+            weight: 59,
+            bankName: "(SCB) - Ngân hàng TMCP Sài Gòn",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "TCB",
+            channel: "LidapayBankVNM",
+            needProv: false,
+            weight: 33,
+            bankName: "(Techcombank) - Ngân hàng TMCP Kỹ thương Việt Nam",
+            channelVersion: "v2"
+          },
+          {
+            bankCode: "VCB",
+            channel: "LidapayBankVNM",
+            needProv: false,
+            weight: 31,
+            bankName:
+              "(Vietcombank) - Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam",
+            channelVersion: "v2"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "nljsbank",
+      type: "EBank",
+      paymentChannel: "nljsbank",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 23000.0,
+      checkCardHour: 48,
+      integerOnly: true,
+      inMinimum: 150,
+      name: "Internet Banking",
+      requireBrand: true,
+      indexId: 225,
+      provType: 2,
+      currency: "VND",
+      channelVersion: "v1",
+      id: 167,
+      inMaximum: 10000,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "BIDV",
+            channel: "nljsbank",
+            needProv: false,
+            weight: 47,
+            bankName: "(BIDV) - Ngân hàng Đầu Tư Và Phát Triển Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "TCB",
+            channel: "nljsbank",
+            needProv: false,
+            weight: 33,
+            bankName: "(Techcombank) - Ngân hàng TMCP Kỹ thương Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "DAB",
+            channel: "nljsbank",
+            needProv: false,
+            weight: 32,
+            bankName: "(DongA Bank) - Ngân hàng Đông Á",
+            channelVersion: "v1"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "PabfBankVNM",
+      type: "EBank",
+      paymentChannel: "PabfBankVNM",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 21900.0,
+      checkCardHour: 48,
+      integerOnly: false,
+      inMinimum: 150,
+      name: "Internet Banking",
+      requireBrand: true,
+      indexId: 222,
+      provType: 2,
+      currency: "VND",
+      channelVersion: "v1",
+      id: 192,
+      inMaximum: 10000,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "STB",
+            channel: "PabfBankVNM",
+            needProv: false,
+            weight: 44,
+            bankName: "(Sacombank) - Ngân hàng TMCP Sài Gòn Thương Tín",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "ACB",
+            channel: "PabfBankVNM",
+            needProv: false,
+            weight: 38,
+            bankName: "(ACB) - Ngân hàng TMCP Á Châu ACB",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "EXB",
+            channel: "PabfBankVNM",
+            needProv: false,
+            weight: 37,
+            bankName: "(Eximbank) - Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "ICB",
+            channel: "PabfBankVNM",
+            needProv: false,
+            weight: 36,
+            bankName: "(VietinBank) - Ngân hàng TMCP Công Thương Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "VCB",
+            channel: "PabfBankVNM",
+            needProv: false,
+            weight: 31,
+            bankName:
+              "(Vietcombank) - Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam",
+            channelVersion: "v1"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "",
+      type: "Other",
+      paymentChannel: "nljs",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 23000.0,
+      checkCardHour: 0,
+      integerOnly: false,
+      inMinimum: 50.0,
+      name: "ATM Card",
+      requireBrand: true,
+      indexId: 216,
+      provType: 5,
+      currency: "VND",
+      channelVersion: "v1",
+      id: 164,
+      inMaximum: 100000.0,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        paymentChannel: "nljs",
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "EXB",
+            channel: "nljs",
+            needProv: false,
+            weight: 37,
+            bankName: "(Eximbank) - Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "MB",
+            channel: "nljs",
+            needProv: false,
+            weight: 34,
+            bankName: "(MB) - Ngân hàng Quân đội",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "TCB",
+            channel: "nljs",
+            needProv: false,
+            weight: 33,
+            bankName: "(Techcombank) - Ngân hàng TMCP Kỹ thương Việt Nam",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "DAB",
+            channel: "nljs",
+            needProv: false,
+            weight: 32,
+            bankName: "(DongA Bank) - Ngân hàng Đông Á",
+            channelVersion: "v1"
+          },
+          {
+            bankCode: "VCB",
+            channel: "nljs",
+            needProv: false,
+            weight: 31,
+            bankName:
+              "(Vietcombank) - Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam",
+            channelVersion: "v1"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "LidapayEwalletQRVNM",
+      type: "Other",
+      paymentChannel: "LidapayEwalletQRVNM",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 40000.0,
+      checkCardHour: 48,
+      integerOnly: true,
+      inMinimum: 10.0,
+      name: "QR eWallet",
+      requireBrand: false,
+      indexId: 203,
+      provType: 2,
+      currency: "VND",
+      channelVersion: "v2",
+      id: 227,
+      inMaximum: 10000.0,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        paymentChannel: "LidapayEwalletQRVNM",
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [
+          {
+            bankCode: "MOMO",
+            channel: "LidapayEwalletQRVNM",
+            needProv: false,
+            swiftCode: "",
+            weight: 71,
+            bankName: "MOMO",
+            channelVersion: "v2"
+          }
+        ],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    },
+    {
+      description: "",
+      type: "Other",
+      paymentChannel: "PaysafeSkrillGeneralUSD",
+      requireFields: "AMOUNT_ONLY",
+      exchangeRate: 1,
+      checkCardHour: 48,
+      integerOnly: false,
+      inMinimum: 5.0,
+      name: "Skrill",
+      requireBrand: false,
+      indexId: 195,
+      provType: 6,
+      currency: "USD",
+      channelVersion: "v2",
+      id: 222,
+      inMaximum: 9000.0,
+      paymentInfo: {
+        recBankList: [],
+        walletList: [],
+        unableCode: 0,
+        payIdList: [],
+        walletLimit: 1,
+        paymentChannel: "PaysafeSkrillGeneralUSD",
+        isEnable: true,
+        cardList: [],
+        provList: [],
+        bankAccountList: [],
+        bankList: [],
+        provAccountList: [],
+        bankAccountLimit: 0,
+        cardLimit: 3
+      },
+      status: 1
+    }
+  ]
+};

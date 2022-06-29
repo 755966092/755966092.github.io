@@ -1,6 +1,8 @@
 const CryptoJS = require("crypto-js");
 const JSEncrypt = require("node-jsencrypt");
 const data = require("./data");
+const fs = require("fs");
+
 
 const ObjectsToCsv = require("objects-to-csv");
 
@@ -40,11 +42,12 @@ function getData() {
     const d1 = d.data;
     console.log('序号:', i);
     // console.log('d1: ', d1.);
-    list.push({
-      name: d1.userName,
-      address: d1.walletAddress,
-      uid: d1.uid
-    });
+    list.push(d1);
+    // list.push({
+    //   name: d1.userName,
+    //   address: d1.walletAddress,
+    //   uid: d1.uid
+    // });
   }
   console.log(JSON.stringify(list));
 
@@ -53,4 +56,14 @@ function getData() {
   //   await csv.toDisk("./宙斯.js");
   //   //   await csv.toDisk("./list.csv", { append: true });
   // })();
+
+  fs.writeFile(
+    `./凌霄宝殿.js`,
+    JSON.stringify(list),
+    (err) => {
+        if (err) {
+            throw err;
+        }
+    }
+);
 }
