@@ -9,39 +9,40 @@
     <style>
         .wrap {
             display: flex;
-            align-items: center;
-            height: 400px;
             border: 1px solid #000;
+            border-top: none;
         }
         
-        .wrap>div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            box-sizing: border-box;
-            padding: 10px 20px;
-            height: 100%;
-            flex: 1;
-            border-left: 1px solid #000;
+        .title {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        
+        .wrap p {
+            /* padding: 5px 0; */
+            margin: 5px 0;
         }
         
         .wrap .img {
-            border: none;
-            width: 360px;
-            flex: 2;
+            padding: 10px;
+            display: flex;
+            align-items: center;
         }
         
-        .wrap img {
-            max-height: 360px;
+        .wrap .img img {
+            width: 300px;
         }
         
         .wrap .cp-name {
-            flex: 2;
+            border-left: 1px solid #000;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
         }
         
-        .wrap .info {
-            flex: 3;
+        .desc {
+            text-indent: 2em
         }
     </style>
 </head>
@@ -65,33 +66,38 @@
     <div id="w">
 
     </div>
+
     <script src="../public/all.js"></script>
 
     <script>
         var w = document.getElementById('w')
         var html = ''
-        all.forEach(item => {
+        all.forEach((item, index) => {
+            // if (index > 3) {
+            //     return
+            // }
+            var url = ''
+            if (item.gUrls) {
+                url = item.gUrls[0].url
+            } else {
+                url = item.thumbPic
+            }
             html += `
             <div class="wrap">
-        <div class="img">
-            <img data-v-b569f17e="" src="https://www.ibox.art${item.thumbPic}">
-
-        </div>
-        <div class="cp-name">
-            <div>${item.gName}</div>
-        </div>
-        <div class="total">总量:${item.sellLimit}</div>
-        <div class="sold">流通:${item.soldNum}</div>
-        
-        <div class="type">
-            <div>
-                <p>系列: ${item.albumName}<p>
-            <p>机构: ${item.brandName}<p>
-            <p>作者: ${item.authorName}<p>
+                <div class="img">
+                    <a href="https://www.ibox.art${url}" target="_black"><img loading="lazy" src="https://www.ibox.art${url}"></a>
+                    
                 </div>
-        </div>
-        <div class="info">${item.gDesc}</div>
-    </div>`
+                <div class="cp-name">
+                    <div class="title">${item.gName}</div>
+                    <p>总量: ${item.sellLimit}</p>
+                    <p>流通: ${item.soldNum}</p>
+                    <p>系列: ${item.albumName}</p>
+                    <p>机构: ${item.brandName}</p>
+                    <p>作者: ${item.authorName}<p>
+                    <p class="desc">${item.gDesc}</p>
+                </div>
+            </div>`
         })
         w.innerHTML = html;
     </script>
