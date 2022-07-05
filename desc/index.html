@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
     <title>藏品介绍</title>
     <style>
         .wrap {
             display: flex;
             border: 1px solid #000;
             border-top: none;
+        }
+        
+        .border {
+            border-top: 1px solid #000;
+            overflow: hidden;
         }
         
         .title {
@@ -44,6 +50,28 @@
         .desc {
             text-indent: 2em
         }
+        
+        #sel {
+            /* margin-bottom: 5px; */
+        }
+        
+        .sel-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 5px 0;
+        }
+        
+        @media screen and (max-width: 1080px) {
+            .wrap {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrap .cp-name {
+                border-left: none;
+            }
+        }
     </style>
 </head>
 
@@ -62,16 +90,33 @@
         <div class="info">蚩尤是上古时代九黎部落酋长，也是中国神话中的战神。《山海经·大荒北经》记载：“ 蚩尤者，九黎民之君子也，俗云：人自牛蹄，面如牛首，背生双翅，獸身人語，铜头铁额，食沙石子，制五兵之器，变化云雾 ，仗刀戟大弩，威振天下。蚩尤作兵伐黄帝，黄帝乃令应龙攻之冀州之野，应龙畜水，蚩尤请风伯雨师纵大风雨，黄帝乃下天女曰魃，雨止，遂杀蚩尤。”
         </div>
     </div> -->
+    <div class="sel-wrap">
+        <select name="" id="sel" onchange="selChange(event)">
 
-    <div id="w">
+        </select>
+    </div>
+    <div class="border">
+        <div class="wrap">
+            <div class="img">
+                <img src="../public/IMG_2426.jpg">
+            </div>
+            <div class="cp-name">
+                <div class="title">iBox 海天盛筵交流群</div>
+                <p>PC 端 Ctrl+F 可以直接搜索</p>
+            </div>
+        </div>
+        <div id="w">
 
+        </div>
     </div>
 
     <script src="../public/all.js"></script>
 
     <script>
         var w = document.getElementById('w')
-        var html = ''
+        var sel = document.getElementById('sel')
+        var html = '',
+            html2 = '<option value="">-- 请选择 --</option>';
         all.forEach((item, index) => {
             // if (index > 3) {
             //     return
@@ -98,8 +143,48 @@
                     <p class="desc">${item.gDesc}</p>
                 </div>
             </div>`
+            html2 += `
+            <option value="${item.gName}">${item.gName}</option>
+            `
         })
         w.innerHTML = html;
+        sel.innerHTML = html2;
+
+        function selChange(e) {
+            let gName = e.target.value;
+            let selHtml = ''
+
+            for (let index = 0; index < all.length; index++) {
+                const item = all[index];
+                if (item.gName == gName) {
+                    w.innerHTML = ''
+                    var url = ''
+                    if (item.gUrls) {
+                        url = item.gUrls[0].url
+                    } else {
+                        url = item.thumbPic
+                    }
+                    selHtml += `
+                        <div class="wrap">
+                            <div class="img">
+                                <a href="https://www.ibox.art${url}" target="_black"><img loading="lazy" src="https://www.ibox.art${url}"></a>
+                                
+                            </div>
+                            <div class="cp-name">
+                                <div class="title">${item.gName}</div>
+                                <p>总量: ${item.sellLimit}</p>
+                                <p>流通: ${item.soldNum}</p>
+                                <p>系列: ${item.albumName}</p>
+                                <p>机构: ${item.brandName}</p>
+                                <p>作者: ${item.authorName}<p>
+                                <p class="desc">${item.gDesc}</p>
+                            </div>
+                        </div>`
+                    w.innerHTML = selHtml;
+                    break;
+                }
+            }
+        }
     </script>
 </body>
 
