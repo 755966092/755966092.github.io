@@ -18,20 +18,20 @@ var data = {
   code: 0,
   data: [
     {
-      crt_amount: 1111100,
+      crt_amount: 1599900,
       id: "c8ooika2dtegla6ajdag",
       name: "SCREW-未来人2046",
       period_change_rate: 0,
       serial_name: "SCREW",
-      total_change_rate: 16.96
+      total_change_rate: 68.41
     },
     {
-      crt_amount: 788800,
+      crt_amount: 1088600,
       id: "c7ooij22dtegla6ajd18",
       name: "宝宝—大火、小火",
       period_change_rate: 0,
       serial_name: "宝宝系列",
-      total_change_rate: -11.25
+      total_change_rate: 22.48
     },
     {
       crt_amount: 999900,
@@ -42,12 +42,12 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 1299900,
+      crt_amount: 1222200,
       id: "c7ooij22dtegla6ajd16",
       name: "宝宝—创世",
       period_change_rate: 0,
       serial_name: "宝宝系列",
-      total_change_rate: 30
+      total_change_rate: 22.23
     },
     {
       crt_amount: 700000,
@@ -66,52 +66,52 @@ var data = {
       total_change_rate: -1.25
     },
     {
-      crt_amount: 499900,
+      crt_amount: 645600,
       id: "c8ooika2dtegla6ajdc0",
       name: "《平行世界行舟1号》",
       period_change_rate: 0,
       serial_name: "平行世界",
-      total_change_rate: 0
+      total_change_rate: 29.15
     },
     {
-      crt_amount: 400000,
+      crt_amount: 666600,
       id: "c8ooika2dtegla6ajdcg",
       name: "梦境系列01",
       period_change_rate: 0,
       serial_name: "梦境系列",
-      total_change_rate: -19.79
+      total_change_rate: 33.67
     },
     {
-      crt_amount: 439600,
+      crt_amount: 450000,
       id: "c8ooiki2dtegla6ajdd0",
       name: "多维宇宙谎言03",
       period_change_rate: 0,
       serial_name: "多维宇宙谎言",
-      total_change_rate: 19.91
+      total_change_rate: 22.75
     },
     {
-      crt_amount: 360000,
+      crt_amount: 420000,
       id: "c8ooikq2dtegla6ajddg",
       name: "Rich",
       period_change_rate: 0,
       serial_name: "SIJIA",
-      total_change_rate: -21.4
+      total_change_rate: -8.3
     },
     {
-      crt_amount: 436000,
+      crt_amount: 444000,
       id: "c8ooima2dtegla6ajde0",
       name: "仙境",
       period_change_rate: 0,
       serial_name: "仙境",
-      total_change_rate: 14.77
+      total_change_rate: 16.87
     },
     {
-      crt_amount: 477700,
+      crt_amount: 466600,
       id: "c8ooin22dtegla6ajdeg",
       name: "无声剧场系列2号",
       period_change_rate: 0,
       serial_name: "无声剧场",
-      total_change_rate: 22.87
+      total_change_rate: 20.01
     },
     {
       crt_amount: 510000,
@@ -122,52 +122,52 @@ var data = {
       total_change_rate: 13.33
     },
     {
-      crt_amount: 428000,
+      crt_amount: 500000,
       id: "c8ooioq2dtegla6ajdfg",
       name: "SCREW-创世纪",
       period_change_rate: 0,
       serial_name: "SCREW",
-      total_change_rate: -0.47
+      total_change_rate: 16.28
     },
     {
-      crt_amount: 430000,
+      crt_amount: 599900,
       id: "c8ooip22dtegla6ajdg0",
       name: "SCREW-舜跖",
       period_change_rate: 0,
       serial_name: "SCREW",
-      total_change_rate: 7.5
+      total_change_rate: 49.98
     },
     {
-      crt_amount: 549000,
+      crt_amount: 499900,
       id: "c8ooipi2dtegla6ajdgg",
       name: "Particle Fever No.1",
-      period_change_rate: -0.09,
+      period_change_rate: -3.87,
       serial_name: "Particle Fever",
-      total_change_rate: 12.04
+      total_change_rate: 2.02
     },
     {
-      crt_amount: 482200,
+      crt_amount: 490000,
       id: "c8ooipq2dtegla6ajdh0",
       name: "1001页-0038",
       period_change_rate: 0,
       serial_name: "1001页(1001 Pages)",
-      total_change_rate: 20.55
+      total_change_rate: 22.5
     },
     {
-      crt_amount: 418800,
+      crt_amount: 516800,
       id: "c8ooir22dtegla6ajdhg",
       name: "十二支宝宝之龙",
-      period_change_rate: 0,
+      period_change_rate: 0.02,
       serial_name: "十二支宝宝",
-      total_change_rate: -4.56
+      total_change_rate: 17.78
     },
     {
-      crt_amount: 380000,
+      crt_amount: 499900,
       id: "c8ooirq2dtegla6ajdi0",
       name: "十二支宝宝之虎",
       period_change_rate: 0,
       serial_name: "十二支宝宝",
-      total_change_rate: -9.52
+      total_change_rate: 19.02
     },
     {
       crt_amount: 508800,
@@ -178,60 +178,60 @@ var data = {
       total_change_rate: 8.53
     },
     {
-      crt_amount: 790000,
+      crt_amount: 787900,
       id: "c8ooit22dtegla6ajdj0",
       name: "赛博敦煌02",
       period_change_rate: 0,
       serial_name: "赛博敦煌",
-      total_change_rate: 16.38
+      total_change_rate: 16.07
     },
     {
-      crt_amount: 699900,
+      crt_amount: 733000,
       id: "c8ooita2dtegla6ajdjg",
       name: "iBox-Black Hole",
       period_change_rate: 0,
       serial_name: "SIJIA",
-      total_change_rate: -0.01
+      total_change_rate: 4.71
     },
     {
-      crt_amount: 998000,
+      crt_amount: 777700,
       id: "c8ooita2dtegla6ajdk0",
       name: "《云上涂鸦》",
       period_change_rate: 0,
       serial_name: "云上涂鸦",
-      total_change_rate: 42.57
+      total_change_rate: 11.1
     },
     {
-      crt_amount: 388800,
+      crt_amount: 399900,
       id: "c8ooiti2dtegla6ajdkg",
       name: "四期",
       period_change_rate: 0,
       serial_name: "张国荣公益数字藏品",
-      total_change_rate: -13.58
+      total_change_rate: -11.11
     },
     {
-      crt_amount: 220000,
+      crt_amount: 250100,
       id: "c8ooiu22dtegla6ajdl0",
       name: "三期",
       period_change_rate: 0,
       serial_name: "张国荣公益数字藏品",
-      total_change_rate: -14.99
+      total_change_rate: -3.36
     },
     {
-      crt_amount: 220000,
+      crt_amount: 265000,
       id: "c8ooiuq2dtegla6ajdlg",
       name: "二期",
       period_change_rate: 0,
       serial_name: "张国荣公益数字藏",
-      total_change_rate: -12
+      total_change_rate: 6
     },
     {
-      crt_amount: 239900,
+      crt_amount: 265000,
       id: "c8ooiv22dtegla6ajdm0",
       name: "张国荣公益数字藏品",
-      period_change_rate: 0,
+      period_change_rate: -1.85,
       serial_name: "张国荣公益数字藏品",
-      total_change_rate: -6.11
+      total_change_rate: 3.72
     },
     {
       crt_amount: 550000,
@@ -250,36 +250,36 @@ var data = {
       total_change_rate: -9.61
     },
     {
-      crt_amount: 666500,
+      crt_amount: 666600,
       id: "c8ooj122dtegla6ajdng",
       name: "清晨",
       period_change_rate: 0,
       serial_name: "记忆的花园-洋甘菊-清晨",
-      total_change_rate: 5.81
+      total_change_rate: 5.83
     },
     {
-      crt_amount: 600000,
+      crt_amount: 790000,
       id: "c8ooj1a2dtegla6ajdo0",
       name: "正午",
       period_change_rate: 0,
       serial_name: "记忆的花园-洋甘菊-正午",
-      total_change_rate: 0
+      total_change_rate: 31.67
     },
     {
-      crt_amount: 488000,
+      crt_amount: 590000,
       id: "c8ooj1i2dtegla6ajdog",
       name: "《谎言·冠军》",
       period_change_rate: 0,
       serial_name: "之之2021系列",
-      total_change_rate: -17.12
+      total_change_rate: 0.2
     },
     {
-      crt_amount: 780000,
+      crt_amount: 1109900,
       id: "c8ooj2a2dtegla6ajdp0",
       name: "《云端 · 天使》",
       period_change_rate: 0,
       serial_name: "之之2021系列",
-      total_change_rate: 30.02
+      total_change_rate: 85.01
     },
     {
       crt_amount: 690000,
@@ -290,12 +290,12 @@ var data = {
       total_change_rate: -5.9
     },
     {
-      crt_amount: 525200,
+      crt_amount: 519900,
       id: "c8ooj3i2dtegla6ajdq0",
       name: "Arrive IN Mars",
       period_change_rate: 0,
       serial_name: "Arrive IN Mars",
-      total_change_rate: -7.18
+      total_change_rate: -8.11
     },
     {
       crt_amount: 580000,
@@ -306,36 +306,36 @@ var data = {
       total_change_rate: -14.71
     },
     {
-      crt_amount: 1650000,
+      crt_amount: 1688800,
       id: "c7ooij22dtegla6ajd15",
       name: "云豹",
-      period_change_rate: -2.3,
+      period_change_rate: 0,
       serial_name: "云豹",
-      total_change_rate: -17.5
+      total_change_rate: -15.56
     },
     {
-      crt_amount: 538800,
+      crt_amount: 499900,
       id: "c8ooj522dtegla6ajdr0",
       name: "火吻",
       period_change_rate: 0,
       serial_name: "火吻",
-      total_change_rate: -17.61
+      total_change_rate: -23.56
     },
     {
-      crt_amount: 888800,
+      crt_amount: 1155500,
       id: "c8ooj5i2dtegla6ajdrg",
       name: "悟空",
       period_change_rate: 0,
       serial_name: "悟空",
-      total_change_rate: 0
+      total_change_rate: 30.01
     },
     {
-      crt_amount: 688800,
+      crt_amount: 530000,
       id: "c8ooj6q2dtegla6ajds0",
       name: "Knight Guard",
       period_change_rate: 0,
       serial_name: "Knight Guard",
-      total_change_rate: 37.79
+      total_change_rate: 6.02
     },
     {
       crt_amount: 463500,
@@ -362,68 +362,68 @@ var data = {
       total_change_rate: 18.03
     },
     {
-      crt_amount: 2000000,
+      crt_amount: 2666600,
       id: "c7ooij22dtegla6ajd12",
       name: "《启示录-天使战争》",
       period_change_rate: 0,
       serial_name: "《圣经-启示录》",
-      total_change_rate: -43.75
+      total_change_rate: -25
     },
     {
-      crt_amount: 623400,
+      crt_amount: 659900,
       id: "c8ooj8q2dtegla6ajdt0",
       name: "草莓女孩",
       period_change_rate: 0,
       serial_name: "草莓女孩",
-      total_change_rate: 5.66
+      total_change_rate: 11.85
     },
     {
-      crt_amount: 485000,
+      crt_amount: 699900,
       id: "c8ooj922dtegla6ajdtg",
       name: "粉红色的凝视",
-      period_change_rate: 0,
+      period_change_rate: 46.51,
       serial_name: "粉红色的凝视",
-      total_change_rate: -11.82
+      total_change_rate: 27.25
     },
     {
-      crt_amount: 265000,
+      crt_amount: 309900,
       id: "c8ooj9a2dtegla6ajdu0",
       name: "丰收女神-德墨忒尔",
-      period_change_rate: -3.6,
+      period_change_rate: -0.03,
       serial_name: "希腊神话系列",
-      total_change_rate: -5.36
+      total_change_rate: 10.68
     },
     {
-      crt_amount: 330000,
+      crt_amount: 450000,
       id: "c8ooj9i2dtegla6ajdug",
       name: "战神-阿瑞斯",
-      period_change_rate: 0,
+      period_change_rate: 12.5,
       serial_name: "希腊神话系列",
-      total_change_rate: 10
+      total_change_rate: 50
     },
     {
-      crt_amount: 328000,
+      crt_amount: 379300,
       id: "c8oojb22dtegla6ajdv0",
       name: "孙悟空语录版",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: 10.07
+      total_change_rate: 27.28
     },
     {
-      crt_amount: 1345600,
+      crt_amount: 1866600,
       id: "c7ooij22dtegla6ajd11",
       name: "何B仔卡住了",
       period_change_rate: 0,
       serial_name: "何B仔卡住了",
-      total_change_rate: -27.46
+      total_change_rate: 0.63
     },
     {
-      crt_amount: 520000,
+      crt_amount: 700000,
       id: "c8oojba2dtegla6ajdvg",
       name: "祈祷之手",
       period_change_rate: 0,
       serial_name: "祈祷之手",
-      total_change_rate: -13.3
+      total_change_rate: 16.71
     },
     {
       crt_amount: 666600,
@@ -434,60 +434,60 @@ var data = {
       total_change_rate: 14.93
     },
     {
-      crt_amount: 833300,
+      crt_amount: 944400,
       id: "c8oojbq2dtegla6aje0g",
       name: "心动大王（老虎）",
       period_change_rate: 0,
       serial_name: "心动系列",
-      total_change_rate: 17.37
+      total_change_rate: 33.01
     },
     {
-      crt_amount: 855500,
+      crt_amount: 750000,
       id: "c8oojbq2dtegla6aje10",
       name: "心动牛牛（牛牛）",
       period_change_rate: 0,
       serial_name: "心动系列",
-      total_change_rate: 42.61
+      total_change_rate: 25.02
     },
     {
-      crt_amount: 128700,
+      crt_amount: 194900,
       id: "c8oojci2dtegla6aje1g",
       name: "巴别塔",
-      period_change_rate: -0.08,
+      period_change_rate: 2.58,
       serial_name: "iBox先锋音乐",
-      total_change_rate: -6.74
+      total_change_rate: 41.23
     },
     {
-      crt_amount: 74000,
+      crt_amount: 115000,
       id: "c8oojcq2dtegla6aje20",
       name: "No other name",
       period_change_rate: 0,
       serial_name: "iBox先锋音乐",
-      total_change_rate: -12.94
+      total_change_rate: 35.29
     },
     {
-      crt_amount: 190000,
+      crt_amount: 218800,
       id: "c8oojd22dtegla6aje2g",
       name: "“旷世之恋”情侣卡",
       period_change_rate: 0,
       serial_name: "《真 · 三国无双》电影版",
-      total_change_rate: 2.7
+      total_change_rate: 18.27
     },
     {
-      crt_amount: 488800,
+      crt_amount: 628900,
       id: "c8oojei2dtegla6aje30",
       name: "Huntress 女猎人",
       period_change_rate: 0,
       serial_name: "Huntress 女猎人",
-      total_change_rate: -30.16
+      total_change_rate: -10.14
     },
     {
-      crt_amount: 950000,
+      crt_amount: 930000,
       id: "c8oojeq2dtegla6aje3g",
       name: "Cyber Girl 赛博女孩",
       period_change_rate: 0,
       serial_name: "Cyber Girl 赛博女孩",
-      total_change_rate: 18.75
+      total_change_rate: 16.25
     },
     {
       crt_amount: 690000,
@@ -498,12 +498,12 @@ var data = {
       total_change_rate: 15.02
     },
     {
-      crt_amount: 1988800,
+      crt_amount: 2491000,
       id: "c7ooij22dtegla6ajd10",
       name: "坠",
-      period_change_rate: 0,
+      period_change_rate: 15.8,
       serial_name: "坠",
-      total_change_rate: -0.56
+      total_change_rate: 24.56
     },
     {
       crt_amount: 1999900,
@@ -514,12 +514,12 @@ var data = {
       total_change_rate: -19.64
     },
     {
-      crt_amount: 550000,
+      crt_amount: 660000,
       id: "c8oojfa2dtegla6aje4g",
       name: "痴娃娃",
       period_change_rate: 0,
       serial_name: "痴娃娃-东方艺术花园主题-山茶花系列",
-      total_change_rate: -21.08
+      total_change_rate: -5.29
     },
     {
       crt_amount: 666600,
@@ -530,52 +530,52 @@ var data = {
       total_change_rate: -8.26
     },
     {
-      crt_amount: 330000,
+      crt_amount: 339900,
       id: "c8oojg22dtegla6aje5g",
       name: "土地公公",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: 15.79
+      total_change_rate: 19.26
     },
     {
-      crt_amount: 100000,
+      crt_amount: 170000,
       id: "c8oojg22dtegla6aje60",
       name: "回眸倾城",
-      period_change_rate: 0,
+      period_change_rate: 2.1,
       serial_name: "iBox先锋音乐",
-      total_change_rate: -12.36
+      total_change_rate: 48.99
     },
     {
-      crt_amount: 75700,
+      crt_amount: 122200,
       id: "c8oojga2dtegla6aje6g",
       name: "Fool around",
-      period_change_rate: 0,
+      period_change_rate: 1.83,
       serial_name: "iBox先锋音乐",
-      total_change_rate: -7.68
+      total_change_rate: 49.02
     },
     {
-      crt_amount: 79900,
+      crt_amount: 129900,
       id: "c8oojgi2dtegla6aje70",
       name: "芒种",
-      period_change_rate: 0,
+      period_change_rate: 7.36,
       serial_name: "iBox先锋音乐",
-      total_change_rate: -11.12
+      total_change_rate: 44.49
     },
     {
-      crt_amount: 218800,
+      crt_amount: 300000,
       id: "c8oojgi2dtegla6aje7g",
       name: "003号古力娜扎",
-      period_change_rate: 0,
+      period_change_rate: 3.45,
       serial_name: "iBox十大明星卡",
-      total_change_rate: -0.5
+      total_change_rate: 36.43
     },
     {
-      crt_amount: 311000,
+      crt_amount: 380000,
       id: "c8oojgq2dtegla6aje80",
       name: "天后-赫拉",
       period_change_rate: 0,
       serial_name: "希腊神话系列",
-      total_change_rate: -5.73
+      total_change_rate: 15.19
     },
     {
       crt_amount: 5111100,
@@ -594,12 +594,12 @@ var data = {
       total_change_rate: -16.67
     },
     {
-      crt_amount: 1199900,
+      crt_amount: 899900,
       id: "c7ooij22dtegla6ajd06",
       name: "BUNNY BAR",
       period_change_rate: 0,
       serial_name: "BUNNY BAR",
-      total_change_rate: 0
+      total_change_rate: -25
     },
     {
       crt_amount: 799900,
@@ -610,52 +610,52 @@ var data = {
       total_change_rate: -15.8
     },
     {
-      crt_amount: 890000,
+      crt_amount: 946600,
       id: "c7ooij22dtegla6ajd04",
       name: "Bastet 特别版《时间》",
       period_change_rate: 0,
       serial_name: "Bastet 特别版《时间》",
-      total_change_rate: 17.8
+      total_change_rate: 25.29
     },
     {
-      crt_amount: 234800,
+      crt_amount: 295000,
       id: "c8oojh22dtegla6aje8g",
       name: "002号陶喆",
       period_change_rate: 0,
       serial_name: "iBox十大明星卡",
-      total_change_rate: 2.09
+      total_change_rate: 28.26
     },
     {
-      crt_amount: 240000,
+      crt_amount: 270000,
       id: "c8oojha2dtegla6aje90",
       name: "Q版孙悟空VI",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -11.08
+      total_change_rate: 0.04
     },
     {
-      crt_amount: 253000,
+      crt_amount: 298800,
       id: "c8oojhi2dtegla6aje9g",
       name: "Q版孙悟空VII",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -6.26
+      total_change_rate: 10.71
     },
     {
-      crt_amount: 288800,
+      crt_amount: 339900,
       id: "c8oojhq2dtegla6ajea0",
       name: "001号古天乐",
       period_change_rate: 0,
       serial_name: "iBox十大明星卡",
-      total_change_rate: -0.38
+      total_change_rate: 17.25
     },
     {
-      crt_amount: 270000,
+      crt_amount: 345000,
       id: "c8oojj22dtegla6ajeag",
       name: "海皇-波塞冬",
       period_change_rate: 0,
       serial_name: "希腊神话系列",
-      total_change_rate: -6.25
+      total_change_rate: 19.79
     },
     {
       crt_amount: 3500000,
@@ -666,28 +666,28 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 699900,
+      crt_amount: 1666600,
       id: "c8oojka2dtegla6ajeb0",
       name: "World-The Challenge",
-      period_change_rate: 0,
+      period_change_rate: -7.41,
       serial_name: "World- The Challenge",
-      total_change_rate: 0
+      total_change_rate: 138.12
     },
     {
-      crt_amount: 999900,
+      crt_amount: 1288800,
       id: "c8oojki2dtegla6ajebg",
       name: "World-The King",
       period_change_rate: 0,
       serial_name: "World-The King",
-      total_change_rate: 12.5
+      total_change_rate: 45
     },
     {
-      crt_amount: 118800,
+      crt_amount: 178600,
       id: "c8oojni2dtegla6ajee0",
       name: "iBox 002号空投版",
       period_change_rate: 0,
       serial_name: "iBox 002号空投版",
-      total_change_rate: 32.15
+      total_change_rate: 98.67
     },
     {
       crt_amount: 799900,
@@ -698,12 +698,12 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 102000,
+      crt_amount: 142200,
       id: "c8oojo22dtegla6ajefg",
       name: "金牛献福",
-      period_change_rate: 0,
+      period_change_rate: 1.64,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 6.47
+      total_change_rate: 48.43
     },
     {
       crt_amount: 9999900,
@@ -746,12 +746,12 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 766600,
+      crt_amount: 888800,
       id: "c8ook3a2dtegla6ajfc0",
       name: "萨德（Sade）",
       period_change_rate: 0,
       serial_name: "一期盲盒N",
-      total_change_rate: 39.38
+      total_change_rate: 61.6
     },
     {
       crt_amount: 799900,
@@ -770,20 +770,20 @@ var data = {
       total_change_rate: 1.15
     },
     {
-      crt_amount: 888800,
+      crt_amount: 928900,
       id: "c8ook4i2dtegla6ajfdg",
       name: "桑迪（Sunday）",
       period_change_rate: 0,
       serial_name: "一期盲盒N",
-      total_change_rate: -10.2
+      total_change_rate: -6.15
     },
     {
-      crt_amount: 1366600,
+      crt_amount: 1359900,
       id: "c8ook4q2dtegla6ajfe0",
       name: "格若瑞娅（Gloria）",
       period_change_rate: 0,
       serial_name: "一期盲盒N",
-      total_change_rate: 0
+      total_change_rate: -0.49
     },
     {
       crt_amount: 999900,
@@ -794,52 +794,52 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 1000000,
+      crt_amount: 980000,
       id: "c8ook5a2dtegla6ajff0",
       name: "泡泡（Bubble）",
-      period_change_rate: -8.16,
+      period_change_rate: 0,
       serial_name: "一期盲盒N",
-      total_change_rate: 11.11
+      total_change_rate: 8.89
     },
     {
-      crt_amount: 78000,
+      crt_amount: 94900,
       id: "c8ook5i2dtegla6ajffg",
       name: "闪电（Flash）",
-      period_change_rate: 0,
+      period_change_rate: -0.11,
       serial_name: "闪电（Flash）",
-      total_change_rate: 13.37
+      total_change_rate: 37.94
     },
     {
-      crt_amount: 279000,
+      crt_amount: 329900,
       id: "c8ook5q2dtegla6ajfg0",
       name: "宇智波佐助",
       period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 26.82
+      total_change_rate: 49.95
     },
     {
-      crt_amount: 285000,
+      crt_amount: 330000,
       id: "c8ook5q2dtegla6ajfgg",
       name: "旗木卡卡西",
-      period_change_rate: 9.62,
+      period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 29.55
+      total_change_rate: 50
     },
     {
-      crt_amount: 270000,
+      crt_amount: 299900,
       id: "c8ook622dtegla6ajfh0",
       name: "自来也",
       period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 10.75
+      total_change_rate: 23.01
     },
     {
-      crt_amount: 284000,
+      crt_amount: 349900,
       id: "c8ook622dtegla6ajfhg",
       name: "波风水门",
       period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 9.23
+      total_change_rate: 34.58
     },
     {
       crt_amount: 350000,
@@ -850,52 +850,52 @@ var data = {
       total_change_rate: 7.69
     },
     {
-      crt_amount: 288800,
+      crt_amount: 330000,
       id: "c8ook6a2dtegla6ajfig",
       name: "鸣人VS我爱罗",
       period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 13.03
+      total_change_rate: 29.16
     },
     {
-      crt_amount: 299000,
+      crt_amount: 335000,
       id: "c8ook6i2dtegla6ajfj0",
       name: "漩涡鸣人",
       period_change_rate: 0,
       serial_name: "二期盲盒N",
-      total_change_rate: 24.64
+      total_change_rate: 39.64
     },
     {
-      crt_amount: 1364700,
+      crt_amount: 1333300,
       id: "c8ook6i2dtegla6ajfjg",
       name: "奇拉比\u0026鸣人",
       period_change_rate: 0,
       serial_name: "二期盲盒SR",
-      total_change_rate: 17.17
+      total_change_rate: 14.48
     },
     {
-      crt_amount: 1150000,
+      crt_amount: 1288800,
       id: "c8ook6q2dtegla6ajfk0",
       name: "鸣人VS佐助",
       period_change_rate: 0,
       serial_name: "二期盲盒SR",
-      total_change_rate: 15.01
+      total_change_rate: 28.89
     },
     {
-      crt_amount: 4588800,
+      crt_amount: 5432100,
       id: "c8ook6q2dtegla6ajfkg",
       name: "木叶村众人",
       period_change_rate: 0,
       serial_name: "二期盲盒SSR",
-      total_change_rate: 17.33
+      total_change_rate: 38.89
     },
     {
-      crt_amount: 119900,
+      crt_amount: 138800,
       id: "c8ook7q2dtegla6ajfl0",
       name: "神牛降瑞",
       period_change_rate: 0,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 19.9
+      total_change_rate: 38.8
     },
     {
       crt_amount: 9999600,
@@ -906,20 +906,20 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 1000000,
+      crt_amount: 992200,
       id: "c8ook8a2dtegla6ajfn0",
       name: "八分光轮",
-      period_change_rate: 12.51,
+      period_change_rate: 0,
       serial_name: "三期盲盒SR",
-      total_change_rate: 40.85
+      total_change_rate: 39.75
     },
     {
-      crt_amount: 888800,
+      crt_amount: 978800,
       id: "c8ook8i2dtegla6ajfng",
       name: "捕捉光环",
       period_change_rate: 0,
       serial_name: "三期盲盒SR",
-      total_change_rate: 18.51
+      total_change_rate: 30.51
     },
     {
       crt_amount: 950000,
@@ -930,132 +930,132 @@ var data = {
       total_change_rate: 28.38
     },
     {
-      crt_amount: 277700,
+      crt_amount: 299900,
       id: "c8ook8i2dtegla6ajfog",
       name: "奥特屏障",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 6.81
+      total_change_rate: 15.35
     },
     {
-      crt_amount: 300000,
+      crt_amount: 366600,
       id: "c8ook922dtegla6ajfp0",
       name: "空中撞击战法",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 0
+      total_change_rate: 22.2
     },
     {
-      crt_amount: 278800,
+      crt_amount: 359900,
       id: "c8ook922dtegla6ajfpg",
       name: "奥特念力",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 11.56
+      total_change_rate: 44.02
     },
     {
-      crt_amount: 300000,
+      crt_amount: 339900,
       id: "c8ook9a2dtegla6ajfq0",
       name: "奥特水流",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 20
+      total_change_rate: 35.96
     },
     {
-      crt_amount: 315000,
+      crt_amount: 330000,
       id: "c8ook9a2dtegla6ajfqg",
       name: "奥特瞬间移动",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: -7.02
+      total_change_rate: -2.6
     },
     {
-      crt_amount: 282000,
+      crt_amount: 333300,
       id: "c8ook9i2dtegla6ajfrg",
       name: "巨大化能力",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 34.35
+      total_change_rate: 58.79
     },
     {
-      crt_amount: 298800,
+      crt_amount: 300000,
       id: "c8ook9i2dtegla6ajfs0",
       name: "碎裂光线",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 3.86
+      total_change_rate: 4.28
     },
     {
-      crt_amount: 268800,
+      crt_amount: 308800,
       id: "c8ook9q2dtegla6ajfsg",
       name: "奥特眼光线",
-      period_change_rate: 0,
+      period_change_rate: 0.72,
       serial_name: "三期盲盒N",
-      total_change_rate: 14.48
+      total_change_rate: 31.52
     },
     {
-      crt_amount: 290000,
+      crt_amount: 310000,
       id: "c8ook9q2dtegla6ajft0",
       name: "超级过肩摔",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 20.83
+      total_change_rate: 29.17
     },
     {
-      crt_amount: 277700,
+      crt_amount: 296600,
       id: "c8ooka22dtegla6ajftg",
       name: "防御能力",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 11.08
+      total_change_rate: 18.64
     },
     {
-      crt_amount: 268500,
+      crt_amount: 349900,
       id: "c8ooka22dtegla6ajfu0",
       name: "光线白刃取",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 22.1
+      total_change_rate: 59.12
     },
     {
-      crt_amount: 268600,
+      crt_amount: 319900,
       id: "c8ookaa2dtegla6ajfug",
       name: "奥特空中意念捕捉",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: -3.66
+      total_change_rate: 14.74
     },
     {
-      crt_amount: 58800,
+      crt_amount: 67600,
       id: "c8ookai2dtegla6ajfv0",
       name: "灵牛来喜",
-      period_change_rate: 0.17,
+      period_change_rate: 2.42,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 11.36
+      total_change_rate: 28.03
     },
     {
-      crt_amount: 50000,
+      crt_amount: 59000,
       id: "c8ookaq2dtegla6ajfvg",
       name: "玄牛遂意",
-      period_change_rate: 1.01,
+      period_change_rate: 0,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 16.55
+      total_change_rate: 37.53
     },
     {
-      crt_amount: 399900,
+      crt_amount: 432300,
       id: "c8ookci2dtegla6ajg7g",
       name: "白羊座：加利斯",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: -20.02
+      total_change_rate: -13.54
     },
     {
-      crt_amount: 399900,
+      crt_amount: 499100,
       id: "c8ookcq2dtegla6ajg80",
       name: "巨蟹座：蛋丁",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 0
+      total_change_rate: 24.81
     },
     {
       crt_amount: 480000,
@@ -1066,20 +1066,20 @@ var data = {
       total_change_rate: 20
     },
     {
-      crt_amount: 600000,
+      crt_amount: 599900,
       id: "c8ookd22dtegla6ajg90",
       name: "天秤座：窝窝鸡",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 50.04
+      total_change_rate: 50.01
     },
     {
-      crt_amount: 366600,
+      crt_amount: 488800,
       id: "c8ookd22dtegla6ajg9g",
       name: "天蝎座：雷猴",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 14.56
+      total_change_rate: 52.75
     },
     {
       crt_amount: 450000,
@@ -1090,44 +1090,44 @@ var data = {
       total_change_rate: 36.36
     },
     {
-      crt_amount: 450000,
+      crt_amount: 439900,
       id: "c8ookda2dtegla6ajgag",
       name: "摩羯座：奋斗熊",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 4.65
+      total_change_rate: 2.3
     },
     {
-      crt_amount: 380000,
+      crt_amount: 555500,
       id: "c8ookdi2dtegla6ajgb0",
       name: "水瓶座：格白尼",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 16.92
+      total_change_rate: 70.92
     },
     {
-      crt_amount: 421100,
+      crt_amount: 466600,
       id: "c8ookdi2dtegla6ajgbg",
       name: "双鱼座：小超鱼",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 40.41
+      total_change_rate: 55.59
     },
     {
-      crt_amount: 699900,
+      crt_amount: 650000,
       id: "c8ookdq2dtegla6ajgc0",
       name: "奇幻马戏团",
       period_change_rate: 0,
       serial_name: "四期盲盒SR",
-      total_change_rate: 0
+      total_change_rate: -7.13
     },
     {
-      crt_amount: 588800,
+      crt_amount: 649900,
       id: "c8ookdq2dtegla6ajgcg",
       name: "大魔术师",
       period_change_rate: 0,
       serial_name: "四期盲盒SR",
-      total_change_rate: 7.07
+      total_change_rate: 18.19
     },
     {
       crt_amount: 2888800,
@@ -1146,12 +1146,12 @@ var data = {
       total_change_rate: -2.51
     },
     {
-      crt_amount: 400000,
+      crt_amount: 439900,
       id: "c8ookgi2dtegla6ajge0",
       name: "双子座：猫院长",
       period_change_rate: 0,
       serial_name: "四期盲盒N",
-      total_change_rate: 0
+      total_change_rate: 9.98
     },
     {
       crt_amount: 1533300,
@@ -1162,68 +1162,68 @@ var data = {
       total_change_rate: 9.57
     },
     {
-      crt_amount: 59600,
+      crt_amount: 69900,
       id: "c8ookiq2dtegla6ajgh0",
       name: "潮牛逐浪",
-      period_change_rate: 0.17,
+      period_change_rate: 0,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 9.56
+      total_change_rate: 28.49
     },
     {
-      crt_amount: 92000,
+      crt_amount: 109800,
       id: "c8ookki2dtegla6ajgig",
       name: "电牛放歌",
-      period_change_rate: 0,
+      period_change_rate: -0.09,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 6.98
+      total_change_rate: 27.67
     },
     {
-      crt_amount: 185000,
+      crt_amount: 239000,
       id: "c8ookla2dtegla6ajgj0",
       name: "混沌",
-      period_change_rate: 0,
+      period_change_rate: 6.22,
       serial_name: "山海经",
-      total_change_rate: 16.5
+      total_change_rate: 50.5
     },
     {
-      crt_amount: 98800,
+      crt_amount: 163100,
       id: "c8ookli2dtegla6ajgjg",
       name: "iBox-电牛放歌",
-      period_change_rate: 0,
+      period_change_rate: 8.81,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 4.66
+      total_change_rate: 72.78
     },
     {
-      crt_amount: 95000,
+      crt_amount: 141000,
       id: "c8ookm22dtegla6ajgk0",
       name: "iBox-电牛放歌",
-      period_change_rate: 0,
+      period_change_rate: -0.07,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 6.74
+      total_change_rate: 58.43
     },
     {
-      crt_amount: 108000,
+      crt_amount: 153000,
       id: "c8ookm22dtegla6ajgkg",
       name: "战牛无双",
-      period_change_rate: 0,
+      period_change_rate: -1.61,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 9.31
+      total_change_rate: 54.86
     },
     {
-      crt_amount: 46000,
+      crt_amount: 55800,
       id: "c8ookma2dtegla6ajgl0",
       name: "I‘m Sorry",
-      period_change_rate: 2.22,
+      period_change_rate: -1.93,
       serial_name: "iBox纪念系列",
-      total_change_rate: 15.29
+      total_change_rate: 39.85
     },
     {
-      crt_amount: 69000,
+      crt_amount: 82500,
       id: "c8ookna2dtegla6ajglg",
       name: "iBox-翔牛摘星",
-      period_change_rate: 0,
+      period_change_rate: -0.48,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 9.87
+      total_change_rate: 31.37
     },
     {
       crt_amount: 9999900,
@@ -1234,340 +1234,340 @@ var data = {
       total_change_rate: 0.34
     },
     {
-      crt_amount: 149800,
+      crt_amount: 188800,
       id: "c8ookpi2dtegla6ajgmg",
       name: "宣传小标兵",
-      period_change_rate: 0,
+      period_change_rate: 7.89,
       serial_name: "iBox纪念系列",
-      total_change_rate: 20.03
+      total_change_rate: 51.28
     },
     {
-      crt_amount: 64500,
+      crt_amount: 78000,
       id: "c9mlo5q2dtehm10l72gg",
       name: "CyberMouse",
-      period_change_rate: 2.54,
+      period_change_rate: -0.64,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -6.39
+      total_change_rate: 13.21
     },
     {
-      crt_amount: 205000,
+      crt_amount: 235000,
       id: "c9mlo5q2dtehm10l72vg",
       name: "丹凤门酒宴",
-      period_change_rate: 0,
+      period_change_rate: -0.21,
       serial_name: "长安往事",
-      total_change_rate: 2.5
+      total_change_rate: 17.5
     },
     {
-      crt_amount: 440000,
+      crt_amount: 440500,
       id: "c9mlo5q2dtehm10l7330",
       name: "孙悟空大战巨灵神",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -15.22
+      total_change_rate: -15.13
     },
     {
-      crt_amount: 229800,
+      crt_amount: 248800,
       id: "c9mlo5q2dtehm10l736g",
       name: "魏征斩龙王",
       period_change_rate: 0,
       serial_name: "长安往事",
-      total_change_rate: -13.22
+      total_change_rate: -6.04
     },
     {
-      crt_amount: 888800,
+      crt_amount: 850000,
       id: "c9mlo5q2dtehm10l73a0",
       name: "孙悟空大战托塔天王",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -6.32
+      total_change_rate: -10.41
     },
     {
-      crt_amount: 282800,
+      crt_amount: 340000,
       id: "c9mlo5q2dtehm10l73d0",
       name: "爱神-阿佛洛狄忒",
-      period_change_rate: 0,
+      period_change_rate: -2.83,
       serial_name: "希腊神话系列",
-      total_change_rate: -5.7
+      total_change_rate: 13.37
+    },
+    {
+      crt_amount: 326600,
+      id: "c9mlo5q2dtehm10l73k0",
+      name: "炉灶女神-赫斯提亚",
+      period_change_rate: 2.06,
+      serial_name: "希腊神话系列",
+      total_change_rate: 23.25
+    },
+    {
+      crt_amount: 280000,
+      id: "c9mlo622dtehm10l7420",
+      name: "红娘",
+      period_change_rate: -3.05,
+      serial_name: "四大名旦",
+      total_change_rate: 8.65
     },
     {
       crt_amount: 289900,
-      id: "c9mlo5q2dtehm10l73k0",
-      name: "炉灶女神-赫斯提亚",
-      period_change_rate: 0,
-      serial_name: "希腊神话系列",
-      total_change_rate: 9.4
-    },
-    {
-      crt_amount: 230000,
-      id: "c9mlo622dtehm10l7420",
-      name: "红娘",
-      period_change_rate: 0,
-      serial_name: "四大名旦",
-      total_change_rate: -10.75
-    },
-    {
-      crt_amount: 240000,
       id: "c9mlo622dtehm10l746g",
       name: "锁麟囊",
-      period_change_rate: 4.9,
+      period_change_rate: 0,
       serial_name: "四大名旦",
-      total_change_rate: -6.47
+      total_change_rate: 12.98
     },
     {
-      crt_amount: 249900,
+      crt_amount: 299800,
       id: "c9mlo622dtehm10l749g",
       name: "擂鼓战金山",
       period_change_rate: 0,
       serial_name: "四大名旦",
-      total_change_rate: -0.04
+      total_change_rate: 19.92
     },
     {
-      crt_amount: 295000,
+      crt_amount: 366600,
       id: "c9mlo622dtehm10l74c0",
       name: "贵妃醉酒",
       period_change_rate: 0,
       serial_name: "四大名旦",
-      total_change_rate: -8.44
+      total_change_rate: 13.78
     },
     {
-      crt_amount: 480000,
+      crt_amount: 455000,
       id: "c9mlo622dtehm10l74lg",
       name: "窦府巷选婿",
-      period_change_rate: 0,
+      period_change_rate: 1.13,
       serial_name: "长安往事",
-      total_change_rate: 2.15
+      total_change_rate: -3.17
     },
     {
-      crt_amount: 449900,
+      crt_amount: 529900,
       id: "c9mlo622dtehm10l74o0",
       name: "“才”",
       period_change_rate: 0,
       serial_name: "新生的数字旅程",
-      total_change_rate: -4.28
+      total_change_rate: 12.74
     },
     {
-      crt_amount: 818000,
+      crt_amount: 800000,
       id: "c9mlo622dtehm10l74s0",
       name: "张飞",
       period_change_rate: 0,
       serial_name: "五虎上将",
-      total_change_rate: 22.73
+      total_change_rate: 20.03
     },
     {
-      crt_amount: 496600,
+      crt_amount: 555500,
       id: "c9mlo622dtehm10l74v0",
       name: "“色”",
-      period_change_rate: 0,
+      period_change_rate: 11.1,
       serial_name: "新生的数字旅程",
-      total_change_rate: 7.96
+      total_change_rate: 20.76
     },
     {
-      crt_amount: 462000,
+      crt_amount: 566600,
       id: "c9mlo622dtehm10l7560",
       name: "“形”",
       period_change_rate: 0,
       serial_name: "新生的数字旅程",
-      total_change_rate: 0.43
+      total_change_rate: 23.17
     },
     {
-      crt_amount: 445500,
+      crt_amount: 552000,
       id: "c9mlo622dtehm10l758g",
       name: "“艺”",
       period_change_rate: 0,
       serial_name: "新生的数字旅程",
-      total_change_rate: -3.13
+      total_change_rate: 20.03
     },
     {
-      crt_amount: 455000,
+      crt_amount: 529900,
       id: "c9mlo6a2dtehm10l75f0",
       name: "“声”",
-      period_change_rate: 0,
+      period_change_rate: 8.16,
       serial_name: "新生的数字旅程",
-      total_change_rate: -8.98
+      total_change_rate: 6
     },
     {
-      crt_amount: 960000,
+      crt_amount: 1100000,
       id: "c9mlo6a2dtehm10l75hg",
       name: "关羽",
       period_change_rate: 0,
       serial_name: "五虎上将",
-      total_change_rate: 11.63
+      total_change_rate: 27.91
     },
     {
-      crt_amount: 57000,
+      crt_amount: 66600,
       id: "c9mlo6a2dtehm10l75ng",
       name: "CyberDragon",
-      period_change_rate: 0,
+      period_change_rate: 2.78,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -8.06
+      total_change_rate: 7.42
     },
     {
-      crt_amount: 1666600,
+      crt_amount: 1789900,
       id: "c9mlo6a2dtehm10l75tg",
       name: "财瑞狮",
-      period_change_rate: 11.18,
+      period_change_rate: 0,
       serial_name: "五瑞狮",
-      total_change_rate: 38.89
+      total_change_rate: 49.17
     },
     {
-      crt_amount: 1500000,
+      crt_amount: 1866600,
       id: "c9mlo6a2dtehm10l7610",
       name: "寿瑞狮",
       period_change_rate: 0,
       serial_name: "五瑞狮",
-      total_change_rate: 12.5
+      total_change_rate: 40
     },
     {
-      crt_amount: 1555500,
+      crt_amount: 1833300,
       id: "c9mlo6a2dtehm10l763g",
       name: "喜瑞狮",
       period_change_rate: 0,
       serial_name: "五瑞狮",
-      total_change_rate: 29.63
+      total_change_rate: 52.78
     },
     {
-      crt_amount: 1650000,
+      crt_amount: 1766600,
       id: "c9mlo6a2dtehm10l7670",
       name: "福瑞狮",
       period_change_rate: 0,
       serial_name: "五瑞狮",
-      total_change_rate: 23.75
+      total_change_rate: 32.5
     },
     {
-      crt_amount: 1555500,
+      crt_amount: 1888700,
       id: "c9mlo6a2dtehm10l769g",
       name: "禄瑞狮",
       period_change_rate: 0,
       serial_name: "五瑞狮",
-      total_change_rate: 26.46
+      total_change_rate: 53.55
     },
     {
-      crt_amount: 6911100,
+      crt_amount: 6866600,
       id: "c9mlo6a2dtehm10l76d0",
       name: "刘备",
       period_change_rate: 0,
       serial_name: "五虎上将",
-      total_change_rate: 15.19
+      total_change_rate: 14.44
     },
     {
-      crt_amount: 720000,
+      crt_amount: 785900,
       id: "c9mlo6a2dtehm10l76lg",
       name: "鱼化寨由来",
-      period_change_rate: -0.25,
+      period_change_rate: 0,
       serial_name: "长安往事",
-      total_change_rate: 14.47
+      total_change_rate: 24.94
     },
     {
-      crt_amount: 878800,
+      crt_amount: 900000,
       id: "c9mlo6i2dtehm10l76rg",
       name: "黄忠",
-      period_change_rate: 1.02,
+      period_change_rate: 0.01,
       serial_name: "五虎上将",
-      total_change_rate: 20.58
+      total_change_rate: 23.49
     },
     {
-      crt_amount: 49000,
+      crt_amount: 58000,
       id: "c9n00722dtehgk6leg5g",
       name: "赛博Terrier",
       period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -13.88
+      total_change_rate: 1.93
     },
     {
-      crt_amount: 48800,
+      crt_amount: 57000,
       id: "c9n0bu22dtehgk6leg60",
       name: "赛博GOLDEN",
-      period_change_rate: 0.62,
-      serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -9.46
-    },
-    {
-      crt_amount: 62800,
-      id: "c9uconq2dteihl2l39m0",
-      name: "赛博蓝猫",
       period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: 14.39
+      total_change_rate: 5.75
     },
     {
-      crt_amount: 1248800,
+      crt_amount: 77000,
+      id: "c9uconq2dteihl2l39m0",
+      name: "赛博蓝猫",
+      period_change_rate: 4.34,
+      serial_name: "iBox赛博猫狗系列",
+      total_change_rate: 40.26
+    },
+    {
+      crt_amount: 1356600,
       id: "c9ucv3a2dteihl2l39mg",
       name: "爱丽丝梦游仙境",
       period_change_rate: 0,
       serial_name: "爱丽丝梦游仙境",
-      total_change_rate: 7.05
+      total_change_rate: 16.29
     },
     {
-      crt_amount: 72000,
+      crt_amount: 86800,
       id: "c9ud04i2dteihl2l39n0",
       name: "赛博哈士奇",
-      period_change_rate: 0,
+      period_change_rate: -0.23,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -6.49
+      total_change_rate: 12.73
     },
     {
-      crt_amount: 48600,
+      crt_amount: 57000,
       id: "c9ud0ui2dteihl2l39ng",
       name: "CyberBull",
-      period_change_rate: 0,
+      period_change_rate: -0.7,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -11.64
+      total_change_rate: 3.64
     },
     {
-      crt_amount: 47500,
+      crt_amount: 57000,
       id: "c9ud13q2dteihl2l39o0",
       name: "CyberGoat",
-      period_change_rate: -1.04,
+      period_change_rate: 1.79,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -17.68
+      total_change_rate: -1.21
     },
     {
-      crt_amount: 150000,
+      crt_amount: 166600,
       id: "c9ud1822dteihl2l39og",
       name: "广目天王魔礼寿",
       period_change_rate: 0,
       serial_name: "四大天王",
-      total_change_rate: -5.54
+      total_change_rate: 4.91
     },
     {
-      crt_amount: 118000,
+      crt_amount: 139500,
       id: "c9ud1di2dteihl2l39p0",
       name: "斗牛玩家",
-      period_change_rate: -1.58,
+      period_change_rate: 0.5,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -1.67
+      total_change_rate: 16.25
     },
     {
-      crt_amount: 46900,
+      crt_amount: 56900,
       id: "c9ud1gq2dteihl2l39pg",
       name: "功夫猫-2号",
-      period_change_rate: 1.96,
+      period_change_rate: -0.52,
       serial_name: "功夫猫-2号",
-      total_change_rate: -13.47
+      total_change_rate: 4.98
     },
     {
-      crt_amount: 279900,
+      crt_amount: 322200,
       id: "c9ud1mq2dteihl2l39q0",
       name: "奥特高速旋转",
       period_change_rate: 0,
       serial_name: "三期盲盒N",
-      total_change_rate: 16.67
+      total_change_rate: 34.31
     },
     {
-      crt_amount: 73500,
+      crt_amount: 89800,
       id: "c9ud1qa2dteihl2l39qg",
       name: "大芒妖妖",
-      period_change_rate: -0.41,
+      period_change_rate: 0.22,
       serial_name: "iBox-魔法药水",
-      total_change_rate: 14.84
+      total_change_rate: 40.31
     },
     {
-      crt_amount: 69800,
+      crt_amount: 76000,
       id: "c9ud21i2dteihl2l39r0",
       name: "赛博加菲",
       period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -5.68
+      total_change_rate: 2.7
     },
     {
       crt_amount: 766600,
@@ -1578,108 +1578,108 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 164000,
+      crt_amount: 199900,
       id: "c9ud28a2dteihl2l39sg",
       name: "CyberHorse",
-      period_change_rate: 0,
+      period_change_rate: -0.05,
       serial_name: "iBox-CyberHorse",
-      total_change_rate: -8.89
+      total_change_rate: 11.06
     },
     {
-      crt_amount: 270000,
+      crt_amount: 308800,
       id: "c9ud3di2dtei3p7n8hs0",
       name: "摇滚熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 0
+      total_change_rate: 14.37
     },
     {
-      crt_amount: 51600,
+      crt_amount: 57500,
       id: "c9ud3p22dtei3p7n8hsg",
       name: "CyberTiger",
-      period_change_rate: 0,
+      period_change_rate: -2.21,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: 13.41
+      total_change_rate: 26.37
     },
     {
-      crt_amount: 53500,
+      crt_amount: 62000,
       id: "c9ud3ri2dtei3p7n8ht0",
       name: "赛博布偶",
-      period_change_rate: -0.74,
+      period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: 16.81
+      total_change_rate: 35.37
     },
     {
-      crt_amount: 48000,
+      crt_amount: 57700,
       id: "c9ud40a2dtei3p7n8htg",
       name: "赛博边牧",
       period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: 15.94
+      total_change_rate: 39.37
     },
     {
-      crt_amount: 81000,
+      crt_amount: 100000,
       id: "c9ud47i2dtei3p7n8hu0",
       name: "赛博柴犬",
-      period_change_rate: 1.25,
+      period_change_rate: 0.1,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -7.95
+      total_change_rate: 13.64
     },
     {
-      crt_amount: 70500,
+      crt_amount: 84100,
       id: "c9ud4da2dtei3p7n8hug",
       name: "蕃红李李",
-      period_change_rate: 0,
+      period_change_rate: -1.06,
       serial_name: "iBox-魔法药水",
-      total_change_rate: 17.89
+      total_change_rate: 40.64
     },
     {
-      crt_amount: 260000,
+      crt_amount: 298800,
       id: "c9ud4hi2dtei3p7n8hv0",
       name: "剑士熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 4.5
+      total_change_rate: 20.1
     },
     {
-      crt_amount: 72000,
+      crt_amount: 84900,
       id: "c9ud4ri2dtei3p7n8hvg",
       name: "魅紫萄萄",
-      period_change_rate: 0,
+      period_change_rate: -0.12,
       serial_name: "iBox-魔法药水",
-      total_change_rate: 20
+      total_change_rate: 41.5
     },
     {
-      crt_amount: 215000,
+      crt_amount: 256800,
       id: "c9ud50a2dtei3p7n8i00",
       name: "赛博司芬克斯",
       period_change_rate: 0,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -6.52
+      total_change_rate: 11.65
     },
     {
-      crt_amount: 250000,
+      crt_amount: 282000,
       id: "c9ud5b22dtei3p7n8i0g",
       name: "艾斯波列塔（ESPOLETA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒",
-      total_change_rate: 1.38
+      total_change_rate: 14.36
     },
     {
-      crt_amount: 318800,
+      crt_amount: 360000,
       id: "c9ud6ga2dtehdn0rm68g",
       name: "威尼斯双年艺术展纪念海报",
       period_change_rate: 0,
       serial_name: "威尼斯双年艺术展纪念海报",
-      total_change_rate: 10.39
+      total_change_rate: 24.65
     },
     {
-      crt_amount: 720000,
+      crt_amount: 750000,
       id: "c9ud6k22dtehdn0rm690",
       name: "何罗鱼",
-      period_change_rate: 2.87,
+      period_change_rate: 0,
       serial_name: "山海经",
-      total_change_rate: 62.02
+      total_change_rate: 68.77
     },
     {
       crt_amount: 299900,
@@ -1690,36 +1690,36 @@ var data = {
       total_change_rate: 19.96
     },
     {
-      crt_amount: 369900,
+      crt_amount: 388000,
       id: "c9ud79i2dtehdn0rm6a0",
       name: "异世界·海之城",
       period_change_rate: 0,
       serial_name: "异世界·海之城",
-      total_change_rate: 47.96
+      total_change_rate: 55.2
     },
     {
-      crt_amount: 278000,
+      crt_amount: 280000,
       id: "c9ud7fa2dtehdn0rm6ag",
       name: "布兰卡（BRANCA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 39
+      total_change_rate: 40
     },
     {
-      crt_amount: 250000,
+      crt_amount: 273500,
       id: "c9ud7ma2dtehdn0rm6b0",
       name: "机器人熊",
-      period_change_rate: 0,
+      period_change_rate: -0.55,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 25.06
+      total_change_rate: 36.82
     },
     {
-      crt_amount: 269900,
+      crt_amount: 294800,
       id: "c9ud7oa2dtehdn0rm6bg",
       name: "维洛（VELOZ）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 28.52
+      total_change_rate: 40.38
     },
     {
       crt_amount: 1800000,
@@ -1730,36 +1730,36 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 240000,
+      crt_amount: 279500,
       id: "c9ud8ai2dtehdn0rm6cg",
       name: "斗士熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 14.29
+      total_change_rate: 33.1
     },
     {
-      crt_amount: 80000,
+      crt_amount: 104800,
       id: "c9ud8rq2dtehdn0rm6d0",
       name: "泰迪熊-空投版",
       period_change_rate: 0,
       serial_name: "泰迪熊-空投版",
-      total_change_rate: 33.33
+      total_change_rate: 74.67
     },
     {
-      crt_amount: 259800,
+      crt_amount: 339900,
       id: "c9ud8vq2dtehdn0rm6dg",
       name: "迪奇克熊",
-      period_change_rate: 0,
+      period_change_rate: -0.03,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: -0.08
+      total_change_rate: 30.73
     },
     {
-      crt_amount: 229900,
+      crt_amount: 272000,
       id: "c9ud96i2dtehdn0rm6e0",
       name: "好春宵",
-      period_change_rate: 0.48,
+      period_change_rate: 2.64,
       serial_name: "民国六大金曲N",
-      total_change_rate: 18.51
+      total_change_rate: 40.21
     },
     {
       crt_amount: 766600,
@@ -1770,28 +1770,28 @@ var data = {
       total_change_rate: 39.38
     },
     {
-      crt_amount: 47900,
+      crt_amount: 57000,
       id: "c9udfqa2dtehdn0rm6fg",
       name: "CyberRabbit",
-      period_change_rate: 1.91,
+      period_change_rate: 0.53,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -15.82
+      total_change_rate: 0.18
     },
     {
-      crt_amount: 47300,
+      crt_amount: 57500,
       id: "c9udgbq2dtehdn0rm6g0",
       name: "CyberBoar",
-      period_change_rate: -0.84,
+      period_change_rate: 0,
       serial_name: "iBox赛博生肖系列",
-      total_change_rate: -17.74
+      total_change_rate: 0
     },
     {
-      crt_amount: 1122200,
+      crt_amount: 1300000,
       id: "c9udjqa2dtehdn0rm6h0",
       name: "大鱼",
       period_change_rate: 0,
       serial_name: "大鱼",
-      total_change_rate: 7.45
+      total_change_rate: 24.47
     },
     {
       crt_amount: 5555500,
@@ -1802,60 +1802,60 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 588800,
+      crt_amount: 829900,
       id: "c9udkma2dtehdn0rm6i0",
       name: "如果没有你",
       period_change_rate: 0,
       serial_name: "民国六大金曲SR",
-      total_change_rate: -15.74
+      total_change_rate: 18.76
     },
     {
-      crt_amount: 230000,
+      crt_amount: 270000,
       id: "c9udksa2dtehdn0rm6ig",
       name: "俏冤家",
       period_change_rate: 0,
       serial_name: "民国六大金曲N",
-      total_change_rate: 21.05
+      total_change_rate: 42.11
     },
     {
-      crt_amount: 227700,
+      crt_amount: 270000,
       id: "c9udl322dtehdn0rm6j0",
       name: "蔷薇处处开",
-      period_change_rate: 0,
+      period_change_rate: 0.04,
       serial_name: "民国六大金曲N",
-      total_change_rate: 16.77
+      total_change_rate: 38.46
     },
     {
-      crt_amount: 1800000,
+      crt_amount: 1780000,
       id: "c9udlm22dtehdn0rm6jg",
       name: "伊爱娃（IARA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒SSR",
-      total_change_rate: 7.22
+      total_change_rate: 6.03
     },
     {
-      crt_amount: 550000,
+      crt_amount: 648800,
       id: "c9udlpa2dtehdn0rm6k0",
       name: "佛里奥索（FURIOSA）",
-      period_change_rate: 0,
+      period_change_rate: -0.17,
       serial_name: "马迪托盲盒SR",
-      total_change_rate: 10.02
+      total_change_rate: 29.79
     },
     {
-      crt_amount: 499900,
+      crt_amount: 560000,
       id: "c9udlsq2dtehdn0rm6kg",
       name: "贝贝（BEBE）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒SR",
-      total_change_rate: 24.98
+      total_change_rate: 40
     },
     {
-      crt_amount: 242800,
+      crt_amount: 289900,
       id: "c9udm1a2dtehdn0rm6l0",
       name: "普普拉（PURPURA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 5.57
+      total_change_rate: 26.04
     },
     {
       crt_amount: 285000,
@@ -1866,36 +1866,36 @@ var data = {
       total_change_rate: 18.75
     },
     {
-      crt_amount: 270000,
+      crt_amount: 323800,
       id: "c9udmj22dtehdn0rm6m0",
       name: "橙日（CRESCENTE）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 12.97
+      total_change_rate: 35.48
     },
     {
-      crt_amount: 249900,
+      crt_amount: 298800,
       id: "c9udmmi2dtehdn0rm6mg",
       name: "蓝日（NOVA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 19
+      total_change_rate: 42.29
     },
     {
-      crt_amount: 298000,
+      crt_amount: 380000,
       id: "c9udmtq2dtehdn0rm6n0",
       name: "昂蒂娜（ONDINHA）",
       period_change_rate: 0,
       serial_name: "马迪托盲盒N",
-      total_change_rate: 30.24
+      total_change_rate: 66.08
     },
     {
-      crt_amount: 960000,
+      crt_amount: 999900,
       id: "c9udn722dtehdn0rm6ng",
       name: "林黛玉",
       period_change_rate: 0,
       serial_name: "金陵十二钗盲盒SSR",
-      total_change_rate: 8.01
+      total_change_rate: 12.5
     },
     {
       crt_amount: 700000,
@@ -1914,12 +1914,12 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 3588800,
+      crt_amount: 3111100,
       id: "c9udnoi2dtehdn0rm6p0",
       name: "王熙凤",
       period_change_rate: 0,
       serial_name: "金陵十二钗盲盒N",
-      total_change_rate: 0
+      total_change_rate: -13.31
     },
     {
       crt_amount: 6488800,
@@ -1970,180 +1970,180 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 335000,
+      crt_amount: 369900,
       id: "c9udot22dtehdn0rm6sg",
       name: "孙悟空看守蟠桃园",
-      period_change_rate: 0,
+      period_change_rate: 5.69,
       serial_name: "大闹天宫系列",
-      total_change_rate: -3.74
+      total_change_rate: 6.29
     },
     {
-      crt_amount: 1699900,
+      crt_amount: 1858800,
       id: "c9udp322dtehdn0rm6t0",
       name: "赤啸虎",
-      period_change_rate: 4.1,
+      period_change_rate: 0,
       serial_name: "赤啸虎",
-      total_change_rate: 10.4
+      total_change_rate: 20.72
     },
     {
-      crt_amount: 8999900,
+      crt_amount: 9500000,
       id: "c9udpa22dtehdn0rm6tg",
       name: "牛气冲天",
       period_change_rate: 0,
       serial_name: "牛气冲天",
-      total_change_rate: 0
+      total_change_rate: 5.56
     },
     {
-      crt_amount: 112900,
+      crt_amount: 141000,
       id: "c9udpf22dtehdn0rm6u0",
       name: "甜心战士",
-      period_change_rate: 0,
+      period_change_rate: -0.21,
       serial_name: "iBox赛博猫狗系列",
-      total_change_rate: -8.51
+      total_change_rate: 14.26
     },
     {
-      crt_amount: 458000,
+      crt_amount: 499900,
       id: "c9udppa2dtehdn0rm6ug",
       name: "宝珠",
-      period_change_rate: -0.43,
+      period_change_rate: 0.99,
       serial_name: "星体",
-      total_change_rate: -10.2
+      total_change_rate: -1.98
     },
     {
-      crt_amount: 788700,
+      crt_amount: 850000,
       id: "c9udpsi2dtehdn0rm6v0",
       name: "Cece-roses",
-      period_change_rate: 0,
+      period_change_rate: -5.35,
       serial_name: "Cece-plants",
-      total_change_rate: 29.3
+      total_change_rate: 39.34
     },
     {
-      crt_amount: 138000,
+      crt_amount: 158700,
       id: "c9udpvq2dtehdn0rm6vg",
       name: "多闻天王魔礼红",
       period_change_rate: 0,
       serial_name: "四大天王",
-      total_change_rate: -4.83
+      total_change_rate: 9.45
     },
     {
-      crt_amount: 174600,
+      crt_amount: 210000,
       id: "c9udq3i2dtehdn0rm700",
       name: "企鹅",
-      period_change_rate: -0.23,
+      period_change_rate: 0.05,
       serial_name: "企鹅",
-      total_change_rate: -7.91
+      total_change_rate: 10.76
     },
     {
-      crt_amount: 850000,
+      crt_amount: 930000,
       id: "c9udq822dtehdn0rm70g",
       name: "大闹天宫-齐天大圣造访灵霄宝殿",
-      period_change_rate: 0,
+      period_change_rate: -0.3,
       serial_name: "大闹天宫系列",
-      total_change_rate: 10.89
+      total_change_rate: 21.33
     },
     {
-      crt_amount: 229900,
+      crt_amount: 280000,
       id: "c9udqca2dtehdn0rm710",
       name: "十万天兵天将下凡",
-      period_change_rate: 0,
+      period_change_rate: 4.17,
       serial_name: "大闹天宫系列",
-      total_change_rate: -14.47
+      total_change_rate: 4.17
     },
     {
-      crt_amount: 259900,
+      crt_amount: 305800,
       id: "c9udqeq2dtehdn0rm71g",
       name: "太平有象",
-      period_change_rate: -0.04,
+      period_change_rate: -0.71,
       serial_name: "彩云精灵",
-      total_change_rate: -7.18
+      total_change_rate: 9.21
     },
     {
-      crt_amount: 286500,
+      crt_amount: 306000,
       id: "c9udqhi2dtehdn0rm720",
       name: "孔雀呈祥",
       period_change_rate: 0,
       serial_name: "彩云精灵",
-      total_change_rate: -6
+      total_change_rate: 0.39
     },
     {
-      crt_amount: 1666600,
+      crt_amount: 1950000,
       id: "c9udqk22dtehdn0rm72g",
       name: "Sunny！Sunny！",
       period_change_rate: 0,
       serial_name: "Sunny",
-      total_change_rate: 7.14
+      total_change_rate: 25.36
     },
     {
-      crt_amount: 240000,
+      crt_amount: 269900,
       id: "c9udqoi2dtehdn0rm730",
       name: "异形人",
       period_change_rate: 0,
       serial_name: "异形人",
-      total_change_rate: -16.67
+      total_change_rate: -6.28
     },
     {
-      crt_amount: 450000,
+      crt_amount: 479900,
       id: "c9udqs22dtehdn0rm73g",
       name: "孙悟空大战哪吒",
-      period_change_rate: 0,
+      period_change_rate: 11.6,
       serial_name: "大闹天宫系列",
-      total_change_rate: -18.17
+      total_change_rate: -12.73
     },
     {
-      crt_amount: 920000,
+      crt_amount: 1177700,
       id: "c9udr1i2dtehdn0rm740",
       name: "朱雀",
       period_change_rate: 0,
       serial_name: "中国风元兽",
-      total_change_rate: 13.75
+      total_change_rate: 45.61
     },
     {
-      crt_amount: 283900,
+      crt_amount: 300000,
       id: "c9udr822dtehdn0rm750",
       name: "Cece-cotton",
-      period_change_rate: 0,
+      period_change_rate: -2.6,
       serial_name: "Cece-Plants",
-      total_change_rate: 4.26
+      total_change_rate: 10.17
     },
     {
-      crt_amount: 1700000,
+      crt_amount: 2000000,
       id: "c9udraa2dtehdn0rm75g",
       name: "姜子牙",
-      period_change_rate: 3.03,
+      period_change_rate: 0,
       serial_name: "姜子牙",
-      total_change_rate: 3.04
+      total_change_rate: 21.22
     },
     {
-      crt_amount: 280000,
+      crt_amount: 309900,
       id: "c9udria2dtehdn0rm76g",
       name: "Cece-liles",
       period_change_rate: 0,
       serial_name: "Cece-Plants",
-      total_change_rate: 3.7
+      total_change_rate: 14.78
     },
     {
-      crt_amount: 419900,
+      crt_amount: 466000,
       id: "c9udrli2dtehdn0rm770",
       name: "青啸虎",
       period_change_rate: 0,
       serial_name: "青啸虎",
-      total_change_rate: 2.44
+      total_change_rate: 13.69
     },
     {
-      crt_amount: 46000,
+      crt_amount: 56800,
       id: "c9udrpa2dtehdn0rm77g",
       name: "功夫猫-1号",
-      period_change_rate: 0,
+      period_change_rate: 1.43,
       serial_name: "功夫猫-1号",
-      total_change_rate: -14.66
+      total_change_rate: 5.38
     },
     {
-      crt_amount: 99900,
+      crt_amount: 118000,
       id: "c9udrri2dtehdn0rm780",
       name: "精灵宝贝",
-      period_change_rate: 0,
+      period_change_rate: 0.08,
       serial_name: "精灵宝贝",
-      total_change_rate: -8.18
+      total_change_rate: 8.46
     },
     {
       crt_amount: 6180000,
@@ -2154,52 +2154,52 @@ var data = {
       total_change_rate: 12.36
     },
     {
-      crt_amount: 688800,
+      crt_amount: 755500,
       id: "c9uds1q2dtehdn0rm790",
       name: "情愫",
       period_change_rate: 0,
       serial_name: "情愫",
-      total_change_rate: 23.02
+      total_change_rate: 34.93
     },
     {
-      crt_amount: 1050000,
+      crt_amount: 1268800,
       id: "c9uds3i2dtehdn0rm79g",
       name: "蝴蝶精灵",
-      period_change_rate: 0,
+      period_change_rate: 6.62,
       serial_name: "蝴蝶精灵",
-      total_change_rate: 16.67
+      total_change_rate: 40.98
     },
     {
-      crt_amount: 529900,
+      crt_amount: 611100,
       id: "c9udsc22dtehdn0rm7a0",
       name: "Love-003",
       period_change_rate: 0,
       serial_name: "呼唤",
-      total_change_rate: -15.73
+      total_change_rate: -2.81
     },
     {
-      crt_amount: 3199900,
+      crt_amount: 3488800,
       id: "c9udseq2dtehdn0rm7ag",
       name: "迷幻梦境",
       period_change_rate: 0,
       serial_name: "迷幻梦境",
-      total_change_rate: 15.66
+      total_change_rate: 26.1
     },
     {
-      crt_amount: 500000,
+      crt_amount: 690000,
       id: "c9udsia2dtehdn0rm7b0",
       name: "太空龙",
-      period_change_rate: -13.76,
+      period_change_rate: 1.47,
       serial_name: "COSMOS-太空龙",
-      total_change_rate: -5.46
+      total_change_rate: 30.46
     },
     {
-      crt_amount: 550000,
+      crt_amount: 540000,
       id: "c9udsla2dtehdn0rm7bg",
       name: "牡丹之三",
-      period_change_rate: 0,
+      period_change_rate: -1.82,
       serial_name: "牡丹之三",
-      total_change_rate: 10
+      total_change_rate: 8
     },
     {
       crt_amount: 745000,
@@ -2210,116 +2210,116 @@ var data = {
       total_change_rate: 24.19
     },
     {
-      crt_amount: 1000000,
+      crt_amount: 999900,
       id: "c9udssa2dtehdn0rm7cg",
       name: "张国荣签名纪念版",
       period_change_rate: 0,
       serial_name: "张国荣签名纪念版",
-      total_change_rate: 11.12
+      total_change_rate: 11.11
     },
     {
-      crt_amount: 180000,
+      crt_amount: 228000,
       id: "c9udt1a2dtehdn0rm7d0",
       name: "CyberMonkey",
       period_change_rate: 0,
       serial_name: "iBox-CyberMonkey",
-      total_change_rate: -10.89
+      total_change_rate: 12.87
     },
     {
-      crt_amount: 312300,
+      crt_amount: 388800,
       id: "c9udt5a2dtehdn0rm7dg",
       name: "赛博美短",
       period_change_rate: 0,
       serial_name: "iBox−赛博美短",
-      total_change_rate: -23.61
+      total_change_rate: -4.89
     },
     {
-      crt_amount: 349900,
+      crt_amount: 366000,
       id: "c9udtbq2dtehdn0rm7e0",
       name: "金瓜满载",
       period_change_rate: 0,
       serial_name: "红红火火",
-      total_change_rate: 16.63
+      total_change_rate: 22
     },
     {
-      crt_amount: 555500,
+      crt_amount: 533300,
       id: "c9udtdi2dtehdn0rm7eg",
       name: "秋色斑斓",
       period_change_rate: 0,
       serial_name: "红红火火",
-      total_change_rate: 57.77
+      total_change_rate: 51.46
     },
     {
-      crt_amount: 270000,
+      crt_amount: 315000,
       id: "c9udtga2dtehdn0rm7f0",
       name: "古龙今韵",
       period_change_rate: 0,
       serial_name: "齐兴华2022数字藏品",
-      total_change_rate: -8.97
+      total_change_rate: 6.2
     },
     {
-      crt_amount: 278800,
+      crt_amount: 280000,
       id: "c9udtjq2dtehdn0rm7fg",
       name: "异星夜袭",
-      period_change_rate: 0,
+      period_change_rate: 0.04,
       serial_name: "异星夜袭",
-      total_change_rate: -1.13
+      total_change_rate: -0.71
     },
     {
-      crt_amount: 666000,
+      crt_amount: 700000,
       id: "c9udtma2dtehdn0rm7g0",
       name: "想你的液",
       period_change_rate: 0,
       serial_name: "想你的液",
-      total_change_rate: 18.95
+      total_change_rate: 25.02
     },
     {
-      crt_amount: 259900,
+      crt_amount: 316000,
       id: "c9udtoa2dtehdn0rm7gg",
       name: "橙C的愿望",
       period_change_rate: 0,
       serial_name: "橙C的愿望",
-      total_change_rate: -16.16
+      total_change_rate: 1.94
     },
     {
-      crt_amount: 288800,
+      crt_amount: 288500,
       id: "c9udtrq2dtehdn0rm7h0",
       name: "戏剧老虎",
       period_change_rate: 0,
       serial_name: "戏剧老虎",
-      total_change_rate: 7.84
+      total_change_rate: 7.73
     },
     {
-      crt_amount: 429900,
+      crt_amount: 444400,
       id: "c9udtu22dtehdn0rm7hg",
       name: "虎年生金",
       period_change_rate: 0,
       serial_name: "虎年生金",
-      total_change_rate: 11.14
+      total_change_rate: 14.89
     },
     {
-      crt_amount: 780000,
+      crt_amount: 1069000,
       id: "c9udu122dtehdn0rm7i0",
       name: "《你到底在想什么》-附改编发行授权",
       period_change_rate: 0,
       serial_name: "你到底在想什么（附改编发行权）",
-      total_change_rate: 0.3
+      total_change_rate: 37.46
     },
     {
-      crt_amount: 136500,
+      crt_amount: 178500,
       id: "c9udu4a2dtehdn0rm7ig",
       name: "《你到底在想什么》-音乐",
-      period_change_rate: 0,
+      period_change_rate: -5.46,
       serial_name: "畅享音乐（无版权）",
-      total_change_rate: -2.29
+      total_change_rate: 27.77
     },
     {
-      crt_amount: 699900,
+      crt_amount: 760000,
       id: "c9udu9a2dtehdn0rm7j0",
       name: "众生",
       period_change_rate: 0,
       serial_name: "齐兴华2022数字藏品",
-      total_change_rate: 16.67
+      total_change_rate: 26.69
     },
     {
       crt_amount: 499900,
@@ -2330,28 +2330,28 @@ var data = {
       total_change_rate: -15.1
     },
     {
-      crt_amount: 799900,
+      crt_amount: 885800,
       id: "c9udue22dtehdn0rm7k0",
       name: "狐狸小姐和她的小公主",
       period_change_rate: 0,
       serial_name: "狐狸小姐和她的小公主",
-      total_change_rate: -11.12
+      total_change_rate: -1.58
     },
     {
-      crt_amount: 600000,
+      crt_amount: 699900,
       id: "c9udugi2dtehdn0rm7kg",
       name: "龙啸",
-      period_change_rate: 1.9,
+      period_change_rate: 0,
       serial_name: "齐兴华2022数字藏品",
-      total_change_rate: -14.27
+      total_change_rate: 0
     },
     {
-      crt_amount: 6333300,
+      crt_amount: 6500000,
       id: "c9uduia2dtehdn0rm7l0",
       name: "黄福(暴富有道)",
       period_change_rate: 0,
       serial_name: "茅山财富新福系列",
-      total_change_rate: -5
+      total_change_rate: -2.5
     },
     {
       crt_amount: 6666600,
@@ -2370,100 +2370,100 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 177700,
+      crt_amount: 210000,
       id: "c9udurq2dtehdn0rm7mg",
       name: "探索系列",
-      period_change_rate: 0,
+      period_change_rate: -0.52,
       serial_name: "“十二天宫”系列",
-      total_change_rate: -10.7
+      total_change_rate: 5.53
     },
     {
-      crt_amount: 209500,
+      crt_amount: 259900,
       id: "c9udv0q2dtehdn0rm7n0",
       name: "天通一号",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: 11.44
+      total_change_rate: 38.24
     },
     {
-      crt_amount: 219900,
+      crt_amount: 288800,
       id: "c9udv3q2dtehdn0rm7ng",
       name: "能源系列",
-      period_change_rate: 0,
+      period_change_rate: -2.1,
       serial_name: "“十二天宫”系列",
-      total_change_rate: 11.62
+      total_change_rate: 46.6
     },
     {
-      crt_amount: 205000,
+      crt_amount: 200000,
       id: "c9udv6q2dtehdn0rm7o0",
       name: "风暴系列",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: 3.02
+      total_change_rate: 0.5
     },
     {
-      crt_amount: 171000,
+      crt_amount: 218200,
       id: "c9udv9i2dtehdn0rm7og",
       name: "空间站",
-      period_change_rate: 0,
+      period_change_rate: -0.18,
       serial_name: "“十二天宫”系列",
-      total_change_rate: 0.71
+      total_change_rate: 28.5
     },
     {
-      crt_amount: 180000,
+      crt_amount: 198000,
       id: "c9udvc22dtehdn0rm7p0",
       name: "问天一号",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: 2.86
+      total_change_rate: 13.14
     },
     {
-      crt_amount: 170000,
+      crt_amount: 199900,
       id: "c9udvha2dtehdn0rm7pg",
       name: "首次载人航天",
-      period_change_rate: -2.86,
-      serial_name: "“十二天宫”系列",
-      total_change_rate: 13.41
-    },
-    {
-      crt_amount: 165000,
-      id: "c9udvk22dtehdn0rm7q0",
-      name: "悟空号",
-      period_change_rate: -0.96,
-      serial_name: "“十二天宫”系列",
-      total_change_rate: 9.05
-    },
-    {
-      crt_amount: 144500,
-      id: "c9udvp22dtehdn0rm7qg",
-      name: "奔月系列",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: -4.62
+      total_change_rate: 33.36
     },
     {
-      crt_amount: 190000,
+      crt_amount: 199900,
+      id: "c9udvk22dtehdn0rm7q0",
+      name: "悟空号",
+      period_change_rate: 0.6,
+      serial_name: "“十二天宫”系列",
+      total_change_rate: 32.12
+    },
+    {
+      crt_amount: 184900,
+      id: "c9udvp22dtehdn0rm7qg",
+      name: "奔月系列",
+      period_change_rate: 9.41,
+      serial_name: "“十二天宫”系列",
+      total_change_rate: 22.05
+    },
+    {
+      crt_amount: 210000,
       id: "c9udvsa2dtehdn0rm7r0",
       name: "东方红系列",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: -7.32
+      total_change_rate: 2.44
     },
     {
-      crt_amount: 175000,
+      crt_amount: 198000,
       id: "c9ue01a2dtehdn0rm7rg",
       name: "天庭对接",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: -4.37
+      total_change_rate: 8.2
     },
     {
-      crt_amount: 180000,
+      crt_amount: 219000,
       id: "c9ue04a2dtehdn0rm7s0",
       name: "一星三闪",
       period_change_rate: 0,
       serial_name: "“十二天宫”系列",
-      total_change_rate: -4.66
+      total_change_rate: 16
     },
     {
       crt_amount: 666600,
@@ -2474,316 +2474,316 @@ var data = {
       total_change_rate: -11.12
     },
     {
-      crt_amount: 966600,
+      crt_amount: 880000,
       id: "c9ue0d22dtehdn0rm7t0",
       name: "Magic Girl",
       period_change_rate: 0,
       serial_name: "COSMOS",
-      total_change_rate: 46.45
+      total_change_rate: 33.33
     },
     {
-      crt_amount: 2888800,
+      crt_amount: 2999900,
       id: "c9vdkoq2dtehf80deb8g",
       name: "陆逊",
       period_change_rate: 0,
       serial_name: "三国系列",
-      total_change_rate: 3.17
+      total_change_rate: 7.14
     },
     {
-      crt_amount: 230000,
+      crt_amount: 282800,
       id: "c9vdl022dtehf80deb90",
       name: "出于蓝",
-      period_change_rate: -1.67,
+      period_change_rate: 0,
       serial_name: "赵文琪",
-      total_change_rate: -17.33
+      total_change_rate: 1.65
     },
     {
-      crt_amount: 267000,
+      crt_amount: 315900,
       id: "c9vdl2q2dtehf80deb9g",
       name: "花米奇",
-      period_change_rate: -0.11,
+      period_change_rate: 0.83,
       serial_name: "花米奇",
-      total_change_rate: -10.4
+      total_change_rate: 6.01
     },
     {
-      crt_amount: 555500,
+      crt_amount: 529900,
       id: "ca0nkai2dteim80n3dmg",
       name: "思情郎",
       period_change_rate: 0,
       serial_name: "思情郎",
-      total_change_rate: 58.76
+      total_change_rate: 51.44
     },
     {
-      crt_amount: 390000,
+      crt_amount: 400800,
       id: "ca0nkg22dteim80n3dn0",
       name: "火与工匠之神-赫菲斯托斯",
       period_change_rate: 0,
       serial_name: "iBox纪念系列",
-      total_change_rate: 30
+      total_change_rate: 33.6
     },
     {
-      crt_amount: 666600,
+      crt_amount: 699700,
       id: "ca0nkt22dteim80n3dng",
       name: "虎虎生威",
       period_change_rate: 0,
       serial_name: "iBox礼遇系列",
-      total_change_rate: 66.65
+      total_change_rate: 74.93
     },
     {
-      crt_amount: 299900,
+      crt_amount: 299000,
       id: "ca0nlbi2dteim80n3do0",
       name: "半机甲熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 19.96
+      total_change_rate: 19.6
     },
     {
-      crt_amount: 355000,
+      crt_amount: 410000,
       id: "ca0nm7a2dteim80n3dog",
       name: "向阳",
-      period_change_rate: 0,
+      period_change_rate: 2.5,
       serial_name: "赵文琪",
-      total_change_rate: -1.39
+      total_change_rate: 13.89
     },
     {
-      crt_amount: 429900,
+      crt_amount: 449700,
       id: "ca0nma22dteim80n3dp0",
       name: "月光宝盒",
-      period_change_rate: 0,
+      period_change_rate: 4.58,
       serial_name: "大话西游",
-      total_change_rate: -8.53
+      total_change_rate: -4.32
     },
     {
-      crt_amount: 325000,
+      crt_amount: 334900,
       id: "ca0nmda2dteim80n3dpg",
       name: "照妖镜",
       period_change_rate: 0,
       serial_name: "大话西游",
-      total_change_rate: 8.37
+      total_change_rate: 11.67
     },
     {
-      crt_amount: 300000,
+      crt_amount: 320000,
       id: "ca0npeq2dteim80n3dq0",
       name: "可可熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 36.36
+      total_change_rate: 45.45
     },
     {
-      crt_amount: 770000,
+      crt_amount: 759900,
       id: "ca0nphi2dteim80n3dqg",
       name: "精灵熊",
-      period_change_rate: 0,
+      period_change_rate: -1.31,
       serial_name: "泰迪熊盲盒SR",
-      total_change_rate: 1.33
+      total_change_rate: 0
     },
     {
-      crt_amount: 295000,
+      crt_amount: 289900,
       id: "ca0nrk22dteim80n3dr0",
       name: "美女熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 22.92
+      total_change_rate: 20.79
     },
     {
-      crt_amount: 288800,
+      crt_amount: 298800,
       id: "ca0nrmi2dteim80n3drg",
       name: "军团熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 24.48
+      total_change_rate: 28.79
     },
     {
-      crt_amount: 320000,
+      crt_amount: 278800,
       id: "ca19tk22dtej1m5crqt0",
       name: "全机甲熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒",
-      total_change_rate: 41.09
+      total_change_rate: 22.93
     },
     {
-      crt_amount: 880000,
+      crt_amount: 950000,
       id: "ca19tua2dtej1m5crqtg",
       name: "Cece-tulip",
       period_change_rate: 0,
       serial_name: "Cece-Plants",
-      total_change_rate: 14.29
+      total_change_rate: 23.38
     },
     {
-      crt_amount: 294900,
+      crt_amount: 338000,
       id: "ca19udq2dtej1m5crqu0",
       name: "大话西游之金箍",
       period_change_rate: 0,
       serial_name: "大话西游",
-      total_change_rate: -4.87
+      total_change_rate: 9.03
     },
     {
-      crt_amount: 177800,
+      crt_amount: 199900,
       id: "ca19v1a2dtej1m5crqug",
       name: "介尔景福",
-      period_change_rate: 0,
+      period_change_rate: -0.55,
       serial_name: "一見有喜 平安長樂",
-      total_change_rate: 41.11
-    },
-    {
-      crt_amount: 180000,
-      id: "ca19v3i2dtej1m5crqv0",
-      name: "门神守护",
-      period_change_rate: -1.8,
-      serial_name: "一見有喜 平安長樂",
-      total_change_rate: 56.79
-    },
-    {
-      crt_amount: 349900,
-      id: "ca2hoq22dteikn5cb8e0",
-      name: "金甲圣衣",
-      period_change_rate: -0.03,
-      serial_name: "大话西游",
-      total_change_rate: 10.03
-    },
-    {
-      crt_amount: 608800,
-      id: "ca2hoq22dteikn5cb8eg",
-      name: "杨戬",
-      period_change_rate: 0,
-      serial_name: "杨戬",
-      total_change_rate: -7.05
-    },
-    {
-      crt_amount: 1100000,
-      id: "ca2hoq22dteikn5cb8f0",
-      name: "甘宁",
-      period_change_rate: -1,
-      serial_name: "三国系列",
-      total_change_rate: 12.24
+      total_change_rate: 58.65
     },
     {
       crt_amount: 200000,
+      id: "ca19v3i2dtej1m5crqv0",
+      name: "门神守护",
+      period_change_rate: -3.29,
+      serial_name: "一見有喜 平安長樂",
+      total_change_rate: 74.22
+    },
+    {
+      crt_amount: 347400,
+      id: "ca2hoq22dteikn5cb8e0",
+      name: "金甲圣衣",
+      period_change_rate: 0,
+      serial_name: "大话西游",
+      total_change_rate: 9.25
+    },
+    {
+      crt_amount: 666600,
+      id: "ca2hoq22dteikn5cb8eg",
+      name: "杨戬",
+      period_change_rate: 1.35,
+      serial_name: "杨戬",
+      total_change_rate: 1.77
+    },
+    {
+      crt_amount: 1239100,
+      id: "ca2hoq22dteikn5cb8f0",
+      name: "甘宁",
+      period_change_rate: -0.06,
+      serial_name: "三国系列",
+      total_change_rate: 26.44
+    },
+    {
+      crt_amount: 241500,
       id: "ca3lp01uk5rpni3e3rtg",
       name: "Lady Puppy",
-      period_change_rate: 0,
+      period_change_rate: 1.47,
       serial_name: "彩色童话",
-      total_change_rate: -11.11
+      total_change_rate: 7.33
     },
     {
-      crt_amount: 270000,
+      crt_amount: 320000,
       id: "ca6542puk5rr5i8nssrg",
       name: "太极星球",
-      period_change_rate: 0,
+      period_change_rate: -3.03,
       serial_name: "Old Is New",
-      total_change_rate: -12.88
+      total_change_rate: 3.26
     },
     {
-      crt_amount: 1433300,
+      crt_amount: 1633300,
       id: "ca6sjnpuk5rr5i8o5nmg",
       name: "至尊宝",
       period_change_rate: 0,
       serial_name: "大话西游",
-      total_change_rate: -7.53
+      total_change_rate: 5.37
     },
     {
-      crt_amount: 828000,
+      crt_amount: 990000,
       id: "ca6vohpuk5rr5i8o6p90",
       name: "泼彩红荷",
       period_change_rate: 0,
       serial_name: "大千文墨",
-      total_change_rate: -12.84
+      total_change_rate: 4.21
     },
     {
-      crt_amount: 2033300,
+      crt_amount: 2150000,
       id: "ca79tp22dteiua32t0ug",
       name: "筋斗云",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: 16.19
+      total_change_rate: 22.86
     },
     {
-      crt_amount: 588800,
+      crt_amount: 549900,
       id: "ca79voq2dteiua32t0v0",
       name: "机械师",
-      period_change_rate: 3.3,
+      period_change_rate: 0,
       serial_name: "机械师",
-      total_change_rate: 34.18
+      total_change_rate: 25.32
     },
     {
-      crt_amount: 1250000,
+      crt_amount: 1699900,
       id: "ca7a08q2dteiua32t0vg",
       name: "前线指挥官",
       period_change_rate: 0,
       serial_name: "前线指挥官",
-      total_change_rate: 4.18
+      total_change_rate: 41.67
     },
     {
-      crt_amount: 488800,
+      crt_amount: 590000,
       id: "ca7a0ci2dteiua32t100",
       name: "士兵",
       period_change_rate: 0,
       serial_name: "士兵",
-      total_change_rate: 13.67
+      total_change_rate: 37.21
     },
     {
-      crt_amount: 235000,
+      crt_amount: 269900,
       id: "ca7a0ja2dteiua32t10g",
       name: "特使",
       period_change_rate: 0,
       serial_name: "特使",
-      total_change_rate: 18.21
+      total_change_rate: 35.76
     },
     {
-      crt_amount: 239400,
+      crt_amount: 274900,
       id: "ca7a0v22dteiua32t110",
       name: "探索家",
-      period_change_rate: 0,
+      period_change_rate: -1.12,
       serial_name: "探索家",
-      total_change_rate: 16.33
+      total_change_rate: 33.58
     },
     {
-      crt_amount: 236500,
+      crt_amount: 269900,
       id: "ca7a1022dteiua32t11g",
       name: "战士",
-      period_change_rate: -0.04,
+      period_change_rate: -2.67,
       serial_name: "战士",
-      total_change_rate: 12.94
+      total_change_rate: 28.89
     },
     {
-      crt_amount: 236600,
+      crt_amount: 273900,
       id: "ca7a10i2dteiua32t120",
       name: "能源采集者",
-      period_change_rate: 0,
+      period_change_rate: 1.44,
       serial_name: "能源采集者",
-      total_change_rate: 18.36
+      total_change_rate: 37.02
     },
     {
-      crt_amount: 248800,
+      crt_amount: 270700,
       id: "ca7a1122dteiua32t12g",
       name: "探险家",
-      period_change_rate: 3.67,
+      period_change_rate: 0,
       serial_name: "探险家",
-      total_change_rate: 27.59
+      total_change_rate: 38.82
     },
     {
-      crt_amount: 239900,
+      crt_amount: 275000,
       id: "ca7a11q2dteiua32t130",
       name: "科学家",
-      period_change_rate: 0,
+      period_change_rate: -0.69,
       serial_name: "科学家",
-      total_change_rate: 10.25
+      total_change_rate: 26.38
     },
     {
-      crt_amount: 239700,
+      crt_amount: 269900,
       id: "ca7a12q2dteiua32t13g",
       name: "沉睡者",
-      period_change_rate: -0.08,
+      period_change_rate: -0.7,
       serial_name: "沉睡者",
-      total_change_rate: 19.97
+      total_change_rate: 35.09
     },
     {
-      crt_amount: 235000,
+      crt_amount: 273000,
       id: "ca7a13i2dteiua32t140",
       name: "守护者",
       period_change_rate: 0,
       serial_name: "守护者",
-      total_change_rate: 17.56
+      total_change_rate: 36.57
     },
     {
       crt_amount: 7000000,
@@ -2794,68 +2794,68 @@ var data = {
       total_change_rate: 7.69
     },
     {
-      crt_amount: 2799900,
+      crt_amount: 3333300,
       id: "ca7a36i2dteiua32t150",
       name: "免平台服务费特权卡",
       period_change_rate: 0,
       serial_name: "iBox权益卡",
-      total_change_rate: -16
+      total_change_rate: 0
     },
     {
-      crt_amount: 116900,
+      crt_amount: 147500,
       id: "ca7sgea2dtehnr5ee9f0",
       name: "元气汪",
-      period_change_rate: 0.78,
+      period_change_rate: -0.34,
       serial_name: "爱的答案 向光而生",
-      total_change_rate: -17.5
+      total_change_rate: 4.09
     },
     {
-      crt_amount: 479900,
+      crt_amount: 499800,
       id: "ca7sgjq2dtehnr5ee9fg",
       name: "暹罗警长",
       period_change_rate: 0,
       serial_name: "赛博系列",
-      total_change_rate: -12.67
+      total_change_rate: -9.04
     },
     {
-      crt_amount: 518800,
+      crt_amount: 525000,
       id: "ca7sgoa2dtehnr5ee9g0",
       name: "觅迹寻踪",
       period_change_rate: 0,
       serial_name: "水远山重",
-      total_change_rate: -21.39
+      total_change_rate: -20.45
     },
     {
-      crt_amount: 1222200,
+      crt_amount: 1388800,
       id: "ca7sgt22dtehnr5ee9gg",
       name: "马超",
       period_change_rate: 0,
       serial_name: "五虎上将",
-      total_change_rate: 26.44
+      total_change_rate: 43.68
     },
     {
-      crt_amount: 119900,
+      crt_amount: 145000,
       id: "ca7sgb22dtehnr5ee9eg",
       name: "魅力喵",
-      period_change_rate: 1.61,
+      period_change_rate: 0,
       serial_name: "爱的答案 向光而生",
-      total_change_rate: -14.96
+      total_change_rate: 2.84
     },
     {
-      crt_amount: 2300000,
+      crt_amount: 2588800,
       id: "ca8jsri2dteii6376kp0",
       name: "四五花洞",
-      period_change_rate: 0,
+      period_change_rate: -0.43,
       serial_name: "四大名旦",
-      total_change_rate: 29.21
+      total_change_rate: 45.44
     },
     {
-      crt_amount: 7333200,
+      crt_amount: 8666600,
       id: "ca8jt422dteii6376kpg",
       name: "潇湘咖啡",
       period_change_rate: 0,
       serial_name: "潇湘咖啡",
-      total_change_rate: 10
+      total_change_rate: 30
     },
     {
       crt_amount: 2222500,
@@ -2882,68 +2882,68 @@ var data = {
       total_change_rate: 31.46
     },
     {
-      crt_amount: 3455500,
+      crt_amount: 3666600,
       id: "ca8jtva2dteii6376krg",
       name: "雷神",
       period_change_rate: 0,
       serial_name: "山海经",
-      total_change_rate: -13.37
+      total_change_rate: -8.08
     },
     {
-      crt_amount: 649900,
+      crt_amount: 788800,
       id: "ca8juk22dteii6376ks0",
       name: "月球探测器",
-      period_change_rate: 0,
+      period_change_rate: 3.38,
       serial_name: "月球探测器",
-      total_change_rate: 32.96
+      total_change_rate: 61.37
     },
     {
-      crt_amount: 1080000,
+      crt_amount: 1299800,
       id: "ca8kbdi2dtej3e09l7i0",
       name: "九色鹿",
       period_change_rate: 0,
       serial_name: "Ms文创系列",
-      total_change_rate: 33.33
+      total_change_rate: 60.47
     },
     {
-      crt_amount: 1552800,
+      crt_amount: 1700000,
       id: "ca8kbi22dtej3e09l7ig",
       name: "敦煌飞天",
       period_change_rate: 0,
       serial_name: "Ms文创系列",
-      total_change_rate: 4.3
+      total_change_rate: 14.19
     },
     {
-      crt_amount: 1399900,
+      crt_amount: 1699900,
       id: "ca8kbsi2dtej3e09l7j0",
       name: "飞天鹿王",
-      period_change_rate: -0.01,
+      period_change_rate: 4.08,
       serial_name: "国潮插画系列",
-      total_change_rate: 10.52
+      total_change_rate: 34.21
     },
     {
-      crt_amount: 3881100,
+      crt_amount: 4350000,
       id: "ca8kd8q2dtej3e09l7jg",
       name: "凤凰",
-      period_change_rate: 0,
+      period_change_rate: -2.25,
       serial_name: "中国风元兽",
-      total_change_rate: 7.84
+      total_change_rate: 20.86
     },
     {
-      crt_amount: 389900,
+      crt_amount: 444400,
       id: "ca8ro31uk5rvnvvg3v80",
       name: "百鸟朝凤",
-      period_change_rate: 0,
+      period_change_rate: 1.02,
       serial_name: "南京剪纸",
-      total_change_rate: 5.38
+      total_change_rate: 20.11
     },
     {
-      crt_amount: 838000,
+      crt_amount: 1090000,
       id: "ca9acvi2dteip80ch3gg",
       name: "万国争霸",
       period_change_rate: 0,
       serial_name: "万国争霸-资源徽章",
-      total_change_rate: 23.25
+      total_change_rate: 60.32
     },
     {
       crt_amount: 9999900,
@@ -2954,68 +2954,68 @@ var data = {
       total_change_rate: 0.1
     },
     {
-      crt_amount: 368800,
+      crt_amount: 439900,
       id: "ca9adja2dteip80ch3hg",
       name: "森林聚会",
-      period_change_rate: 0,
+      period_change_rate: -0.52,
       serial_name: "森林聚会",
-      total_change_rate: 22.97
+      total_change_rate: 46.68
     },
     {
-      crt_amount: 888800,
+      crt_amount: 880000,
       id: "ca9au0a2dteip80ch3i0",
       name: "万圣熊",
       period_change_rate: 0,
       serial_name: "泰迪熊盲盒SR",
-      total_change_rate: 11.11
+      total_change_rate: 10.01
     },
     {
-      crt_amount: 2188800,
+      crt_amount: 1888800,
       id: "ca9au7q2dteip80ch3ig",
       name: "经典熊",
-      period_change_rate: 0,
+      period_change_rate: -0.59,
       serial_name: "泰迪熊盲盒SSR",
-      total_change_rate: 56.35
+      total_change_rate: 34.92
     },
     {
-      crt_amount: 609900,
+      crt_amount: 670000,
       id: "ca9ba022dteip80ch3j0",
       name: "祥虎献瑞",
-      period_change_rate: 4.26,
+      period_change_rate: 0,
       serial_name: "太平盛世",
-      total_change_rate: -7.59
+      total_change_rate: 1.52
     },
     {
-      crt_amount: 2450000,
+      crt_amount: 2555500,
       id: "ca9baaa2dteip80ch3jg",
       name: "螭耳",
       period_change_rate: 0,
       serial_name: "Ms文创系列",
-      total_change_rate: 13.66
+      total_change_rate: 18.56
     },
     {
-      crt_amount: 560000,
+      crt_amount: 655500,
       id: "caahamq2dtejln1eq9j0",
       name: "海底的蘑菇林",
-      period_change_rate: 0.81,
+      period_change_rate: 0,
       serial_name: "深海公主",
-      total_change_rate: 0.21
+      total_change_rate: 17.3
     },
     {
-      crt_amount: 280000,
+      crt_amount: 319800,
       id: "caahba22dtejln1eq9jg",
       name: "夏天的板栗",
-      period_change_rate: -5.05,
+      period_change_rate: 0.03,
       serial_name: "彩色童话",
-      total_change_rate: -2.78
+      total_change_rate: 11.04
     },
     {
-      crt_amount: 899800,
+      crt_amount: 1030000,
       id: "caahbki2dtejln1eq9k0",
       name: "东海龙王",
-      period_change_rate: -2.17,
+      period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -5.27
+      total_change_rate: 8.43
     },
     {
       crt_amount: 358000,
@@ -3026,172 +3026,172 @@ var data = {
       total_change_rate: 28.32
     },
     {
-      crt_amount: 600000,
+      crt_amount: 590000,
       id: "cab7ar22dtehip72fq70",
       name: "悟道小子",
       period_change_rate: 0,
       serial_name: "iBox纪念系列",
-      total_change_rate: 33.33
+      total_change_rate: 31.11
     },
     {
-      crt_amount: 5000000,
+      crt_amount: 5666600,
       id: "cab7aui2dtehip72fq7g",
       name: "长想思",
-      period_change_rate: 0,
+      period_change_rate: -3.77,
       serial_name: "上海老歌",
-      total_change_rate: 21.95
+      total_change_rate: 38.21
     },
     {
-      crt_amount: 520000,
+      crt_amount: 512500,
       id: "cab7bc22dtehip72fq80",
       name: "金钱豹",
-      period_change_rate: 0,
+      period_change_rate: -1.44,
       serial_name: "金钱豹",
-      total_change_rate: 8.33
+      total_change_rate: 6.77
     },
     {
-      crt_amount: 2466600,
+      crt_amount: 2499900,
       id: "cab7bfi2dtehip72fq8g",
       name: "赵云",
       period_change_rate: 0,
       serial_name: "五虎上将",
-      total_change_rate: 37.04
+      total_change_rate: 38.89
     },
     {
-      crt_amount: 69900,
+      crt_amount: 83800,
       id: "cabfug1uk5rs05fasl7g",
       name: "兵小贝",
-      period_change_rate: -1.27,
+      period_change_rate: 2.2,
       serial_name: "拾光者",
-      total_change_rate: -11.18
+      total_change_rate: 6.48
     },
     {
-      crt_amount: 118800,
+      crt_amount: 135000,
       id: "cabira1uk5rs05favpv0",
       name: "灵犬",
       period_change_rate: 0,
       serial_name: "南荷一梦",
-      total_change_rate: -15.14
+      total_change_rate: -3.57
     },
     {
-      crt_amount: 118800,
+      crt_amount: 143800,
       id: "cablbl9uk5rs05fb1k1g",
       name: "幻狮",
-      period_change_rate: 0,
+      period_change_rate: 1.27,
       serial_name: "南荷一梦",
-      total_change_rate: -16.81
+      total_change_rate: 0.7
     },
     {
-      crt_amount: 1579900,
+      crt_amount: 1986000,
       id: "cacfeu22dteh0m3s4130",
       name: "玉皇大帝",
-      period_change_rate: 0,
+      period_change_rate: 2.06,
       serial_name: "大闹天宫系列",
-      total_change_rate: -14.6
+      total_change_rate: 7.35
     },
     {
-      crt_amount: 3999900,
+      crt_amount: 4999900,
       id: "cacffaq2dteh0m3s413g",
       name: "冥王-哈迪斯",
-      period_change_rate: 2.86,
+      period_change_rate: 0,
       serial_name: "希腊神话系列",
-      total_change_rate: 2.86
+      total_change_rate: 28.57
     },
     {
-      crt_amount: 170000,
+      crt_amount: 199800,
       id: "cacstapuk5rov1fhupng",
       name: "RED",
-      period_change_rate: 0,
+      period_change_rate: -0.05,
       serial_name: "彩色童话",
-      total_change_rate: -14.27
+      total_change_rate: 0.76
     },
     {
-      crt_amount: 699800,
+      crt_amount: 799900,
       id: "cad1pe9uk5rov1fi0510",
       name: "变幻",
-      period_change_rate: -0.01,
+      period_change_rate: 0,
       serial_name: "马迪托MALDITO",
-      total_change_rate: -14.5
+      total_change_rate: -2.27
     },
     {
-      crt_amount: 173900,
+      crt_amount: 199800,
       id: "cade0i9uk5rov1fi29ng",
       name: "BLUE",
-      period_change_rate: 0,
+      period_change_rate: -0.05,
       serial_name: "彩色童话",
-      total_change_rate: -8.47
+      total_change_rate: 5.16
     },
     {
-      crt_amount: 1240000,
+      crt_amount: 1320000,
       id: "cadf9s1uk5rov1fi2h5g",
       name: "吕蒙",
-      period_change_rate: 0,
+      period_change_rate: -0.17,
       serial_name: "三国系列",
-      total_change_rate: 3.34
+      total_change_rate: 10.01
     },
     {
-      crt_amount: 1000000,
+      crt_amount: 1188000,
       id: "cadfbp9uk5rov1fi2hog",
       name: "太史慈",
-      period_change_rate: 0,
+      period_change_rate: 5.24,
       serial_name: "三国系列",
-      total_change_rate: 2.41
+      total_change_rate: 21.66
     },
     {
-      crt_amount: 2180000,
+      crt_amount: 2345600,
       id: "caf3tkq2dtei4e7r5ckg",
       name: "灵鹿送祥",
       period_change_rate: 0,
       serial_name: "异兽录",
-      total_change_rate: 1.4
+      total_change_rate: 9.1
     },
     {
-      crt_amount: 265000,
+      crt_amount: 334400,
       id: "caf3tqq2dtei4e7r5cl0",
       name: "呼朋引伴",
       period_change_rate: 0,
       serial_name: "生命共同体",
-      total_change_rate: -13.11
+      total_change_rate: 9.64
     },
     {
-      crt_amount: 480000,
+      crt_amount: 540000,
       id: "caficn9uk5rtkhugjjpg",
       name: "痴迷",
-      period_change_rate: 0,
+      period_change_rate: 2.12,
       serial_name: "马迪托MALDITO",
-      total_change_rate: -4.95
+      total_change_rate: 6.93
     },
     {
-      crt_amount: 1988000,
+      crt_amount: 2162200,
       id: "cafpkk22dteir921jr90",
       name: "太空飞鸟",
-      period_change_rate: 0.41,
+      period_change_rate: 0,
       serial_name: "浪漫太空生物",
-      total_change_rate: -0.1
+      total_change_rate: 8.65
     },
     {
-      crt_amount: 1070000,
+      crt_amount: 1400000,
       id: "cafpkri2dteir921jr9g",
       name: "哪吒",
       period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -14.4
+      total_change_rate: 12
     },
     {
-      crt_amount: 4000000,
+      crt_amount: 4200000,
       id: "cag2nea2dteiqk0h9sog",
       name: "智慧女神-雅典娜",
-      period_change_rate: 0,
+      period_change_rate: 5,
       serial_name: "希腊神话系列",
-      total_change_rate: -4.76
+      total_change_rate: 0
     },
     {
-      crt_amount: 8888800,
+      crt_amount: 7666600,
       id: "cag2nm22dteiqk0h9sp0",
       name: "狩猎女神-阿尔忒弥斯",
       period_change_rate: 0,
       serial_name: "希腊神话系列",
-      total_change_rate: 77.78
+      total_change_rate: 53.34
     },
     {
       crt_amount: 4500000,
@@ -3210,12 +3210,12 @@ var data = {
       total_change_rate: 7.5
     },
     {
-      crt_amount: 6200000,
+      crt_amount: 6666600,
       id: "cag36822dtej0p48lgdg",
       name: "四大名旦",
       period_change_rate: 0,
       serial_name: "梅兰芳-霸王别姬",
-      total_change_rate: 15.05
+      total_change_rate: 23.71
     },
     {
       crt_amount: 9200000,
@@ -3226,108 +3226,108 @@ var data = {
       total_change_rate: 1.1
     },
     {
-      crt_amount: 4666600,
+      crt_amount: 5399900,
       id: "cag38oa2dtej0p48lgeg",
       name: "MALDITO马迪托·序章",
-      period_change_rate: 5,
+      period_change_rate: 0,
       serial_name: "MALDITO马迪托·序章",
-      total_change_rate: 16.72
+      total_change_rate: 35.07
     },
     {
-      crt_amount: 157700,
+      crt_amount: 179900,
       id: "cag3dbq2dtej0p48lgh0",
       name: "四大天王-南方增长天王",
       period_change_rate: 0,
       serial_name: "四大天王",
-      total_change_rate: -0.69
+      total_change_rate: 13.29
     },
     {
-      crt_amount: 6800000,
+      crt_amount: 7666600,
       id: "cag6gsq2dtej780a1lp0",
       name: "钦原",
       period_change_rate: 0,
       serial_name: "山海经",
-      total_change_rate: 2
+      total_change_rate: 14.99
     },
     {
-      crt_amount: 7666500,
+      crt_amount: 8999900,
       id: "cag6o8i2dtej780a1lr0",
       name: "金福",
       period_change_rate: 0,
       serial_name: "茅山财富新福系列",
-      total_change_rate: 43.75
+      total_change_rate: 68.75
     },
     {
-      crt_amount: 2450000,
+      crt_amount: 2735500,
       id: "cagakhi2dtei2e24n3m0",
       name: "橙色世界",
-      period_change_rate: 0,
+      period_change_rate: -0.32,
       serial_name: "仙境奇观",
-      total_change_rate: 5.2
+      total_change_rate: 17.46
     },
     {
-      crt_amount: 414500,
+      crt_amount: 439900,
       id: "cagan5i2dtegb96lfru0",
       name: "两仪",
       period_change_rate: 0,
       serial_name: "齐兴华2022数字藏品",
-      total_change_rate: -3.33
+      total_change_rate: 2.59
     },
     {
-      crt_amount: 272000,
+      crt_amount: 299800,
       id: "caganqa2dtegb96lfrvg",
       name: "太空游鱼",
-      period_change_rate: 4.62,
+      period_change_rate: -6.31,
       serial_name: "浪漫太空生物",
-      total_change_rate: 8.84
+      total_change_rate: 19.97
     },
     {
-      crt_amount: 4888800,
+      crt_amount: 5580000,
       id: "caganuq2dtegb96lfs00",
       name: "翎耀九天",
       period_change_rate: 0,
       serial_name: "异兽录",
-      total_change_rate: 11.11
+      total_change_rate: 26.82
     },
     {
-      crt_amount: 2555500,
+      crt_amount: 2966600,
       id: "cagao3a2dtegb96lfs0g",
       name: "孙悟空",
-      period_change_rate: -8.69,
+      period_change_rate: 0,
       serial_name: "大闹天宫系列",
-      total_change_rate: -15.75
+      total_change_rate: -2.2
     },
     {
-      crt_amount: 1688000,
+      crt_amount: 1750000,
       id: "cagavpi2dtegb96lfs50",
       name: "气吞牛斗",
       period_change_rate: 0,
       serial_name: "异兽录",
-      total_change_rate: 6.84
+      total_change_rate: 10.76
     },
     {
-      crt_amount: 725000,
+      crt_amount: 850000,
       id: "cagb46q2dtegb96lfs7g",
       name: "枕月眠云",
       period_change_rate: 0,
       serial_name: "生命共同体",
-      total_change_rate: -3.32
+      total_change_rate: 13.35
     },
     {
-      crt_amount: 999900,
+      crt_amount: 1168800,
       id: "cagb4fi2dtegb96lfs80",
       name: "黄盖",
       period_change_rate: 0,
       serial_name: "三国系列",
-      total_change_rate: 0
+      total_change_rate: 16.89
     },
     {
-      crt_amount: 1049000,
+      crt_amount: 1199900,
       id: "cagb4ka2dtegb96lfs8g",
       name: "周瑜",
-      period_change_rate: -5.5,
+      period_change_rate: 4.45,
       serial_name: "三国系列",
-      total_change_rate: 4.91
+      total_change_rate: 20
     },
     {
       crt_amount: 9999900,
@@ -3354,148 +3354,148 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 349800,
+      crt_amount: 386800,
       id: "cage6qa2dtehun6tr5lg",
       name: "太白金星",
-      period_change_rate: -0.03,
+      period_change_rate: 0.99,
       serial_name: "大闹天宫系列",
-      total_change_rate: -12.51
+      total_change_rate: -3.25
     },
     {
-      crt_amount: 74800,
+      crt_amount: 88500,
       id: "cage89i2dtehun6tr5m0",
       name: "赤焰象",
-      period_change_rate: 1.08,
+      period_change_rate: 0.68,
       serial_name: "南荷一梦",
-      total_change_rate: -9.77
+      total_change_rate: 6.76
     },
     {
-      crt_amount: 155000,
+      crt_amount: 178800,
       id: "cage8m22dtehun6tr5mg",
       name: "四大天王-东方持国天王",
-      period_change_rate: -3,
+      period_change_rate: 0,
       serial_name: "四大天王",
-      total_change_rate: 4.73
+      total_change_rate: 20.81
     },
     {
-      crt_amount: 5666600,
+      crt_amount: 6200000,
       id: "cajmvo22dtegal4ren8g",
       name: "灵蝉高歌",
-      period_change_rate: -3.77,
+      period_change_rate: 0,
       serial_name: "万物有灵",
-      total_change_rate: 7.32
+      total_change_rate: 17.42
     },
     {
-      crt_amount: 149900,
+      crt_amount: 187500,
       id: "cajmvpi2dtegal4ren90",
       name: "一叶知秋",
-      period_change_rate: -1.9,
+      period_change_rate: -0.21,
       serial_name: "生命共同体",
-      total_change_rate: 0.6
+      total_change_rate: 25.84
     },
     {
-      crt_amount: 448800,
+      crt_amount: 478800,
       id: "cajmvra2dtegal4ren9g",
       name: "子鼠",
       period_change_rate: 0,
       serial_name: "十二元辰",
-      total_change_rate: 32.47
+      total_change_rate: 41.32
     },
     {
-      crt_amount: 1599900,
+      crt_amount: 1950000,
       id: "cajmvs22dtegal4rena0",
       name: "灵狐拜月",
-      period_change_rate: 0,
+      period_change_rate: 2.63,
       serial_name: "万物有灵",
-      total_change_rate: 6.67
+      total_change_rate: 30.01
     },
     {
-      crt_amount: 2333300,
+      crt_amount: 2622200,
       id: "cajmvt22dtegal4renag",
       name: "太空巨龟",
       period_change_rate: 0,
       serial_name: "浪漫太空生物",
-      total_change_rate: 32.08
+      total_change_rate: 48.43
     },
     {
-      crt_amount: 4499900,
+      crt_amount: 4999900,
       id: "cajmvu22dtegal4renb0",
       name: "太空萌猫",
       period_change_rate: 0,
       serial_name: "浪漫太空生物",
-      total_change_rate: 15.71
+      total_change_rate: 28.57
     },
     {
-      crt_amount: 900000,
+      crt_amount: 1020000,
       id: "cak7ks1uk5rusto083n0",
       name: "Nonoku-Ari",
-      period_change_rate: -1.1,
+      period_change_rate: 0.88,
       serial_name: "Nonoku头像",
-      total_change_rate: -3.22
+      total_change_rate: 9.69
     },
     {
-      crt_amount: 1587600,
+      crt_amount: 1800000,
       id: "cakiovi2dtehid4hu3bg",
       name: "麒麟",
       period_change_rate: 0,
       serial_name: "十期盲盒SSR",
-      total_change_rate: 22.12
+      total_change_rate: 38.46
     },
     {
-      crt_amount: 580000,
+      crt_amount: 699900,
       id: "cakip0i2dtehid4hu3c0",
       name: "石狮",
       period_change_rate: 0,
       serial_name: "十期盲盒SR",
-      total_change_rate: 16.02
+      total_change_rate: 40.01
     },
     {
-      crt_amount: 520000,
+      crt_amount: 649900,
       id: "cakip122dtehid4hu3cg",
       name: "腾龙",
-      period_change_rate: 0,
+      period_change_rate: 4.82,
       serial_name: "十期盲盒SR",
-      total_change_rate: 14.16
+      total_change_rate: 42.68
     },
     {
-      crt_amount: 238000,
+      crt_amount: 278000,
       id: "cakip1q2dtehid4hu3d0",
       name: "神鹿",
-      period_change_rate: -0.08,
+      period_change_rate: -0.29,
       serial_name: "十期盲盒N",
-      total_change_rate: 15.82
+      total_change_rate: 35.28
     },
     {
-      crt_amount: 244000,
+      crt_amount: 274900,
       id: "cakip3q2dtehid4hu3dg",
       name: "铜牛",
       period_change_rate: 0,
       serial_name: "十期盲盒N",
-      total_change_rate: 19.08
+      total_change_rate: 34.16
     },
     {
-      crt_amount: 239800,
+      crt_amount: 279900,
       id: "cakip4i2dtehid4hu3e0",
       name: "仙鹤",
       period_change_rate: 0,
       serial_name: "十期盲盒N",
-      total_change_rate: 18.71
+      total_change_rate: 38.56
     },
     {
-      crt_amount: 7999900,
+      crt_amount: 7900000,
       id: "cakirvq2dtehid4hu3eg",
       name: "凤凰",
       period_change_rate: 0,
       serial_name: "十期盲盒UR",
-      total_change_rate: 20
+      total_change_rate: 18.5
     },
     {
-      crt_amount: 460000,
+      crt_amount: 569900,
       id: "calddm1uk5rogq8qrqc0",
       name: "土星怪客",
-      period_change_rate: 0,
+      period_change_rate: -1.54,
       serial_name: "美探虎行星系列",
-      total_change_rate: -9.8
+      total_change_rate: 11.75
     },
     {
       crt_amount: 29900,
@@ -3506,60 +3506,60 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 2350000,
+      crt_amount: 2828800,
       id: "canatm22dteido0sduvg",
       name: "飞",
-      period_change_rate: 2.17,
+      period_change_rate: 2.12,
       serial_name: "大千文墨",
-      total_change_rate: 6.82
+      total_change_rate: 28.58
     },
     {
-      crt_amount: 2599900,
+      crt_amount: 2950000,
       id: "capd8fhuk5rohnogg8hg",
       name: "秋水春云图",
-      period_change_rate: 0,
+      period_change_rate: -1.66,
       serial_name: "大千文墨",
-      total_change_rate: 11.43
+      total_change_rate: 26.43
     },
     {
-      crt_amount: 780000,
+      crt_amount: 930000,
       id: "capfuk9uk5rohnoghaeg",
       name: "粉墨登场",
-      period_change_rate: 0,
+      period_change_rate: 2.09,
       serial_name: "秦筱雅-秦腔宇宙",
-      total_change_rate: -15.21
+      total_change_rate: 1.1
     },
     {
-      crt_amount: 3598200,
+      crt_amount: 4188700,
       id: "caqc6dhuk5rop3l782gg",
       name: "泼墨紫",
-      period_change_rate: -1.69,
+      period_change_rate: 0,
       serial_name: "大千文墨",
-      total_change_rate: 44
+      total_change_rate: 67.63
     },
     {
-      crt_amount: 788800,
+      crt_amount: 864000,
       id: "caqc6dhuk5rop3l782h0",
       name: "花间鹿",
-      period_change_rate: 0,
+      period_change_rate: -0.46,
       serial_name: "蓝与梦",
-      total_change_rate: -5.87
+      total_change_rate: 3.1
     },
     {
-      crt_amount: 715000,
+      crt_amount: 849900,
       id: "caqr17huk5rqeb08e520",
       name: "水袖流云",
-      period_change_rate: -0.53,
+      period_change_rate: 1.31,
       serial_name: "秦筱雅-秦腔宇宙",
-      total_change_rate: -15.76
+      total_change_rate: 0.13
     },
     {
-      crt_amount: 850000,
+      crt_amount: 920000,
       id: "casqavpuk5rtmsk9bfj0",
       name: "星梦",
-      period_change_rate: 0,
+      period_change_rate: 0.55,
       serial_name: "蓝与梦",
-      total_change_rate: 0
+      total_change_rate: 8.24
     },
     {
       crt_amount: 19900,
@@ -3570,36 +3570,36 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 147000,
+      crt_amount: 169900,
       id: "cau6aha2dtehvn33b7kg",
       name: "快乐总动员",
-      period_change_rate: 1.38,
+      period_change_rate: 0,
       serial_name: "奇异旅程",
-      total_change_rate: 5
+      total_change_rate: 21.36
     },
     {
-      crt_amount: 642800,
+      crt_amount: 860000,
       id: "cau6bca2dtehvn33b7lg",
       name: "无忧之地",
-      period_change_rate: 0,
+      period_change_rate: -2.13,
       serial_name: "生命共同体",
-      total_change_rate: -8.16
+      total_change_rate: 22.87
     },
     {
-      crt_amount: 9998800,
+      crt_amount: 9999900,
       id: "cau6vuq2dteigd08jlkg",
       name: "孙权",
       period_change_rate: 0,
       serial_name: "三国系列",
-      total_change_rate: -0.01
+      total_change_rate: 0
     },
     {
-      crt_amount: 849900,
+      crt_amount: 918800,
       id: "cau706a2dteigd08jll0",
       name: "香炉凌天",
       period_change_rate: 0,
       serial_name: "Ai诗情",
-      total_change_rate: 2.4
+      total_change_rate: 10.7
     },
     {
       crt_amount: 19900,
@@ -3610,12 +3610,12 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 6299900,
+      crt_amount: 6666600,
       id: "caupuspuk5rtenlekrv0",
       name: "六合仙鹤",
       period_change_rate: 0,
       serial_name: "颐和六景",
-      total_change_rate: -5.5
+      total_change_rate: 0
     },
     {
       crt_amount: 19900,
@@ -3626,28 +3626,28 @@ var data = {
       total_change_rate: 0
     },
     {
-      crt_amount: 145000,
+      crt_amount: 164800,
       id: "cavhbl9uk5rokd763ul0",
       name: "小暑",
-      period_change_rate: -0.68,
+      period_change_rate: 2.42,
       serial_name: "二十四节气",
-      total_change_rate: -6.45
+      total_change_rate: 6.32
     },
     {
-      crt_amount: 1739900,
+      crt_amount: 1898800,
       id: "cavqrrpuk5rr458ar730",
       name: "祥狮送瑞",
       period_change_rate: 0,
       serial_name: "颐和仙境-唯美",
-      total_change_rate: -27.5
+      total_change_rate: -20.88
     },
     {
-      crt_amount: 1750000,
+      crt_amount: 1900000,
       id: "cavqs8puk5rr458ar760",
       name: "福牛纳彩",
       period_change_rate: 0,
       serial_name: "颐和仙境-唯美",
-      total_change_rate: -29.66
+      total_change_rate: -23.63
     },
     {
       crt_amount: 1989,
