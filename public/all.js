@@ -19440,7 +19440,7 @@ var all = [{
         thumbPic: "/file/oss/test/image/nft-goods/ef1a7db59f9b4126a5a1edc27e28bbc5.jpg",
         sellLimit: "700",
         soldNum: "650",
-        albumName: "姜子牙",
+        albumName: "封神演义",
         brandName: "M Space",
         authorName: "Shan Qiao",
         gDesc: "姜子牙，又称姜尚、姜太公、子牙公、太公望，别号飞熊先生，是明代神魔小说《封神演义》中的主角人物之一，乃昆仑山玉虚宫元始天尊门下的阐教弟子之一，曾手执封神榜代理封神。当神仙子牙出现在平行宇宙时，你会喜欢这个满身文身，发型怪异，衣着前卫，手执钓竿的他吗？"
@@ -19450,10 +19450,20 @@ var all = [{
         thumbPic: "/file/oss/test/image/nft-goods/f6fbe0356ae745be8529d4c48a27abd8.jpg",
         sellLimit: "1100",
         soldNum: "1000",
-        albumName: "杨戬",
+        albumName: "封神演义",
         brandName: "M Space",
         authorName: "Shan Qiao",
         gDesc: "杨戬，明代神魔小说《封神演义》中的人物，是玉泉山金霞洞玉鼎真人的徒弟，元始天尊的再传弟子，金毛童子的师父，阐教第三代弟子，被判为“修成八九玄中妙，任尔纵横在世间”，助周伐纣，立下赫赫战功，肉身成圣，封清源妙道真君。人物原型是神话人物灌口二郎神。当神仙杨戬出现在平行宇宙，化身潮流boy兼爱狗人士，他还是你记忆中威风凛凛的二郎神杨戬吗？"
+    },
+    {
+        gName: "封神·哪吒",
+        thumbPic: "/file/oss/test/image/nft-goods/060417cf77c245e1bd2681ebb0e8aafe.jpg",
+        sellLimit: "1100",
+        soldNum: "1000",
+        albumName: "封神演义",
+        brandName: "M Space",
+        authorName: "Shan Qiao",
+        gDesc: "哪吒，明代神魔小说《封神演义》中的重要角色，玉虚奇宝“灵珠子”投胎转世，奉阐教师祖元始天尊法旨下世保周灭商，成为陈塘关总兵官“李靖”三子，是辅佐姜子牙的开路先锋。 从叛逆顽强、忠肝义胆的有志少年，变身成脚踏球鞋滑板、一身嘻哈、个性自我的当代少年，不是否感觉到了熟悉？"
     },
     {
         gName: "iBox-暹罗警长",
