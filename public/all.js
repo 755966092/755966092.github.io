@@ -12897,6 +12897,26 @@ var all = [{
         tokenId: "",
         vFlag: 1
     },
+    {
+      gName: "MALDITO马迪托·序章",
+      thumbPic: "/file/oss/test/image/nft-goods/2bfc3f2d37fd4435b7306f121664ab5f.jpg",
+      sellLimit: "700",
+      soldNum: "633",
+      albumName: "第七期盲盒",
+      brandName: "User-Defined",
+      authorName: "Francisco Terra",
+      gDesc: "大幕渐起。该藏品记录了User-Defined时尚元宇宙里，首个时尚IP《MALDITO马迪托》入驻的里程碑。艺术家Francisco Terra把他曾供职纪梵希及其个人品牌与时尚顶流明星合作的深厚沉淀，在数字世界的全面映射。第一期盲盒藏品的持有者，会和User-Defined一起构建并定义这场时尚与科技碰撞出的革命火花，成为独一无二的MALDITO马迪托藏家身份标识。"
+  },
+    {
+      gName: "马迪托（MALDITO）",
+      thumbPic: "/file/oss/test/image/nft-goods/39dd5d5e827345728ba800d9872fc329.png",
+      sellLimit: "20",
+      soldNum: "20",
+      albumName: "第七期盲盒",
+      brandName: "User-Defined",
+      authorName: "Francisco Terra",
+      gDesc: "蠢萌的DG大赛参赛者。总是做着拿奖杯的白日梦，让自己陷入麻烦。内心有个黑暗世界，总有一天会释放出内心的恶魔。"
+  },
 
     {
         albumId: 100513759,
