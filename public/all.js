@@ -20485,4 +20485,14 @@ var all = [{
         authorName: "Francisco Terra",
         gDesc: "在时尚的定义中，白色总是具有“广泛的意义”，大面积的白色会让人觉得圣洁优雅，小面积的白色装饰，却会带来一种甜腻腻的感受。一袭简约小白裙，勾勒出完美的身材曲线，与气质相得益彰，将时尚界中的“越简单越高级”描绘到了极致。"
     },
+    {
+        gName: "星河鲸梦",
+        thumbPic: "/file/oss/test/image/nft-goods/2ac41e858bfe4e6bac3956f04e740bfe.jpg",
+        sellLimit: "60000",
+        soldNum: "---",
+        albumName: "星河鲸梦",
+        brandName: "iBox",
+        authorName: "iBox",
+        gDesc: "对于星空的憧憬从未停止… \n幻想飞，幻想在万物沉睡的时分遨游星河之上，去看看世界的奇幻美景，或是探寻空中花园的奥秘，或是揭开寰宇的朦胧面纱。以梦为鲸，远游天外，星空会指引我们闪烁光明的坦途！"
+    },
 ];
