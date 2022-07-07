@@ -12897,6 +12897,26 @@ var all = [{
         tokenId: "",
         vFlag: 1
     },
+    {
+      gName: "MALDITO马迪托·序章",
+      thumbPic: "/file/oss/test/image/nft-goods/2bfc3f2d37fd4435b7306f121664ab5f.jpg",
+      sellLimit: "700",
+      soldNum: "633",
+      albumName: "第七期盲盒",
+      brandName: "User-Defined",
+      authorName: "Francisco Terra",
+      gDesc: "大幕渐起。该藏品记录了User-Defined时尚元宇宙里，首个时尚IP《MALDITO马迪托》入驻的里程碑。艺术家Francisco Terra把他曾供职纪梵希及其个人品牌与时尚顶流明星合作的深厚沉淀，在数字世界的全面映射。第一期盲盒藏品的持有者，会和User-Defined一起构建并定义这场时尚与科技碰撞出的革命火花，成为独一无二的MALDITO马迪托藏家身份标识。"
+  },
+    {
+      gName: "马迪托（MALDITO）",
+      thumbPic: "/file/oss/test/image/nft-goods/39dd5d5e827345728ba800d9872fc329.png",
+      sellLimit: "20",
+      soldNum: "20",
+      albumName: "第七期盲盒",
+      brandName: "User-Defined",
+      authorName: "Francisco Terra",
+      gDesc: "蠢萌的DG大赛参赛者。总是做着拿奖杯的白日梦，让自己陷入麻烦。内心有个黑暗世界，总有一天会释放出内心的恶魔。"
+  },
 
     {
         albumId: 100513759,
@@ -19440,7 +19460,7 @@ var all = [{
         thumbPic: "/file/oss/test/image/nft-goods/ef1a7db59f9b4126a5a1edc27e28bbc5.jpg",
         sellLimit: "700",
         soldNum: "650",
-        albumName: "姜子牙",
+        albumName: "封神演义",
         brandName: "M Space",
         authorName: "Shan Qiao",
         gDesc: "姜子牙，又称姜尚、姜太公、子牙公、太公望，别号飞熊先生，是明代神魔小说《封神演义》中的主角人物之一，乃昆仑山玉虚宫元始天尊门下的阐教弟子之一，曾手执封神榜代理封神。当神仙子牙出现在平行宇宙时，你会喜欢这个满身文身，发型怪异，衣着前卫，手执钓竿的他吗？"
@@ -19450,10 +19470,20 @@ var all = [{
         thumbPic: "/file/oss/test/image/nft-goods/f6fbe0356ae745be8529d4c48a27abd8.jpg",
         sellLimit: "1100",
         soldNum: "1000",
-        albumName: "杨戬",
+        albumName: "封神演义",
         brandName: "M Space",
         authorName: "Shan Qiao",
         gDesc: "杨戬，明代神魔小说《封神演义》中的人物，是玉泉山金霞洞玉鼎真人的徒弟，元始天尊的再传弟子，金毛童子的师父，阐教第三代弟子，被判为“修成八九玄中妙，任尔纵横在世间”，助周伐纣，立下赫赫战功，肉身成圣，封清源妙道真君。人物原型是神话人物灌口二郎神。当神仙杨戬出现在平行宇宙，化身潮流boy兼爱狗人士，他还是你记忆中威风凛凛的二郎神杨戬吗？"
+    },
+    {
+        gName: "封神·哪吒",
+        thumbPic: "/file/oss/test/image/nft-goods/060417cf77c245e1bd2681ebb0e8aafe.jpg",
+        sellLimit: "1100",
+        soldNum: "1000",
+        albumName: "封神演义",
+        brandName: "M Space",
+        authorName: "Shan Qiao",
+        gDesc: "哪吒，明代神魔小说《封神演义》中的重要角色，玉虚奇宝“灵珠子”投胎转世，奉阐教师祖元始天尊法旨下世保周灭商，成为陈塘关总兵官“李靖”三子，是辅佐姜子牙的开路先锋。 从叛逆顽强、忠肝义胆的有志少年，变身成脚踏球鞋滑板、一身嘻哈、个性自我的当代少年，不是否感觉到了熟悉？"
     },
     {
         gName: "iBox-暹罗警长",
@@ -20454,5 +20484,15 @@ var all = [{
         brandName: "User-Defined",
         authorName: "Francisco Terra",
         gDesc: "在时尚的定义中，白色总是具有“广泛的意义”，大面积的白色会让人觉得圣洁优雅，小面积的白色装饰，却会带来一种甜腻腻的感受。一袭简约小白裙，勾勒出完美的身材曲线，与气质相得益彰，将时尚界中的“越简单越高级”描绘到了极致。"
+    },
+    {
+        gName: "星河鲸梦",
+        thumbPic: "/file/oss/test/image/nft-goods/2ac41e858bfe4e6bac3956f04e740bfe.jpg",
+        sellLimit: "60000",
+        soldNum: "---",
+        albumName: "星河鲸梦",
+        brandName: "iBox",
+        authorName: "iBox",
+        gDesc: "对于星空的憧憬从未停止… \n幻想飞，幻想在万物沉睡的时分遨游星河之上，去看看世界的奇幻美景，或是探寻空中花园的奥秘，或是揭开寰宇的朦胧面纱。以梦为鲸，远游天外，星空会指引我们闪烁光明的坦途！"
     },
 ];
