@@ -123,6 +123,14 @@ const addressList = [
   {
     address: "0x513f61fec7ee705dbd5da9a8e0354e407802c3dd",
     name: "NEI-活动前买金福",
+  },
+  {
+    address: "0x534e76131946aebfb4ee296365f8c81182acab95",
+    name: "NEI-罗纳威犬-1",
+  },
+  {
+    address: "0xca7155fb215750619e6d68fc5d2363be77252886",
+    name: "NEI-罗纳威犬-2",
   }
 ];
 var addressData = {};
