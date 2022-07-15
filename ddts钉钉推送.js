@@ -106,35 +106,60 @@ const addressList = [
   },
   {
     address: "0x414c9fe0f658bfbd987ccc4ffbb80d45f7a1c1fc",
-    name: "NEI-一发入魂10宙斯",
+    name: "NEI-一发入魂10宙斯"
   },
   {
     address: "0x0db6ce001b7e15e403760c047cfb0a2d5d75b2b1",
-    name: "NEI-天天好心情10宙斯",
+    name: "NEI-天天好心情10宙斯"
   },
   {
     address: "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
-    name: "NEI-毛哥发现的小号",
+    name: "NEI-毛哥发现的小号"
   },
   {
     address: "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37",
-    name: "NEI-这个人4个宙斯",
+    name: "NEI-这个人4个宙斯"
   },
   {
     address: "0x513f61fec7ee705dbd5da9a8e0354e407802c3dd",
-    name: "NEI-活动前买金福",
+    name: "NEI-活动前买金福"
   },
   {
     address: "0x534e76131946aebfb4ee296365f8c81182acab95",
-    name: "NEI-罗纳威犬-1-胡",
-  },
-  {
-    address: "0xca7155fb215750619e6d68fc5d2363be77252886",
-    name: "NEI-罗纳威犬-2-胡",
+    name: "NEI-罗纳威犬-1"
   },
   {
     address: "0x3700ba3feae4cd9f5042173eeca8a6794442a1e9",
-    name: "NEI-罗纳威犬-3-柒月",
+    name: "NEI-罗纳威犬-5-柒岁"
+  },
+  {
+    name: "罗纳威犬-两个-2",
+    address: "0x472080f9b53526fececbe9cd96920e9a34c106f9"
+  },
+  {
+    name: "罗纳威犬-长安-1",
+    address: "0xf6336d69e5822214d497d4ac2840e5aa2de37027"
+  },
+
+  {
+    name: "罗纳威犬-两个罗纳威犬-2",
+    address: "0x7cec63ed64fdfdaa2a7c9bbf5c461fe5eacac674"
+  },
+  {
+    name: "罗纳威犬-业精于勤",
+    address: "0x3ff690b2b5320e5ddacad8b9addb61c97167638b"
+  },
+  {
+    name: "罗纳威犬-bug我关羽留v",
+    address: "0xc087424b5495b4812df10b03b8ea84387206fa0f"
+  },
+  {
+    name: "罗纳威犬-干",
+    address: "0x334ec89d987bc76a5b443950d7f55a89f17850e7"
+  },
+  {
+    name: "罗纳威犬-跑跑-2",
+    address: "0xc32c4ef06d3e70ea32a006d752ecec38f9087f7c"
   }
 ];
 var addressData = {};
@@ -142,171 +167,176 @@ let getFlag = true;
 
 var i = 0;
 const sleep = (ms) =>
-    new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
+  new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 var num = 1;
 console.log("开始...");
 
 setTimeout(() => {
-    console.log("重启服务...");
-    throw "测试错误";
+  console.log("重启服务...");
+  throw "测试错误";
 }, 1800000);
 
-(async() => {
-    try {
-        getDate(addressList[i]);
-    } catch (error) {}
+(async () => {
+  try {
+    getDate(addressList[i]);
+  } catch (error) {}
 })();
 
 function getDate(params) {
-    if (getFlag) {
-        getFlag = false;
-        request({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
-                headers: {
-                    "content-type": "application/json"
-                }
-            },
+  if (getFlag) {
+    getFlag = false;
+    request(
+      {
+        url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
+        headers: {
+          "content-type": "application/json"
+        }
+      },
 
-            async function(error, response, body) {
-                getFlag = true;
-                try {
-                    if (error) {
-                        getDate(addressList[i]);
-                        console.log("错误一次:", JSON.stringify(error));
-                    }
-                    let bodyData = JSON.parse(body);
+      async function (error, response, body) {
+        getFlag = true;
+        try {
+          if (error) {
+            getDate(addressList[i]);
+            console.log("错误一次:", JSON.stringify(error));
+          }
+          let bodyData = JSON.parse(body);
 
-                    console.log("请求:", params.name, "-", i);
-                    if (i < addressList.length - 1) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
-                    // tokenID
-                    console.log(
-                        "请求次数:",
-                        num++,
-                        " -- ",
-                        moment().format("MM-DD HH:mm:ss")
-                    );
-                    // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
-                    await sleep(500);
-                    getDate(addressList[i]);
+          console.log("请求:", params.name, "-", i);
+          if (i < addressList.length - 1) {
+            i++;
+          } else {
+            i = 0;
+          }
+          // tokenID
+          console.log(
+            "请求次数:",
+            num++,
+            " -- ",
+            moment().format("MM-DD HH:mm:ss")
+          );
+          // console.log(i, "-最新id: ", bodyData.result[0].tokenID);
+          await sleep(500);
+          getDate(addressList[i]);
 
-                    if (addressData[params.address]) {
-                        let diff = [];
-                        if (
-                            bodyData.result.length == 10 &&
-                            addressData[params.address].length == 10
-                        ) {
-                            diff = lodash.differenceBy(
-                                bodyData.result,
-                                addressData[params.address],
-                                "timeStamp"
-                            );
-                        }
-                        if (diff.length > 0) {
-                            console.log("不同: ", diff);
-                            // 有新交易
-                            addressData[params.address] = bodyData.result;
-                            sendDDNews(diff, params);
-                        } else {
-                            addressData[params.address] = bodyData.result;
-                        }
-                    } else {
-                        addressData[params.address] = bodyData.result;
-                    }
-                } catch (error) {
-                    getDate(addressList[i]);
-                }
+          if (addressData[params.address]) {
+            let diff = [];
+            if (
+              bodyData.result.length == 10 &&
+              addressData[params.address].length == 10
+            ) {
+              diff = lodash.differenceBy(
+                bodyData.result,
+                addressData[params.address],
+                "timeStamp"
+              );
             }
-        );
-    }
+            if (diff.length > 0) {
+              console.log("不同: ", diff);
+              // 有新交易
+              addressData[params.address] = bodyData.result;
+              sendDDNews(diff, params);
+            } else {
+              addressData[params.address] = bodyData.result;
+            }
+          } else {
+            addressData[params.address] = bodyData.result;
+          }
+        } catch (error) {
+          getDate(addressList[i]);
+        }
+      }
+    );
+  }
 }
 
 function sendDDNews(diff, params) {
-    let ids = [];
+  let ids = [];
 
-    diff.forEach((item) => {
-        getProductList(item.tokenID, (data) => {
-            var aaaaaaaa = {
-                title: "新交易提醒：",
-                text: ""
-            };
-            let d = JSON.parse(data).data;
-            const time = moment(item.timeStamp * 1000).format("MM-DD HH:mm:ss");
-            aaaaaaaa.title += params.name;
-            let type = "";
-            if (item.to == params.address) {
-                type = "买入";
-            } else {
-                type = "卖出";
-            }
-            if (d.length > 0) {
-                const ele = d[0];
-                aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gName} \n- 类型：${type} \n- 时间：${time} \n- GID：[${ele.gId}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId}) \n- 链接：https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId}  \n- tokenId： ${ele.tokenId}`;
-                // aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`;
-                sendNews(aaaaaaaa, params);
-            } else {
-                aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`;
-                // aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`;
-                sendNews(aaaaaaaa, params);
-            }
-        });
+  diff.forEach((item) => {
+    getProductList(item.tokenID, (data) => {
+      var aaaaaaaa = {
+        title: "新交易提醒：",
+        text: ""
+      };
+      let d = JSON.parse(data).data;
+      const time = moment(item.timeStamp * 1000).format("MM-DD HH:mm:ss");
+      aaaaaaaa.title += params.name;
+      let type = "";
+      if (item.to == params.address) {
+        type = "买入";
+      } else {
+        type = "卖出";
+      }
+      if (d.length > 0) {
+        const ele = d[0];
+        aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gName} \n- 类型：${type} \n- 时间：${time} \n- GID：[${ele.gId}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId}) \n- 链接：https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gId}  \n- tokenId： ${ele.tokenId}`;
+        // aaaaaaaa.text = `## ${params.name} \n- 商品：${ele.gname} \n- 类型：${type} \n- 时间：${time} \n- 链接(GID)：[${ele.gid}](https://www.ibox.art/zh-cn/item/?id=100513860&gid=${ele.gid})  \n- tokenId： ${ele.tokenId}`;
+        sendNews(aaaaaaaa, params);
+      } else {
+        aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`;
+        // aaaaaaaa.text = `## ${params.name} \n- 商品：暂无信息 \n- 类型：${type} \n- 时间：${time} \n- 链接：- -  \n- tokenId： ${item.tokenID}`;
+        sendNews(aaaaaaaa, params);
+      }
     });
+  });
 }
 
 function sendNews(news, params) {
-    let noall = [
-        "0x3342572427e79309071b43368cc7976e5c627a12",
-        "0xf66dcdbb3110a1d833b32a28da3083d644d639be",
-        "0xdd7ef936fa6fbc14fc583f25b7b70e73460fa42a",
-        "0xf2d3249d7725d5ff117c9a9688cdb0edd4bddb87",
-        "0x26028941e28ad3eae79543c6768595d4d4daaab4",
-        "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e",
-        "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
-        "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37"
-    ];
-    if (noall.indexOf(params.address) == -1) {
-        sendNews2(news);
+  let noall = [
+    "0x3342572427e79309071b43368cc7976e5c627a12",
+    "0xf66dcdbb3110a1d833b32a28da3083d644d639be",
+    "0xdd7ef936fa6fbc14fc583f25b7b70e73460fa42a",
+    "0xf2d3249d7725d5ff117c9a9688cdb0edd4bddb87",
+    "0x26028941e28ad3eae79543c6768595d4d4daaab4",
+    "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e",
+    "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
+    "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37"
+  ];
+  if (noall.indexOf(params.address) == -1) {
+    sendNews2(news);
+  }
+  request(
+    {
+      url: "https://oapi.dingtalk.com/robot/send?access_token=febedf3f0da93b332c18b7b34926a82fd1bbb3474b5372417b2a1e83cf6ad180", //请求路径
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        msgtype: "markdown",
+        markdown: news
+      })
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+      }
     }
-    request({
-            url: "https://oapi.dingtalk.com/robot/send?access_token=febedf3f0da93b332c18b7b34926a82fd1bbb3474b5372417b2a1e83cf6ad180", //请求路径
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({
-                msgtype: "markdown",
-                markdown: news
-            })
-        },
-        function(error, response, body) {
-            if (!error && response.statusCode == 200) {}
-        }
-    );
+  );
 }
 
 function sendNews2(news) {
-    request({
-            url: "https://oapi.dingtalk.com/robot/send?access_token=d728f7912c9fe66fe78679ed4ccd046a37c6273c30839fbb7b9b01f15dba832e", //请求路径
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            // body: JSON.stringify({ msgtype: "markdown", text: { content: news } })
-            body: JSON.stringify({
-                    msgtype: "markdown",
-                    markdown: news
-                })
-                // body: JSON.stringify({ msgtype: "text", text: { content: news } })
-        },
-        function(error, response, body) {
-            if (!error && response.statusCode == 200) {}
-        }
-    );
+  request(
+    {
+      url: "https://oapi.dingtalk.com/robot/send?access_token=d728f7912c9fe66fe78679ed4ccd046a37c6273c30839fbb7b9b01f15dba832e", //请求路径
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      // body: JSON.stringify({ msgtype: "markdown", text: { content: news } })
+      body: JSON.stringify({
+        msgtype: "markdown",
+        markdown: news
+      })
+      // body: JSON.stringify({ msgtype: "text", text: { content: news } })
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+      }
+    }
+  );
 }
 
 // function getProductList(ids, cb) {
@@ -326,19 +356,20 @@ function sendNews2(news) {
 // }
 
 function getProductList(ids, cb) {
-    request({
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
-            body: JSON.stringify({
-                token: "41kbW8",
-                tokenIds: ids
-            })
-        },
-        function(error, response, body) {
-            cb(body);
-        }
-    );
+  request(
+    {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
+      body: JSON.stringify({
+        token: "41kbW8",
+        tokenIds: ids
+      })
+    },
+    function (error, response, body) {
+      cb(body);
+    }
+  );
 }
