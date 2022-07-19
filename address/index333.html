@@ -1048,6 +1048,21 @@
                             </div>
                         </div>
                 </li>`
+                } else if (item.to === '0x0000000000000000000000000000000000000000') {
+                    // 销毁
+                    html +=
+                        `<li class="list-group-item d-flex">
+                    <div class="item-wrap">
+                        <p>${item.gName || '暂无数据'} <span class=" badge badge-secondary">销毁</span></p>
+                        <div class="text-black-50">
+                            <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
+                            <span class="label token">tokenId: ${item.tokenID}</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
+                            <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
+                        </div>
+                    </div>
+                </li>
+                `
                 } else if (item.to === iid) {
                     // 买
                     html += `

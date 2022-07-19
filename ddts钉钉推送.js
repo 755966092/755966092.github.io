@@ -164,18 +164,18 @@ const addressList = [
   {
     userid: 12516366,
     name: "多维合成-小目标-1个",
-    address: "0xea50bd7a3ebe14d208bd50cdad027780c3871271",
+    address: "0xea50bd7a3ebe14d208bd50cdad027780c3871271"
   },
   {
     userid: 10441361,
     name: "多维合成-割割不要再割了-1个",
-    address: "0x31b52751b3ab0d270fad9f0974aa9930287ef502",
+    address: "0x31b52751b3ab0d270fad9f0974aa9930287ef502"
   },
   {
     userid: 10966600,
     name: "多维合成-相信资本的力量-2个",
-    address: "0xc695473e4a10fc9fca0c92804e5a7e9ba4c9cbb8",
-  },
+    address: "0xc695473e4a10fc9fca0c92804e5a7e9ba4c9cbb8"
+  }
 ];
 var addressData = {};
 let getFlag = true;
@@ -282,6 +282,8 @@ function sendDDNews(diff, params) {
       let type = "";
       if (item.to == params.address) {
         type = "买入";
+      } else if (item.to === "0x0000000000000000000000000000000000000000") {
+        type = "销毁";
       } else {
         type = "卖出";
       }
@@ -364,7 +366,7 @@ function sendNews3(news) {
       url: "https://oapi.dingtalk.com/robot/send?access_token=efaeda965fb6a4f4742cd5c29e4f8a72c7bd7df5502ef77aa4ba2e6340b50391", //请求路径
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "content-type": "application/json"
       },
       body: JSON.stringify({
         msgtype: "markdown",
