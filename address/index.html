@@ -92,7 +92,6 @@
         </div>
     </div>
     <div class="header">
-
         <div class="header-item">
             <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
                 <option value="">选择</option>
@@ -135,26 +134,6 @@
     </div>
     <div class="wrap">
         <ul class="list-group list-group-flush" id="ul_wrap">
-            <!-- <li class="list-group-item d-flex">
-                <div class="item-wrap">
-                    <p>想你的液 <span class="bg-danger badge badge-secondary">卖出</span></p>
-                    <div class="text-black-50">
-                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
-                        <span class="label token">tokenId: 12345</span>
-                        <span class="label number">编号: 12345</span>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item d-flex">
-                <div class="item-wrap">
-                    <p>想你的液想你的液 <span class="bg-success badge badge-secondary">买入</span></p>
-                    <div class="text-black-50">
-                        <span class="label">时间: <span>2022-05-04 21:59:59</span></span>
-                        <span class="label token">tokenId: 12345</span>
-                        <span class="label number">编号: 12345</span>
-                    </div>
-                </div>
-            </li> -->
         </ul>
     </div>
 
@@ -193,7 +172,7 @@
             $("#loading").addClass("show");
             $("#loading").removeClass("hide");
             $.ajax({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=1&offset=1000&sort=desc`,
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=1&offset=100&sort=desc`,
                 type: "get",
                 dataType: 'json',
                 success: function(msg) {
@@ -203,9 +182,8 @@
                         tokenids.push(item.tokenID)
                     }
                     getProductList(tokenids, (data_ibox) => {
-                            render(msg, iid, data_ibox)
-                        })
-                        // render(msg, iid, data_ibox)
+                        render(msg, iid, data_ibox)
+                    })
                 },
                 error: function() {
                     $("#loading").addClass("hide");
@@ -1055,9 +1033,9 @@
                 for (let j = 0; j < ibox.length; j++) {
                     const ele = ibox[j];
                     if (ele.tokenId == item.tokenID) {
-                        item.gName = ele.gname
-                        item.nNum = ele.gnum
-                        item.gId = ele.gid
+                        item.gName = ele.gName
+                        item.gNum = ele.gNum
+                        item.gId = ele.gId
                         break;
                     }
                 }
@@ -1070,6 +1048,21 @@
                             </div>
                         </div>
                 </li>`
+                } else if (item.to === '0x0000000000000000000000000000000000000000') {
+                    // 销毁
+                    html +=
+                        `<li class="list-group-item d-flex">
+                    <div class="item-wrap">
+                        <p>${item.gName || '暂无数据'} <span class=" badge badge-secondary">销毁</span></p>
+                        <div class="text-black-50">
+                            <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
+                            <span class="label token">tokenId: ${item.tokenID}</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
+                            <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
+                        </div>
+                    </div>
+                </li>
+                `
                 } else if (item.to === iid) {
                     // 买
                     html += `
@@ -1079,7 +1072,7 @@
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: ${item.nNum || '--'}</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
                             <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
                         </div>
                     </div>
@@ -1094,7 +1087,7 @@
                         <div class="text-black-50">
                             <span class="label">时间: <span>${moment(item.noticeTime).format("YYYY-MM-DD HH:mm:ss")}</span></span>
                             <span class="label token">tokenId: ${item.tokenID}</span>
-                            <span class="label number">编号: ${item.nNum || '--'}</span>
+                            <span class="label number">编号: ${item.gNum || '--'}</span>
                             <span class="label number">gid: ${item.gId ?`<a href="https://www.ibox.art/zh-cn/item/?id=100513894&gid=${item.gId}" target="_blank">${item.gId || '--'}</a>`: '--'}</span>
                         </div>
                     </div>
@@ -1108,51 +1101,27 @@
         }
 
         function getProductList(ids, cb) {
-            // ids
             $.ajax({
-                type: "POST",
-                url: "http://123.57.64.135:8080/ibox/getInfos?tokenid=" + ids.toString(),
-                success: function (msg, e, body) {
-                    cb(msg)
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
                 },
-                error: () => {
-                    $("#loading").addClass("hide");
-                    $("#loading").removeClass("show");
-                }
-            });
-            // $.ajax({
-            //     type: "POST",
-            //     url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
-            //     data: {
-            //         token: "kxmi29",
-            //         tokenIds: ids
-            //     },
-            //     success: function(msg) {
-            //         cb(msg)
-            //     },
-            //     error: () => {
-            //         $("#loading").addClass("hide");
-            //         $("#loading").removeClass("show");
-            //     }
-            // });
-        }
-
-        function getList(cb) {
-            $.ajax({
-                type: "GET",
-                url: "https://api-h5.ibox.art/nft-mall-web/v1.2/nft/product/getCommonNoticeList?page=1&pageSize=200",
-                success: function (msg) {
-                    cb(msg)
+                url: "http://60.205.252.237:8080/Api/Token/verifyIbox",
+                data: JSON.stringify({
+                    token: "KefWzH",
+                    tokenIds: ids.toString()
+                }),
+                success: function (body,status) {
+                    if (status === 'success') {
+                        cb(body.data);
+                    } else {
+                        alert("查询出错,请尝试再次查询")
+                    }
                 },
                 error: () => {
 
                 }
             });
-        }
-
-        function showData(data) {
-            // json对象转成字符串
-            var result = JSON.stringify(data);
         }
     </script>
 </body>
