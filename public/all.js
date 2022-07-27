@@ -20818,12 +20818,12 @@ var all = [{
     {
         gName: "蒂凡尼的早餐",
         thumbPic: "/file/oss/test/image/nft-goods/6f3e8af624bf49febf3a8a0150573d9e.jpg",
-        sellLimit: "9000",
-        soldNum: "9000",
-        albumName: "红色金融里程",
-        brandName: "井冈山革命金融博物馆",
-        authorName: "北京米勒科技有限公司",
-        gDesc: "0000"
+        sellLimit: "1000",
+        soldNum: "249",
+        albumName: "Classic RubyNan 十二女神",
+        brandName: "沐呓文化",
+        authorName: "南瓜子",
+        gDesc: "以奥黛丽·赫本在电影《蒂凡尼的早餐》中的形象为原型，鼓励女性去探寻内在的自我，以从容的态度面对生活，以优雅的姿势拥抱岁月。生活中，我们都会被金钱、美貌、权利、名望所迷惑，但并不妨碍我们在平凡的生活中寻找点滴的快乐。真正的优雅并不是住顶级酒店、开百万的豪车、买名贵的丝袜，而是勇敢地面对真实的自我，接受自己的平凡与朴素，找到生活的真谛。"
     },
     {
         gName: "捕蝴蝶",
