@@ -27,7 +27,7 @@ const addressList = [
     address: "0x6006aabb73454c9cfae62febbc6c3f3728f546c8",
     name: "NEI-鱼化寨一号"
   },
-  { address: "0x9ba78a93387cdee2769ae6e24d3f13e2ec2b12ef", name: "NEI-小明星" },
+  // { address: "0x9ba78a93387cdee2769ae6e24d3f13e2ec2b12ef", name: "NEI-小明星" },
   {
     address: "0x3342572427e79309071b43368cc7976e5c627a12",
     name: "NEI-我想吃西瓜"
@@ -48,46 +48,46 @@ const addressList = [
     address: "0x4018fee7752c503b6c2ad8b5807bfecef5eb9ec7",
     name: "NEI-Dashazi(干杯"
   },
-  {
-    address: "0xc2618849b719bce2016c0e27b3925b35a33fa8ff",
-    name: "NEI-超超小飞侠NFT(干杯"
-  },
+  // {
+  //   address: "0xc2618849b719bce2016c0e27b3925b35a33fa8ff",
+  //   name: "NEI-超超小飞侠NFT(干杯"
+  // },
   {
     address: "0xf66dcdbb3110a1d833b32a28da3083d644d639be",
     name: "NEI-麻辣小龙虾"
   },
   { address: "0xfe4f8cb9b5861efc496ee07ad0cc74e3363b363e", name: "NEI-财神爷" },
-  {
-    address: "0xcd05bf87177b6ed34bd3f67ff04fda79ae5c8076",
-    name: "NEI-鱼化寨2号"
-  },
+  // {
+  //   address: "0xcd05bf87177b6ed34bd3f67ff04fda79ae5c8076",
+  //   name: "NEI-鱼化寨2号"
+  // },
   {
     address: "0x2c93bdd79b7930b14f520ca2238e22a2e52a657e",
     name: "NEI-暴富三符(N卡2号"
   },
   { address: "0x5067236b58238325225fbdb276db52f8bbb82f76", name: "NEI-重点2" },
-  {
-    address: "0x7cf335280c65554e4ce3f6268b030a5918088e5f",
-    name: "NEI-南拳妈妈 干杯"
-  },
+  // {
+  //   address: "0x7cf335280c65554e4ce3f6268b030a5918088e5f",
+  //   name: "NEI-南拳妈妈 干杯"
+  // },
   {
     address: "0xc447a826ad68265a395953aadf04cbefdbb72015",
     name: "NEI-大闹群主小号"
   },
-  { address: "0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba", name: "NEI-test" },
-  {
-    address: "0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f",
-    name: "NEI-公告前买小老虎的"
-  },
-  { address: "0x65652ce109f1f538252c3ba6bc3e145744a6f955", name: "NEI-24k" },
+  // { address: "0x267a4882ad378ed5a9ce44263cfe1290ed7c85ba", name: "NEI-test" },
+  // {
+  //   address: "0xe313acea8d1e6ffb9d6a2824554074b41a31ca9f",
+  //   name: "NEI-公告前买小老虎的"
+  // },
+  // { address: "0x65652ce109f1f538252c3ba6bc3e145744a6f955", name: "NEI-24k" },
   { address: "0x0ae867f59df1ed5442d55d8a39d3b8403892dc3a", name: "NEI-阿达" },
-  {
-    address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6",
-    name: "NEI-张国荣查出来的"
-  },
+  // {
+  //   address: "0x1aac1c9d7209ff82877f1442034a1789d813fdb6",
+  //   name: "NEI-张国荣查出来的"
+  // },
   { address: "0x7351928ee87ac364858b55673e649eac049370c5", name: "林斌" }, // 81
   { address: "0xc9e4f4a4512290612cf8ecb5086d290d0a3e396b", name: "辛德勒" },
-  { address: "0x09c3fd879365c00410e3fcf37f58687b76ac75e3", name: "NEI-花花" },
+  // { address: "0x09c3fd879365c00410e3fcf37f58687b76ac75e3", name: "NEI-花花" },
   // { address: "0x5e71ee36793db6bb532d0fedc0f1ad74b58ac541", name: "NEI-马超黄忠" }
   {
     address: "0x07d46d9cf737a121ecc359d6e29b0f62f33bb05e",
@@ -112,22 +112,22 @@ const addressList = [
     address: "0x0db6ce001b7e15e403760c047cfb0a2d5d75b2b1",
     name: "NEI-天天好心情10宙斯"
   },
-  {
-    address: "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
-    name: "NEI-毛哥发现的小号"
-  },
-  {
-    address: "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37",
-    name: "NEI-这个人4个宙斯"
-  },
-  {
-    address: "0x513f61fec7ee705dbd5da9a8e0354e407802c3dd",
-    name: "NEI-活动前买金福"
-  },
-  {
-    address: "0x534e76131946aebfb4ee296365f8c81182acab95",
-    name: "NEI-罗纳威犬-1个"
-  },
+  // {
+  //   address: "0x06fefec3d5d978aea8ca1367421c9d78b0adef83",
+  //   name: "NEI-毛哥发现的小号"
+  // },
+  // {
+  //   address: "0x05c98f6be94182bfa0ff1dd18f7c3b93cff18a37",
+  //   name: "NEI-这个人4个宙斯"
+  // },
+  // {
+  //   address: "0x513f61fec7ee705dbd5da9a8e0354e407802c3dd",
+  //   name: "NEI-活动前买金福"
+  // },
+  // {
+  //   address: "0x534e76131946aebfb4ee296365f8c81182acab95",
+  //   name: "NEI-罗纳威犬-1个"
+  // },
   {
     address: "0x3700ba3feae4cd9f5042173eeca8a6794442a1e9",
     name: "NEI-罗纳威犬-5个-柒岁"
@@ -175,6 +175,10 @@ const addressList = [
     userid: 10966600,
     name: "多维合成-相信资本的力量-2个",
     address: "0xc695473e4a10fc9fca0c92804e5a7e9ba4c9cbb8"
+  },
+  {
+    name: "云飞扬",
+    address: "0x8cbb9cbb46b258070c592cd88c836b5072e43f9d"
   }
 ];
 var addressData = {};

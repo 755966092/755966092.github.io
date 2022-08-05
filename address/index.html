@@ -172,7 +172,7 @@
             $("#loading").addClass("show");
             $("#loading").removeClass("hide");
             $.ajax({
-                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=1&offset=100&sort=desc`,
+                url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${iid}&page=1&offset=2000&sort=desc`,
                 type: "get",
                 dataType: 'json',
                 success: function(msg) {
