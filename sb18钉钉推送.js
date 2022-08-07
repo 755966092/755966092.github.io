@@ -143,7 +143,6 @@ const addressList = [
     name: "送信人",
     address: "iaa17w4tn4kl93muxen7lnnua0e8jc9cdds69a8hdq"
   },
-  {},
   {
     count: 1,
     name: "下一个ib",
@@ -697,6 +696,11 @@ function getDate(params) {
             addressData[params.address] = bodyData;
           }
         } catch (error) {
+          if (i < addressList.length - 1) {
+            i++;
+          } else {
+            i = 0;
+          }
           getDate(addressList[i]);
         }
       }
