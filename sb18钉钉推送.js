@@ -146,9 +146,6 @@ function getDate(params) {
           let bodyData = JSON.parse(body).data.data;
           console.log("------------------------------------------------");
           console.log("用户: ", params.name);
-          console.log("数据详情: ", bodyData[0].msgs[0].msg.name);
-
-          // // tokenID
           console.log(
             "请求次数:",
             num++,
@@ -164,7 +161,6 @@ function getDate(params) {
           await sleep(500);
           getDate(addressList[i]);
 
-          // console.log('addressData: ', JSON.stringify(addressData));
           if (addressData[params.address]) {
             let diff = [];
             if (
@@ -178,10 +174,6 @@ function getDate(params) {
               );
             }
             if (diff.length > 0) {
-              console.log(
-                "-----------------------------------------不同-不同-不同-不同-不同-不同-不同-不同------------------------------------------------: ",
-                diff
-              );
               // 有新交易
               addressData[params.address] = bodyData;
               sendDDNews(diff, params);
@@ -228,13 +220,17 @@ function sendDDNews(diff, params) {
   });
 }
 
+// new boy 内部群
 function sendNews(news, params) {
   let noall = [
     // "0x3342572427e79309071b43368cc7976e5c627a12",
   ];
   if (noall.indexOf(params.address) == -1) {
-    sendNews2(news);
-    sendNews3(news);
+    // sendNews2(news);
+    // sendNews3(news);
+    // setTimeout(() => {
+      
+    // }, timeout);
   }
   request(
     {
@@ -255,6 +251,7 @@ function sendNews(news, params) {
   );
 }
 
+// 交易提醒收费群
 function sendNews2(news) {
   request(
     {
@@ -277,7 +274,7 @@ function sendNews2(news) {
   );
 }
 
-// 新老监控群
+// 新老链监控收费监控群
 function sendNews3(news) {
   request(
     {

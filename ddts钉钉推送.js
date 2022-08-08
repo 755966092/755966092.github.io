@@ -305,6 +305,7 @@ function sendDDNews(diff, params) {
   });
 }
 
+// new Boy 
 function sendNews(news, params) {
   let noall = [
     // "0x3342572427e79309071b43368cc7976e5c627a12",
@@ -341,6 +342,7 @@ function sendNews(news, params) {
   );
 }
 
+// 交易提醒收费监控群
 function sendNews2(news) {
   request(
     {
@@ -363,7 +365,7 @@ function sendNews2(news) {
   );
 }
 
-// 新老监控群
+// 新老链收费监控群
 function sendNews3(news) {
   request(
     {
