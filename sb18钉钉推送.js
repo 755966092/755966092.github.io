@@ -215,7 +215,11 @@ function sendDDNews(diff, params) {
       type = "卖出";
     }
     const ele = item.msgs[0].msg;
-    aaaaaaaa.text = `## ${params.name} \n- 18数藏交易 \n- 商品：${ele.name} \n- 类型：${type} \n- 时间：${time} \n- ID: ${ele.id}}`;
+    aaaaaaaa.text = `## ${params.name} \n- 18数藏交易 \n- 商品：${
+      ele.name
+    } \n- 类型：${type} \n- 时间：${time} \n- ID: ${
+      ele.id
+    } \n- Address: ${params.address.substr(15, 25)}`;
     sendNews(aaaaaaaa, params);
   });
 }
@@ -229,7 +233,6 @@ function sendNews(news, params) {
     // sendNews2(news);
     // sendNews3(news);
     // setTimeout(() => {
-      
     // }, timeout);
   }
   request(
