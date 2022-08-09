@@ -219,7 +219,7 @@ function sendDDNews(diff, params) {
       ele.name
     } \n- 类型：${type} \n- 时间：${time} \n- ID: ${
       ele.id
-    } \n- Address: ${params.address.substr(15, 10)}`;
+    } \n- 地址: ${params.address.substr(30)}`;
     sendNews(aaaaaaaa, params);
   });
 }
