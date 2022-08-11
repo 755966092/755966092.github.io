@@ -64,7 +64,7 @@ const addressList = [
     address: "iaa19luv66pr55evlsp20nv5zgksu4cyz6veu9ywah"
   },
   {
-    name: "18数藏-- 129",
+    name: "18数藏-- 129 -- 特殊对象",
     address: "iaa16tf3aquz433n60y5e46gsc9m67wfskt9w9dnfn"
   },
   {
