@@ -56,7 +56,7 @@ const addressList = [
     address: "iaa1wvdusmcvenxgt8a5qw8zpkn509g29n4wl3xr6u"
   },
   {
-    name: "18数藏-- 113",
+    name: "18数藏-- 113 -- 罗汉活动前买罗汉",
     address: "iaa1hwss6szw0d3wqjr9mlwp8jvn9kjk7darvqh9c4"
   },
   {
@@ -96,7 +96,7 @@ const addressList = [
     address: "iaa1w5e57klgd9p8ycrwpnrz8kmvpg4ee8rn5wt3s7"
   },
   {
-    name: "18数藏-- 237",
+    name: "18数藏-- 237 - 林斌",
     address: "iaa1qhsljthqynupfyhrhc8cqksmgs4nde423mceg8"
   }
 ];
@@ -207,7 +207,9 @@ function sendDDNews(diff, params) {
     const time = moment(item.time * 1000).format("MM-DD HH:mm:ss");
     aaaaaaaa.title += params.name;
     let type = "";
-    if (item.msgs[0].msg.recipient == params.address) {
+    if (item.msgs[0].msg.recipient == 'iaa1thp0uyk72vu8uhxjmygxm0xphfs99jzcpkl23u') {
+      type = "空投";
+    } else if (item.msgs[0].msg.recipient == params.address) {
       type = "买入";
     } else if (item.to === "0x0000000000000000000000000000000000000000") {
       type = "销毁";
