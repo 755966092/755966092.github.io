@@ -133,7 +133,8 @@ function getDate(params) {
         // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
         headers: {
           "content-type": "application/json"
-        }
+        },
+        rejectUnauthorized: false
       },
 
       async function (error, response, body) {
