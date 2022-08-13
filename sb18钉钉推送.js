@@ -129,12 +129,10 @@ function getDate(params) {
     request(
       {
         url: `https://explorer.wenchang.bianjie.ai/api/txs/addresses?address=${params.address}&type=issue_denom,transfer_denom,mint_nft,edit_nft,transfer_nft,burn_nft&useCount=false&countMsg=false&pageNum=1&pageSize=5`,
-        // url: `https://explorer.wenchang.bianjie.ai/api/nfts?denomId=&nftId=&owner=iaa1p7vrfx7ytqqgyd2g8ulwhpu42nmaqt0dkxmcwx&pageNum=1&pageSize=5`,
-        // url: `https://api.hecoinfo.com/api?module=account&action=tokennfttx&address=${params.address.toLowerCase()}&page=1&offset=10&sort=desc`,
         headers: {
           "content-type": "application/json"
         },
-        rejectUnauthorized: false
+        // rejectUnauthorized: false
       },
 
       async function (error, response, body) {
