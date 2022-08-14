@@ -11,9 +11,10 @@ var flagTime = moment("2022-08-09 00:00:00").valueOf() / 1000;
 
 console.time('所用时间');
 (async function () {
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 2000; i < data.length; i++) {
     const item = data[i];
-    if (i < 500) {
+    if (i < 2500) {
+    // getFn(item, i);
       await getFn(item, i);
     } else {
       console.timeEnd("所用时间");

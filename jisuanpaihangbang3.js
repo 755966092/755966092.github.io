@@ -4,19 +4,31 @@ const lodash = require("lodash");
 const moment = require("moment");
 
 const data = require("./luohan-paixv.js");
-const data2 = require("./luohan.js");
+const startTime = moment().format("YYMMDD");
 
 var pageNum = 1;
-var startTime = moment("2022-08-09 00:00:00").valueOf() / 1000;
+var flagTime = moment("2022-08-09 00:00:00").valueOf() / 1000;
 
+console.time('所用时间');
 (async function () {
-  for (let i = 106; i < data.length; i++) {
+  for (let i = 1000; i < data.length; i++) {
     const item = data[i];
-    if (i < 3000) {
+    if (i < 1500) {
+    // getFn(item, i);
       await getFn(item, i);
+    } else {
+      console.timeEnd("所用时间");
+      break;
     }
   }
 })();
+
+// for (let i = 0; i < data.length; i++) {
+//   const item = data[i];
+//   if (i < 3000) {
+//     getFn(item, i);
+//   }
+// }
 
 async function getFn(param, iii) {
   let page = pageNum;
@@ -37,7 +49,7 @@ async function getFn(param, iii) {
     if (result.length == resultLength) {
       break;
     }
-    if (time < startTime) {
+    if (time < flagTime) {
       break;
     }
   }
@@ -183,7 +195,11 @@ function formatData(dataParam, iid) {
   }
   all.address = iid;
   all.total = total;
-  fs.appendFile("排序数据.js", `${JSON.stringify(all)},`, () => {});
+  fs.appendFile(
+    `排序数据-${startTime}.js`,
+    `${JSON.stringify(all)},`,
+    () => {}
+  );
 }
 
 function unique(arr) {
