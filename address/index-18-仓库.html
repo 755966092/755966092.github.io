@@ -297,6 +297,7 @@
             }
             pageNum = page
             viewData = result
+            console.log('viewData: ', JSON.stringify(result));
             viewIid = iid
             if (viewType == 1) {
                 render(result, iid)
@@ -305,8 +306,36 @@
             }
         }
 
-        function formatData(data, iid) {
+        // function uniqueKey(arr) {
+        //     const res = new Map();
+        //     return arr.filter((a) => !res.has(a.msgs[0].msg.name) && res.set(a.msgs[0].msg.name, 1));
+        // }
+
+        function uniqueKey(param) {
+            let arr = param
+            let kongtou = [];
+            let yuanxian = [];
+            arr.forEach(item => {
+                if (item.msgs[0].msg.sender === 'iaa1thp0uyk72vu8uhxjmygxm0xphfs99jzcpkl23u') {
+                    // 空投
+                    kongtou.push(item)
+                } else {
+                    yuanxian.push(item)
+                }
+            })
+
+            const res = new Map();
+            let a = kongtou.filter((a) => !res.has(a.msgs[0].msg.name) && res.set(a.msgs[0].msg.name, 1));
+            return a.concat(yuanxian)
+        }
+
+
+        function formatData(dataParam, iid) {
             let resultData = {}
+
+            let data = dataParam
+            data = uniqueKey(data)
+
             for (let i = 0; i < data.length; i++) {
                 const item = data[i].msgs[0].msg;
                 let name = item.name.replace(/#.*/g, '')
@@ -500,6 +529,8 @@
             }]
             let html = ''
 
+
+
             for (let i = 0; i < data.length; i++) {
                 const item = data[i];
                 item.time = item.time * 1000
@@ -508,6 +539,9 @@
                 const item = a2[i];
                 item.time = moment(item.time).valueOf()
             }
+
+
+            data = uniqueKey(data)
 
 
             var resultData = data.concat(a2)

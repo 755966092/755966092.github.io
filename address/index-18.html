@@ -241,6 +241,7 @@
         function iptChange2(e) {
             pageNum = Number(e.target.value)
         }
+        getData("iaa1tqws4axne2haegqp3q5yyfcjv4phnutgsnf66u")
 
         async function getData(address) {
             let iid;
@@ -280,6 +281,8 @@
                 });
             })
         }
+
+
 
 
         function render(data, iid) {
@@ -381,8 +384,15 @@
 
             for (let i = 0; i < data.length; i++) {
                 const item = data[i];
-                item.time = item.time * 1000
+                item.time = item.time * 1000;
             }
+
+            function uniqueKey(arr) {
+                const res = new Map();
+                return arr.filter((a) => !res.has(a.msgs[0].msg.name) && res.set(a.msgs[0].msg.name, 1));
+            }
+
+            data = uniqueKey(data)
             for (let i = 0; i < a2.length; i++) {
                 const item = a2[i];
                 item.time = moment(item.time).valueOf()
@@ -403,7 +413,6 @@
                 const item = resultData[i];
                 var info;
                 if (!item.noticeName) {
-
                     info = item.msgs[0].msg
                 }
                 if (item.noticeName) {
