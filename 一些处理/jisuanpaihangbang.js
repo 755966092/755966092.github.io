@@ -3,7 +3,7 @@ const fs = require("fs");
 const lodash = require("lodash");
 const moment = require("moment");
 
-const data = require("./luohan-paixv.js");
+const data = require("./18地址排序.js");
 const startTime = moment().format("YYMMDD");
 
 var pageNum = 1;
@@ -11,10 +11,9 @@ var flagTime = moment("2022-08-09 00:00:00").valueOf() / 1000;
 
 console.time('所用时间');
 (async function () {
-  for (let i = 1000; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     const item = data[i];
-    if (i < 1500) {
-    // getFn(item, i);
+    if (i < 500) {
       await getFn(item, i);
     } else {
       console.timeEnd("所用时间");

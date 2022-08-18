@@ -1,18 +1,14 @@
-// const fs = require("fs");
-// str = "address,,";
-// fs.appendFile("str.js", str, function (err) {
-//   if (err) {
-//     throw new Error("追加数据失败");
-//   } else {
-//     console.log("追加数据成功");
-//   }
-// });
-
-
-console.time();
-for (i = 0; i < 100000; i++) {
-  // 代码部分
-}
-console.timeEnd();
-
-// 2022-08-14 22:15:22
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'node_demo'
+});
+ 
+connection.connect();
+ 
+connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});

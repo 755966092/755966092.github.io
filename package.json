@@ -18,6 +18,7 @@
         "forever-monitor": "^3.0.3",
         "lodash": "^4.17.21",
         "moment": "^2.29.1",
+        "mysql": "^2.18.1",
         "node-fetch": "^3.2.3",
         "node-jsencrypt": "^1.0.0",
         "node-uuid": "^1.4.8",

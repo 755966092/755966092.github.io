@@ -124,17 +124,23 @@
             </select>
         </div>
         <div class="header-item">
-            <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
-                <option value="">选择</option>
-
+            <select onchange="selViewType(event)" class="sel-wrap form-control">
+                <option value="1">按页码</option>
+                <option value="2">查所有</option>
             </select>
         </div>
+
         <div class="header-item page-num">
             页码：
             <input class="form-control" oninput="iptChange2(event)" value='1'>
         </div>
         <div class="header-item">
-            <input class="form-control" oninput="iptChange(event)">
+            <select onchange="selId(event)" class="sel-wrap form-control" id="exampleFormControlSelect1">
+                <option value="">选择地址</option>
+            </select>
+        </div>
+        <div class="header-item">
+            <input class="form-control" placeholder="输入地址" oninput="iptChange(event)">
         </div>
         <div class="header-item">
             <button type="button" class="btn btn-primary" onclick="queryResult()">查 询</button>
@@ -155,6 +161,7 @@
         var pageNum = 1;
         var viewData = [],
             viewIid = '';
+        var viewDataType = 1;
         var viewType = 1;
         const addressList = [{
             name: "18数藏-- 70",
@@ -235,6 +242,7 @@
         function selId(e) {
             if (e.target.value) {
                 getData(e.target.value.toLowerCase())
+                iptAddress = e.target.value.toLowerCase()
             }
         }
 
@@ -247,10 +255,14 @@
             }
         }
 
+        function selViewType(e) {
+            viewDataType = e.target.value
+        }
+
 
         function renderSel() {
             let dom = document.getElementById('exampleFormControlSelect1')
-            let html = '<option value="">选择</option>'
+            let html = '<option value="">选择地址</option>'
             for (let i = 0; i < addressList.length; i++) {
                 const element = addressList[i];
                 html += `<option value="${element.address}">${element.name}</option>`
@@ -279,21 +291,42 @@
             } else {
                 iid = id
             }
+            // $.ajax({
+            //     type: "POST",
+            //     url: "http://60.205.252.237:8080/Api/Token/verifyToken",
+            //     data: {
+            //         token: "uwjJoJKOv5bk7KAEN8ln"
+            //     },
+            //     success: function(msg) {
+            //         console.log('msg: ', msg);
+            //     },
+            //     error: function(error) {
+            //         console.log('error: ', error);
+
+            //     }
+
+            // });
+            // viewDataType 1 页码：2 所有
             let page = pageNum
             let result = [],
                 resultLength = 0;
             $("#loading").addClass("show");
             $("#loading").removeClass("hide");
-            for (let i = 1; i > 0; i++) {
-                console.log(i);
+            if (viewDataType == 1) {
                 await pro(iid, pageNum).then((data, iid) => {
-
-                    pageNum += 1
-                    result = result.concat(data)
-                    resultLength = result.length + data.length
+                    result = data
                 })
-                if (result.length == resultLength) {
-                    break;
+            } else {
+                for (let i = 1; i > 0; i++) {
+                    console.log(i);
+                    await pro(iid, pageNum).then((data, iid) => {
+                        pageNum += 1
+                        result = result.concat(data)
+                        resultLength = result.length + data.length
+                    })
+                    if (result.length == resultLength) {
+                        break;
+                    }
                 }
             }
             pageNum = page
@@ -417,7 +450,7 @@
         function pro(iid, pageNum) {
             return new Promise((resolve, reject) => {
                 $.ajax({
-                    url: `https://explorer.wenchang.bianjie.ai/api/txs/addresses?address=${iid}&type=issue_denom,transfer_denom,mint_nft,edit_nft,transfer_nft,burn_nft&useCount=false&countMsg=false&pageNum=${pageNum}&pageSize=100`,
+                    url: `https://tianhe.wenchang.bianjie.ai/api/txs/addresses?address=${iid}&type=edit_nft,transfer_nft,transfer_denom,burn_nft,mint_nft,issue_denom&useCount=false&countMsg=false&pageNum=${pageNum}&pageSize=100`,
                     type: "get",
                     dataType: 'json',
                     success: function(msg) {
