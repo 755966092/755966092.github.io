@@ -9,12 +9,12 @@ const addressList = [
     name: "内幕-提前买罗汉",
     address: ""
   },
-  {
-    userid: 27640,
-    key: "key27640",
-    name: "内幕-胡博士",
-    address: ""
-  },
+  // {
+  //   userid: 27640,
+  //   key: "key27640",
+  //   name: "内幕-胡博士",
+  //   address: ""
+  // },
   {
     userid: 31237,
     key: "key31237",
@@ -43,6 +43,12 @@ const addressList = [
     userid: 353657,
     key: "key353657",
     name: "大户-水镜-小号",
+    address: ""
+  },
+  {
+    userid: 352972,
+    key: "key352972",
+    name: "大户-水镜-3",
     address: ""
   }
 ];
