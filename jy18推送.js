@@ -9,34 +9,22 @@ const addressList = [
     name: "内幕-提前买罗汉",
     address: ""
   },
-  // {
-  //   userid: 27640,
-  //   key: "key27640",
-  //   name: "内幕-胡博士",
-  //   address: ""
-  // },
+  {
+    userid: 27463,
+    key: "key27463",
+    name: "大户-鸭王",
+    address: ""
+  },
   {
     userid: 31237,
     key: "key31237",
-    name: "大户-杨文斌",
+    name: "大户-林斌",
     address: ""
   },
   {
     userid: 28392,
     key: "key28392",
-    name: "大户-真-杨文斌",
-    address: ""
-  },
-  {
-    userid: 365036,
-    key: "key365036",
-    name: "大户-月瘦",
-    address: ""
-  },
-  {
-    userid: 354457,
-    key: "key354457",
-    name: "大户-水镜-大号",
+    name: "大户-杨文斌",
     address: ""
   },
   {
@@ -45,12 +33,7 @@ const addressList = [
     name: "大户-水镜-小号",
     address: ""
   },
-  {
-    userid: 352972,
-    key: "key352972",
-    name: "大户-水镜-3",
-    address: ""
-  },
+
   {
     userid: 34603,
     key: "key34603",
@@ -106,7 +89,6 @@ function getDate(params) {
             console.log("错误一次:", JSON.stringify(error));
           }
           let bodyData = JSON.parse(body);
-       
 
           if (i < addressList.length - 1) {
             i++;
@@ -120,7 +102,7 @@ function getDate(params) {
             " -- ",
             moment().format("MM-DD HH:mm:ss")
           );
-          await sleep(20000);
+          await sleep(15000);
           getDate(addressList[i]);
           let handleDaya = bodyData.data.records;
           if (addressData[params.key]) {
@@ -168,7 +150,7 @@ function sendDDNews(diff, params) {
       type = "买入";
       // } else if (item.to === "0x0000000000000000000000000000000000000000") {
       //   type = "销毁";
-    } else if (item.type == 'SALE') {
+    } else if (item.type == "SALE") {
       type = "卖出";
     }
 
@@ -180,7 +162,6 @@ function sendDDNews(diff, params) {
     sendNews(aaaaaaaa, params);
   });
 }
-
 
 function sendNews(news, params) {
   // let noall = [];
