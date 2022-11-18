@@ -28,22 +28,15 @@ const addressList = [
     address: ""
   },
   {
-    userid: 353657,
-    key: "key353657",
-    name: "大户-水镜-小号",
-    address: ""
-  },
-
-  {
-    userid: 34603,
-    key: "key34603",
-    name: "内幕-提前买古镇云海-1号",
-    address: ""
-  },
-  {
     userid: 368142,
     key: "key368142",
     name: "内幕-提前买古镇云海-2号",
+    address: ""
+  },
+  {
+    userid: 52660,
+    key: "key52660",
+    name: "NFT博主",
     address: ""
   }
 ];
