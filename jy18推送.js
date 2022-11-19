@@ -70,7 +70,8 @@ function getDate(params) {
       {
         url: `https://api.codeleven.cn/nft-live/server/asserts-api/list_user_transaction_log?userWalletId=${params.userid}&platformId=20&behaviorType=&pageNum=1&pageSize=20`,
         headers: {
-          "content-type": "application/json"
+          "content-type": "application/json",
+          "user-token": "58327fff17f5dacc16d930cc257c7a1b"
         }
       },
 
@@ -97,6 +98,7 @@ function getDate(params) {
           );
           await sleep(15000);
           getDate(addressList[i]);
+          console.log('bodyData: ', bodyData);
           let handleDaya = bodyData.data.records;
           if (addressData[params.key]) {
             let diff = [];
