@@ -98,7 +98,6 @@ function getDate(params) {
           );
           await sleep(15000);
           getDate(addressList[i]);
-          console.log('bodyData: ', bodyData);
           let handleDaya = bodyData.data.records;
           if (addressData[params.key]) {
             let diff = [];
