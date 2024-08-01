@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>生成文案</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>生成文案</h1>
+      <div class="form-group">
+        <label for="province">省：</label>
+        <select id="province" onchange="updateCityOptions()">
+          <option value="">请选择省份</option>
+          <!-- 省份选项 -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="city">市：</label>
+        <select id="city" onchange="updateCountyOptions()">
+          <option value="">请选择城市</option>
+          <!-- 城市选项 -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="county">县：</label>
+        <select id="county">
+          <option value="">请选择区县</option>
+          <!-- 区县选项 -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="category">分类：</label>
+        <select id="category" onchange="updateDefaultTexts()">
+          <option value="">请选择分类</option>
+          <!-- 分类选项 -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">手机号：</label>
+        <input type="text" id="phoneNumber" />
+      </div>
+      <div class="form-group">
+        <label for="serveName">服务标题：</label>
+        <input type="text" id="serveName" />
+      </div>
+      <div class="form-group">
+        <label for="serveContent">服务内容：</label>
+
+        <textarea type="text" id="serveContent" rows="5" cols="30"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="fixedText1">标签一：</label>
+        <input type="text" id="fixedText1" />
+      </div>
+      <div class="form-group">
+        <label for="fixedText2">标签二：</label>
+        <input type="text" id="fixedText2" />
+      </div>
+      <div class="form-group">
+        <label for="fixedText3">标签三：</label>
+        <input type="text" id="fixedText3" />
+      </div>
+      <div class="form-group">
+        <label for="fixedText4">标签四：</label>
+        <input type="text" id="fixedText4" />
+      </div>
+      <button onclick="generateText()">生成文案</button>
+      <button onclick="copyText()">复制文案</button>
+      <button onclick="copyTitle()">复制标题</button>
+      <div class="form-group">
+        <label for="generatedText">生成的文案：</label>
+        <textarea id="generatedText" readonly></textarea>
+      </div>
+    </div>
+
+    <script src="./data.js"></script>
+    <!-- dataCountry -->
+    <script>
+      const data = dataCountry;
+
+      const categories = [
+        {
+          name: "家电维修",
+          defaultTexts: {
+            serveName: "空调维修上门服务",
+            serveContent:
+              "空调清洗、空调移机、空调安装、美的空调、海尔空调、三菱空调、松下空调、奥克斯空调、海信空调、TCL 空调、科龙空调、康佳空调、志高空调、华凌空调、小米空调、大金空调、长虹空调、格兰仕空调、吊顶式空调、方形形柜机空调维修安装清洗移机，空调扇维修，空调E6、空调各类代码、中央空调维修、空调漏水、空调异味，空调不制冷不制热、空调噪音、空调跳闸、空调按键失灵、空调加氟漏氟、空调不工作、空调外机空调没风、故障排查、售后服务等家电清洗、家电安装、等各类家电服务。30分钟快速响应，就近安排，附近上门服务，专业|高效|诚信，有保障",
+            fixedText1: "空调维修电话",
+            fixedText2: "维修空调",
+            fixedText3: "空调清洗",
+            fixedText4: "家政服务"
+          }
+        },
+        {
+          name: "水电维修",
+          defaultTexts: {
+            serveName: "水电维修上门服务",
+            serveContent:
+              "水管维修、水管安装、水管漏水、卫生间漏水、厨房漏水、马桶维修、马桶安装、马桶漏水、洗手盆维修、洗手盆安装、洗手盆漏水、淋浴房维修、淋浴房安装、淋浴房漏水、电路维修、电路安装、灯具维修、灯具安装、开关维修、开关安装、插座维修、插座安装、跳闸维修、短路维修、故障排查、售后服务等。30分钟快速响应，就近安排，附近上门服务，专业|高效|诚信，有保障",
+            fixedText1: "水电维修电话",
+            fixedText2: "维修水电",
+            fixedText3: "水电安装",
+            fixedText4: "家政服务"
+          }
+        },
+        {
+          name: "地暖维修",
+          defaultTexts: {
+            serveName: "地暖维修上门服务",
+            serveContent:
+              "地暖清洗、地暖安装、地暖漏水、地暖不热、地暖维修、地暖保养、地暖管道维修、地暖管道清洗、地暖管道更换、地暖温控器维修、地暖温控器更换、地暖分水器维修、地暖分水器更换、地暖回水不热、地暖循环泵维修、地暖循环泵更换、故障排查、售后服务等。30分钟快速响应，就近安排，附近上门服务，专业|高效|诚信，有保障",
+            fixedText1: "地暖维修电话",
+            fixedText2: "维修地暖",
+            fixedText3: "地暖清洗",
+            fixedText4: "家政服务"
+          }
+        }
+      ];
+
+      function populateProvinces() {
+        const provinceSelect = document.getElementById("province");
+        data.forEach((province) => {
+          const option = document.createElement("option");
+          option.value = province.code;
+          option.textContent = province.name;
+          provinceSelect.appendChild(option);
+        });
+      }
+
+      function updateCityOptions() {
+        const provinceSelect = document.getElementById("province");
+        const citySelect = document.getElementById("city");
+        citySelect.innerHTML = '<option value="">请选择城市</option>';
+        const selectedProvince = data.find((province) => province.code === provinceSelect.value);
+        if (selectedProvince) {
+          selectedProvince.cityList.forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city.code;
+            option.textContent = city.name;
+            citySelect.appendChild(option);
+          });
+        }
+        updateCountyOptions();
+      }
+
+      function updateCountyOptions() {
+        const citySelect = document.getElementById("city");
+        const countySelect = document.getElementById("county");
+        countySelect.innerHTML = '<option value="">请选择区县</option>';
+        const provinceSelect = document.getElementById("province");
+        const selectedProvince = data.find((province) => province.code === provinceSelect.value);
+        const selectedCity = selectedProvince.cityList.find((city) => city.code === citySelect.value);
+        if (selectedCity) {
+          selectedCity.areaList.forEach((county) => {
+            const option = document.createElement("option");
+            option.value = county.code;
+            option.textContent = county.name;
+            countySelect.appendChild(option);
+          });
+        }
+      }
+
+      function populateCategories() {
+        const categorySelect = document.getElementById("category");
+        categories.forEach((category) => {
+          const option = document.createElement("option");
+          option.value = category.name;
+          option.textContent = category.name;
+          categorySelect.appendChild(option);
+        });
+      }
+
+      function updateDefaultTexts() {
+        const categorySelect = document.getElementById("category");
+        const selectedCategory = categories.find((category) => category.name === categorySelect.value);
+        if (selectedCategory) {
+          document.getElementById("serveName").value = selectedCategory.defaultTexts.serveName;
+          document.getElementById("serveContent").value = selectedCategory.defaultTexts.serveContent;
+          document.getElementById("fixedText1").value = selectedCategory.defaultTexts.fixedText1;
+          document.getElementById("fixedText2").value = selectedCategory.defaultTexts.fixedText2;
+          document.getElementById("fixedText3").value = selectedCategory.defaultTexts.fixedText3;
+          document.getElementById("fixedText4").value = selectedCategory.defaultTexts.fixedText4;
+        }
+      }
+
+      function generateText() {
+        const provinceSelect = document.getElementById("province");
+        const citySelect = document.getElementById("city");
+        const countySelect = document.getElementById("county");
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const serveName = document.getElementById("serveName").value;
+        const serveContent = document.getElementById("serveContent").value;
+        const fixedText1 = document.getElementById("fixedText1").value;
+        const fixedText2 = document.getElementById("fixedText2").value;
+        const fixedText3 = document.getElementById("fixedText3").value;
+        const fixedText4 = document.getElementById("fixedText4").value;
+
+        const provinceName = provinceSelect.options[provinceSelect.selectedIndex].text;
+        const cityName = citySelect.options[citySelect.selectedIndex].text;
+        const countyName = countySelect.options[countySelect.selectedIndex].text;
+
+        const generatedText = `${cityName}${countyName}${serveName}\n${cityName}#${countyName} ${fixedText1}☎️☎️☎️${phoneNumber}，\n${serveContent}。\n#${countyName}${fixedText1} #${countyName}${fixedText2} #${countyName}${fixedText3} #${countyName}${fixedText4}`;
+
+        document.getElementById("generatedText").value = generatedText.trim();
+      }
+
+      function copyText() {
+        const generatedTextElement = document.getElementById("generatedText");
+        generatedTextElement.select();
+        document.execCommand("copy");
+        alert("文案已复制到剪贴板！");
+      }
+
+      function copyTitle() {
+        const serveNameElement = document.getElementById("serveName");
+        serveNameElement.select();
+        document.execCommand("copy");
+        alert("标题已复制到剪贴板！");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        populateProvinces();
+        populateCategories();
+      });
+    </script>
+  </body>
+</html>
