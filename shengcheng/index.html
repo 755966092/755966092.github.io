@@ -95,7 +95,6 @@
       </div>
       <div class="form-group">
         <label for="serveContent">服务内容：</label>
-
         <textarea type="text" id="serveContent" rows="5" cols="30"></textarea>
       </div>
       <div class="form-group">
@@ -252,6 +251,12 @@
         const generatedText = `${cityName}${countyName}${serveName}\n${cityName}#${countyName} ${fixedText1}☎️☎️☎️${phoneNumber}，\n${serveContent}。\n#${countyName}${fixedText1} #${countyName}${fixedText2} #${countyName}${fixedText3} #${countyName}${fixedText4}`;
 
         document.getElementById("generatedText").value = generatedText.trim();
+
+        // 存储数据到localStorage
+        localStorage.setItem("phoneNumber", phoneNumber);
+        localStorage.setItem("province", provinceSelect.value);
+        localStorage.setItem("city", citySelect.value);
+        localStorage.setItem("county", countySelect.value);
       }
 
       function copyText() {
@@ -268,9 +273,32 @@
         alert("标题已复制到剪贴板！");
       }
 
+      function loadCachedData() {
+        const phoneNumber = localStorage.getItem("phoneNumber");
+        const province = localStorage.getItem("province");
+        const city = localStorage.getItem("city");
+        const county = localStorage.getItem("county");
+
+        if (phoneNumber) {
+          document.getElementById("phoneNumber").value = phoneNumber;
+        }
+        if (province) {
+          document.getElementById("province").value = province;
+          updateCityOptions();
+          if (city) {
+            document.getElementById("city").value = city;
+            updateCountyOptions();
+            if (county) {
+              document.getElementById("county").value = county;
+            }
+          }
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         populateProvinces();
         populateCategories();
+        loadCachedData();
       });
     </script>
   </body>
