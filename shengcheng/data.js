@@ -1,6 +1,6 @@
 const categories = [
   {
-    name: "家电维修",
+    name: "空调维修",
     defaultTexts: {
       serveName: "空调维修上门服务",
       serveContent:
@@ -104,6 +104,18 @@ const categories = [
       fixedText1: "太阳能维修电话",
       fixedText2: "维修太阳能",
       fixedText3: "太阳能清洗",
+      fixedText4: "家政服务"
+    }
+  },
+  {
+    name: "家电维修",
+    defaultTexts: {
+      serveName: "家电维修上门服务",
+      serveContent:
+        "提供冰箱、洗衣机、空调、微波炉、电视机、太阳能、油烟机、燃气灶、电热水器等家用电器的维修服务。支持故障排查、零部件更换、清洗保养等。30分钟快速响应，就近安排，附近上门服务，专业|高效|诚信，有保障。",
+      fixedText1: "家电维修电话",
+      fixedText2: "维修家电",
+      fixedText3: "家电清洗",
       fixedText4: "家政服务"
     }
   }
