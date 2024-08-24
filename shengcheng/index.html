@@ -104,8 +104,14 @@
         <input type="text" id="phoneNumber" />
       </div>
       <div class="form-group">
+        <button onclick="generateText()">生成文案</button>
+        <button onclick="copyText()">复制文案</button>
+        <button onclick="copyTitle()">复制标题</button>
+      </div>
+
+      <div class="form-group">
         <label for="serveName">服务标题：</label>
-        <input type="text" id="serveName" readonly/>
+        <input type="text" id="serveName" readonly />
       </div>
       <div class="form-group">
         <label for="serveContent">服务内容：</label>
@@ -127,9 +133,7 @@
         <label for="fixedText4">标签四：</label>
         <input type="text" id="fixedText4" />
       </div>
-      <button onclick="generateText()">生成文案</button>
-      <button onclick="copyText()">复制文案</button>
-      <button onclick="copyTitle()">复制标题</button>
+
       <div class="form-group">
         <label for="generatedText">生成的文案：</label>
         <textarea id="generatedText" readonly></textarea>
