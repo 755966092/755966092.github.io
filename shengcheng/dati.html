@@ -2,29 +2,68 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <title>多题目 JSON 渲染示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>多题目 JSON 渲染示例 - 手机适配</title>
     <style>
+      /* 基础字体和布局 */
       body {
         font-family: Arial, sans-serif;
-        padding: 20px;
+        padding: 16px 12px;
+        margin: 0;
+        background-color: #fafafa;
+        color: #333;
+        line-height: 1.5;
       }
+
+      /* 容器样式 */
       .question-container {
-        margin-bottom: 30px;
+        padding: 20px;
+        margin-bottom: 24px;
         border-bottom: 1px solid #ddd;
         padding-bottom: 16px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
       }
+
+      /* 题目标题 */
       .question-title {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.15rem;
         margin-bottom: 12px;
       }
+
+      /* 答案样式 */
       .answer {
-        margin: 6px 0;
+        margin: 8px 0;
+        padding: 10px 14px;
         cursor: default;
+        border-radius: 6px;
+        background-color: #f5f5f5;
+        transition: background-color 0.2s ease;
+        font-size: 1rem;
       }
+      .answer:hover {
+        background-color: #e8f0fe;
+      }
+
+      /* 正确答案 */
       .answer.correct {
-        color: red;
-        font-weight: bold;
+        color: #c00;
+        font-weight: 600;
+        background-color: #ffe6e6;
+        border: 1px solid #c00;
+      }
+
+      /* 响应式字体调整（可选） */
+      @media (max-width: 480px) {
+        .question-title {
+          font-size: 1.05rem;
+        }
+        .answer {
+          font-size: 0.95rem;
+          padding: 8px 12px;
+        }
       }
     </style>
   </head>
@@ -32,7 +71,7 @@
     <div id="app"></div>
 
     <script>
-      // 多条题目 JSON 数据，数组格式示例
+      // 多条题目 JSON 数据示例
       const questionsData = [
         {
           Score: 0.5,
@@ -8246,31 +8285,24 @@
       const app = document.getElementById("app");
 
       questionsData.forEach((question, qIndex) => {
-        // 创建外层容器
         const container = document.createElement("div");
         container.className = "question-container";
 
-        // 题目标题
         const titleEl = document.createElement("div");
         titleEl.className = "question-title";
         titleEl.textContent = `${qIndex + 1}. ${question._Title}`;
         container.appendChild(titleEl);
 
-        // 正确答案索引
         const correctIndex = parseInt(question._RightAnswerIndexD, 10);
 
-        // 创建答案列表
         question._Answers.forEach((answer, idx) => {
           const answerEl = document.createElement("div");
           answerEl.className = "answer";
-          if (idx === correctIndex) {
-            answerEl.classList.add("correct");
-          }
+          if (idx === correctIndex) answerEl.classList.add("correct");
           answerEl.textContent = answer.label;
           container.appendChild(answerEl);
         });
 
-        // 把题目容器追加到页面
         app.appendChild(container);
       });
     </script>
