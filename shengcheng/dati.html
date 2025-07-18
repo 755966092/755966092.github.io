@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>答题</title>
+    <title>多题目 JSON 渲染示例 - 手机适配</title>
     <style>
       /* 基础字体和布局 */
       body {
@@ -8283,10 +8283,13 @@
         }
       ];
       const app = document.getElementById("app");
+      const STORAGE_KEY = "lastViewedQuestionIndex";
 
+      // 渲染页面，并给每个题目容器设置 data-index 方便定位
       questionsData.forEach((question, qIndex) => {
         const container = document.createElement("div");
         container.className = "question-container";
+        container.dataset.index = qIndex;
 
         const titleEl = document.createElement("div");
         titleEl.className = "question-title";
@@ -8305,6 +8308,51 @@
 
         app.appendChild(container);
       });
+
+      // 监听页面滚动事件以保存当前可视的题目索引
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            saveCurrentVisibleQuestion();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      /**
+       * 找当前视口最靠近顶部，且显示出来的题目索引，保存到 localStorage
+       */
+      function saveCurrentVisibleQuestion() {
+        const containers = document.querySelectorAll(".question-container");
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        for (let i = 0; i < containers.length; i++) {
+          const rect = containers[i].getBoundingClientRect();
+          // 题目距视口顶部距离在0到页面高度的区间内，认为是当前可见题目
+          if (rect.top >= 0 && rect.top < window.innerHeight) {
+            localStorage.setItem(STORAGE_KEY, containers[i].dataset.index);
+            break;
+          }
+        }
+      }
+
+      /**
+       * 页面加载时，从缓存读取上次的题目索引并滚动到对应题目
+       */
+      function scrollToLastViewedQuestion() {
+        const lastIndex = localStorage.getItem(STORAGE_KEY);
+        if (lastIndex !== null) {
+          const container = document.querySelector(`.question-container[data-index="${lastIndex}"]`);
+          if (container) {
+            container.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      }
+
+      // 页面加载完毕后执行滚动
+      window.addEventListener("load", scrollToLastViewedQuestion);
     </script>
   </body>
 </html>
