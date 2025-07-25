@@ -390,10 +390,10 @@ const Taobao: React.FC = () => {
           <Form.Item label="折后最低优惠券" name="discountMinCoupon" rules={[]}>
             <Input placeholder="输入折后最低优惠券" disabled={!discountValue} />
           </Form.Item>
-          <Form.Item label="价格位置" name="pricePosition" rules={[{ required: true, message: "请输入价格位置" }]}>
+          <Form.Item label="价格位置" name="pricePosition" rules={[]}>
             <Input placeholder="输入价格位置" />
           </Form.Item>
-          <Form.Item label="折后价格位置" name="discountPricePosition" rules={[{ required: true, message: "请输入折后价格位置" }]}>
+          <Form.Item label="折后价格位置" name="discountPricePosition" rules={[]}>
             <Input placeholder="输入折后价格位置" />
           </Form.Item>
           <Form.Item>
