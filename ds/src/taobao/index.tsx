@@ -24,9 +24,14 @@ const Taobao: React.FC = () => {
   const [arr, setArr] = useState<ResultRow[]>([]);
   const [excelFormula, setExcelFormula] = useState<string>("");
   const [manjian, setManjian] = useState<string>("");
+  const [discountArr, setDiscountArr] = useState<ResultRow[]>([]);
+  const [discountExcelFormula, setDiscountExcelFormula] = useState<string>("");
+  const [discountManjian, setDiscountManjian] = useState<string>("");
+
   useEffect(() => {
     form.setFieldsValue({
-      pricePosition: "D2"
+      pricePosition: "D2",
+      discountPricePosition: "E2"
     });
   }, []);
 
@@ -99,15 +104,22 @@ const Taobao: React.FC = () => {
         )
     },
     {
-      title: "折后等比优惠券",
+      title: "折后优惠券",
       dataIndex: "discountCoupon",
       key: "discountCoupon",
       render: (_: unknown, row: ResultRow) => {
         if (row.discountCoupon === undefined) return "";
         const rounded = Math.round(row.discountCoupon);
         const isRed = rounded % 10 === 0 || rounded % 10 === 1 || rounded % 10 === 9;
+        const isSelected = discountArr.some((item) => item.key === row.key);
         return (
-          <span style={isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : {}}>
+          <span
+            style={{
+              ...(isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : { padding: 10 }),
+              ...(isSelected ? { outline: "4px solid #52c41a" } : {})
+            }}
+            onClick={() => handleDiscountArr(row)}
+          >
             {rounded}
             <span style={{ fontSize: 12, marginLeft: 4 }}>({row.discountCoupon.toFixed(2)})</span>
           </span>
@@ -189,6 +201,44 @@ const Taobao: React.FC = () => {
       const newArr = arr.filter((_, index) => index !== existingIndex);
       generateExcelFormula(newArr);
       setArr(newArr);
+    }
+  };
+
+  // 生成折后excel公式
+  const generateDiscountExcelFormula = (arr: ResultRow[]) => {
+    if (arr.length === 0) {
+      setDiscountExcelFormula("");
+      setDiscountManjian("");
+      return;
+    }
+    const pricePosition = form.getFieldValue("pricePosition");
+    let formula = `=${pricePosition}`;
+    let manjian = "";
+    arr.forEach((row, idx) => {
+      if (idx === 0) {
+        formula += ` + IF(${pricePosition} <= ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)} `;
+        manjian += `满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
+      } else {
+        formula += `, IF(${pricePosition} <= ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)} `;
+        manjian += `, 满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
+      }
+    });
+    formula += ", " + (Math.round(arr[arr.length - 1].discountCoupon ?? 0) ?? 0) + ")".repeat(arr.length);
+    manjian += `, 满 ${Math.round(arr[arr.length - 1].discountPrice ?? 0)} 减 ${Math.round(arr[arr.length - 1].discountCoupon ?? 0)}`;
+    setDiscountExcelFormula(formula);
+    setDiscountManjian(manjian);
+  };
+
+  const handleDiscountArr = (record: ResultRow) => {
+    const existingIndex = discountArr.findIndex((item) => item.discountPrice === record.discountPrice);
+    if (existingIndex === -1) {
+      const newArr = [...discountArr, record].sort((a, b) => (a.discountPrice ?? 0) - (b.discountPrice ?? 0));
+      generateDiscountExcelFormula(newArr);
+      setDiscountArr(newArr);
+    } else {
+      const newArr = discountArr.filter((_, index) => index !== existingIndex);
+      generateDiscountExcelFormula(newArr);
+      setDiscountArr(newArr);
     }
   };
 
@@ -300,6 +350,22 @@ const Taobao: React.FC = () => {
           </div>
         </>
       )}
+      {discountArr.length > 0 && (
+        <>
+          <div style={{ marginBottom: 16, background: "#e6f7ff", padding: 12, fontFamily: "monospace" }}>
+            <b>折后优惠券Excel公式：</b>
+            <Text copyable style={{ userSelect: "all" }}>
+              {discountExcelFormula}
+            </Text>
+          </div>
+          <div style={{ marginBottom: 16, background: "#e6f7ff", padding: 12, fontFamily: "monospace" }}>
+            <b>折后满减：</b>
+            <Text copyable style={{ userSelect: "all" }}>
+              {discountManjian}
+            </Text>
+          </div>
+        </>
+      )}
       <Form
         form={form}
         layout="inline"
@@ -326,6 +392,9 @@ const Taobao: React.FC = () => {
           </Form.Item>
           <Form.Item label="价格位置" name="pricePosition" rules={[{ required: true, message: "请输入价格位置" }]}>
             <Input placeholder="输入价格位置" />
+          </Form.Item>
+          <Form.Item label="折后价格位置" name="discountPricePosition" rules={[{ required: true, message: "请输入折后价格位置" }]}>
+            <Input placeholder="输入折后价格位置" />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
