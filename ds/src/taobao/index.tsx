@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Table } from "antd";
+import { Form, Input, Button, Table, Typography } from "antd";
 
 type ResultRow = {
   key: number;
@@ -14,10 +14,14 @@ type ResultRow = {
   discountFinalDiff?: number;
 };
 
+const { Text } = Typography;
 const Taobao: React.FC = () => {
   const [result, setResult] = useState<ResultRow[]>([]);
   const [form] = Form.useForm();
   const [discountValue, setDiscountValue] = useState<string>("");
+  const [arr, setArr] = useState<ResultRow[]>([]);
+  const [excelFormula, setExcelFormula] = useState<string>("");
+  const [manjian, setManjian] = useState<string>("");
 
   const columns = [
     {
@@ -44,7 +48,10 @@ const Taobao: React.FC = () => {
         const rounded = Math.round(row.coupon);
         const isRed = rounded % 10 === 0 || rounded % 10 === 1 || rounded % 10 === 9;
         return (
-          <span style={isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : {}}>
+          <span
+            style={isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : {}}
+            onClick={() => handleArr(row)}
+          >
             {rounded}
             <span style={{ fontSize: 12, marginLeft: 4 }}>({row.coupon.toFixed(2)})</span>
           </span>
@@ -141,12 +148,41 @@ const Taobao: React.FC = () => {
     }
   ];
 
+  const generateExcelFormula = (arr: ResultRow[]) => {
+    if (arr.length === 0) return "";
+    let formula = "=B4";
+    let manjian = "";
+    arr.forEach((row, idx) => {
+      if (idx === 0) {
+        formula += ` + IF(B4 <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        manjian += `满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
+      } else {
+        formula += `, IF(B4 <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        manjian += `, 满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
+      }
+    });
+    formula += ", " + (Math.round(arr[arr.length - 1].coupon ?? 0) ?? 0) + ")".repeat(arr.length);
+    manjian += `, 满 ${Math.round(arr[arr.length - 1].original)} 减 ${Math.round(arr[arr.length - 1].coupon ?? 0)}`;
+    setManjian(manjian);
+    setExcelFormula(formula);
+  };
+
+  const handleArr = (record: ResultRow) => {
+    if (!arr.find((item) => item.original === record.original)) {
+      const newArr = [...arr, record].sort((a, b) => a.original - b.original);
+      generateExcelFormula(newArr);
+      setArr(newArr);
+    }
+  };
+
   const onFinish = (values: { minCoupon?: string; price: string; discount?: string; discountMinCoupon?: string }) => {
     let prices = values.price
       .split(" ")
       .map((v) => Number(v))
       .filter((v) => !isNaN(v) && v > 0);
 
+    setArr([]);
+    setExcelFormula("");
     prices = Array.from(new Set(prices)).sort((a, b) => a - b);
 
     const min = values.minCoupon ? Number(values.minCoupon) : undefined;
@@ -231,6 +267,18 @@ const Taobao: React.FC = () => {
 
   return (
     <div>
+      {arr.length > 0 && (
+        <>
+          <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
+            <b>Excel公式：</b>
+            <Text copyable style={{ userSelect: "all" }}>{excelFormula}</Text>
+          </div>
+          <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
+            <b>满减：</b>
+            <Text copyable style={{ userSelect: "all" }}>{manjian}</Text>
+          </div>
+        </>
+      )}
       <Form
         form={form}
         layout="inline"
@@ -249,10 +297,7 @@ const Taobao: React.FC = () => {
           name="discount"
           rules={[{ pattern: /^(100|[1-9]?\d)?$/, message: "请输入1-100之间的数字" }]}
         >
-          <Input
-            placeholder="如: 88 表示88折"
-            onChange={e => setDiscountValue(e.target.value)}
-          />
+          <Input placeholder="如: 88 表示88折" onChange={(e) => setDiscountValue(e.target.value)} />
         </Form.Item>
         <Form.Item label="折后最低优惠券" name="discountMinCoupon" rules={[]}>
           <Input placeholder="输入折后最低优惠券" disabled={!discountValue} />
