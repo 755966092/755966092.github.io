@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Form, Input, Button, Table, Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { Form, Input, Button, Table, Typography, Space } from "antd";
 
 type ResultRow = {
   key: number;
@@ -12,16 +12,23 @@ type ResultRow = {
   discountFinal?: number;
   discountDiff?: number;
   discountFinalDiff?: number;
+  pricePosition?: string;
 };
 
 const { Text } = Typography;
 const Taobao: React.FC = () => {
   const [result, setResult] = useState<ResultRow[]>([]);
   const [form] = Form.useForm();
+  
   const [discountValue, setDiscountValue] = useState<string>("");
   const [arr, setArr] = useState<ResultRow[]>([]);
   const [excelFormula, setExcelFormula] = useState<string>("");
   const [manjian, setManjian] = useState<string>("");
+  useEffect(() => {
+    form.setFieldsValue({
+      pricePosition: "D2"
+    });
+  }, []);
 
   const columns = [
     {
@@ -150,14 +157,15 @@ const Taobao: React.FC = () => {
 
   const generateExcelFormula = (arr: ResultRow[]) => {
     if (arr.length === 0) return "";
-    let formula = "=B4";
+    const pricePosition = form.getFieldValue("pricePosition");
+    let formula = `=${pricePosition}`;
     let manjian = "";
     arr.forEach((row, idx) => {
       if (idx === 0) {
-        formula += ` + IF(B4 <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        formula += ` + IF(${pricePosition} <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
         manjian += `满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
       } else {
-        formula += `, IF(B4 <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        formula += `, IF(${pricePosition} <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
         manjian += `, 满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
       }
     });
@@ -271,11 +279,15 @@ const Taobao: React.FC = () => {
         <>
           <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
             <b>Excel公式：</b>
-            <Text copyable style={{ userSelect: "all" }}>{excelFormula}</Text>
+            <Text copyable style={{ userSelect: "all" }}>
+              {excelFormula}
+            </Text>
           </div>
           <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
             <b>满减：</b>
-            <Text copyable style={{ userSelect: "all" }}>{manjian}</Text>
+            <Text copyable style={{ userSelect: "all" }}>
+              {manjian}
+            </Text>
           </div>
         </>
       )}
@@ -286,27 +298,32 @@ const Taobao: React.FC = () => {
         style={{ marginBottom: 24 }}
         initialValues={{ minCoupon: "", price: "", discount: "", discountMinCoupon: "" }}
       >
-        <Form.Item label="价格(空格分隔)" name="price" rules={[{ required: true, message: "请输入价格" }]}>
-          <Input placeholder="如: 50 100 200" />
-        </Form.Item>
-        <Form.Item label="最低优惠券" name="minCoupon" rules={[]}>
-          <Input placeholder="输入最低优惠券" />
-        </Form.Item>
-        <Form.Item
-          label="折扣"
-          name="discount"
-          rules={[{ pattern: /^(100|[1-9]?\d)?$/, message: "请输入1-100之间的数字" }]}
-        >
-          <Input placeholder="如: 88 表示88折" onChange={(e) => setDiscountValue(e.target.value)} />
-        </Form.Item>
-        <Form.Item label="折后最低优惠券" name="discountMinCoupon" rules={[]}>
-          <Input placeholder="输入折后最低优惠券" disabled={!discountValue} />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            计算
-          </Button>
-        </Form.Item>
+        <Space wrap>
+          <Form.Item label="价格(空格分隔)" name="price" rules={[{ required: true, message: "请输入价格" }]}>
+            <Input placeholder="如: 50 100 200" />
+          </Form.Item>
+          <Form.Item label="最低优惠券" name="minCoupon" rules={[]}>
+            <Input placeholder="输入最低优惠券" />
+          </Form.Item>
+          <Form.Item
+            label="折扣"
+            name="discount"
+            rules={[{ pattern: /^(100|[1-9]?\d)?$/, message: "请输入1-100之间的数字" }]}
+          >
+            <Input placeholder="如: 88 表示88折" onChange={(e) => setDiscountValue(e.target.value)} />
+          </Form.Item>
+          <Form.Item label="折后最低优惠券" name="discountMinCoupon" rules={[]}>
+            <Input placeholder="输入折后最低优惠券" disabled={!discountValue} />
+          </Form.Item>
+          <Form.Item label="价格位置" name="pricePosition" rules={[{ required: true, message: "请输入价格位置" }]}>
+            <Input placeholder="输入价格位置" />
+          </Form.Item>
+          <Form.Item>
+            <Button type="primary" htmlType="submit">
+              计算
+            </Button>
+          </Form.Item>
+        </Space>
       </Form>
 
       <Table
