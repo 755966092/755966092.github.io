@@ -19,7 +19,7 @@ const { Text } = Typography;
 const Taobao: React.FC = () => {
   const [result, setResult] = useState<ResultRow[]>([]);
   const [form] = Form.useForm();
-  
+
   const [discountValue, setDiscountValue] = useState<string>("");
   const [arr, setArr] = useState<ResultRow[]>([]);
   const [excelFormula, setExcelFormula] = useState<string>("");
@@ -54,9 +54,13 @@ const Taobao: React.FC = () => {
         if (row.coupon === undefined) return "";
         const rounded = Math.round(row.coupon);
         const isRed = rounded % 10 === 0 || rounded % 10 === 1 || rounded % 10 === 9;
+        const isSelected = arr.some((item) => item.key === row.key);
         return (
           <span
-            style={isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : {}}
+            style={{
+              ...(isRed ? { backgroundColor: "red", color: "white", padding: 10, fontWeight: 800 } : { padding: 10 }),
+              ...(isSelected ? { outline: "4px solid #1890ff" } : {})
+            }}
             onClick={() => handleArr(row)}
           >
             {rounded}
@@ -176,8 +180,13 @@ const Taobao: React.FC = () => {
   };
 
   const handleArr = (record: ResultRow) => {
-    if (!arr.find((item) => item.original === record.original)) {
+    const existingIndex = arr.findIndex((item) => item.original === record.original);
+    if (existingIndex === -1) {
       const newArr = [...arr, record].sort((a, b) => a.original - b.original);
+      generateExcelFormula(newArr);
+      setArr(newArr);
+    } else {
+      const newArr = arr.filter((_, index) => index !== existingIndex);
       generateExcelFormula(newArr);
       setArr(newArr);
     }
