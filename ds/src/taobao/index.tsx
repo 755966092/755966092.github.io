@@ -127,7 +127,7 @@ const Taobao: React.FC = () => {
       }
     },
     {
-      title: "折后最终价",
+      title: "活动价",
       dataIndex: "discountFinal",
       key: "discountFinal",
       onCell: () => ({ style: { backgroundColor: "yellow" } }),
@@ -156,7 +156,7 @@ const Taobao: React.FC = () => {
         )
     },
     {
-      title: "折后最终价-原价",
+      title: "活动价-原价",
       dataIndex: "discountFinalDiff",
       key: "discountFinalDiff",
       render: (_: unknown, row: ResultRow) =>
@@ -174,19 +174,26 @@ const Taobao: React.FC = () => {
   const generateExcelFormula = (arr: ResultRow[]) => {
     if (arr.length === 0) return "";
     const pricePosition = form.getFieldValue("pricePosition");
-    let formula = `=${pricePosition}`;
+    let formula = `=${pricePosition} - `;
     let manjian = "";
-    arr.forEach((row, idx) => {
+    
+    // 按原价从大到小排序
+    const sortedArr = [...arr].sort((a, b) => b.original - a.original);
+    
+    sortedArr.forEach((row, idx) => {
       if (idx === 0) {
-        formula += ` + IF(${pricePosition} <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        formula += `IF(${pricePosition} > ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)}`;
         manjian += `满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
       } else {
-        formula += `, IF(${pricePosition} <= ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)} `;
+        formula += `,\n  IF(${pricePosition} > ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)}`;
         manjian += `, 满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
       }
     });
-    formula += ", " + (Math.round(arr[arr.length - 1].coupon ?? 0) ?? 0) + ")".repeat(arr.length);
-    manjian += `, 满 ${Math.round(arr[arr.length - 1].original)} 减 ${Math.round(arr[arr.length - 1].coupon ?? 0)}`;
+    
+    // 添加最后的默认值 0
+    formula += `,\n  ${Math.round(sortedArr[sortedArr.length - 1].coupon ?? 0)})`.repeat(sortedArr.length);
+    manjian += `, 满 ${Math.round(sortedArr[sortedArr.length - 1].original)} 减 ${Math.round(sortedArr[sortedArr.length - 1].coupon ?? 0)}`;
+    
     setManjian(manjian);
     setExcelFormula(formula);
   };
@@ -212,19 +219,26 @@ const Taobao: React.FC = () => {
       return;
     }
     const pricePosition = form.getFieldValue("pricePosition");
-    let formula = `=${pricePosition}`;
+    let formula = `=${pricePosition} - `;
     let manjian = "";
-    arr.forEach((row, idx) => {
+    
+    // 按折后价从大到小排序
+    const sortedArr = [...arr].sort((a, b) => (b.discountPrice ?? 0) - (a.discountPrice ?? 0));
+    
+    sortedArr.forEach((row, idx) => {
       if (idx === 0) {
-        formula += ` + IF(${pricePosition} <= ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)} `;
+        formula += `IF(${pricePosition} > ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)}`;
         manjian += `满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
       } else {
-        formula += `, IF(${pricePosition} <= ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)} `;
+        formula += `,\n  IF(${pricePosition} > ${Math.round(row.discountPrice ?? 0)}, ${Math.round(row.discountCoupon ?? 0)}`;
         manjian += `, 满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
       }
     });
-    formula += ", " + (Math.round(arr[arr.length - 1].discountCoupon ?? 0) ?? 0) + ")".repeat(arr.length);
-    manjian += `, 满 ${Math.round(arr[arr.length - 1].discountPrice ?? 0)} 减 ${Math.round(arr[arr.length - 1].discountCoupon ?? 0)}`;
+    
+    // 添加最后的默认值 0
+    formula += `,\n  ${Math.round(sortedArr[sortedArr.length - 1].discountCoupon ?? 0)})`.repeat(sortedArr.length);
+    manjian += `, 满 ${Math.round(sortedArr[sortedArr.length - 1].discountPrice ?? 0)} 减 ${Math.round(sortedArr[sortedArr.length - 1].discountCoupon ?? 0)}`;
+    
     setDiscountExcelFormula(formula);
     setDiscountManjian(manjian);
   };
