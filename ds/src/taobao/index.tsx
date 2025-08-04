@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, Table, Typography, Space } from "antd";
+import { Form, Input, Button, Table, Space } from "antd";
 
 type ResultRow = {
   key: number;
@@ -14,19 +14,22 @@ type ResultRow = {
   discountFinalDiff?: number;
   pricePosition?: string;
 };
+type ManjianRow = {
+  key: number;
+  condition: number;
+  amount: number;
+  text: string;
+};
 
-const { Text } = Typography;
 const Taobao: React.FC = () => {
   const [result, setResult] = useState<ResultRow[]>([]);
   const [form] = Form.useForm();
 
   const [discountValue, setDiscountValue] = useState<string>("");
   const [arr, setArr] = useState<ResultRow[]>([]);
-  const [excelFormula, setExcelFormula] = useState<string>("");
-  const [manjian, setManjian] = useState<string>("");
+  const [manjianTable, setManjianTable] = useState<ManjianRow[]>([]);
   const [discountArr, setDiscountArr] = useState<ResultRow[]>([]);
-  const [discountExcelFormula, setDiscountExcelFormula] = useState<string>("");
-  const [discountManjian, setDiscountManjian] = useState<string>("");
+  const [discountManjianTable, setDiscountManjianTable] = useState<ManjianRow[]>([]);
 
   useEffect(() => {
     form.setFieldsValue({
@@ -171,95 +174,101 @@ const Taobao: React.FC = () => {
     }
   ];
 
-  const generateExcelFormula = (arr: ResultRow[]) => {
-    if (arr.length === 0) return "";
-    const pricePosition = form.getFieldValue("pricePosition");
-    let formula = `=${pricePosition} - `;
-    let manjian = "";
+  const manjianColumns = [
+    {
+      title: "满减条件",
+      dataIndex: "condition",
+      key: "condition"
+    },
+    {
+      title: "满减金额",
+      dataIndex: "amount",
+      key: "amount"
+    },
+    {
+      title: "文案",
+      dataIndex: "text",
+      key: "text"
+    }
+  ];
+  const manjianColumns2 = [
+    {
+      title: "折后满减条件",
+      dataIndex: "condition",
+      key: "condition"
+    },
+    {
+      title: "折后满减金额",
+      dataIndex: "amount",
+      key: "amount"
+    },
+    {
+      title: "文案",
+      dataIndex: "text",
+      key: "text"
+    }
+  ];
+
+  const generateManjianTable = (arr: ResultRow[]) => {
+    if (arr.length === 0) {
+      setManjianTable([]);
+      return;
+    }
 
     // 按原价从大到小排序
-    const sortedArr = [...arr].sort((a, b) => b.original - a.original);
+    const sortedArr = [...arr].sort((a, b) => a.original - b.original);
 
-    sortedArr.forEach((row, idx) => {
-      if (idx === 0) {
-        formula += `IF(${pricePosition} > ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)}`;
-        manjian += `满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
-      } else {
-        formula += `,\n  IF(${pricePosition} > ${Math.round(row.original)}, ${Math.round(row.coupon ?? 0)}`;
-        manjian += `, 满 ${Math.round(row.original)} 减 ${Math.round(row.coupon ?? 0)}`;
-      }
-    });
+    const tableData = sortedArr.map((row, idx) => ({
+      key: idx,
+      condition: Math.round(row.original),
+      amount: Math.round(row.coupon ?? 0),
+      text: `满${Math.round(row.original)}减${Math.round(row.coupon ?? 0)}`
+    }));
 
-    // 添加最后的默认值 0
-    formula += `,\n  ${Math.round(sortedArr[sortedArr.length - 1].coupon ?? 0)})`.repeat(sortedArr.length);
-    manjian += `, 满 ${Math.round(sortedArr[sortedArr.length - 1].original)} 减 ${Math.round(
-      sortedArr[sortedArr.length - 1].coupon ?? 0
-    )}`;
+    setManjianTable(tableData);
+  };
 
-    setManjian(manjian);
-    setExcelFormula(formula);
+  const generateDiscountManjianTable = (arr: ResultRow[]) => {
+    if (arr.length === 0) {
+      setDiscountManjianTable([]);
+      return;
+    }
+
+    // 按折后价从大到小排序
+    const sortedArr = [...arr].sort((a, b) => (a.discountPrice ?? 0) - (b.discountPrice ?? 0));
+
+    const tableData = sortedArr.map((row, idx) => ({
+      key: idx,
+      condition: Math.round(row.discountPrice ?? 0),
+      amount: Math.round(row.discountCoupon ?? 0),
+      text: `满${Math.round(row.discountPrice ?? 0)}减${Math.round(row.discountCoupon ?? 0)}`
+    }));
+
+    setDiscountManjianTable(tableData);
   };
 
   const handleArr = (record: ResultRow) => {
     const existingIndex = arr.findIndex((item) => item.original === record.original);
     if (existingIndex === -1) {
       const newArr = [...arr, record].sort((a, b) => a.original - b.original);
-      generateExcelFormula(newArr);
+      generateManjianTable(newArr);
       setArr(newArr);
     } else {
       const newArr = arr.filter((_, index) => index !== existingIndex);
-      generateExcelFormula(newArr);
+      generateManjianTable(newArr);
       setArr(newArr);
     }
-  };
-
-  // 生成折后excel公式
-  const generateDiscountExcelFormula = (arr: ResultRow[]) => {
-    if (arr.length === 0) {
-      setDiscountExcelFormula("");
-      setDiscountManjian("");
-      return;
-    }
-    const pricePosition = form.getFieldValue("pricePosition");
-    let formula = `=${pricePosition} - `;
-    let manjian = "";
-
-    // 按折后价从大到小排序
-    const sortedArr = [...arr].sort((a, b) => (b.discountPrice ?? 0) - (a.discountPrice ?? 0));
-
-    sortedArr.forEach((row, idx) => {
-      if (idx === 0) {
-        formula += `IF(${pricePosition} > ${Math.round(row.discountPrice ?? 0)}, ${Math.round(
-          row.discountCoupon ?? 0
-        )}`;
-        manjian += `满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
-      } else {
-        formula += `,\n  IF(${pricePosition} > ${Math.round(row.discountPrice ?? 0)}, ${Math.round(
-          row.discountCoupon ?? 0
-        )}`;
-        manjian += `, 满 ${Math.round(row.discountPrice ?? 0)} 减 ${Math.round(row.discountCoupon ?? 0)}`;
-      }
-    });
-
-    // 添加最后的默认值 0
-    formula += `,\n  ${Math.round(sortedArr[sortedArr.length - 1].discountCoupon ?? 0)})`.repeat(sortedArr.length);
-    manjian += `, 满 ${Math.round(sortedArr[sortedArr.length - 1].discountPrice ?? 0)} 减 ${Math.round(
-      sortedArr[sortedArr.length - 1].discountCoupon ?? 0
-    )}`;
-
-    setDiscountExcelFormula(formula);
-    setDiscountManjian(manjian);
   };
 
   const handleDiscountArr = (record: ResultRow) => {
     const existingIndex = discountArr.findIndex((item) => item.discountPrice === record.discountPrice);
     if (existingIndex === -1) {
       const newArr = [...discountArr, record].sort((a, b) => (a.discountPrice ?? 0) - (b.discountPrice ?? 0));
-      generateDiscountExcelFormula(newArr);
+      generateDiscountManjianTable(newArr);
       setDiscountArr(newArr);
     } else {
       const newArr = discountArr.filter((_, index) => index !== existingIndex);
-      generateDiscountExcelFormula(newArr);
+      generateDiscountManjianTable(newArr);
       setDiscountArr(newArr);
     }
   };
@@ -273,10 +282,8 @@ const Taobao: React.FC = () => {
     // 清空已选中的表格项
     setArr([]);
     setDiscountArr([]);
-    setExcelFormula("");
-    setDiscountExcelFormula("");
-    setManjian("");
-    setDiscountManjian("");
+    setManjianTable([]);
+    setDiscountManjianTable([]);
     prices = Array.from(new Set(prices)).sort((a, b) => a - b);
 
     const min = values.minCoupon ? Number(values.minCoupon) : undefined;
@@ -361,37 +368,32 @@ const Taobao: React.FC = () => {
 
   return (
     <div>
-      {arr.length > 0 && (
-        <>
-          <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
-            <b>Excel公式：</b>
-            <Text copyable style={{ userSelect: "all" }}>
-              {excelFormula}
-            </Text>
-          </div>
-          <div style={{ marginBottom: 16, background: "#f6ffed", padding: 12, fontFamily: "monospace" }}>
-            <b>满减：</b>
-            <Text copyable style={{ userSelect: "all" }}>
-              {manjian}
-            </Text>
-          </div>
-        </>
+      {manjianTable.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <h3>满减规则表</h3>
+          <Table
+            columns={manjianColumns}
+            dataSource={[{ key: 0, condition: "0", amount: 0, text: "满0减0" }, ...manjianTable]}
+            pagination={false}
+            bordered
+            size="small"
+            style={{ maxWidth: 600 }}
+          />
+        </div>
       )}
-      {discountArr.length > 0 && (
-        <>
-          <div style={{ marginBottom: 16, background: "#e6f7ff", padding: 12, fontFamily: "monospace" }}>
-            <b>折后优惠券Excel公式：</b>
-            <Text copyable style={{ userSelect: "all" }}>
-              {discountExcelFormula}
-            </Text>
-          </div>
-          <div style={{ marginBottom: 16, background: "#e6f7ff", padding: 12, fontFamily: "monospace" }}>
-            <b>折后满减：</b>
-            <Text copyable style={{ userSelect: "all" }}>
-              {discountManjian}
-            </Text>
-          </div>
-        </>
+
+      {discountManjianTable.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <h3>折后满减规则表</h3>
+          <Table
+            columns={manjianColumns2}
+            dataSource={[{ key: 0, condition: "0", amount: 0, text: "满0减0" }, ...discountManjianTable]}
+            pagination={false}
+            bordered
+            size="small"
+            style={{ maxWidth: 600 }}
+          />
+        </div>
       )}
       <Form
         form={form}
