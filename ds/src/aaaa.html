@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝价格计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-section {
+            margin-bottom: 24px;
+            padding: 16px;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .form-item {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+        }
+
+        .form-item label {
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-item input {
+            padding: 8px 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-item input:focus {
+            outline: none;
+            border-color: #1890ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+
+        .form-item input:disabled {
+            background-color: #f5f5f5;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #1890ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #40a9ff;
+        }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+
+        .table-container {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .table-title {
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .copy-btn {
+            margin-bottom: 16px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #d9d9d9;
+            font-size: 12px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #d9d9d9;
+        }
+
+        th {
+            background-color: #fafafa;
+            font-weight: 500;
+        }
+
+        .main-table {
+            max-width: 1200px;
+            background: #fffbe6;
+            border: 1px solid #d9d9d9;
+        }
+
+        .main-table th, .main-table td {
+            padding: 12px 8px;
+            font-size: 14px;
+        }
+
+        .yellow-bg {
+            background-color: yellow;
+        }
+
+        .clickable {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .clickable:hover {
+            opacity: 0.8;
+        }
+
+        .red-bg {
+            background-color: red;
+            color: white;
+            font-weight: 800;
+        }
+
+        .selected-blue {
+            outline: 4px solid #1890ff;
+        }
+
+        .selected-green {
+            outline: 4px solid #52c41a;
+        }
+
+        .decimal {
+            font-size: 12px;
+            color: #888;
+            margin-left: 4px;
+        }
+
+        .message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 16px;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .message.success {
+            background-color: #52c41a;
+        }
+
+        .message.error {
+            background-color: #ff4d4f;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="manjianTable" class="table-container hidden">
+            <h3 class="table-title">满减规则表</h3>
+            <button class="btn btn-primary btn-small copy-btn" onclick="copyTableContent('manjian')">
+                📋 复制表格
+            </button>
+            <table id="manjianTableContent">
+                <thead>
+                    <tr>
+                        <th>满减条件</th>
+                        <th>满减金额</th>
+                        <th>文案</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="discountManjianTable" class="table-container hidden">
+            <h3 class="table-title">折后满减规则表</h3>
+            <button class="btn btn-primary btn-small copy-btn" onclick="copyTableContent('discountManjian')">
+                📋 复制表格
+            </button>
+            <table id="discountManjianTableContent">
+                <thead>
+                    <tr>
+                        <th>折后满减条件</th>
+                        <th>折后满减金额</th>
+                        <th>文案</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="form-section">
+            <form id="priceForm">
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="price">价格(空格分隔)</label>
+                        <input type="text" id="price" name="price" placeholder="如: 50 100 200" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="minCoupon">最低优惠券</label>
+                        <input type="number" id="minCoupon" name="minCoupon" placeholder="输入最低优惠券">
+                    </div>
+                    <div class="form-item">
+                        <label for="discount">折扣</label>
+                        <input type="number" id="discount" name="discount" placeholder="如: 88 表示88折" min="1" max="100" onchange="handleDiscountChange()">
+                    </div>
+                    <div class="form-item">
+                        <label for="discountMinCoupon">折后最低优惠券</label>
+                        <input type="number" id="discountMinCoupon" name="discountMinCoupon" placeholder="输入折后最低优惠券" disabled>
+                    </div>
+                    <div class="form-item">
+                        <label for="pricePosition">价格位置</label>
+                        <input type="text" id="pricePosition" name="pricePosition" placeholder="输入价格位置" value="D2">
+                    </div>
+                    <div class="form-item">
+                        <label for="discountPricePosition">折后价格位置</label>
+                        <input type="text" id="discountPricePosition" name="discountPricePosition" placeholder="输入折后价格位置" value="E2">
+                    </div>
+                    <div class="form-item">
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn btn-primary">计算</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <table id="resultTable" class="main-table hidden">
+            <thead>
+                <tr>
+                    <th class="yellow-bg">原价</th>
+                    <th>加成比例</th>
+                    <th>加成金额</th>
+                    <th class="yellow-bg">最终价格</th>
+                    <th>折后价</th>
+                    <th>折后优惠券</th>
+                    <th class="yellow-bg">活动价</th>
+                    <th>折后价-原价</th>
+                    <th>活动价-原价</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        let result = [];
+        let arr = [];
+        let discountArr = [];
+        let manjianTable = [];
+        let discountManjianTable = [];
+
+        function handleDiscountChange() {
+            const discountInput = document.getElementById('discount');
+            const discountMinCouponInput = document.getElementById('discountMinCoupon');
+            discountMinCouponInput.disabled = !discountInput.value;
+        }
+
+        function showMessage(text, type = 'success') {
+            const message = document.createElement('div');
+            message.className = `message ${type}`;
+            message.textContent = text;
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                message.remove();
+            }, 3000);
+        }
+
+        function generateManjianTable(arr) {
+            if (arr.length === 0) {
+                manjianTable = [];
+                document.getElementById('manjianTable').classList.add('hidden');
+                return;
+            }
+
+            const sortedArr = [...arr].sort((a, b) => a.original - b.original);
+            manjianTable = sortedArr.map((row, idx) => ({
+                key: idx,
+                condition: Math.round(row.original),
+                amount: Math.round(row.coupon || 0),
+                text: `满${Math.round(row.original)}减${Math.round(row.coupon || 0)}`
+            }));
+
+            renderManjianTable();
+        }
+
+        function generateDiscountManjianTable(arr) {
+            if (arr.length === 0) {
+                discountManjianTable = [];
+                document.getElementById('discountManjianTable').classList.add('hidden');
+                return;
+            }
+
+            const sortedArr = [...arr].sort((a, b) => (a.discountPrice || 0) - (b.discountPrice || 0));
+            discountManjianTable = sortedArr.map((row, idx) => ({
+                key: idx,
+                condition: Math.round(row.discountPrice || 0),
+                amount: Math.round(row.discountCoupon || 0),
+                text: `满${Math.round(row.discountPrice || 0)}减${Math.round(row.discountCoupon || 0)}`
+            }));
+
+            renderDiscountManjianTable();
+        }
+
+        function renderManjianTable() {
+            const tbody = document.querySelector('#manjianTableContent tbody');
+            tbody.innerHTML = '';
+            
+            const rows = [
+                { condition: "0", amount: 0, text: "满0减0" },
+                ...manjianTable
+            ];
+            
+            rows.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.condition}</td>
+                    <td>${row.amount}</td>
+                    <td>${row.text}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            
+            document.getElementById('manjianTable').classList.remove('hidden');
+        }
+
+        function renderDiscountManjianTable() {
+            const tbody = document.querySelector('#discountManjianTableContent tbody');
+            tbody.innerHTML = '';
+            
+            const rows = [
+                { condition: "0", amount: 0, text: "满0减0" },
+                ...discountManjianTable
+            ];
+            
+            rows.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.condition}</td>
+                    <td>${row.amount}</td>
+                    <td>${row.text}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            
+            document.getElementById('discountManjianTable').classList.remove('hidden');
+        }
+
+        function handleArr(record) {
+            const existingIndex = arr.findIndex(item => item.original === record.original);
+            if (existingIndex === -1) {
+                const newArr = [...arr, record].sort((a, b) => a.original - b.original);
+                generateManjianTable(newArr);
+                arr = newArr;
+            } else {
+                const newArr = arr.filter((_, index) => index !== existingIndex);
+                generateManjianTable(newArr);
+                arr = newArr;
+            }
+            renderResultTable();
+        }
+
+        function handleDiscountArr(record) {
+            const existingIndex = discountArr.findIndex(item => item.discountPrice === record.discountPrice);
+            if (existingIndex === -1) {
+                const newArr = [...discountArr, record].sort((a, b) => (a.discountPrice || 0) - (b.discountPrice || 0));
+                generateDiscountManjianTable(newArr);
+                discountArr = newArr;
+            } else {
+                const newArr = discountArr.filter((_, index) => index !== existingIndex);
+                generateDiscountManjianTable(newArr);
+                discountArr = newArr;
+            }
+            renderResultTable();
+        }
+
+        function renderResultTable() {
+            const tbody = document.querySelector('#resultTable tbody');
+            tbody.innerHTML = '';
+            
+            result.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                const isSelected = arr.some(item => item.key === row.key);
+                const isDiscountSelected = discountArr.some(item => item.key === row.key);
+                
+                let couponCell = '';
+                if (row.coupon !== undefined) {
+                    const rounded = Math.round(row.coupon);
+                    const isRed = rounded % 10 === 0 || rounded % 10 === 1 || rounded % 10 === 9;
+                    const classes = ['clickable'];
+                    if (isRed) classes.push('red-bg');
+                    if (isSelected) classes.push('selected-blue');
+                    
+                    couponCell = `
+                        <span class="${classes.join(' ')}" onclick="handleArr(${JSON.stringify(row).replace(/"/g, '&quot;')})">
+                            ${rounded}
+                            <span class="decimal">(${row.coupon.toFixed(2)})</span>
+                        </span>
+                    `;
+                }
+                
+                let discountCouponCell = '';
+                if (row.discountCoupon !== undefined) {
+                    const rounded = Math.round(row.discountCoupon);
+                    const isRed = rounded % 10 === 0 || rounded % 10 === 1 || rounded % 10 === 9;
+                    const classes = ['clickable'];
+                    if (isRed) classes.push('red-bg');
+                    if (isDiscountSelected) classes.push('selected-green');
+                    
+                    discountCouponCell = `
+                        <span class="${classes.join(' ')}" onclick="handleDiscountArr(${JSON.stringify(row).replace(/"/g, '&quot;')})">
+                            ${rounded}
+                            <span class="decimal">(${row.discountCoupon.toFixed(2)})</span>
+                        </span>
+                    `;
+                }
+                
+                tr.innerHTML = `
+                    <td class="yellow-bg">${row.original}</td>
+                    <td>${row.ratio !== undefined ? row.ratio.toFixed(2) + 'x' : ''}</td>
+                    <td>${couponCell}</td>
+                    <td class="yellow-bg">
+                        ${row.final !== undefined ? 
+                            `${Math.round(row.final)}<span class="decimal">(${row.final.toFixed(2)})</span>` : 
+                            ''}
+                    </td>
+                    <td>
+                        ${row.discountPrice !== undefined ? 
+                            `${Math.round(row.discountPrice)}<span class="decimal">(${row.discountPrice.toFixed(2)})</span>` : 
+                            ''}
+                    </td>
+                    <td>${discountCouponCell}</td>
+                    <td class="yellow-bg">
+                        ${row.discountFinal !== undefined ? 
+                            `${Math.round(row.discountFinal)}<span class="decimal">(${row.discountFinal.toFixed(2)})</span>` : 
+                            ''}
+                    </td>
+                    <td>
+                        ${row.discountDiff !== undefined ? 
+                            `${Math.round(row.discountDiff)}<span class="decimal">(${row.discountDiff.toFixed(2)})</span>` : 
+                            ''}
+                    </td>
+                    <td>
+                        ${row.discountFinalDiff !== undefined ? 
+                            `${Math.round(row.discountFinalDiff)}<span class="decimal">(${row.discountFinalDiff.toFixed(2)})</span>` : 
+                            ''}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            
+            document.getElementById('resultTable').classList.remove('hidden');
+        }
+
+        function copyTableContent(type) {
+            let tableData, title;
+            
+            if (type === 'manjian') {
+                tableData = manjianTable;
+                title = '满减规则表';
+            } else {
+                tableData = discountManjianTable;
+                title = '折后满减规则表';
+            }
+            
+            const content = ["0\t0\t满0减0", ...tableData.map(row => `${row.condition}\t${row.amount}\t${row.text}`)].join('\n');
+            const fullContent = `${title}\n满减条件\t满减金额\t文案\n${content}`;
+            
+            navigator.clipboard.writeText(fullContent)
+                .then(() => {
+                    showMessage('表格内容已复制到剪贴板');
+                })
+                .catch(() => {
+                    showMessage('复制失败，请手动复制', 'error');
+                });
+        }
+
+        function onFinish(formData) {
+            let prices = formData.price
+                .split(' ')
+                .map(v => Number(v))
+                .filter(v => !isNaN(v) && v > 0);
+
+            // 清空已选中的表格项
+            arr = [];
+            discountArr = [];
+            manjianTable = [];
+            discountManjianTable = [];
+            document.getElementById('manjianTable').classList.add('hidden');
+            document.getElementById('discountManjianTable').classList.add('hidden');
+            
+            prices = Array.from(new Set(prices)).sort((a, b) => a - b);
+
+            const min = formData.minCoupon ? Number(formData.minCoupon) : undefined;
+            const discount = formData.discount ? Number(formData.discount) : undefined;
+            const discountMinCoupon = formData.discountMinCoupon ? Number(formData.discountMinCoupon) : undefined;
+
+            if (prices.length === 0) {
+                result = [];
+                document.getElementById('resultTable').classList.add('hidden');
+                return;
+            }
+
+            const minPrice = prices[0];
+
+            let discountPrices = [];
+            let minDiscountPrice = undefined;
+            
+            if ((!min || min <= 0) && discount && discount > 0 && discount <= 100) {
+                discountPrices = prices.map(p => Math.round(p * (discount / 100) * 100) / 100);
+                minDiscountPrice = Math.min(...discountPrices);
+            } else if (min !== undefined && min > 0 && discount && discount > 0 && discount <= 100) {
+                discountPrices = prices.map(p => {
+                    const ratio = p / minPrice;
+                    const coupon = Math.round(min * ratio * 100) / 100;
+                    const final = Math.round((p + coupon) * 100) / 100;
+                    return Math.round(final * (discount / 100) * 100) / 100;
+                });
+                minDiscountPrice = Math.min(...discountPrices);
+            }
+
+            result = prices.map((p, idx) => {
+                let ratio = undefined;
+                let coupon = undefined;
+                let final = undefined;
+                let discountPrice = undefined;
+                let discountCouponVal = undefined;
+                let discountFinal = undefined;
+                let discountDiff = undefined;
+                let discountFinalDiff = undefined;
+
+                if (min !== undefined && min > 0) {
+                    ratio = p / minPrice;
+                    coupon = Math.round(min * ratio * 100) / 100;
+                    final = Math.round((p + coupon) * 100) / 100;
+                    if (discount && discount > 0 && discount <= 100) {
+                        discountPrice = Math.round(final * (discount / 100) * 100) / 100;
+                        discountDiff = Math.round((discountPrice - p) * 100) / 100;
+                        if (discountMinCoupon && discountMinCoupon > 0 && minDiscountPrice) {
+                            const discountRatio = discountPrice / minDiscountPrice;
+                            discountCouponVal = Math.round(discountMinCoupon * discountRatio * 100) / 100;
+                            discountFinal = Math.round((discountPrice - discountCouponVal) * 100) / 100;
+                            discountFinalDiff = Math.round((discountFinal - p) * 100) / 100;
+                        }
+                    }
+                } else if (discount && discount > 0 && discount <= 100) {
+                    discountPrice = Math.round(p * (discount / 100) * 100) / 100;
+                    discountDiff = Math.round((discountPrice - p) * 100) / 100;
+                    if (discountMinCoupon && discountMinCoupon > 0 && minDiscountPrice) {
+                        const discountRatio = discountPrice / minDiscountPrice;
+                        discountCouponVal = Math.round(discountMinCoupon * discountRatio * 100) / 100;
+                        discountFinal = Math.round((discountPrice - discountCouponVal) * 100) / 100;
+                        discountFinalDiff = Math.round((discountFinal - p) * 100) / 100;
+                    }
+                }
+
+                return {
+                    key: idx,
+                    original: p,
+                    coupon,
+                    ratio,
+                    final,
+                    discountPrice,
+                    discountCoupon: discountCouponVal,
+                    discountFinal,
+                    discountDiff,
+                    discountFinalDiff
+                };
+            });
+
+            renderResultTable();
+        }
+
+        document.getElementById('priceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                price: document.getElementById('price').value,
+                minCoupon: document.getElementById('minCoupon').value,
+                discount: document.getElementById('discount').value,
+                discountMinCoupon: document.getElementById('discountMinCoupon').value,
+                pricePosition: document.getElementById('pricePosition').value,
+                discountPricePosition: document.getElementById('discountPricePosition').value
+            };
+            
+            onFinish(formData);
+        });
+
+        // 初始化
+        handleDiscountChange();
+    </script>
+</body>
+</html>

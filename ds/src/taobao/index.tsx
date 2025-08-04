@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Form, Input, Button, Table, Space, message, Flex  } from "antd";
+import React, { useState } from "react";
+import { Form, Input, Button, Table, Space, message, Flex } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
 
 type ResultRow = {
@@ -31,13 +31,6 @@ const Taobao: React.FC = () => {
   const [manjianTable, setManjianTable] = useState<ManjianRow[]>([]);
   const [discountArr, setDiscountArr] = useState<ResultRow[]>([]);
   const [discountManjianTable, setDiscountManjianTable] = useState<ManjianRow[]>([]);
-
-  useEffect(() => {
-    form.setFieldsValue({
-      pricePosition: "D2",
-      discountPricePosition: "E2"
-    });
-  }, []);
 
   const columns = [
     {
@@ -179,34 +172,52 @@ const Taobao: React.FC = () => {
     {
       title: "满减条件",
       dataIndex: "condition",
-      key: "condition"
+      key: "condition",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#1890ff", color: "white", fontWeight: "bold" }
+      })
     },
     {
       title: "满减金额",
       dataIndex: "amount",
-      key: "amount"
+      key: "amount",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#1890ff", color: "white", fontWeight: "bold" }
+      })
     },
     {
       title: "文案",
       dataIndex: "text",
-      key: "text"
+      key: "text",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#1890ff", color: "white", fontWeight: "bold" }
+      })
     }
   ];
   const manjianColumns2 = [
     {
       title: "折后满减条件",
       dataIndex: "condition",
-      key: "condition"
+      key: "condition",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#52c41a", color: "white", fontWeight: "bold" }
+      })
     },
     {
       title: "折后满减金额",
       dataIndex: "amount",
-      key: "amount"
+      key: "amount",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#52c41a", color: "white", fontWeight: "bold" }
+      })
     },
     {
       title: "文案",
       dataIndex: "text",
-      key: "text"
+      key: "text",
+      onHeaderCell: () => ({
+        style: { backgroundColor: "#52c41a", color: "white", fontWeight: "bold" }
+      })
     }
   ];
 
@@ -368,7 +379,9 @@ const Taobao: React.FC = () => {
   };
 
   const copyTableContent = (tableData: ManjianRow[], title: string) => {
-    const content = ["0\t0\t满0减0", ...tableData.map((row) => `${row.condition}\t${row.amount}\t${row.text}`)].join("\n");
+    const content = ["0\t0\t满0减0", ...tableData.map((row) => `${row.condition}\t${row.amount}\t${row.text}`)].join(
+      "\n"
+    );
 
     const fullContent = `${title}\n满减条件\t满减金额\t文案\n${content}`;
 
@@ -455,12 +468,7 @@ const Taobao: React.FC = () => {
           <Form.Item label="折后最低优惠券" name="discountMinCoupon" rules={[]}>
             <Input placeholder="输入折后最低优惠券" disabled={!discountValue} />
           </Form.Item>
-          <Form.Item label="价格位置" name="pricePosition" rules={[]}>
-            <Input placeholder="输入价格位置" />
-          </Form.Item>
-          <Form.Item label="折后价格位置" name="discountPricePosition" rules={[]}>
-            <Input placeholder="输入折后价格位置" />
-          </Form.Item>
+
           <Form.Item>
             <Button type="primary" htmlType="submit">
               计算
