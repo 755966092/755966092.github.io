@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, Table, Space } from "antd";
+import { Form, Input, Button, Table, Space, message, Flex  } from "antd";
+import { CopyOutlined } from "@ant-design/icons";
 
 type ResultRow = {
   key: number;
@@ -366,34 +367,69 @@ const Taobao: React.FC = () => {
     setResult(data);
   };
 
+  const copyTableContent = (tableData: ManjianRow[], title: string) => {
+    const content = ["0\t0\t满0减0", ...tableData.map((row) => `${row.condition}\t${row.amount}\t${row.text}`)].join("\n");
+
+    const fullContent = `${title}\n满减条件\t满减金额\t文案\n${content}`;
+
+    navigator.clipboard
+      .writeText(fullContent)
+      .then(() => {
+        message.success("表格内容已复制到剪贴板");
+      })
+      .catch(() => {
+        message.error("复制失败，请手动复制");
+      });
+  };
+
   return (
     <div>
       {manjianTable.length > 0 && (
-        <div style={{ marginBottom: 16 }}>
+        <Flex style={{ marginBottom: 16, width: "100%" }} justify="center" align="center" vertical={true}>
           <h3>满减规则表</h3>
+          <Button
+            type="primary"
+            style={{ marginBottom: 16 }}
+            icon={<CopyOutlined />}
+            onClick={() => copyTableContent(manjianTable, "满减规则表")}
+            size="small"
+          >
+            复制表格
+          </Button>
           <Table
             columns={manjianColumns}
             dataSource={[{ key: 0, condition: "0", amount: 0, text: "满0减0" }, ...manjianTable]}
             pagination={false}
             bordered
+            rowKey="amount"
             size="small"
-            style={{ maxWidth: 600 }}
+            style={{ maxWidth: 600, width: "100%" }}
           />
-        </div>
+        </Flex>
       )}
 
       {discountManjianTable.length > 0 && (
-        <div style={{ marginBottom: 16 }}>
+        <Flex style={{ marginBottom: 16, width: "100%" }} justify="center" align="center" vertical={true}>
           <h3>折后满减规则表</h3>
+          <Button
+            type="primary"
+            style={{ marginBottom: 16 }}
+            icon={<CopyOutlined />}
+            onClick={() => copyTableContent(discountManjianTable, "折后满减规则表")}
+            size="small"
+          >
+            复制表格
+          </Button>
           <Table
             columns={manjianColumns2}
             dataSource={[{ key: 0, condition: "0", amount: 0, text: "满0减0" }, ...discountManjianTable]}
             pagination={false}
             bordered
+            rowKey="amount"
             size="small"
-            style={{ maxWidth: 600 }}
+            style={{ maxWidth: 600, width: "100%" }}
           />
-        </div>
+        </Flex>
       )}
       <Form
         form={form}
