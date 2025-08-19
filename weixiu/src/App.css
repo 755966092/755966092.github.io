@@ -1,0 +1,107 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {}
+
+.read-the-docs {
+  color: #888;
+}
+
+.ant-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.ant-form-item-label>label {
+  font-weight: 500;
+}
+
+.ant-btn {
+  border-radius: 6px;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-select,
+.ant-input,
+.ant-input-number {
+  border-radius: 6px;
+}
+
+.ant-select:hover,
+.ant-input:hover,
+.ant-input-number:hover {
+  border-color: #40a9ff;
+}
+
+.ant-typography h2 {
+  color: #262626;
+}
+
+@media (max-width: 768px) {
+  .ant-card {
+    margin: 10px;
+  }
+
+  .ant-btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .ant-space {
+    width: 100%;
+  }
+
+  .ant-space .ant-space-item {
+    width: 100%;
+  }
+}
+
+.ant-list-item-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  ;
+}
