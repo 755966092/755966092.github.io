@@ -2,7 +2,7 @@
  * @Author: yuanzhuangzhuang@jujin8.com
  * @Date: 2025-08-18 18:09:48
  * @LastEditors: yuanzhuangzhuang@jujin8.com
- * @LastEditTime: 2025-08-19 11:11:21
+ * @LastEditTime: 2025-08-20 16:12:06
  * @FilePath: /master/weixiu/src/types.ts
  * @Description: 文件注释
  */
@@ -72,6 +72,9 @@ export interface PaiDanData {
   isAccepted: boolean; // 是否已接单
   acceptedBy?: string; // 接单人姓名
   acceptedTime?: string; // 接单时间
+  suggestedPrice?: string; // 建议价格（可选）
+  isDeleted?: boolean; // 软删除标记
+  deletedTime?: string; // 删除时间
 }
 
 export interface PaiDanFormData {
@@ -85,4 +88,5 @@ export interface PaiDanFormData {
   appointmentTime: string | dayjs.Dayjs; // 支持字符串和dayjs对象
   technician: string;
   remarks: string;
+  suggestedPrice?: string; // 建议价格（可选）
 }

@@ -52,7 +52,9 @@ import {
   UserOutlined,
   PhoneOutlined,
   ClockCircleOutlined,
-  CheckCircleOutlined
+  DeleteOutlined,
+  CheckCircleOutlined,
+  DollarOutlined
 } from "@ant-design/icons";
 import { dataCountry } from "../data";
 import type { PaiDanData, PaiDanFormData, Province, City, Area } from "../types";
@@ -178,6 +180,7 @@ const PaiDan: React.FC = () => {
   const [currentFaultOptions, setCurrentFaultOptions] = useState(getEquipmentFaultOptions("其他"));
   const [acceptModalVisible, setAcceptModalVisible] = useState<boolean>(false);
   const [currentAcceptRecord, setCurrentAcceptRecord] = useState<PaiDanData | null>(null);
+  const [currentOrderId, setCurrentOrderId] = useState<string | null>(null);
 
   // 生成派单编号
   const generateOrderId = (): string => {
@@ -239,8 +242,7 @@ const PaiDan: React.FC = () => {
   };
 
   // 生成派单内容（用于复制，包含隐私保护）
-  const generatePaidanContentForCopy = (values: PaiDanFormData): string => {
-    const orderId = generateOrderId();
+  const generatePaidanContentForCopy = (values: PaiDanFormData, orderId: string): string => {
     const maskedPhone = maskPhoneNumber(values.customerPhone);
     const addressForCopy = `${values.province}${values.city}${values.county}`; // 只显示省市县
 
@@ -248,6 +250,7 @@ const PaiDan: React.FC = () => {
 客户姓名：${values.customerName}
 联系电话：${maskedPhone}
 地址：${addressForCopy}
+预估价格：${values.suggestedPrice || "未提供"}
 
 故障描述：
 ${values.faultDescription}
@@ -256,18 +259,18 @@ ${values.faultDescription}
 维修技术员：- -
 
 维修备注：
-${values.remarks}`;
+${values.remarks || ""}`;
   };
 
   // 生成派单内容（用于显示，完整信息）
-  const generatePaidanContent = (values: PaiDanFormData): string => {
-    const orderId = generateOrderId();
+  const generatePaidanContent = (values: PaiDanFormData, orderId: string): string => {
     const fullAddress = `${values.province}${values.city}${values.county}${values.detailAddress}`;
 
     return `派单编号：${orderId}
 客户姓名：${values.customerName}
 联系电话：${values.customerPhone}
 地址：${fullAddress}
+预估价格：${values.suggestedPrice || "未提供"}
 
 故障描述：
 ${values.faultDescription}
@@ -276,9 +279,8 @@ ${values.faultDescription}
 维修技术员：- -
 
 维修备注：
-${values.remarks}`;
+${values.remarks || ""}`;
   };
-
   // 提交表单
   const handleSubmit = (values: PaiDanFormData) => {
     // 确保appointmentTime是字符串格式
@@ -287,7 +289,10 @@ ${values.remarks}`;
       appointmentTime: values.appointmentTime ? dayjs(values.appointmentTime).format("YYYY-MM-DD HH:mm:ss") : ""
     };
 
-    const content = generatePaidanContent(formattedValues);
+    const orderId = generateOrderId();
+    setCurrentOrderId(orderId);
+
+    const content = generatePaidanContent(formattedValues, orderId);
     setGeneratedContent(content);
     message.success("派单内容生成成功！");
   };
@@ -299,46 +304,55 @@ ${values.remarks}`;
       return;
     }
 
+    // 使用隐私保护版本的内容进行复制
+    const values = form.getFieldsValue();
+
+    // 确保appointmentTime是字符串格式
+    const formattedValues: PaiDanFormData = {
+      ...values,
+      appointmentTime: values.appointmentTime ? dayjs(values.appointmentTime).format("YYYY-MM-DD HH:mm:ss") : ""
+    };
+
+    // 保证本次操作使用同一个orderId
+    const orderId = currentOrderId || generateOrderId();
+    if (!currentOrderId) setCurrentOrderId(orderId);
+
+    const contentForCopy = generatePaidanContentForCopy(formattedValues, orderId);
+
+    // 先保存/去重，再尝试复制
+    const newPaidan: PaiDanData = {
+      id: orderId,
+      customerName: formattedValues.customerName,
+      customerPhone: formattedValues.customerPhone,
+      province: formattedValues.province,
+      city: formattedValues.city,
+      county: formattedValues.county,
+      detailAddress: formattedValues.detailAddress,
+      faultDescription: formattedValues.faultDescription,
+      appointmentTime: formattedValues.appointmentTime,
+      technician: formattedValues.technician,
+      remarks: formattedValues.remarks,
+      createTime: dayjs().format("YYYY-MM-DD HH:mm:ss"),
+      isAccepted: false, // 默认未接单
+      suggestedPrice: formattedValues.suggestedPrice || "",
+      isDeleted: false
+    };
+
+    const exists = paidanList.some((item) => item.id === orderId);
+    const updatedList = exists
+      ? paidanList.map((item) => (item.id === orderId ? { ...item, ...newPaidan } : item))
+      : [newPaidan, ...paidanList];
+
+    setPaidanList(updatedList);
+    localStorage.setItem("paidanList", JSON.stringify(updatedList));
+
+    form.resetFields();
+
     try {
-      // 使用隐私保护版本的内容进行复制
-      const values = form.getFieldsValue();
-
-      // 确保appointmentTime是字符串格式
-      const formattedValues: PaiDanFormData = {
-        ...values,
-        appointmentTime: values.appointmentTime ? dayjs(values.appointmentTime).format("YYYY-MM-DD HH:mm:ss") : ""
-      };
-
-      const contentForCopy = generatePaidanContentForCopy(formattedValues);
-
       await navigator.clipboard.writeText(contentForCopy);
-
-      // 保存到localStorage
-      const orderId = generateOrderId();
-
-      const newPaidan: PaiDanData = {
-        id: orderId,
-        customerName: formattedValues.customerName,
-        customerPhone: formattedValues.customerPhone,
-        province: formattedValues.province,
-        city: formattedValues.city,
-        county: formattedValues.county,
-        detailAddress: formattedValues.detailAddress,
-        faultDescription: formattedValues.faultDescription,
-        appointmentTime: formattedValues.appointmentTime,
-        technician: formattedValues.technician,
-        remarks: formattedValues.remarks,
-        createTime: dayjs().format("YYYY-MM-DD HH:mm:ss"),
-        isAccepted: false // 默认未接单
-      };
-
-      const updatedList = [newPaidan, ...paidanList];
-      setPaidanList(updatedList);
-      localStorage.setItem("paidanList", JSON.stringify(updatedList));
-
       message.success("派单内容已复制到剪贴板并保存！");
     } catch {
-      message.error("复制失败，请手动复制！");
+      message.error("复制失败，但数据已保存到列表！");
     }
   };
 
@@ -360,6 +374,7 @@ ${values.remarks}`;
         "预约时间",
         "维修备注",
         "创建时间",
+        "预估价格",
         "接单状态",
         "接单人",
         "接单时间"
@@ -375,7 +390,8 @@ ${values.remarks}`;
         record.appointmentTime,
         record.remarks,
         record.createTime,
-        record.isAccepted ? "已接单" : "未接单",
+        record.suggestedPrice || "",
+        record.isDeleted ? "已删除" : record.isAccepted ? "已接单" : "未接单",
         record.acceptedBy || "",
         record.acceptedTime || ""
       ]);
@@ -421,6 +437,25 @@ ${values.remarks}`;
       setAcceptModalVisible(true);
       acceptForm.resetFields();
     }
+  };
+  // 软删除确认
+  const confirmDelete = (record: PaiDanData) => {
+    Modal.confirm({
+      title: "确认删除",
+      content: `确定要删除编号为 "${record.id}" 的维修订单吗？`,
+      okText: "确认删除",
+      cancelText: "取消",
+      onOk: () => {
+        const updatedList = paidanList.map((item) =>
+          item.id === record.id
+            ? { ...item, isDeleted: true, deletedTime: dayjs().format("YYYY-MM-DD HH:mm:ss") }
+            : item
+        );
+        setPaidanList(updatedList);
+        localStorage.setItem("paidanList", JSON.stringify(updatedList));
+        message.success("已标记为删除！");
+      }
+    });
   };
 
   // 复制完整派单信息（接单时使用，不显示星号）
@@ -501,8 +536,8 @@ ${record.faultDescription}
 维修备注：
 ${record.remarks}
 
-接单状态：${record.isAccepted ? "已接单" : "未接单"}${
-      record.acceptedBy
+接单状态：${record.isDeleted ? "已删除" : record.isAccepted ? "已接单" : "未接单"}${
+      record.acceptedBy && !record.isDeleted
         ? `
 接单人：${record.acceptedBy}
 接单时间：${record.acceptedTime}`
@@ -567,12 +602,21 @@ ${record.remarks}
       responsive: ["md"]
     },
     {
+      title: "预估价格",
+      dataIndex: "suggestedPrice",
+      key: "suggestedPrice",
+      width: 100,
+      responsive: ["md"]
+    },
+    {
       title: "状态",
       key: "status",
       width: 100,
       render: (record: PaiDanData) => (
         <Space direction="vertical" size={2}>
-          <Tag color={record.isAccepted ? "success" : "default"}>{record.isAccepted ? "已接单" : "未接单"}</Tag>
+          <Tag color={record.isDeleted ? "error" : record.isAccepted ? "success" : "default"}>
+            {record.isDeleted ? "已删除" : record.isAccepted ? "已接单" : "未接单"}
+          </Tag>
           {record.acceptedBy && <div style={{ fontSize: "12px", color: "#666" }}>{record.acceptedBy}</div>}
         </Space>
       )
@@ -597,6 +641,17 @@ ${record.remarks}
           </Button>
           <Button type="link" icon={<EyeOutlined />} onClick={() => viewPaidanDetail(record)} size="small">
             查看
+          </Button>
+
+          <Button
+            type="link"
+            icon={<DeleteOutlined />}
+            onClick={() => confirmDelete(record)}
+            disabled={record.isDeleted}
+            size="small"
+            danger
+          >
+            删除
           </Button>
         </Space>
       )
@@ -712,6 +767,11 @@ ${record.remarks}
               </Form.Item>
             </Col>
             <Col xs={24} sm={12} md={6}>
+              <Form.Item label="建议价格" name="suggestedPrice">
+                <Input placeholder="建议价格(元)" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} sm={12} md={6}>
               <Form.Item
                 label="维修电器"
                 name="repairEquipment"
@@ -811,6 +871,16 @@ ${record.remarks}
                   </Button>,
                   <Button type="text" icon={<EyeOutlined />} onClick={() => viewPaidanDetail(item)} size="small">
                     查看
+                  </Button>,
+                  <Button
+                    type="text"
+                    icon={<DeleteOutlined />}
+                    onClick={() => confirmDelete(item)}
+                    disabled={item.isDeleted}
+                    size="small"
+                    danger
+                  >
+                    删除
                   </Button>
                 ]}
               >
@@ -821,8 +891,8 @@ ${record.remarks}
                       <span>{item.customerName}</span>
                       <div>
                         <Tag color="blue">{item.id}</Tag>
-                        <Tag color={item.isAccepted ? "success" : "default"}>
-                          {item.isAccepted ? "已接单" : "未接单"}
+                        <Tag color={item.isDeleted ? "error" : item.isAccepted ? "success" : "default"}>
+                          {item.isDeleted ? "已删除" : item.isAccepted ? "已接单" : "未接单"}
                         </Tag>
                       </div>
                     </div>
@@ -846,6 +916,10 @@ ${record.remarks}
                           {dayjs(item.appointmentTime).format("YYYY-MM-DD HH:mm:ss")}
                         </span>
                       </div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <DollarOutlined style={{ marginRight: 4, color: "#52c41a" }} />
+                        <span style={{ fontSize: "12px" }}>价格: {item.suggestedPrice || "未提供"}</span>
+                      </div>
                       <div>
                         <Tag color="orange">{item.faultDescription}</Tag>
                       </div>
@@ -868,7 +942,7 @@ ${record.remarks}
           <Table
             columns={columns as ColumnType<PaiDanData>[]}
             dataSource={paidanList}
-            rowKey="id" 
+            rowKey="id"
             scroll={{ x: 1200 }}
             pagination={{
               pageSize: 10,
@@ -918,8 +992,8 @@ ${record.remarks}
               <div>
                 <strong>接单状态：</strong>
                 <div>
-                  <Tag color={selectedRecord.isAccepted ? "success" : "default"}>
-                    {selectedRecord.isAccepted ? "已接单" : "未接单"}
+                  <Tag color={selectedRecord.isDeleted ? "error" : selectedRecord.isAccepted ? "success" : "default"}>
+                    {selectedRecord.isDeleted ? "已删除" : selectedRecord.isAccepted ? "已接单" : "未接单"}
                   </Tag>
                 </div>
               </div>
