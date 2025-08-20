@@ -232,7 +232,7 @@ const PaiDan: React.FC = () => {
 
   // 故障描述选择处理
   const handleFaultChange = (value: string) => {
-    form.setFieldsValue({ faultDescription: value });
+    form.setFieldsValue({ faultDescription: value + ", " });
   };
 
   // 隐私保护处理函数
@@ -704,14 +704,7 @@ ${record.remarks}
           <Row gutter={[16, 16]}>
             <Col xs={24} sm={12} md={6}>
               <Form.Item label="省份" name="province" rules={[{ required: true, message: "请选择省份！" }]}>
-                <Select
-                  placeholder="请选择省份"
-                  onChange={handleProvinceChange}
-                  showSearch
-                  filterOption={(input, option) =>
-                    (option?.children as unknown as string)?.toLowerCase().includes(input.toLowerCase())
-                  }
-                >
+                <Select placeholder="请选择省份" onChange={handleProvinceChange} allowClear>
                   {dataCountry.map((province: Province) => (
                     <Option key={province.code} value={province.name}>
                       {province.name}
@@ -722,15 +715,7 @@ ${record.remarks}
             </Col>
             <Col xs={24} sm={12} md={6}>
               <Form.Item label="城市" name="city" rules={[{ required: true, message: "请选择城市！" }]}>
-                <Select
-                  placeholder="请选择城市"
-                  onChange={handleCityChange}
-                  disabled={!cities.length}
-                  showSearch
-                  filterOption={(input, option) =>
-                    (option?.children as unknown as string)?.toLowerCase().includes(input.toLowerCase())
-                  }
-                >
+                <Select placeholder="请选择城市" onChange={handleCityChange} disabled={!cities.length} allowClear>
                   {cities.map((city: City) => (
                     <Option key={city.code} value={city.name}>
                       {city.name}
@@ -741,14 +726,7 @@ ${record.remarks}
             </Col>
             <Col xs={24} sm={12} md={6}>
               <Form.Item label="县区" name="county" rules={[{ required: true, message: "请选择县区！" }]}>
-                <Select
-                  placeholder="请选择县区"
-                  disabled={!counties.length}
-                  showSearch
-                  filterOption={(input, option) =>
-                    (option?.children as unknown as string)?.toLowerCase().includes(input.toLowerCase())
-                  }
-                >
+                <Select placeholder="请选择县区" disabled={!counties.length} allowClear>
                   {counties.map((county: Area) => (
                     <Option key={county.code} value={county.name}>
                       {county.name}
