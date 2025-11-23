@@ -1,3 +1,11 @@
+/*
+ * @Author: yuanzhuangzhuang@jujin8.com
+ * @Date: 2025-08-18 18:09:54
+ * @LastEditors: yuanzhuangzhuang@jujin8.com
+ * @LastEditTime: 2025-11-23 16:35:49
+ * @FilePath: /master/weixiu/src/data.ts
+ * @Description: 文件注释
+ */
 import type { Category, Province } from "./types.ts";
 
 export const categories: Category[] = [
@@ -59,6 +67,18 @@ export const categories: Category[] = [
       fixedText2: "维修洗衣机",
       fixedText3: "洗衣机清洗",
       fixedText4: "家政服务"
+    }
+  },
+  {
+    name: "绿化苗木出售",
+    defaultTexts: {
+      serveName: "专业绿化苗木出售定制服务",
+      serveContent:
+        "同城直供各类绿化苗木，主营朴树、桂花、白蜡、银杏、樱花、白玉兰、紫薇等乔木，涵盖工程苗、家庭景观苗、地被植物、造型盆景等全品类，承接市政园林工程、小区绿化、私家庭院造景等苗木供应与配套服务，苗木规格齐全、存活率高，支持现场看苗、专车配送、售后养护指导，满足不同场景绿化需求。",
+      fixedText1: "绿化苗木出售电话",
+      fixedText2: "同城绿化苗木出售",
+      fixedText3: "市政/园林绿化苗木采购",
+      fixedText4: "一站式绿化苗木服务"
     }
   }
 ];
