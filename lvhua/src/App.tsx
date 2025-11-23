@@ -1,10 +1,17 @@
+/*
+ * @Author: yuanzhuangzhuang@jujin8.com
+ * @Date: 2025-08-19 10:32:53
+ * @LastEditors: yuanzhuangzhuang@jujin8.com
+ * @LastEditTime: 2025-11-23 17:35:13
+ * @FilePath: /master/lvhua/src/App.tsx
+ * @Description: 文件注释
+ */
 import React, { useState, useEffect } from "react";
 import { Form, Select, Input, Button, Card, Row, Col, Typography, message, Space } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
 import { categories, dataCountry } from "./data";
 import type { FormData, City, Area } from "./types";
 import "./App.css";
-import PaiDan from "./component/paidan";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -13,12 +20,7 @@ const { Option } = Select;
 const App: React.FC = () => {
   const [form] = Form.useForm();
   const [platform, setPlatform] = useState<number>(1); // 1: 抖音, 2: 快手
-  
-  // 功能 - 从localStorage读取缓存，如果没有则默认为1
-  const [functionType, setFunctionType] = useState<number>(() => {
-    const cached = localStorage.getItem("functionType");
-    return cached ? parseInt(cached, 10) : 1;
-  }); // 1: 生成推广文案, 2: 生成派单内容
+
   const [formData, setFormData] = useState<FormData>({
     province: "",
     city: "",
@@ -68,11 +70,6 @@ const App: React.FC = () => {
       }
     }
   }, [form]);
-
-  // 新增：监听functionType变化并保存到localStorage
-  useEffect(() => {
-    localStorage.setItem("functionType", functionType.toString());
-  }, [functionType]);
 
   const updateCityOptions = (provinceCode: string) => {
     const selectedProvince = dataCountry.find((province) => province.code === provinceCode);
@@ -166,9 +163,7 @@ const App: React.FC = () => {
     // 根据平台决定使用多少个标签
     const tags =
       platform === 1
-        ? [formData.fixedText1, formData.fixedText2, formData.fixedText3, formData.fixedText4].filter((tag) =>
-            tag.trim()
-          )
+        ? [formData.fixedText1, formData.fixedText2, formData.fixedText3, formData.fixedText4].filter((tag) => tag.trim())
         : [formData.fixedText1, formData.fixedText2, formData.fixedText3].filter((tag) => tag.trim());
 
     const hashTags = tags.map((tag) => `#${countyName}${tag}`).join(" ");
@@ -210,159 +205,143 @@ ${hashTags}`;
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto" }}>
       <Title level={2} style={{ textAlign: "center", marginBottom: "30px" }}>
-        {functionType === 1 ? "生成推广文案" : "生成派单内容"}
+        生成推广文案
       </Title>
-      <div style={{ marginBottom: "20px", padding: "0 20px" }}>
-        <Select value={functionType} onChange={(value: number) => setFunctionType(value)} style={{ width: "100%" }}>
-          <Option value={1}>生成推广文案</Option>
-          <Option value={2}>生成派单内容</Option>
-        </Select>
-      </div>
-      {functionType === 1 ? (
-        <Card>
-          <Form
-            form={form}
-            layout="vertical"
-            onValuesChange={(changedValues) => {
-              Object.keys(changedValues).forEach((key) => {
-                if (key !== "province" && key !== "city" && key !== "county" && key !== "category") {
-                  handleInputChange(key as keyof FormData, changedValues[key]);
-                }
-              });
-            }}
-          >
-            <Row gutter={16}>
-              <Col xs={24} sm={24}>
-                <Form.Item label="平台选择">
-                  <Select value={platform} onChange={handlePlatformChange} style={{ width: "100%" }}>
-                    <Option value={1}>抖音</Option>
-                    <Option value={2}>快手</Option>
-                  </Select>
-                </Form.Item>
-              </Col>
 
-              <Col xs={24} sm={8}>
-                <Form.Item label="省" name="province">
-                  <Select placeholder="请选择省份" onChange={handleProvinceChange} allowClear>
-                    {dataCountry.map((province) => (
-                      <Option key={province.code} value={province.code}>
-                        {province.name}
-                      </Option>
-                    ))}
-                  </Select>
-                </Form.Item>
-              </Col>
+      <Card>
+        <Form
+          form={form}
+          layout="vertical"
+          onValuesChange={(changedValues) => {
+            Object.keys(changedValues).forEach((key) => {
+              if (key !== "province" && key !== "city" && key !== "county" && key !== "category") {
+                handleInputChange(key as keyof FormData, changedValues[key]);
+              }
+            });
+          }}
+        >
+          <Row gutter={16}>
+            <Col xs={24} sm={24}>
+              <Form.Item label="平台选择">
+                <Select value={platform} onChange={handlePlatformChange} style={{ width: "100%" }}>
+                  <Option value={1}>抖音</Option>
+                  <Option value={2}>快手</Option>
+                </Select>
+              </Form.Item>
+            </Col>
 
-              <Col xs={24} sm={8}>
-                <Form.Item label="市" name="city">
-                  <Select placeholder="请选择城市" onChange={handleCityChange} disabled={!formData.province} allowClear>
-                    {cities.map((city) => (
-                      <Option key={city.code} value={city.code}>
-                        {city.name}
-                      </Option>
-                    ))}
-                  </Select>
-                </Form.Item>
-              </Col>
+            <Col xs={24} sm={8}>
+              <Form.Item label="省" name="province">
+                <Select placeholder="请选择省份" onChange={handleProvinceChange} allowClear>
+                  {dataCountry.map((province) => (
+                    <Option key={province.code} value={province.code}>
+                      {province.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
 
-              <Col xs={24} sm={8}>
-                <Form.Item label="县" name="county">
-                  <Select placeholder="请选择区县" onChange={handleCountyChange} disabled={!formData.city} allowClear>
-                    {counties.map((county) => (
-                      <Option key={county.code} value={county.code}>
-                        {county.name}
-                      </Option>
-                    ))}
-                  </Select>
-                </Form.Item>
-              </Col>
-            </Row>
+            <Col xs={24} sm={8}>
+              <Form.Item label="市" name="city">
+                <Select placeholder="请选择城市" onChange={handleCityChange} disabled={!formData.province} allowClear>
+                  {cities.map((city) => (
+                    <Option key={city.code} value={city.code}>
+                      {city.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
 
-            <Row gutter={16}>
-              <Col xs={24} sm={12}>
-                <Form.Item label="分类" name="category">
-                  <Select placeholder="请选择分类" onChange={handleCategoryChange} allowClear>
-                    {categories.map((category) => (
-                      <Option key={category.name} value={category.name}>
-                        {category.name}
-                      </Option>
-                    ))}
-                  </Select>
-                </Form.Item>
-              </Col>
+            <Col xs={24} sm={8}>
+              <Form.Item label="县" name="county">
+                <Select placeholder="请选择区县" onChange={handleCountyChange} disabled={!formData.city} allowClear>
+                  {counties.map((county) => (
+                    <Option key={county.code} value={county.code}>
+                      {county.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
+          </Row>
 
-              <Col xs={24} sm={12}>
-                <Form.Item label="手机号" name="phoneNumber">
-                  <Input
-                    placeholder="请输入手机号"
-                    onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-                  />
-                </Form.Item>
-              </Col>
-            </Row>
+          <Row gutter={16}>
+            <Col xs={24} sm={12}>
+              <Form.Item label="分类" name="category">
+                <Select placeholder="请选择分类" onChange={handleCategoryChange} allowClear>
+                  {categories.map((category) => (
+                    <Option key={category.name} value={category.name}>
+                      {category.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
 
-            <Form.Item label="服务标题" name="serveName">
-              <Input placeholder="服务标题" onChange={(e) => handleInputChange("serveName", e.target.value)} />
-            </Form.Item>
+            <Col xs={24} sm={12}>
+              <Form.Item label="手机号" name="phoneNumber">
+                <Input placeholder="请输入手机号" onChange={(e) => handleInputChange("phoneNumber", e.target.value)} />
+              </Form.Item>
+            </Col>
+          </Row>
 
-            <Form.Item label="服务内容" name="serveContent">
-              <TextArea
-                rows={4}
-                placeholder="服务内容"
-                onChange={(e) => handleInputChange("serveContent", e.target.value)}
-              />
-            </Form.Item>
+          <Form.Item label="服务标题" name="serveName">
+            <Input placeholder="服务标题" onChange={(e) => handleInputChange("serveName", e.target.value)} />
+          </Form.Item>
 
-            <Row gutter={16}>
+          <Form.Item label="服务内容" name="serveContent">
+            <TextArea rows={4} placeholder="服务内容" onChange={(e) => handleInputChange("serveContent", e.target.value)} />
+          </Form.Item>
+
+          <Row gutter={16}>
+            <Col xs={24} sm={12} md={6}>
+              <Form.Item label="标签一" name="fixedText1">
+                <Input placeholder="标签一" onChange={(e) => handleInputChange("fixedText1", e.target.value)} />
+              </Form.Item>
+            </Col>
+
+            <Col xs={24} sm={12} md={6}>
+              <Form.Item label="标签二" name="fixedText2">
+                <Input placeholder="标签二" onChange={(e) => handleInputChange("fixedText2", e.target.value)} />
+              </Form.Item>
+            </Col>
+
+            <Col xs={24} sm={12} md={6}>
+              <Form.Item label="标签三" name="fixedText3">
+                <Input placeholder="标签三" onChange={(e) => handleInputChange("fixedText3", e.target.value)} />
+              </Form.Item>
+            </Col>
+
+            {platform === 1 && (
               <Col xs={24} sm={12} md={6}>
-                <Form.Item label="标签一" name="fixedText1">
-                  <Input placeholder="标签一" onChange={(e) => handleInputChange("fixedText1", e.target.value)} />
+                <Form.Item label="标签四" name="fixedText4">
+                  <Input placeholder="标签四" onChange={(e) => handleInputChange("fixedText4", e.target.value)} />
                 </Form.Item>
               </Col>
+            )}
+          </Row>
 
-              <Col xs={24} sm={12} md={6}>
-                <Form.Item label="标签二" name="fixedText2">
-                  <Input placeholder="标签二" onChange={(e) => handleInputChange("fixedText2", e.target.value)} />
-                </Form.Item>
-              </Col>
+          <Form.Item>
+            <Space wrap>
+              <Button type="primary" onClick={generateText}>
+                生成文案
+              </Button>
+              <Button icon={<CopyOutlined />} onClick={copyText} disabled={!generatedText}>
+                复制文案
+              </Button>
+              <Button icon={<CopyOutlined />} onClick={copyTitle} disabled={!formData.serveName}>
+                复制标题
+              </Button>
+            </Space>
+          </Form.Item>
 
-              <Col xs={24} sm={12} md={6}>
-                <Form.Item label="标签三" name="fixedText3">
-                  <Input placeholder="标签三" onChange={(e) => handleInputChange("fixedText3", e.target.value)} />
-                </Form.Item>
-              </Col>
-
-              {platform === 1 && (
-                <Col xs={24} sm={12} md={6}>
-                  <Form.Item label="标签四" name="fixedText4">
-                    <Input placeholder="标签四" onChange={(e) => handleInputChange("fixedText4", e.target.value)} />
-                  </Form.Item>
-                </Col>
-              )}
-            </Row>
-
-            <Form.Item>
-              <Space wrap>
-                <Button type="primary" onClick={generateText}>
-                  生成文案
-                </Button>
-                <Button icon={<CopyOutlined />} onClick={copyText} disabled={!generatedText}>
-                  复制文案
-                </Button>
-                <Button icon={<CopyOutlined />} onClick={copyTitle} disabled={!formData.serveName}>
-                  复制标题
-                </Button>
-              </Space>
-            </Form.Item>
-
-            <Form.Item label="生成的文案">
-              <TextArea rows={6} value={generatedText} readOnly placeholder="点击生成文案按钮生成内容" />
-            </Form.Item>
-          </Form>
-        </Card>
-      ) : (
-        <PaiDan />
-      )}
+          <Form.Item label="生成的文案">
+            <TextArea rows={6} value={generatedText} readOnly placeholder="点击生成文案按钮生成内容" />
+          </Form.Item>
+        </Form>
+      </Card>
     </div>
   );
 };
